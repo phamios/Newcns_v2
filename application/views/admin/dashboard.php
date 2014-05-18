@@ -82,6 +82,18 @@
                     <?php endif; ?>
                 <?php endif;?>
 
+                <?php if( $this->router->class == 'review'):?>
+                    <?php if ($this->router->fetch_method() == 'index'): ?>
+                        <?php $this->load->view('admin/review/index'); ?>
+                    <?php endif; ?>
+                    <?php if ($this->router->fetch_method() == 'create'): ?>
+                        <?php $this->load->view('admin/review/create'); ?>
+                    <?php endif; ?>
+                    <?php if ($this->router->fetch_method() == 'edit'): ?>
+                        <?php $this->load->view('admin/review/edit'); ?>
+                    <?php endif; ?>
+                <?php endif;?>
+
                  <?php if( $this->router->class == 'dashboard'):?>
  					<?php if ($this->router->fetch_method() == 'index'): ?>
                         <?php $this->load->view('admin/default'); ?>
