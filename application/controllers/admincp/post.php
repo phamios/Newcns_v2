@@ -50,7 +50,7 @@ class post extends CI_Controller {
             );
             $this->db->insert('tbl_post', $insert);
             //redirect('admin/post', 'refresh');
-            redirect($this->config->base_url() . 'admin/post/');
+            redirect($this->config->base_url() . 'admincp/post/');
         } else {
             $data['title'] = "Create Post";
 
@@ -97,7 +97,7 @@ class post extends CI_Controller {
             );
             $this->db->update('tbl_post', $insert, array('id' => $id));
             //redirect('admin/post', 'refresh');
-            redirect($this->config->base_url() . 'admin/post/edit/' . $id . '?success=1');
+            redirect($this->config->base_url() . 'admincp/post/edit/' . $id . '?success=1');
         } else {
             $data['edit'] = 0;
             $data['id'] = $id;

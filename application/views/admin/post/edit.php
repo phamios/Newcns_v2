@@ -39,7 +39,7 @@ $(document).ready(function() {
             </header>
             <?php //print_r($model) ?>
             <div id="div-1" class="accordion-body collapse in body">
-                <form class="form-horizontal" id="post-edit" action="<?php echo $this->config->base_url().'admin/post/edit/'.$id;?>" method="post">
+                <form class="form-horizontal" id="post-edit" action="<?php echo $this->config->base_url().'admincp/post/edit/'.$id;?>" method="post">
                     <?php if(isset($_GET['success']) && $_GET['success'] == 1): ?>
                         <div id="edit-success">Edit Category Success</div>
                     <?php endif; ?>

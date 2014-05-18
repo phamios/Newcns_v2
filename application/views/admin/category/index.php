@@ -61,12 +61,12 @@ function deleteCate(id) {
     var r = confirm("Do you want to delete this category?");
     if (r == true) {
       	$.ajax({
-      		url: "<?php echo $this->config->base_url().'admin/category/delete';?>",
+      		url: "<?php echo $this->config->base_url().'admincp/category/delete';?>",
       		type: 'POST',
       		//dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
       		data: {id: id},
       		success: function(data) {
-      			window.location.href = "<?php echo $this->config->base_url().'admin/category';?>";
+      			window.location.href = "<?php echo $this->config->base_url().'admincp/category';?>";
       		}
       	});
     }

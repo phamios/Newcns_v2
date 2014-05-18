@@ -32,7 +32,7 @@
                 <!-- /.toolbar -->
             </header>
             <div id="div-1" class="accordion-body collapse in body">
-                <form class="form-horizontal" id="post-create" action="<?php echo $this->config->base_url().'admin/post/create';?>" method="post">
+                <form class="form-horizontal" id="post-create" action="<?php echo $this->config->base_url().'admincp/post/create';?>" method="post">
                     <div class="control-group">
                         <label for="text1" class="control-label">Title<span class="require">*</span></label>
 
