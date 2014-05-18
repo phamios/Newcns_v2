@@ -23,7 +23,7 @@
                     <div class="container-fluid">
                         <div class="row-fluid">
                             <div class="span12">
-                                <h3><i class="icon-home"></i> Dashboard</h3>
+                                <h3><i class="icon-home"></i> Quản lý chung</h3>
                             </div>
                         </div>
                         <!-- /.row-fluid -->

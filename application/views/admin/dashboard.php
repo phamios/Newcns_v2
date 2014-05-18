@@ -57,19 +57,7 @@
             <div id="content">
                 <!-- .outer -->
                 <div class="container-fluid outer"> 
-                
-                <?php if( $this->router->class == 'codeck'):?>
-                    <?php if ($this->router->fetch_method() == 'index'): ?>
-                        <?php $this->load->view('admin/codeck/index'); ?>
-                    <?php endif; ?>  
-                    <?php if ($this->router->fetch_method() == 'add_codeck'): ?>
-                        <?php $this->load->view('admin/codeck/add_codeck'); ?>
-                    <?php endif; ?>
-                    <?php if ($this->router->fetch_method() == 'update_codeck'): ?>
-                        <?php $this->load->view('admin/codeck/update_codeck'); ?>
-                    <?php endif; ?>
-                <?php endif;?>    
-
+                 
                 <?php if( $this->router->class == 'cate'):?>
                     <?php if ($this->router->fetch_method() == 'index'): ?>
                         <?php $this->load->view('admin/cate/index'); ?>

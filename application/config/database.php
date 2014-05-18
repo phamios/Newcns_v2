@@ -48,10 +48,14 @@
 $active_group = 'default';
 $active_record = TRUE;
 
+//$db['default']['hostname'] = 'localhost';
+//$db['default']['username'] = 'admega_stock';
+//$db['default']['password'] = '1q2w3e4r';
+//$db['default']['database'] = 'admega_stock';
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'admega_stock';
-$db['default']['password'] = '1q2w3e4r';
-$db['default']['database'] = 'admega_stock';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '';
+$db['default']['database'] = 'digitrends';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

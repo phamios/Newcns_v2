@@ -7,12 +7,12 @@
                     </li>
                     <li class="accordion-group ">
                         <a data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav">
-                            <i class="icon-tasks icon-large"></i>  Mã chứng khoán <span class="label label-inverse pull-right"></span>
+                            <i class="icon-tasks icon-large"></i> News<span class="label label-inverse pull-right"></span>
                         </a>
                         <ul class="collapse " id="component-nav">
-                            <li><a href="<?php echo base_url('admincp/codeck')?>"><i class="icon-angle-right"></i> Danh sách</a></li>
-                            <li><a href="<?php echo base_url('admincp/codeck/add_codeck')?>"><i class="icon-angle-right"></i> Thêm mới</a></li>
-                            <li><a href="<?php echo base_url('admincp/codeck/add_codeck')?>"> <i class="icon-angle-right"></i> Lấy mã tin tự động </a></li>
+                            <li><a href="<?php echo base_url('admincp/post')?>"><i class="icon-angle-right"></i> Danh sách</a></li>
+                            <li><a href="<?php echo base_url('admincp/post/create')?>"><i class="icon-angle-right"></i> Thêm mới</a></li>
+                            
                         </ul>
                     </li>
                     <li class="accordion-group ">
