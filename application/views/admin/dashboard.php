@@ -58,15 +58,15 @@
                 <!-- .outer -->
                 <div class="container-fluid outer"> 
                  
-                <?php if( $this->router->class == 'cate'):?>
+                <?php if( $this->router->class == 'category'):?>
                     <?php if ($this->router->fetch_method() == 'index'): ?>
-                        <?php $this->load->view('admin/cate/index'); ?>
+                        <?php $this->load->view('admin/category/index'); ?>
                     <?php endif; ?>
-                    <?php if ($this->router->fetch_method() == 'add_cate'): ?>
-                        <?php $this->load->view('admin/cate/add_cate'); ?>
+                    <?php if ($this->router->fetch_method() == 'create'): ?>
+                        <?php $this->load->view('admin/category/create'); ?>
                     <?php endif; ?>
-                    <?php if ($this->router->fetch_method() == 'update_cate'): ?>
-                        <?php $this->load->view('admin/cate/update_cate'); ?>
+                    <?php if ($this->router->fetch_method() == 'edit'): ?>
+                        <?php $this->load->view('admin/category/edit'); ?>
                     <?php endif; ?>
                 <?php endif;?>
 
@@ -74,11 +74,11 @@
                     <?php if ($this->router->fetch_method() == 'index'): ?>
                         <?php $this->load->view('admin/post/index'); ?>
                     <?php endif; ?>
-                    <?php if ($this->router->fetch_method() == 'add_post'): ?>
-                        <?php $this->load->view('admin/post/add_post'); ?>
+                    <?php if ($this->router->fetch_method() == 'create'): ?>
+                        <?php $this->load->view('admin/post/create'); ?>
                     <?php endif; ?>
-                    <?php if ($this->router->fetch_method() == 'update_post'): ?>
-                        <?php $this->load->view('admin/post/update_post'); ?>
+                    <?php if ($this->router->fetch_method() == 'edit'): ?>
+                        <?php $this->load->view('admin/post/edit'); ?>
                     <?php endif; ?>
                 <?php endif;?>
 
