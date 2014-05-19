@@ -38,7 +38,7 @@ class Review extends CI_Controller {
             $this->load->model('features_model');
             if (isset($_REQUEST['submit_review'])) {
                 
-                 $title = $this->input->post('title', true);
+                $title = $this->input->post('title', true);
                 $category = $this->input->post('category', true);
                 $userid = $this->session->userdata('adminid');
                 $specs = $this->input->post('specs', true);
