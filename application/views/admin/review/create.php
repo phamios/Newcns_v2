@@ -109,7 +109,7 @@
 
                     <div class="form-actions">
                         <input type="reset" value="Reset" id="back" class="navigation_button btn">
-                        <input type="button" onclick="create()" value="Create" id="next" class="navigation_button btn btn-primary" name="submit_review">
+                        <input type="submit" value="Create" id="next" class="navigation_button btn btn-primary" name="submit_review">
                     </div>
                     <?php echo form_close(); ?>
                 </div>
