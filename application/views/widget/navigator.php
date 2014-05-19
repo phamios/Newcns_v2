@@ -25,7 +25,7 @@
     <ul class="collapse" id="component-nav-review">
         <li><a href="<?php echo base_url('admincp/review_cate') ?>"><i class="icon-angle-right"></i> List cate </a></li>
         <li><a href="<?php echo base_url('admincp/review_cate/create') ?>"><i class="icon-angle-right"></i> Add category</a></li>
-        <li><a href="<?php echo base_url('admincp/reivew') ?>"><i class="icon-angle-right"></i> List news </a></li>
+        <li><a href="<?php echo base_url('admincp/review') ?>"><i class="icon-angle-right"></i> List news </a></li>
         <li><a href="<?php echo base_url('admincp/review/create') ?>"><i class="icon-angle-right"></i> Add news </a></li>
     </ul>
 </li>
