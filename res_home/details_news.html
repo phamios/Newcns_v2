@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html class=" js no-flexbox flexboxlegacy canvas canvastext geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache" style="" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"><script src="details_news_files/v2" async=""></script><script src="details_news_files/a_usersync.html" async="" type="text/javascript"></script><script src="details_news_files/3.js" type="text/javascript"></script><script async="" src="details_news_files/cbgapi.js"></script><script type="text/javascript" async="" src="details_news_files/quant.js"></script><script src="details_news_files/zerg.js" async="" type="text/javascript"></script><script src="details_news_files/all.js" async="" id="facebook-jssdk"></script>
+
+		<meta charset="UTF-8"><div class="kxhead" data-id="IwNLJc7X" style="display:none;"><span class="kxtag kxinvisible" data-id="28081" data-alias="Appnexus Connect"><script>
+(function(){
+        var kuid = Krux('get', 'user');
+        if (kuid) {
+            var prefix = location.protocol == 'https:' ? "https:" : "http:";
+            var kurl = prefix + '//beacon.krxd.net/usermatch.gif?src=digitaltrends&adnxs_uid=$UID';
+            var appnexus_url = '//ib.adnxs.com/getuid?' + kurl
+            var i = new Image();
+            i.src = appnexus_url;
+        }
+})();
+</script></span><span class="kxtag kxinvisible" data-id="27573" data-alias="Krux Load Segments v2"><script type="text/javascript">
+// DFP premium
+(function(require) {
+  var store = require('store');
+  var _ = require('util');  
+  var segments;
+  
+  function handleUserDataResponse(r) {
+    // Handle the response as usual.
+    segments.handleUserDataResponse(r);
+    
+    // Override localStorage.kxuser with a case-insensitive value for DFP premium.
+    // This will get read by the interchange direct snippet for Krux.user
+    // and Krux.dfpKeyValues
+    if(r.kuid_long) {
+      store.set('user', r.kuid_long, store.DAYS*30);
+    }
+  }
+  
+  // Our own fetch uses our own handleResponse
+  function fetch() {
+    var options = {
+      url: _.get('url_userData'),
+      data: {pubid: _.get('pubid')},
+      callback: 'kxjsonp_userData',
+      done: handleUserDataResponse
+    };
+    if(!segments.readTechFromStore()) {
+      options.data.technographics = 1;
+    }
+    require('http').jsonp(options);  
+  }
+  
+  
+  if(!store.get('segWait')) {
+    // disable segments.fetch and use our own
+    _.set('segWait', 1, store.MINUTES*5);
+    _.onOnce('dom:load', fetch);
+    _.fire('user_data_fetch_scheduled');
+  }
+  
+  // Finally, require segments as usual.
+  segments = require('segments');
+}(Krux.require));
+</script></span><span class="kxtag kxinvisible" data-id="27761" data-alias="Krux Data Transfer Code"><script>
+// Using UrlPath 1 to produce page attribute url_path_1
+Krux('scrape', { "page_attr_url_path_1": {url_path: "1"}});
+// Using UrlPath 2 to produce page attribute url_path_2
+Krux('scrape', { "page_attr_url_path_2": {url_path: "2"}});
+// Using UrlPath 3 to produce page attribute url_path_3
+Krux('scrape', { "page_attr_url_path_3": {url_path: "3"}});
+Krux('scrape', { "page_attr_manufacturer": {meta_name: "manufacturer"}});
+Krux('scrape', { "page_attr_model": {meta_name: "model"}});
+Krux('scrape', { "page_attr_tags": {meta_name: "tags"}});
+</script></span><span class="kxtag kxinvisible" data-id="28421" data-alias="AdAdvisor S2S provider tag"><script>
+(function() {
+  // adadvisor redirects to http://logger... so it's not https safe
+  if (location.protocol == "http:") {
+     var u = "https://adadvisor.net/adscores/g.js?sid=9212244187&_kdpid=2111c0af-fc3a-446f-ab07-63aa74fbde8e";
+     (new Image()).src = u;
+   }
+})();
+</script></span><span class="kxtag kxinvisible" data-id="28422" data-alias="Targus/AdAdvisor provider tag"><script>
+(function() {
+  // adadvisor redirects to http://logger... so it's not https safe
+  if (location.protocol == "http:") {
+     var u = "http://adadvisor.net/adscores/g.js?sid=9212244187&_kdpid=911765d2-536f-4475-8fd5-92b73478fb8f";
+     (new Image()).src = u;
+   }
+})();
+</script>
+</span><span class="kxtag kxinvisible" data-id="28423" data-alias="Nielsen (via Exelate) provider tag"><script>
+// Blank
+</script></span><span class="kxtag kxinvisible" data-id="28424" data-alias="Bluekai provider tag"><img src="details_news_files/um.gif"></span><span class="kxtag kxinvisible" data-id="27548" data-alias="Technographic Data provider tag"><script>
+// this tag is intentionally blank
+</script></span><span class="kxtag kxinvisible" data-id="27549" data-alias="Krux Geographic Data provider tag"></span><span class="kxtag kxinvisible" data-id="28103" data-alias="Acxiom S2S provider tag"><script>
+(function(){
+  var kuid = Krux('get', 'user');
+  if (kuid) {
+    Krux('require:http').pixel({
+      url: "//p.acxiom-online.com/pixel/sci",
+      data: {
+          uid: kuid,
+          _kdpid: 'f19b7626-3732-4dcc-bac5-8d2c937dae9a',
+          pid: 3021
+      }});
+  }
+  })();
+</script></span><span class="kxtag kxinvisible" data-id="28104" data-alias="Brilig provider tag"><script>
+  Krux('require:http').pixel({
+    url: "//p.brilig.com/contact/bct",
+    data: {
+      pid: "9354001b-d428-4e7c-9115-ffd042a2f184",
+      _ct: "pixel",
+      puid: Krux('get', 'user'),
+      REDIR: "http://beacon.krxd.net/data.gif?_kdpid=c3f63723-4104-46a9-9bda-e72960b2959a"
+    }
+  });
+</script></span><span class="kxtag kxinvisible" data-id="28105" data-alias="DataLogix provider tag"><script>
+(function() {
+  // krxd.nexac.com throws SSL cert errors so only fire this tag
+  // on HTTP pages
+  if (location.protocol == "http:") {
+      var Krux = window.Krux;
+      var kuid = Krux('get', 'user');
+      if (kuid) {
+         var u = "http://krxd.nexac.com/dlx.gif?_kdpid=2dd640a6-6ebd-4d4f-af30-af8baa441a0d&kuid=" + kuid;
+         (new Image()).src = u;
+      }
+   }
+})();
+</script></span><span class="kxtag kxinvisible" data-id="28106" data-alias="IXI Digital (Open Market) provider tag"><script>
+  Krux('require:http').pixel({
+    url: "//s.ixiaa.com/digi/C726AB29-0470-440B-B8D2-D552CED3A3DC/a.gif"
+  });
+</script></span><span class="kxtag kxinvisible" data-id="28107" data-alias="Bizo provider tag"><script>
+(function(){
+  if (window.KRUX) {
+    var pubid = KRUXSetup.pubid;
+  } else if (window.Krux) {
+    var pubid = Krux('get', 'pubid');
+  } else { 
+    return;
+  }
+  var prefix = location.protocol == 'https:' ? "https:" : "http:";
+  var kurl = prefix + '//beacon.krxd.net/data.gif?_kdpid=890a6228-04af-4630-85b6-0b49dee6157f&pid=' + pubid;
+  var u = prefix + '//api.bizographics.com/v1/profile.redirect?api_key=595bae8dbc0c4c42b4544e688b10c002' + 
+        '&callback_url=' + escape(kurl);
+  var i = new Image();
+  i.src = u;
+})();
+</script></span><span class="kxtag kxinvisible" data-id="28108" data-alias="eXelate Media provider tag"><script>
+(function(){
+  var kuid = Krux('get', 'user');
+  if (kuid) {
+    Krux('require:http').pixel({
+      url: "//loadm.exelator.com/load",
+      data: {
+          _kdpid: 'e4942ff0-4070-4896-a7ef-e6a5a30ce9f9',
+          buid: kuid,
+          p: '204',
+          g: '270',
+          j: '0'
+      }});
+  }
+  })();
+</script></span></div><script src="details_news_files/controltag.ae7f2374304abe49e3ec18a3fb32755f" async=""></script><script src="details_news_files/a4WNn6KVyr4yHaacwqm_6r.js" async=""></script><script src="details_news_files/fbds.js" async=""></script><script src="details_news_files/ti.js" type="text/javascript" async=""></script><script src="details_news_files/gpt.js" type="text/javascript" async=""></script><script src="details_news_files/ta-pagesocial-sdk.js"></script><script src="details_news_files/controltag.js" async="" type="text/javascript"></script><script src="details_news_files/beacon.js" async=""></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VgYPWFNWGwIBVFFVDwU="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e){function n(t,e,n){n||(n={});for(var r=o[t],a=r&&r.length||0,s=n[i]||(n[i]={}),u=0;a>u;u++)r[u].apply(s,e);return s}function r(t,e){var n=o[t]||(o[t]=[]);n.push(e)}var o={},i="nr@context";e.exports={on:r,emit:n}},{}],2:[function(t){function e(t,e,o,a,u){return s?s-=1:n("err",[u||new UncaughtException(t,e,o)]),"function"==typeof i?i.apply(this,r(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}var n=t("handle"),r=t(6),o=t(5),i=window.onerror,a=!1,s=0;t("loader").features.push("err"),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(4),a=!0)}o.on("fn-start",function(){a&&(s+=1)}),o.on("fn-err",function(t,e,r){a&&(this.thrown=!0,n("err",[r,(new Date).getTime()]))}),o.on("fn-end",function(){a&&!this.thrown&&s>0&&(s-=1)}),o.on("internal-error",function(t){n("ierr",[t,(new Date).getTime(),!0])})},{1:5,2:4,3:3,4:6,5:1,6:14,handle:"D5DuLP",loader:"G9z0Bl"}],3:[function(t){function e(t){r.inPlace(t,["addEventListener","removeEventListener"],"-",n)}function n(t){return t[1]}var r=t(1),o=(t(3),t(2));if(e(window),"getPrototypeOf"in Object){for(var i=document;i&&!i.hasOwnProperty("addEventListener");)i=Object.getPrototypeOf(i);i&&e(i);for(var a=XMLHttpRequest.prototype;a&&!a.hasOwnProperty("addEventListener");)a=Object.getPrototypeOf(a);a&&e(a)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&e(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=e["nr@wrapped"]?t[1]=e["nr@wrapped"]:e["nr@wrapped"]=t[1]=r(e,"fn-"):"function"==typeof e.handleEvent&&r.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:15,2:1,3:14}],4:[function(t){var e=(t(3),t(1)),n=t(2);e.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=e(t[0],"fn-")})},{1:15,2:1,3:14}],5:[function(t){function e(t){var e=t[0];"string"==typeof e&&(e=new Function(e)),t[0]=n(e,"fn-")}var n=(t(3),t(1)),r=t(2);n.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",e)},{1:15,2:1,3:14}],6:[function(t){function e(){o.inPlace(this,s,"fn-")}function n(t,e){o.inPlace(e,["onreadystatechange"],"fn-")}function r(t,e){return e}var o=t(1),i=t(2),a=window.XMLHttpRequest,s=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];window.XMLHttpRequest=function(t){var n=new a(t);return i.emit("new-xhr",[],n),o.inPlace(n,["addEventListener","removeEventListener"],"-",function(t,e){return e}),n.addEventListener("readystatechange",e,!1),n},window.XMLHttpRequest.prototype=a.prototype,o.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",r),i.on("send-xhr-start",n),i.on("open-xhr-start",n)},{1:15,2:1}],7:[function(t){function e(){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;u>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,d="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,p=e(d);if(p&&(r.rxSize=p),this.sameOrigin){var f=t.getResponseHeader("X-NewRelic-App-Data");f&&(n.cat=f.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}t("loader").features.push("xhr");var o=t("handle"),i=t(1),a=t(5),s=["load","error","abort","timeout"],u=s.length,d=t(2);t(3),t(4),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var d=e(o);d&&(r.txSize=d)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){a.emit("internal-error",e)}};for(var p=0;u>p;p++)n.addEventListener(s[p],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&e()},{1:8,2:11,3:3,4:6,5:1,handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e){var n=r[t];return n?n.apply(this,e):(o[t]||(o[t]=[]),void o[t].push(e))}var r={},o={};e.exports=n,n.queues=o,n.handlers=r},{}],11:[function(t,e){function n(t){if(!t||"object"!=typeof t&&"function"!=typeof t)return-1;if(t===window)return 0;if(o.call(t,"__nr"))return t.__nr;try{return Object.defineProperty(t,"__nr",{value:r,writable:!0,enumerable:!1}),r}catch(e){return t.__nr=r,r}finally{r+=1}}var r=1,o=Object.prototype.hasOwnProperty;e.exports=n},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=c.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID){c.proto="https"===f.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=u.createElement("script");e.src=c.proto+t.agent,u.body.appendChild(e)}}function r(){"complete"===u.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,u=s.document,d="addEventListener",p="attachEvent",f=(""+location).split("?")[0],c=e.exports={offset:i(),origin:f,features:[]};u[d]?(u[d]("DOMContentLoaded",o,!1),s[d]("load",n,!1)):(u[p]("onreadystatechange",r),s[p]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],14:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],15:[function(t,e){function n(t,e,n,r){function nrWrapper(){try{var a,u=s(arguments),d=this,p=n&&n(u,d)||{}}catch(f){i([f,"",[u,d,r],p])}o(e+"start",[u,d,r],p);try{return a=t.apply(d,u)}catch(c){throw o(e+"err",[u,d,c],p),c}finally{o(e+"end",[u,d,a],p)}}return t&&"function"==typeof t&&t.apply&&!t._wrapped?(e||(e=""),nrWrapper._wrapped=!0,nrWrapper):t}function r(t,e,r,o){r||(r="");var i,a,s,u="-"===r.charAt(0);for(s=0;s<e.length;s++)a=e[s],i=t[a],i&&"function"==typeof i&&i.apply&&!i._wrapped&&(t[a]=n(i,u?a+r:r,o,a,t))}function o(t,e,n){try{a.emit(t,e,n)}catch(r){i([r,t,e,n])}}function i(t){try{a.emit("internal-error",t)}catch(e){}}var a=t(1),s=t(2);e.exports=n,n.inPlace=r},{1:1,2:14}]},{},["G9z0Bl",2,7]);</script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<title>Here's What You Need to Know About Buying a Custom Built PC | Digital Trends</title>
+
+		<link rel="shortcut icon" href="http://cdn2.digitaltrends.com/favicon.ico?ver=2">
+		<link rel="apple-touch-icon" href="http://cdn2.digitaltrends.com/touch-icon-iphone.png?ver=2">
+		<link rel="apple-touch-icon" sizes="72x72" href="http://cdn2.digitaltrends.com/touch-icon-ipad.png?ver=2">
+		<link rel="apple-touch-icon" sizes="114x114" href="http://cdn2.digitaltrends.com/touch-icon-iphone4.png?ver=2">
+
+		
+		
+			<!-- Begin comScore Tag  (dt-core/dt-core.analytics.php) -->
+			<script>var blacklisted=false;var no_comscore_cookie=(result=new RegExp('(?:^|; )'+encodeURIComponent('dt_no_comscore')+'=([^;]*)').exec(document.cookie))?(result[1]):null;if(no_comscore_cookie===null){var utm_source_blacklist=JSON.parse('[\"a1\\r\",\"d1\\r\",\"n2\"]');var utm_content_blacklist=JSON.parse('[\"\"]');var query_string=window.location.search.substring(1);var query_vars=query_string.split("&");var utm_source='';var utm_content='';for(var i=0;i<query_vars.length;i++){var keyval=query_vars[i].split('=');if(keyval[0]!==undefined&&keyval[1]!==undefined&&keyval[0]=='utm_source'){utm_source=keyval[1];}else if(keyval[0]!==undefined&&keyval[1]!==undefined&&keyval[0]=='utm_content'){utm_content=keyval[1];}}
+if(utm_source){for(var j=0;j<utm_source_blacklist.length;j++){if(utm_source_blacklist[j].trim().toLowerCase()===utm_source.trim().toLowerCase()){blacklisted=true;break;}}}
+if(utm_content){for(var j=0;j<utm_content_blacklist.length;j++){if(utm_content_blacklist[j].trim().toLowerCase()===utm_content.trim().toLowerCase()){blacklisted=true;break;}}}}else
+blacklisted=true;if(!blacklisted){var _comscore=_comscore||[];_comscore.push({c1:"2",c2:"7518287"});(function(){var s=document.createElement("script"),el=document.getElementsByTagName("script")[0];s.async=true;s.src=(document.location.protocol=="https:"?"https://sb":"http://b")+".scorecardresearch.com/beacon.js";el.parentNode.insertBefore(s,el);})();}else
+document.cookie='dt_no_comscore=dt_no_comscore; expires=0; path=/';</script>
+			<!-- End comScore Tag -->
+
+			
+				<meta name="tags" content="Digital Storm,falcon northwest,Gaming Computers,Origin PC,pc build">
+				<!-- Begin dt_utm_source (lib/analytics.php) -->
+	<script>var utm_source_cookie=(result=new RegExp('(?:^|; )'+encodeURIComponent('dt_utm_source')+'=([^;]*)').exec(document.cookie))?(result[1]):null;if(utm_source_cookie===null){var query_string=window.location.search.substring(1);var query_vars=query_string.split("&");var dt_utm_source='';for(var i=0;i<query_vars.length;i++){var keyval=query_vars[i].split('=');if(keyval[0]!==undefined&&keyval[1]!==undefined&&keyval[0]=='utm_source'){dt_utm_source=keyval[1];}}
+if(dt_utm_source)
+document.cookie='dt_utm_source='+dt_utm_source+'; expires=0; path=/';}else
+dt_utm_source=utm_source_cookie;</script>
+	<!-- End dt_utm_source (lib/analytics.php) -->
+	
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.21 - http://yoast.com/wordpress/seo/ -->
+<meta name="description" content="Today's custom PCs are the best, most affordable rigs ever built. What components do you need in such a computer, and how much do you need to spend?">
+<link rel="canonical" href="http://www.digitaltrends.com/computing/heres-what-you-need-to-know-about-buying-a-custom-built-pc/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Here’s what you need to know about buying a custom built PC">
+<meta property="og:description" content="Today's custom PCs are the best, most affordable rigs ever built. What components do you need in such a computer, and how much do you need to spend?">
+<meta property="og:url" content="http://www.digitaltrends.com/computing/heres-what-you-need-to-know-about-buying-a-custom-built-pc/">
+<meta property="og:site_name" content="Digital Trends">
+<meta property="article:publisher" content="https://www.facebook.com/digitaltrendsftw">
+<meta property="article:tag" content="Digital Storm">
+<meta property="article:tag" content="falcon northwest">
+<meta property="article:tag" content="Gaming Computers">
+<meta property="article:tag" content="Origin PC">
+<meta property="article:tag" content="pc build">
+<meta property="article:section" content="Computing">
+<meta property="article:section" content="Gaming">
+<meta property="article:published_time" content="2014-05-11T09:00:15+00:00">
+<meta property="article:modified_time" content="2014-05-09T12:45:29+00:00">
+<meta property="og:image" content="http://icdn3.digitaltrends.com/image/cyberpower-zeus-mini-review-side-angle-2-200x200-c.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@digitaltrends">
+<meta name="twitter:domain" content="Digital Trends">
+<meta name="twitter:creator" content="@digitaltrends">
+<meta name="twitter:image" content="http://icdn2.digitaltrends.com/image/cyberpower-zeus-mini-review-side-angle-2-510x0.jpg"><!-- / Yoast WordPress SEO plugin. -->
+
+	<!-- BEGIN Krux Control Tag for "Digital Trends" (dt-core/dt-core.analytics.php) -->
+	<!-- Source: /snippet/controltag?confid=IwNLJc7X&site=Digital%20Trends&edit=1 -->
+	<script class="kxct" data-id="IwNLJc7X" data-timing="async" data-version="1.9" type="text/javascript">window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);(function(){var k=document.createElement('script');k.type='text/javascript';k.async=true;var m,src=(m=location.href.match(/\bkxsrc=([^&]+)/))&&decodeURIComponent(m[1]);k.src=/^https?:\/\/([^\/]+\.)?krxd\.net(:\d{1,5})?\//i.test(src)?src:src==="disable"?"":(location.protocol==="https:"?"https:":"http:")+"//cdn.krxd.net/controltag?confid=IwNLJc7X";var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(k,s);}());</script>
+	<!-- END Krux Controltag -->
+
+	<!-- BEGIN Krux GPT (dt-core/dt-core.analytics.php)-->
+	<script>window.Krux||((Krux=function(){Krux.q.push(arguments);}).q=[]);(function(){function retrieve(n){var m,k='kx'+n;if(window.localStorage){return window.localStorage[k]||"";}else if(navigator.cookieEnabled){m=document.cookie.match(k+'=([^;]*)');return(m&&unescape(m[1]))||"";}else{return'';}}
+Krux.user=retrieve('user');Krux.segments=retrieve('segs')&&retrieve('segs').split(',')||[];})();</script>
+	<!-- END Krux GPT (dt-core/dt-core.analytics.php)-->
+	<link rel="alternate" type="application/rss+xml" title="Digital Trends | Feed" href="http://www.digitaltrends.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Digital Trends | Here’s what you need to know about buying a custom built PC Comments Feed" href="http://www.digitaltrends.com/computing/heres-what-you-need-to-know-about-buying-a-custom-built-pc/feed/">
+		<script>var DTSSO_Facebook_AppId='61377565444';var DTSSO_Facebook_ChannelUrl='http://www.digitaltrends.com/fb-channel.php';</script>
+		<link rel="stylesheet" id="dt-css-eb34b51db17a4a90ecb8e0b6c5012ca6-css" href="details_news_files/dt-optimized-css-eb34b51db17a4a90ecb8e0b6c5012ca6.css" type="text/css" media="all">
+<script type="text/javascript" src="details_news_files/dt-optimized-head-js-0a4dbf94980a25629f46acff74cabb13.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.digitaltrends.com/xmlrpc.php?rsd">
+<link rel="shortlink" href="http://www.digitaltrends.com/?p=579392">
+
+		<!-- Chartbeat (dt-core/dt-core.analytics.php) -->
+		<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+		<!-- End Chartbeat -->
+
+	
+		<!-- Begin Google Analytics (dt-core/dt-core.analytics.php) -->
+
+		<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-82208-8']);_gaq.push(['_setDomainName','.digitaltrends.com']);_gaq.push(['_setMaxCustomVariables',50]);_gaq.push(['_setCustomVar',1,'Post-Type','Post',3]);_gaq.push(['_setCustomVar',2,'Publish-Date','2014-05-11',3]);_gaq.push(['_setCustomVar',3,'Author','mattsmith',3]);_gaq.push(['_trackPageview']);_gaq.push(['_trackPageLoadTime']);(function(){var ga=document.createElement('script');ga.type='text/javascript';ga.async=true;ga.src=('https:'==document.location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(ga);})();</script><script src="details_news_files/ga.js" async="" type="text/javascript"></script>
+		<!-- End Google Analytics -->
+
+		<!-- BEGIN True Anthem (dt-core/dt-core.analytics.php) -->
+	<script>(function(w,d){var s1=d.getElementsByTagName('script')[0],s=d.createElement('script');s.src='//tru.am/scripts/ta-pagesocial-sdk.js';if(s.addEventListener){s.addEventListener('load',function(){w.TRUE_ANTHEM.configure('111');},false);}else{s.onreadystatechange=function(){if(s.readyState in{loaded:1,complete:1}){s.onreadystatechange=null;w.TRUE_ANTHEM.configure('111');}};}
+s1.parentNode.insertBefore(s,s1);}(window,document));</script>
+	<!-- END True Anthem (dt-core/dt-core.analytics.php) -->
+	<meta name="news_keywords" content="gaming computer, buy gaming computer, buy custom gaming computer, how to customize gaming pc">
+	<style type="text/css">span.dropcap{display:inline;float:left;margin:0;padding: .25em .08em 0 0;#padding: 0.25em 0.08em 0.2em 0.00em;_padding:0.25em 0.08em 0.4em 0.00em;font-size:3.2em;line-height: .4em;text-transform:capitalize;color:#c30;font-family:Georgia,Times New Romans,Trebuchet MS,Lucida Grande}</style>
+			<!--Begin GPT -->
+		<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[];(function(){var gads=document.createElement("script");gads.async=true;gads.type="text/javascript";var useSSL="https:"==document.location.protocol;gads.src=(useSSL?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var node=document.getElementsByTagName("script")[0];node.parentNode.insertBefore(gads,node);})();</script>
+		<!--End GPT -->
+					<!--Begin Define GPT Ad Slots-->
+			<script type="text/javascript">var _gpt_slots=[];googletag.cmd.push(function(){var slot=googletag.defineSlot("/5611/dt.dgt.www",[[728,90],[970,66],[970,90],[970,250],[970,418],[970,200]],"dtadq-leaderboard").addService(googletag.pubads());if(typeof dt_utm_source!=='undefined'&&dt_utm_source)
+slot.setTargeting('trs',dt_utm_source);slot.setTargeting("type","roadblock");slot.setTargeting("loc","atf");slot.setTargeting("adspot","all");slot.setTargeting("tags",["digital-storm","falcon-northwest","gaming-computers","origin-pc","pc-build"]);slot.setTargeting("cat",["computing","gaming"]);slot.setTargeting("aid","579392");_gpt_slots.push(slot);});googletag.cmd.push(function(){var slot=googletag.defineOutOfPageSlot("/5611/dt.dgt.www","dtadq-out-of-page").addService(googletag.pubads());if(typeof dt_utm_source!=='undefined'&&dt_utm_source)
+slot.setTargeting('trs',dt_utm_source);slot.setTargeting("type","roadblock");slot.setTargeting("adspot","all");slot.setTargeting("tags",["digital-storm","falcon-northwest","gaming-computers","origin-pc","pc-build"]);slot.setTargeting("cat",["computing","gaming"]);slot.setTargeting("aid","579392");_gpt_slots.push(slot);});googletag.cmd.push(function(){var slot=googletag.defineSlot("/5611/dt.dgt.www",[[728,90]],"dtadq-footer").addService(googletag.pubads());if(typeof dt_utm_source!=='undefined'&&dt_utm_source)
+slot.setTargeting('trs',dt_utm_source);slot.setTargeting("loc","btf");slot.setTargeting("adspot","all");slot.setTargeting("tags",["digital-storm","falcon-northwest","gaming-computers","origin-pc","pc-build"]);slot.setTargeting("cat",["computing","gaming"]);slot.setTargeting("aid","579392");_gpt_slots.push(slot);});googletag.cmd.push(function(){var slot=googletag.defineSlot("/5611/dt.dgt.www",[[300,250],[300,600],[300,1050]],"dtadq-300").addService(googletag.pubads());if(typeof dt_utm_source!=='undefined'&&dt_utm_source)
+slot.setTargeting('trs',dt_utm_source);slot.setTargeting("type","roadblock");slot.setTargeting("adspot","all");slot.setTargeting("square","1");slot.setTargeting("tags",["digital-storm","falcon-northwest","gaming-computers","origin-pc","pc-build"]);slot.setTargeting("cat",["computing","gaming"]);slot.setTargeting("aid","579392");_gpt_slots.push(slot);});googletag.cmd.push(function(){var slot=googletag.defineSlot("/5611/dt.dgt.www",[[300,250]],"dtadq-300-3").addService(googletag.pubads());if(typeof dt_utm_source!=='undefined'&&dt_utm_source)
+slot.setTargeting('trs',dt_utm_source);slot.setTargeting("square","2");slot.setTargeting("adspot","all");slot.setTargeting("tags",["digital-storm","falcon-northwest","gaming-computers","origin-pc","pc-build"]);slot.setTargeting("cat",["computing","gaming"]);slot.setTargeting("aid","579392");_gpt_slots.push(slot);});googletag.cmd.push(function(){var slot=googletag.defineSlot("/5611/dt.dgt.www",[[300,250],[300,600],[300,1050]],"dtadq-300-4").addService(googletag.pubads());if(typeof dt_utm_source!=='undefined'&&dt_utm_source)
+slot.setTargeting('trs',dt_utm_source);slot.setTargeting("square","3");slot.setTargeting("adspot","all");slot.setTargeting("tags",["digital-storm","falcon-northwest","gaming-computers","origin-pc","pc-build"]);slot.setTargeting("cat",["computing","gaming"]);slot.setTargeting("aid","579392");_gpt_slots.push(slot);});googletag.cmd.push(function(){googletag.pubads().enableSingleRequest();googletag.pubads().collapseEmptyDivs();if(typeof Krux!=='undefined'){googletag.pubads().setTargeting("ksg",Krux.segments);googletag.pubads().setTargeting("kuid",Krux.user);googletag.pubads().setTargeting("thost",encodeURIComponent(location.hostname));}
+googletag.enableServices();});function dt_reload_gpt_slots(){googletag.pubads().refresh(_gpt_slots);}</script>
+			<!--End Define GPT Ad Slots-->
+					<!-- DT Variables (digitaltrends-2013/functions.php) -->
+		<script type="text/javascript">var ajaxurl="http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/ajax-actions.php";var ord=Math.random()*10000000000000000;</script>
+		<!-- End DT Variables -->
+	 <!-- dtc_seo_head() start -->
+	 <!-- dtc_seo_head() end -->
+	
+	<script src="details_news_files/322026.js" defer="defer" async=""></script><script src="details_news_files/pubads_impl_39.js" type="text/javascript" async=""></script><script src="details_news_files/seg_002" type="text/javascript" async=""></script><script src="details_news_files/nonSecureAnonymousFramework.js"></script><script src="details_news_files/osd.js" type="text/javascript"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,.fb_connect_bar_container span,.fb_connect_bar_container a,.fb_connect_bar_container img,.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}.fb_connect_bar a:hover{color:#fff}.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}.fb_connect_bar div a,.fb_connect_bar span,.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style><style type="text/css" id="tyntShCSS">#tyntSh div,#tyntSh span,#tyntSh img,#tyntSh a,div#tyntSh{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;line-height:1;background:0;text-align:left}#tyntSh img,#tyntSh span{display:inline}#tyntSh div,div#tyntSh{display:block}div#tyntSh{z-index:9999999;position:absolute;height:62px;margin:10px;overflow:visible;background:#FFF;border-radius:5px;text-align:center;box-shadow: 0 2px 6px rgba(0,0,0,0.5)}div#tyntShTr{margin:-11px auto 0 auto;width:0;height:0;border-left:10px solid transparent;border-right:10px solid transparent;border-bottom:11px solid #F1F1F1}img#tyntShTw,img#tyntShP,img#tyntShFb,img#tyntShLi,img#tyntShGp{cursor:pointer;height:28px;width:28px;margin:3px 3px 2px 3px;vertical-align:bottom}div#tyntShPTL,div#tyntShHFL{color:#888;text-decoration:none;margin:0 0 2px 0;background-color:#F1F1F1;padding:2px 4px;border-radius:5px 5px 0 0}div#tyntShHFL{text-align:right;border-radius:0 0 5px 5px;margin:2px 0 0 0}div#tyntShHFL,span#tyntShHFLs,div#tyntShPTL{font:normal 8px Arial}span#tyntShHFLs{cursor:pointer;}span#tyntShHFLs:hover{color:#555;text-decoration:underline}div#tyntShCB{position:absolute;cursor:pointer;width:14px;height:14px;top:0;right:0;background-position:0 -14px;background-repeat:no-repeat}div#tyntShCB:hover{background-position: 0 0}div.tyntShIh,.tyntShIh div,.tyntShIh span{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;line-height:1;background:0;text-align:left}.tyntShIh img,.tyntShIh span{display:inline}.tyntShIh div,div.tyntShIh{display:block;outline:0}div.tyntShIh{position:absolute;cursor:default;background:transparent url(http://cdn.tynt.com/images/ss/pi.png) no-repeat;width:43px;height:21px;opacity:0;filter:alpha(opacity=0);z-index:9999999;-webkit-transition:opacity 0.5s;-moz-transition:opacity 0.5s}div.tyntIhHover{opacity:1;filter:alpha(opacity=100);cursor:pointer}</style></head>
+
+<!--[if lt IE 7]> <body class="ie6 ie single single-post postid-579392 single-format-standard"> <![endif]-->
+<!--[if IE 7]>    <body class="ie7 ie single single-post postid-579392 single-format-standard"> <![endif]-->
+<!--[if IE 8]>    <body class="ie8 ie single single-post postid-579392 single-format-standard"> <![endif]-->
+<!--[if IE 9]>    <body class="ie9 ie single single-post postid-579392 single-format-standard"> <![endif]-->
+<!--[if gt IE 9]><!-->
+	<body data-twttr-rendered="true" class="single single-post postid-579392 single-format-standard sticky-nav stuck-nav" data-post-id="579392" data-post-type="post">
+<!--<![endif]-->
+		
+		<!-- Begin Scorecard (dt-core/dt-core.analytics.php) -->
+		<noscript>
+				<img src="http://b.scorecardresearch.com/p?c1=2&c2=7518287&cv=2.0&cj=1" alt="scorecard"/>
+		</noscript>
+		<!-- End Scorecard -->
+
+			<div id="main-wrap" class="dt-site-skin-wrap">
+			<header id="site-header">
+				<div id="top-bar">
+					<div class="bb-wrap">
+						
+						<div class="dt"><a href="http://www.digitaltrends.com/">DT</a></div>
+						<div class="logo"><a href="http://www.digitaltrends.com/">Digital Trends</a></div>
+
+						<form id="search" method="get" action="http://www.digitaltrends.com/">
+
+							<input class="search" name="s" placeholder="Search DT" type="text">
+							<input src="details_news_files/i_search.png" alt="Search" height="11" type="image" width="11">
+
+						</form>
+
+						<div id="logged-in-component-account-links">
+	<div class="auth">
+		<a class="login-link" rel="nofollow" href="http://www.digitaltrends.com/login/">Login</a>
+
+	 <span>or</span> 
+		<a class="signup-link" rel="nofollow" href="http://www.digitaltrends.com/register/">Signup</a>
+
+	</div>
+
+</div>					</div>
+				</div>
+
+				<div id="nav-bar">
+					<div class="bb-wrap">
+						<nav class="primary mega">
+
+										<!--DTC HTML CACHE HIT START-->			
+							<ul id="menu-primary-navigation-2013" class="menu"><li id="menu-item-411326" class="sub menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-411326"><a href="http://www.digitaltrends.com/product-reviews/">Product Reviews</a>
+<div class="mega-wrap"><div><ul class="sub-menu">
+	<li id="menu-item-411306" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-411306 menu-item-object-id-100008"><a href="http://www.digitaltrends.com/cell-phone-reviews/">Smartphones</a></li>
+	<li id="menu-item-411307" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-411307 menu-item-object-id-100011"><a href="http://www.digitaltrends.com/digital-camera-reviews/">Digital Cameras</a></li>
+	<li id="menu-item-411308" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-411308 menu-item-object-id-100029"><a href="http://www.digitaltrends.com/headphone-reviews/">Headphones</a></li>
+	<li id="menu-item-411310" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-411310 menu-item-object-id-100015"><a href="http://www.digitaltrends.com/laptop-reviews/">Laptops</a></li>
+	<li id="menu-item-415181" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-415181 menu-item-object-id-100014"><a href="http://www.digitaltrends.com/desktop-computer-reviews/">Desktop PCs</a></li>
+	<li id="menu-item-411311" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-411311 menu-item-object-id-105121"><a href="http://www.digitaltrends.com/tablet-reviews/">Tablets</a></li>
+	<li id="menu-item-411312" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-411312 menu-item-object-id-100007"><a href="http://www.digitaltrends.com/tv-reviews/">TVs</a></li>
+	<li id="menu-item-487060" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-487060 menu-item-object-id-143758"><a href="http://www.digitaltrends.com/game-reviews/">Games</a></li>
+	<li id="menu-item-487062" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-487062 menu-item-object-id-143751"><a href="http://www.digitaltrends.com/car-reviews/">Cars</a></li>
+	<li id="menu-item-466888" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-466888 menu-item-object-id-134347"><a href="http://www.digitaltrends.com/sound-bar-reviews/">Sound Bars</a></li>
+	<li id="menu-item-431351" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-431351 menu-item-object-id-100169"><a href="http://www.digitaltrends.com/ipod-dock-reviews/">Speaker Docks</a></li>
+	<li id="menu-item-411328" class="more menu-item menu-item-type-post_type menu-item-object-page menu-item-411328"><a href="http://www.digitaltrends.com/product-reviews/">+ More Reviews</a></li>
+</ul><div class="mega-container reviews"></div></div></div>
+</li>
+<li id="menu-item-411314" class="sub menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-411314"><a>News</a>
+<div class="mega-wrap"><div><ul class="sub-menu">
+	<li id="menu-item-411316" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-411316 menu-item-object-id-4"><a href="http://www.digitaltrends.com/mobile/">Mobile</a></li>
+	<li id="menu-item-411315" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-411315 menu-item-object-id-5"><a href="http://www.digitaltrends.com/computing/">Computing</a></li>
+	<li id="menu-item-411318" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-411318 menu-item-object-id-7"><a href="http://www.digitaltrends.com/home-theater/">Home Theater</a></li>
+	<li id="menu-item-411317" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-411317 menu-item-object-id-6"><a href="http://www.digitaltrends.com/gaming/">Gaming</a></li>
+	<li id="menu-item-552454" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-552454 menu-item-object-id-952"><a href="http://www.digitaltrends.com/movies/">Movies</a></li>
+	<li id="menu-item-411323" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-411323 menu-item-object-id-17"><a href="http://www.digitaltrends.com/photography/">Photography</a></li>
+	<li id="menu-item-411321" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-411321 menu-item-object-id-431"><a href="http://www.digitaltrends.com/cars/">Cars</a></li>
+	<li id="menu-item-411320" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-411320 menu-item-object-id-279"><a href="http://www.digitaltrends.com/social-media/">Social Media</a></li>
+	<li id="menu-item-411319" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-411319 menu-item-object-id-8"><a href="http://www.digitaltrends.com/home/">DT Home</a></li>
+	<li id="menu-item-411322" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-411322 menu-item-object-id-571"><a href="http://www.digitaltrends.com/cool-tech/">Cool Tech</a></li>
+	<li id="menu-item-457329" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-457329 menu-item-object-id-143173"><a href="http://www.digitaltrends.com/sports/">Sports</a></li>
+	<li id="menu-item-470294" class="more menu-item menu-item-type-custom menu-item-object-custom menu-item-470294"><a href="http://www.digitaltrends.com/page/1/">+ More News</a></li>
+</ul><div class="mega-container news"></div></div></div>
+</li>
+<li id="menu-item-411327" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-411327"><a href="http://www.digitaltrends.com/videos/">Videos</a></li>
+<li id="menu-item-520473" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-520473 menu-item-object-id-19"><a href="http://www.digitaltrends.com/features/">Features</a></li>
+<li id="menu-item-552394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-552394"><a href="http://deals.digitaltrends.com/">Deals</a></li>
+</ul>
+										<!--DTC HTML CACHE HIT STOP-->
+						</nav>
+
+						
+										<!--DTC HTML CACHE HIT START-->			
+								<div id="sitewide-social">
+
+									<div class="facebook cached">
+										<div class="wrap">
+											<div class="expand" data-app-class="fb-like">
+												<div fb-iframe-plugin-query="app_id=61377565444&amp;href=http%3A%2F%2Fwww.facebook.com%2Fdigitaltrendsftw&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;send=false&amp;show_faces=false&amp;width=100" fb-xfbml-state="rendered" class="fb-like fb_iframe_widget" data-href="http://www.facebook.com/digitaltrendsftw" data-layout="button_count" data-send="false" data-width="100" data-show-faces="false"><span style="vertical-align: top; width: 0px; height: 0px;"><iframe src="details_news_files/like.html" style="border: medium none; visibility: visible;" title="fb:like Facebook Social Plugin" allowtransparency="true" name="ffbd5970ee6ae8" frameborder="0" height="1000px" scrolling="no" width="100px"></iframe></span></div>
+											</div>
+											<span class="icon"></span>
+											<span class="num">246<sup>K</sup></span>
+										</div>
+									</div>
+
+									<div class="twitter cached">
+										<div class="wrap">
+											<div class="expand" data-app-class="twitter-follow-button">
+												<a class="app-class" data-show-count="false" data-width="60px" href="https://twitter.com/DigitalTrends"></a>
+											</div>
+											<span class="icon"></span>
+											<span class="num">99<sup>K</sup></span>
+										</div>
+									</div>
+
+									<div class="gplus cached">
+										<div class="wrap">
+											<div class="expand" data-app-class="g-plusone">
+												<div>
+													<div class="app-class" data-href="https://plus.google.com/105021553983255532005/posts" data-size="medium" data-callback="gotoGplusPage" data-onstartinteraction="dtGplusStartInteraction" data-onendinteraction="dtGplusEndInteraction"></div>
+												</div>
+											</div>
+											<span class="icon"></span>
+											<span class="num">26<sup>K</sup></span>
+										</div>
+									</div>
+
+									<a class="rss" href="http://www.digitaltrends.com/feed/" title="Subscribe to our RSS Feed">
+										<div class="wrap">
+											<span class="icon"></span>
+										</div>
+									</a>
+								</div>
+
+										<!--DTC HTML CACHE HIT STOP-->
+											</div>
+				</div>
+			</header>
+
+			<div id="leaderboard-header" class="leaderboard">
+
+	<div class="bb-wrap">
+
+					<div id="dtadq-leaderboard" class="clearfix gpt-ad-slot">
+				<script type="text/javascript">googletag.cmd.push(function(){googletag.display('dtadq-leaderboard');});</script>
+			<div style="border: 0pt none;" id="google_ads_iframe_/5611/dt.dgt.www_0__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" name="google_ads_iframe_/5611/dt.dgt.www_0" id="google_ads_iframe_/5611/dt.dgt.www_0" frameborder="0" height="90" scrolling="no" width="728"></iframe></div><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom; visibility: hidden; display: none;" marginheight="0" marginwidth="0" name="google_ads_iframe_/5611/dt.dgt.www_0__hidden__" id="google_ads_iframe_/5611/dt.dgt.www_0__hidden__" frameborder="0" height="0" scrolling="no" width="0"></iframe></div>
+			
+					<div style="display: none;" id="dtadq-out-of-page" class="clearfix gpt-ad-slot">
+				<script type="text/javascript">googletag.cmd.push(function(){googletag.display('dtadq-out-of-page');});</script>
+			<div style="border: 0pt none;" id="google_ads_iframe_/5611/dt.dgt.www_1__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" name="google_ads_iframe_/5611/dt.dgt.www_1" id="google_ads_iframe_/5611/dt.dgt.www_1" frameborder="0" height="1" scrolling="no" width="1"></iframe></div></div>
+			
+	</div>
+
+</div>
+			<div id="page" itemscope="" itemtype="http://schema.org/Article">
+				<div class="bb-wrap">
+
+
+
+<header class="title-block">
+	<div class="crumbs"><span xmlns:v="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb"><a href="http://www.digitaltrends.com/" rel="v:url" property="v:title">Home</a></span> <em>&gt;</em> <span typeof="v:Breadcrumb"><a href="http://www.digitaltrends.com/computing/" rel="v:url" property="v:title">Computing</a></span> <em>&gt;</em> <span typeof="v:Breadcrumb"><span class="breadcrumb_last" property="v:title">Here’s what you need to know about buying a…</span></span></span></div>
+	<h1 itemprop="name">Here’s what you need to know about buying a custom built PC</h1>
+
+	<div class="byline">
+
+	<cite>
+
+		By <span class="vcard">
+			<a class="author url fn " rel="author" href="http://www.digitaltrends.com/users/mattsmith/">Matt Smith</a>
+		</span>
+		&nbsp;<span class="dash">—</span>
+		&nbsp;<span itemprop="datePublished" content="2014-05-11" class="date dtreviewed">
+			<span class="value-title" title="2014-05-11">
+				<time datetime="2014-05-11T09:00:15+00:00" pubdate="">
+				May 11, 2014</time>
+			</span>
+		</span>
+
+		<span id="logged-in-component-single-admin-links"></span>
+	</cite>
+
+</div></header>
+
+
+
+
+<div id="primary-wrap" class="full-width-header-media">
+	
+
+
+
+	
+
+	
+	
+	<div class="social-share " data-post-id="579392">
+
+					
+			<div class="comment ">
+				<a class="wrap" href="http://www.digitaltrends.com/computing/heres-what-you-need-to-know-about-buying-a-custom-built-pc/#comments">
+					<span class="text">Add a comment</span>
+					<span class="icon"></span>
+									</a>
+			</div>
+		
+				<div class="twitter cached full">
+			<div class="wrap">
+				<div class="expand" data-app-class="twitter-share-button">
+					<div class="widget-container">
+						<a href="https://twitter.com/share" class="app-class" data-url="http://bit.ly/SILA8v" data-counturl="http://www.digitaltrends.com/computing/heres-what-you-need-to-know-about-buying-a-custom-built-pc/" data-text="Here's what you need to know about buying a custom built PC" data-via="DigitalTrends" data-hashtags="" target="_blank" rel="nofollow"></a>
+					</div>
+				</div>
+				<span class="icon"></span>
+									<span class="num">4</span>
+							</div>
+		</div>
+
+				<div class="facebook cached ">
+			<div class="wrap">
+				<div class="expand" data-app-class="fb-like">
+					<div class="app-class" data-href="http://www.digitaltrends.com/computing/heres-what-you-need-to-know-about-buying-a-custom-built-pc/" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div>
+				</div>
+				<span class="icon"></span>
+							</div>
+		</div>
+
+				<div class="gplus cached full">
+			<div class="wrap">
+				<div class="expand" data-app-class="g-plusone">
+					<div class="app-class" data-href="http://www.digitaltrends.com/computing/heres-what-you-need-to-know-about-buying-a-custom-built-pc/" data-size="medium" data-expandto="right" data-onstartinteraction="dtGplusStartInteraction" data-onendinteraction="dtGplusEndInteraction"></div>
+				</div>
+				<span class="icon"></span>
+									<span class="num">2</span>
+							</div>
+		</div>
+
+				<div class="linkedin cached ">
+			<div class="wrap">
+				<div class="expand" data-app-class="IN/Share">
+					<script data-url="http://www.digitaltrends.com/computing/heres-what-you-need-to-know-about-buying-a-custom-built-pc/" data-counter="right"></script>
+				</div>
+				<span class="icon"></span>
+							</div>
+		</div>
+
+					<div class="email">
+				<a class="wrap" href="javascript:void(0)" data-post-id="579392" title="Share this by email">
+					<span class="icon"></span>
+				</a>
+			</div>
+		
+	</div>
+
+
+
+			<div class="header-media image full-width">
+							<a href="http://www.digitaltrends.com/wp-content/uploads/2014/03/origin-genesis-gaming-desktop-review-front-side-case-lights.jpg" rel="post">
+					<img src="details_news_files/origin-genesis-gaming-desktop-review-front-side-case-lights-.jpg" alt="Origin Genesis gaming desktop review front side case lights">				</a>
+
+									</div>
+	
+
+	
+
+
+
+
+	<div id="primary">
+		
+
+		<article id="content" class="single-post" itemprop="articleBody">
+			<p>While sales of computers have slid over the last few years, <a href="http://www.digitaltrends.com/computing/boutique-boom-bust-small-pc-makers-weathered-downturn/">small companies that make custom computers have grown</a>.
+ The dividing line between those who care about PC performance and those
+ who don’t is more distinct than ever. Specialists like Falcon 
+Northwest, Origin and Digital Storm are where it’s at.</p>
+<p>Buying a customized PC isn’t the same as buying an off-the-shelf 
+model, however. While you don’t build the system yourself, you are 
+responsible for picking the components, and a mistake could mean 
+spending hundreds, even thousands, more than necessary. Here’s what you 
+should know before you take your system through checkout.</p>
+<h3>A home to your creation</h3>
+<p>Readers who are ready to drop five grand or more on an extremely 
+high-end configuration will be able to choose from only one or two 
+models offered by most PC makers, as the top-tier desktops are usually 
+full towers. Everyone else, however, may be wondering what size of 
+desktop is best, whether it’s a mid-tower, full tower, or perhaps a 
+pint-sized PC like the <a href="http://www.digitaltrends.com/desktop-computer-reviews/cyberpower-zeus-mini-review/">CyberPower Zeus</a>?</p>
+<p>Generally, we recommend going with a mid-tower design. Systems 
+labeled as such are usually 16 to 24 inches tall, equally deep, and 
+about eight to ten inches wide. They’re still rather large by modern 
+standards, and they have room inside for multiple hard drives, a pair of
+ video cards and an overclocked processor with a beefy cooler.</p>
+
+<p><a href="http://www.digitaltrends.com/wp-content/uploads/2012/08/Falcon-NW-Talon-topdownWA.jpg"><span class="dt-auto-zoom"><span></span></span><img class="aligncenter size-large wp-image-551688" alt="Falcon-NW-Talon-topdownWA" src="details_news_files/falcon-nw-talon-topdownwa-625x625.jpg" height="416" width="625"></a></p>
+
+<p>Full towers provide even more space, but are often more expensive for
+ any given configuration. Also, they can be so large that finding a 
+place for them in your <a href="http://www.digitaltrends.com/home/" target="_blank">home</a> becomes difficult. The largest are too tall to comfortably fit under a desk, and too heavy to move frequently.</p>
+<p>Mini-PCs like the <a href="http://www.digitaltrends.com/desktop-computer-reviews/falcon-northwest-tiki-review/">Falcon Northwest Tiki</a> and <a href="http://www.digitaltrends.com/desktop-computer-reviews/dell-alienware-x51-review/">Alienware X51</a>
+ can be a good choice in special situations. They’re particularly adept 
+as home theater computers, or in rooms where there’s very little space. 
+Beware that upgrade-ability is limited, however, and that some variants 
+are loud at load.</p>
+<h3>When second best is good enough</h3>
+<p>Once you decide how big you want your system to be, you’ll have to 
+pick out the parts. The rising MSRP displayed alongside your custom 
+configuration can become intimidating, but if you know how to properly 
+build a PC, you can end up with a great rig at a reasonable price.</p>
+<p>You may be surprised to hear that the speed of the processor isn’t 
+terribly important – for gaming at least. While we recommend that you 
+stay away from AMD hardware, which is substantially behind Intel, you’re
+ likely to be satisfied by any Core i5 quad core CPU. <a href="http://techreport.com/review/23246/inside-the-second-gaming-performance-with-today-cpus/6" target="_blank">Testing shows that most games receive no benefit from anything quicker</a>, such as a Core i7 quad core or a Core i7 Extreme.</p>
+
+<p><a href="http://www.digitaltrends.com/wp-content/uploads/2012/08/Falcon-NW-Talon-CPURAM.jpg"><span class="dt-auto-zoom"><span></span></span><img class="aligncenter size-large wp-image-551670" alt="Falcon-NW-Talon-CPURAM" src="details_news_files/falcon-nw-talon-cpuram-625x625.jpg" height="416" width="625"></a></p>
+
+<p>RAM can also be approached with a similar “good enough” attitude. 
+Modern games run on 8GB of memory with ease,&nbsp;and it’s incredibly 
+simple to add more, so there’s no need to go crazy. Also, RAM speed has 
+almost no impact on game performance, so don’t waste money upgrading to 
+the quickest DIMMs available.</p>
+<p>The hard drive you select won’t have much of an impact on framerates 
+either, but it will determine how quickly a game loads. Civilization V 
+benefits massively from a solid state drive, and buying one can cut load
+ times in half (or better) when compared to a mechanical drive. The 
+downside, of course, is cost – a large solid state drive is expensive. 
+Pairing a small SSD (128GB to 256GB) with a mechanical drive can be a 
+good compromise.</p>
+<p>You may be tempted to lay down extra cash for a quicker processor, 
+more memory and a faster hard drive in hopes of “future-proofing” your 
+system. However, this is a gamble. Few people can say what the games of 
+tomorrow might demand. If you just can’t shake the itch to go big 
+though, we suggest spending your money on the processor. Adding a hard 
+drive or more RAM is easy, and relatively inexpensive. Replacing the 
+processor is not.</p>
+<h3>What really matters</h3>
+<p>Now let’s talk about the most important part of any gaming rig, the 
+beating heart that powers it all, the engine which makes it purr – the 
+video card.</p>
+<p>Picking a card can seem like a daunting task, but it all comes down 
+to the resolution at which you run stuff. The math behind a monitor’s 
+pixel count means that what seems like a small increase in resolution 
+actually has a big impact on gameplay. Upgrading from 1080p to 1440p, 
+for example, almost doubles the number of pixels the video card must 
+drive.</p>
+
+<p><a href="http://www.digitaltrends.com/wp-content/uploads/2013/09/Origin-Millennium-GEFORCE-GTX-macro.jpg"><span class="dt-auto-zoom"><span></span></span><span class="image-holder"></span></a></p>
+
+<p>Gaming at 1080p doesn’t require ridiculous hardware. A mid-range, 
+single-GPU card (like the Nvidia GTX 760 or Radeon R9 280) will be more 
+than adequate for modern games at high or very high detail. The GTX 760,
+ for example, <a href="http://www.anandtech.com/show/7103/nvidia-geforce-gtx-760-review/13">can pump out 53 frames per second in Crysis 3 at High quality</a>.
+ If you’d like to future-proof a bit, just go a step or two up (from a 
+GTX 760 to a 770 or 780, for example). AMD Radeon cards like the R9 280 
+and R9 280X are also good choices.</p>
+<p>Running games at 2560×1440 is more demanding, and will require the 
+most powerful single-GPU card you can afford (excluding special models, 
+like the Nvidia GTX Titan). Current examples include the Nvidia GTX 780 
+Ti, and the Radeon R9 290X Uber Edition. Even these cards will barely 
+reach 60 FPS in the most demanding titles, but going with a dual-GPU 
+setup as a means of future-proofing is an expensive proposition.</p>
+<p><a href="http://www.digitaltrends.com/computing/what-hardware-do-you-need-to-run-stuff-at-4k-resolution-on-your-pc/#comments">Anyone planning to play at 4K</a> must be ready to spend some serious cash. You’ll need two very powerful single-GPU cards with at least 4GB of VRAM each, or <a href="http://www.digitaltrends.com/video-card-reviews/amd-radeon-r9-295x2-review/">a powerful dual-GPU card like the Radeon R9 295X2</a>,
+ which also has 4GB of VRAM per GPU. Even then, excellent performance is
+ not guaranteed in the most demanding games when played at their highest
+ settings.</p>
+<h3>The other parts</h3>
+<p>We’ve so far covered the most important hardware inside any custom 
+gaming PC, but there are other components you should consider as well. 
+These include the wireless adapter, the sound card and the cooling 
+system.</p>
+<p>Wired Ethernet is the best choice for gaming, but wireless is 
+sometimes more convenient. If you do plan to use wireless, we suggest 
+picking up an adapter that supports the latest 802.11ac standard. Any 
+such hardware will also support 802.11n, making it compatible with older
+ routers. However, you’ll need a new 802.11ac router to enjoy the new 
+standard’s speed.</p>
+
+<p><a href="http://www.digitaltrends.com/wp-content/uploads/2014/05/asusxonardg.jpg"><span class="image-holder"></span></a></p>
+
+<p>Sound cards are often neglected, but may be worth buying. 
+Motherboards come with integrated sound chips that are good enough for 
+use with cheap speakers and headsets, but anyone who owns high-end audio
+ equipment should upgrade. That said, some custom PC builders only offer
+ the most expensive sound cards. Consider buying an affordable card like
+ the ASUS Xonar DG, and installing it yourself.</p>
+<p>Cooling has less to do with performance than it does with noise, as 
+only over-clocked systems need the best equipment. Adding a water cooler
+ to the processor can decrease system noise, as can selecting an upgrade
+ to “quiet” or “silent” case fans, if they’re available. We recommend 
+ticking those check-boxes if fan noise even slightly annoys you.</p>
+<h3>Warranties and support</h3>
+<p>Virtually all custom PC builders offer a one-year warranty with most 
+systems, but that may be automatically upgraded to two or three years if
+ you buy a more expensive model. Be sure to double-check this when 
+considering different companies, as it may steer you towards an 
+alternative.</p>
+<p>Upgrading the warranty to three years is often an option when a 
+one-year warranty is standard. Whether it’s worthwhile depends on your 
+comfort level, and on the price of the PC you’re buying. Most builders 
+don’t scale warranty cost with the price of a system. A $250 three-year 
+warranty probably isn’t worth getting for a $2,000 rig, but it is a 
+decent choice for one that sets you back five grand.</p>
+<p>Also, look into the details of the company’s support offerings. Many 
+provide lifetime technical support with every system. Upgrade plans are 
+becoming common too, and some builders offer free overnight shipping on 
+any claims made within the first year.</p>
+<h3>Conclusion</h3>
+<p>A powerful gaming system doesn’t have to cost a fortune. <a href="http://www.digitaltrends.com/desktop-computer-reviews/origin-millennium-2014-review/">We recently reviewed a version of the Origin Millennium</a>
+ with an as-tested price of nearly $7,000, but that same system can be 
+equipped to game at 1080p for a tad under $2,000 if you “make do” with a
+ quad-core processor, GTX 770 and 8GB of RAM. You’ll end up with an 
+excellent core rig that has plenty of room for upgrades. Enthusiast PCs 
+are better built, and more affordable than ever before.</p>
+<p>Hopefully, these tips will help you bring one home that puts a smile 
+on your face while leaving a decent chunk of cash in your bank account.</p>
+		</article>
+
+
+		
+
+		<section class="followup">
+							<div class="dt-signoff">DT</div>
+
+				<div id="zergnet-widget-13914" style="text-align:center;"><div id="zerglayout" class="zerglayoutcl" style="clear:both;line-height:normal;border: 0px solid #ddd; font-family: arial,serif; font-size: 12px; text-align: center; background: transparent; width: 650px; margin: 0px auto;"><div style="clear:both;"><div style="clear:both;"></div></div><div style="clear:both;">
+			<div class="zergentity" style="float: left; width: 142px; margin-top:4px;margin-bottom:2px; margin-left: 11px; margin-right: 10px; overflow: hidden; clear: both;">
+				<a href="http://www.zergnet.com/i/22196/13914/0/0/0" target="_blank" rel="nofollow">
+					<img style="-ms-interpolation-mode:bicubic;margin:0;padding:0; height: 140px; width: 140px; border: 1px solid #025f9a;" src="details_news_files/22196_140.jpg" data-pin-no-hover="true">
+				</a>
+				<div class="zergheadline" style="margin-top: 2px;">
+					<a href="http://www.zergnet.com/i/22196/13914/0/0/0" style="font-family:Helvetica;color: #3e3e3e; font-weight: Bold; text-decoration: None;" target="_blank" rel="nofollow">Top 10 Overrated Video Game Characters</a>
+				</div>
+				<div style="clear:both;"></div>
+			</div>
+			<div class="zergentity" style="float: left; width: 142px; margin-top:4px;margin-bottom:2px; margin-left: 10px; margin-right: 10px; overflow: hidden; clear: none;">
+				<a href="http://www.zergnet.com/i/61782/13914/0/0/0" target="_blank" rel="nofollow">
+					<img style="-ms-interpolation-mode:bicubic;margin:0;padding:0; height: 140px; width: 140px; border: 1px solid #025f9a;" src="details_news_files/61782_140.jpg" data-pin-no-hover="true">
+				</a>
+				<div class="zergheadline" style="margin-top: 2px;">
+					<a href="http://www.zergnet.com/i/61782/13914/0/0/0" style="font-family:Helvetica;color: #3e3e3e; font-weight: Bold; text-decoration: None;" target="_blank" rel="nofollow">Game of Thrones Star Refuses Future Explicit Scenes</a>
+				</div>
+				<div style="clear:both;"></div>
+			</div>
+			<div class="zergentity" style="float: left; width: 142px; margin-top:4px;margin-bottom:2px; margin-left: 10px; margin-right: 10px; overflow: hidden; clear: none;">
+				<a href="http://www.zergnet.com/i/174537/13914/0/0/0" target="_blank" rel="nofollow">
+					<img style="-ms-interpolation-mode:bicubic;margin:0;padding:0; height: 140px; width: 140px; border: 1px solid #025f9a;" src="details_news_files/174537_140.jpg" data-pin-no-hover="true">
+				</a>
+				<div class="zergheadline" style="margin-top: 2px;">
+					<a href="http://www.zergnet.com/i/174537/13914/0/0/0" style="font-family:Helvetica;color: #3e3e3e; font-weight: Bold; text-decoration: None;" target="_blank" rel="nofollow">15 Most Brutal Mods of All Time</a>
+				</div>
+				<div style="clear:both;"></div>
+			</div>
+			<div class="zergentity" style="float: left; width: 142px; margin-top:4px;margin-bottom:2px; margin-left: 10px; margin-right: 10px; overflow: hidden; clear: none;">
+				<a href="http://www.zergnet.com/i/82192/13914/0/0/0" target="_blank" rel="nofollow">
+					<img style="-ms-interpolation-mode:bicubic;margin:0;padding:0; height: 140px; width: 140px; border: 1px solid #025f9a;" src="details_news_files/82192_140.jpg" data-pin-no-hover="true">
+				</a>
+				<div class="zergheadline" style="margin-top: 2px;">
+					<a href="http://www.zergnet.com/i/82192/13914/0/0/0" style="font-family:Helvetica;color: #3e3e3e; font-weight: Bold; text-decoration: None;" target="_blank" rel="nofollow">10 Actors Who Killed People In Real Life</a>
+				</div>
+				<div style="clear:both;"></div>
+			</div><div style="clear:both;"></div></div><div style="clear:both;">
+			<div class="zergentity" style="float: left; width: 142px; margin-top:4px;margin-bottom:2px; margin-left: 11px; margin-right: 10px; overflow: hidden; clear: both;">
+				<a href="http://www.zergnet.com/i/87375/13914/0/0/0" target="_blank" rel="nofollow">
+					<img style="-ms-interpolation-mode:bicubic;margin:0;padding:0; height: 140px; width: 140px; border: 1px solid #025f9a;" src="details_news_files/87375_140.jpg" data-pin-no-hover="true">
+				</a>
+				<div class="zergheadline" style="margin-top: 2px;">
+					<a href="http://www.zergnet.com/i/87375/13914/0/0/0" style="font-family:Helvetica;color: #3e3e3e; font-weight: Bold; text-decoration: None;" target="_blank" rel="nofollow">10 Most Abused Video Game Characters</a>
+				</div>
+				<div style="clear:both;"></div>
+			</div>
+			<div class="zergentity" style="float: left; width: 142px; margin-top:4px;margin-bottom:2px; margin-left: 10px; margin-right: 10px; overflow: hidden; clear: none;">
+				<a href="http://www.zergnet.com/i/137825/13914/0/0/0" target="_blank" rel="nofollow">
+					<img style="-ms-interpolation-mode:bicubic;margin:0;padding:0; height: 140px; width: 140px; border: 1px solid #025f9a;" src="details_news_files/137825_140.jpg" data-pin-no-hover="true">
+				</a>
+				<div class="zergheadline" style="margin-top: 2px;">
+					<a href="http://www.zergnet.com/i/137825/13914/0/0/0" style="font-family:Helvetica;color: #3e3e3e; font-weight: Bold; text-decoration: None;" target="_blank" rel="nofollow">Old School: Where Are They Now?</a>
+				</div>
+				<div style="clear:both;"></div>
+			</div>
+			<div class="zergentity" style="float: left; width: 142px; margin-top:4px;margin-bottom:2px; margin-left: 10px; margin-right: 10px; overflow: hidden; clear: none;">
+				<a href="http://www.zergnet.com/i/176405/13914/0/0/0" target="_blank" rel="nofollow">
+					<img style="-ms-interpolation-mode:bicubic;margin:0;padding:0; height: 140px; width: 140px; border: 1px solid #025f9a;" src="details_news_files/176405_140.jpg" data-pin-no-hover="true">
+				</a>
+				<div class="zergheadline" style="margin-top: 2px;">
+					<a href="http://www.zergnet.com/i/176405/13914/0/0/0" style="font-family:Helvetica;color: #3e3e3e; font-weight: Bold; text-decoration: None;" target="_blank" rel="nofollow">3 PC Games Every Console Owner Should Play at Least Once</a>
+				</div>
+				<div style="clear:both;"></div>
+			</div>
+			<div class="zergentity" style="float: left; width: 142px; margin-top:4px;margin-bottom:2px; margin-left: 10px; margin-right: 10px; overflow: hidden; clear: none;">
+				<a href="http://www.zergnet.com/i/156165/13914/0/0/0" target="_blank" rel="nofollow">
+					<img style="-ms-interpolation-mode:bicubic;margin:0;padding:0; height: 140px; width: 140px; border: 1px solid #025f9a;" src="details_news_files/156165_140.jpg" data-pin-no-hover="true">
+				</a>
+				<div class="zergheadline" style="margin-top: 2px;">
+					<a href="http://www.zergnet.com/i/156165/13914/0/0/0" style="font-family:Helvetica;color: #3e3e3e; font-weight: Bold; text-decoration: None;" target="_blank" rel="nofollow">5 Major Movie Blunders You Won't Believe You Missed</a>
+				</div>
+				<div style="clear:both;"></div>
+			</div><div style="clear:both;"></div></div></div></div>
+				
+	
+	<div class="social-share " data-post-id="579392">
+
+					
+			<div class="comment ">
+				<a class="wrap" href="http://www.digitaltrends.com/computing/heres-what-you-need-to-know-about-buying-a-custom-built-pc/#comments">
+					<span class="text">Add a comment</span>
+					<span class="icon"></span>
+									</a>
+			</div>
+		
+				<div class="twitter cached full">
+			<div class="wrap">
+				<div class="expand" data-app-class="twitter-share-button">
+					<div class="widget-container">
+						<a href="https://twitter.com/share" class="app-class" data-url="http://bit.ly/SILA8v" data-counturl="http://www.digitaltrends.com/computing/heres-what-you-need-to-know-about-buying-a-custom-built-pc/" data-text="Here's what you need to know about buying a custom built PC" data-via="DigitalTrends" data-hashtags="" target="_blank" rel="nofollow"></a>
+					</div>
+				</div>
+				<span class="icon"></span>
+									<span class="num">4</span>
+							</div>
+		</div>
+
+				<div class="facebook cached ">
+			<div class="wrap">
+				<div class="expand" data-app-class="fb-like">
+					<div class="app-class" data-href="http://www.digitaltrends.com/computing/heres-what-you-need-to-know-about-buying-a-custom-built-pc/" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div>
+				</div>
+				<span class="icon"></span>
+							</div>
+		</div>
+
+				<div class="gplus cached full">
+			<div class="wrap">
+				<div class="expand" data-app-class="g-plusone">
+					<div class="app-class" data-href="http://www.digitaltrends.com/computing/heres-what-you-need-to-know-about-buying-a-custom-built-pc/" data-size="medium" data-expandto="right" data-onstartinteraction="dtGplusStartInteraction" data-onendinteraction="dtGplusEndInteraction"></div>
+				</div>
+				<span class="icon"></span>
+									<span class="num">2</span>
+							</div>
+		</div>
+
+				<div class="linkedin cached ">
+			<div class="wrap">
+				<div class="expand" data-app-class="IN/Share">
+					<script data-url="http://www.digitaltrends.com/computing/heres-what-you-need-to-know-about-buying-a-custom-built-pc/" data-counter="right"></script>
+				</div>
+				<span class="icon"></span>
+							</div>
+		</div>
+
+					<div class="email">
+				<a class="wrap" href="javascript:void(0)" data-post-id="579392" title="Share this by email">
+					<span class="icon"></span>
+				</a>
+			</div>
+		
+	</div>
+
+
+					
+
+	<section class="author-block" data-user-id="76988" itemscope="" itemtype="http://data-vocabulary.org/Person">
+
+		<img src="details_news_files/url-3f2f06289e34c0c057c29bf8ca91f9d7-94x94-c.jpg" alt="Matt Smith" data-avatar-provider="uploaded">
+		<div class="wrap">
+
+			<div class="name">
+				<h3>
+					by 
+					<a href="http://www.digitaltrends.com/users/mattsmith/" itemprop="url">
+						<span itemprop="name">Matt Smith</span>
+
+					</a>				</h3>
+
+							</div>
+
+			<p>Matt Smith is a writer, computing guru, gamer and geek hailing 
+from Portland, Oregon. He also writes for MakeUseOf and his personal 
+blog, <a href="http://mattontech.me/mattontech/">@matt_on_tech</a>. You can follow him on Twitter <a href="https://twitter.com/Matt_on_tech">@Matt_on_tech</a> and <a rel="author" href="https://plus.google.com/115183690169153206030/"> Google+.</a></p><a rel="author" href="https://plus.google.com/115183690169153206030/">
+
+							<meta itemprop="affiliation" content="Digital Trends">
+			
+		</a></div><a rel="author" href="https://plus.google.com/115183690169153206030/">
+
+		</a><div class="social-buttons"><a rel="author" href="https://plus.google.com/115183690169153206030/">
+			
+
+	
+		</a><a rel="me nofollow" href="https://plus.google.com/115183690169153206030" target="_blank" class="simple button gplus">
+			<span class="icon"></span>Follow
+		</a>
+
+	
+			
+			
+		</div>
+
+	</section>
+
+			
+			
+			<div class="wrap">
+							<!--DTC HTML CACHE HIT START-->			
+	<div class="widget post-widget in-case-you-missed-it left">
+
+		<h3>In Case You Missed It</h3>
+
+		<ul>
+
+			
+			<li>
+				<a href="http://www.digitaltrends.com/computing/boutique-boom-bust-small-pc-makers-weathered-downturn/">As PC sales dwindle, high-end builders find that gamers aren’t going anywhere</a>
+			</li>
+			
+			
+			<li>
+				<a href="http://www.digitaltrends.com/gaming/alienware-origin-third-party-steam-machines-vendors/">Alienware, Origin among more than a dozen third-party Steam Machines vendors</a>
+			</li>
+			
+			
+			<li>
+				<a href="http://www.digitaltrends.com/computing/digital-storm-releases-aventum-ii-gaming-rig-with-22-fans-and-copper-piping-inside/">Digital Storm releases Aventum II gaming rig with 22 fans and copper piping inside</a>
+			</li>
+			
+			
+			<li>
+				<a href="http://www.digitaltrends.com/computing/hard-drives-ssds-disks-whats-best-fit/">Hard drives, SSDs, and disks in between: What’s the best fit for you?</a>
+			</li>
+			
+			
+		</ul>
+
+	</div>
+
+	
+			<!--DTC HTML CACHE HIT STOP-->
+				<div class="ad ad-300 right">
+
+				<div id="dtadq-300-3" class="clearfix gpt-ad-slot">
+				<script type="text/javascript">googletag.cmd.push(function(){googletag.display('dtadq-300-3');});</script>
+			<div style="border: 0pt none;" id="google_ads_iframe_/5611/dt.dgt.www_4__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" name="google_ads_iframe_/5611/dt.dgt.www_4" id="google_ads_iframe_/5611/dt.dgt.www_4" frameborder="0" height="250" scrolling="no" width="300"></iframe></div></div>
+			
+</div>			</div>
+		</section>
+
+
+		<section id="comments" data-post-id="579392" data-comments-open="1" data-comments-order="desc" data-user-reviews="">
+
+	<div id="comment-count" class="total-count"><div></div></div>
+
+	<div id="above-comment-list"><div><!--digitaltrends-2013/comments/comment-form.php--><div class="comment-box" id="dt-comment-submit-form-container"><form id="write-comment" class="write-comment validate trackable" data-trackable-form="new-comment" method="post"><input style="display:none" class="robot-text" name="robot" type="text"><textarea class="required" id="comment-content" name="comment" placeholder="Type your comment here"></textarea><div class="wrap"><div class="notice user-info" data-logout-url="/logout?_=1399826473&amp;redirect_to=http%3A%2F%2Fwww.digitaltrends.com%2Fcomputing%2Fheres-what-you-need-to-know-about-buying-a-custom-built-pc%2F%23comments">Not logged in.You will be prompted to login after writing your comment.</div><input class="button standard submit" value="Post Comment" type="submit"></div></form></div></div></div>
+
+	<div id="comment-list" class="comment-list"><div><ol class="comment-list"><!--Actual comments go here--></ol></div></div>
+
+	<div id="below-comment-list"><!-- Comment Form might go here --></div>
+
+</section>
+
+<script type="text/template" id="comment-count-template"><%if(data.comment_count>0){%><%=data.comment_count%>&nbsp;comments<%}%></script>
+
+<script type="text/template" id="comment-list-template"><%if(data.comments_open){%><ol class="comment-list"><!--Actual comments go here--></ol><%}%></script>
+
+<script type="text/template" id="comment-reply-form-template"><form class="comment-reply-form-template write-comment standard trackable"data-trackable-form="reply-comment"id="respond"method="post"><input type="text"style="display:none"class="robot-text"name="robot"value=""/><label><h4>Reply to<span class="author"><%=data.comment.author_name%></span></h4><textarea id="reply-content"class="comment-text"name="comment"></textarea></label><div class="controls"><a class="button cancel"href="javascript:void(0)"rel="nofollow"><span>Cancel</span></a><input type="submit"class="button submit reply"value="Post Reply"rel="nofollow"/></div></form></script>
+
+<script type="text/template" id="comment-form-template"><%if(data.comments_open){%><!--digitaltrends-2013/comments/comment-form.php--><div class="comment-box"id="dt-comment-submit-form-container"><form id="write-comment"class="write-comment validate trackable"data-trackable-form="new-comment"method="post"><input type="text"style="display:none"class="robot-text"name="robot"value=""/><textarea class="required"id="comment-content"class="comment-text"name="comment"placeholder="Type your comment here"><%=data.comment.comment_content%></textarea><div class="wrap"><div class="notice user-info"data-logout-url="/logout?_=1399826473&redirect_to=http%3A%2F%2Fwww.digitaltrends.com%2Fcomputing%2Fheres-what-you-need-to-know-about-buying-a-custom-built-pc%2F%23comments"><%if(data.user===undefined){%>Not logged in.You will be prompted to login after writing your comment.<%}else{%>Logged in as&nbsp;<a href="<%= data.user.get( 'profile_url' ) %>"><%=data.user.get('display_name')%></a>.(<a href="/logout?_=1399826473&redirect_to=http%3A%2F%2Fwww.digitaltrends.com%2Fcomputing%2Fheres-what-you-need-to-know-about-buying-a-custom-built-pc%2F%23comments">Logout</a>)<%}%></div><input type="submit"class="button standard submit"value="Post Comment"/></div></form></div><%if(data.has_user_reviews){%><div class="ask-review"><div>Did you write a review of this product?<a class="convert-review"href="http://www.digitaltrends.com/computing/heres-what-you-need-to-know-about-buying-a-custom-built-pc/user-reviews/">Click here to rate it</a></div></div><%}%><%}else{%><p class="message">Comments are closed on this story.(<%=data.comments_open%>)</p><%}%></script>
+
+<script type="text/template" id="comment-flag-form-template"><form class="flag-comment standard"method="post"><input type="text"style="display:none"class="robot-text"name="robot"value=""/><label><h5>Flag this comment</h5><p>Please enter a reason for flagging this comment as inappropriate.</p><textarea id="flag-reason"class="flag-text"name="flag-reason"></textarea></label><div class="controls"><a class="button cancel"href="javascript:void(0)"rel="nofollow"><span>Cancel</span></a><input type="submit"value="Flag"class="button submit flag"rel="nofollow"/></div></form></script>
+
+<script type="text/template" id="comment-node-template"><%if(data.approved||data.pending_approval){%><div class="avatar-wrap"><%if(parseInt(data.comment.author_id)){%><a href="<%= data.comment.author_url %>"><%}else{%><span><%}%><%=data.comment.author_avatar%><%if(parseInt(data.comment.author_id)){%></a><%}else{%></span><%}%></div><div class="wrap"><div class="info"><span class="name"><%if(parseInt(data.comment.author_id)){%><a itemprop="creator"href="<%= data.comment.author_url %>"><%}else{%><span itemprop="creator"><%}%><%=data.comment.author_name%><%if(parseInt(data.comment.author_id)){%></a><%}else{%></span><%}%></span><small>&mdash;</small><time><%=toFuzzyDate(data.comment.comment_date_gmt,true)%>&nbsp;</time><%if(parseInt(data.comment.comment_parent)){%><em class="in-reply-to"><a itemprop="replyToUrl"href="javascript:void(0)"rel="nofollow">In reply to&nbsp;<strong><%=data.comment.parent_author_name%></strong></a></em><%}%></div><div class="content"itemprop="commentText"><%=data.comment.comment_content%></div><div class="controls"><%if(!data.comment.author_deleted){%><span class="count comment-vote-count"><%=data.comment.comment_karma%></span><%if(!data.user_has_voted){%><a rel="nofollow"class="like comment-upvote-link"href="<%= data.comment.links.upvote %>"><span>Like</span></a><%}else{%><a rel="nofollow"class="like liked comment-downvote-link"href="<%= data.comment.links.downvote %>"><span>Liked</span></a><%}%><a class="reply comment-reply-link"href="javascript:void(0)"rel="nofollow">Reply</a><%if(!data.user_has_flagged){%><a class="flag"href="javascript:void(0)"rel="nofollow">Flag</a><%}else{%><a class="flag"href="javascript:void(0)"rel="nofollow"><em>Flagged</em></a><%}%><%if(data.user_is_moderator){%><a class="admin-link edit-link"rel="nofollow"href="<%= data.comment.links['edit'] %>">Edit</a><a class="admin-link delete-link"rel="nofollow"href="<%= data.comment.links['delete'] %>">Delete</a><a class="admin-link spam-link"rel="nofollow"href="<%= data.comment.links['spam'] %>">Spam</a><a class="admin-link blockip-link"rel="nofollow"href="<%= data.comment.links['blockip'] %>">Block IP</a><%}%><%}%></div><div class="form-container"></div><ol class="replies"><!--Nested Replies go here--></ol></div><%}%></script>	</div>
+
+
+	<aside class="sidebar-block">
+
+	<!-- Single category:computing Sidebar --><!-- Deployed 2014-04-28 16:49:35 by Greg Mombert --><!-- Last Rendered 2014-05-11 09:41:13 -->			<div id="dtadq-300" class="clearfix gpt-ad-slot">
+				<script type="text/javascript">googletag.cmd.push(function(){googletag.display('dtadq-300');});</script>
+			<div style="border: 0pt none;" id="google_ads_iframe_/5611/dt.dgt.www_3__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" name="google_ads_iframe_/5611/dt.dgt.www_3" id="google_ads_iframe_/5611/dt.dgt.www_3" frameborder="0" height="250" scrolling="no" width="300"></iframe></div></div>
+			<!-- Last Rendered 2014-05-11 09:01:02 -->
+			<div class="widget standard latest-posts">
+
+				<h3>Latest Computing News</h3>
+
+				
+					<div class="item">
+
+						<a href="http://www.digitaltrends.com/computing/heres-what-you-need-to-know-about-buying-a-custom-built-pc/" class="thumb alt"><img src="details_news_files/cyberpower-zeus-mini-review-side-angle-2-76x76-c.jpg" class="attachment-width=76&amp;height=76&amp;crop=1" alt="Cyberpower Zeus Mini review side angle 2"></a>
+
+						<h4><a href="http://www.digitaltrends.com/computing/heres-what-you-need-to-know-about-buying-a-custom-built-pc/">Here’s what you need to know about buying a custom built PC</a></h4>
+
+				   	 </div>
+
+			    	
+					<div class="item">
+
+						<a href="http://www.digitaltrends.com/computing/building-new-pc-may-able-strip-old-one-parts/" class="thumb alt"><img src="details_news_files/pc-parts-scrounging-76x76-c.jpg" class="attachment-width=76&amp;height=76&amp;crop=1" alt="PC Parts Scrounging"></a>
+
+						<h4><a href="http://www.digitaltrends.com/computing/building-new-pc-may-able-strip-old-one-parts/">Building a new PC? You may be able to strip your old one for some parts</a></h4>
+
+				   	 </div>
+
+			    	
+					<div class="item">
+
+						<a href="http://www.digitaltrends.com/computing/2014-macbook-air-refresh/" class="thumb alt"><img src="details_news_files/macbook-air-2013-review-lid-open-angle-2-1500x991-76x76-c.jpg" class="attachment-width=76&amp;height=76&amp;crop=1" alt="macbook-air-2013-review-lid-open-angle-2-1500x991"></a>
+
+						<h4><a href="http://www.digitaltrends.com/computing/2014-macbook-air-refresh/">Is Apple asleep at the wheel on the MacBook Air?</a></h4>
+
+				   	 </div>
+
+			    	
+					<div class="item">
+
+						<a href="http://www.digitaltrends.com/computing/swedish-anti-piracy-law-boost-of-music-sales-drop-in-internet-traffic/" class="thumb alt"><img src="details_news_files/the-pirate-bay-7-76x76-c.jpg" class="attachment-width=76&amp;height=76&amp;crop=1" alt="the-pirate-bay"></a>
+
+						<h4><a href="http://www.digitaltrends.com/computing/swedish-anti-piracy-law-boost-of-music-sales-drop-in-internet-traffic/">Swedish anti-piracy law resulted in boost of music sales, drop in Internet traffic</a></h4>
+
+				   	 </div>
+
+			    	
+			    				    		<a href="http://www.digitaltrends.com/computing/" class="button flat icon more"><span>More Computing News</span></a>
+			    				</div>
+			<!-- Last Rendered 2014-05-09 12:51:33 -->
+			<div class="widget standard latest-reviews">
+
+				<h3>Latest Laptop Reviews</h3>
+
+				
+				<div class="item">
+
+					<a href="http://www.digitaltrends.com/laptop-reviews/msi-global-gt60-dominator-pro-review/" class="thumb alt"><img src="details_news_files/msi-global-gt60-dominator-pro-front-full-2-76x76-c.jpg" class="attachment-width=76&amp;height=76&amp;crop=1" alt="MSI Global GT60 Dominator Pro front full"></a>
+
+					<h4><a href="http://www.digitaltrends.com/laptop-reviews/msi-global-gt60-dominator-pro-review/">MSI Global GT60 Dominator Pro review</a></h4>
+
+					<div class="rating">
+
+						<div class="dt-rating num-7">Our Score<span><span>: 7</span></span></div>
+
+						
+					</div>
+
+				</div>
+
+				
+				<div class="item">
+
+					<a href="http://www.digitaltrends.com/laptop-reviews/dell-inspiron-15-7000-series-review/" class="thumb alt"><img src="details_news_files/dell-inspirion-15-7000-review-front-screen-angle-76x76-c.jpg" class="attachment-width=76&amp;height=76&amp;crop=1" alt="Dell Inspiron 15 7000 review front screen angle"></a>
+
+					<h4><a href="http://www.digitaltrends.com/laptop-reviews/dell-inspiron-15-7000-series-review/">Dell Inspiron 15 7000 series review</a></h4>
+
+					<div class="rating">
+
+						<div class="dt-rating num-9">Our Score<span><span>: 9</span></span></div>
+
+						
+					</div>
+
+				</div>
+
+				
+				<div class="item">
+
+					<a href="http://www.digitaltrends.com/laptop-reviews/lenovo-yoga-2-11-inch-review/" class="thumb alt"><img src="details_news_files/lenovo-ideapad-yoga-11-fulloffset-76x76-c.jpg" class="attachment-width=76&amp;height=76&amp;crop=1" alt="Lenovo IdeaPad Yoga 11"></a>
+
+					<h4><a href="http://www.digitaltrends.com/laptop-reviews/lenovo-yoga-2-11-inch-review/">Lenovo Yoga 2 (11-inch) review</a></h4>
+
+					<div class="rating">
+
+						<div class="dt-rating num-4">Our Score<span><span>: 4</span></span></div>
+
+						
+					</div>
+
+				</div>
+
+				
+				<div class="item">
+
+					<a href="http://www.digitaltrends.com/laptop-reviews/lenovo-yoga-2-review/" class="thumb alt"><img src="details_news_files/lenovo-yoga-13-review-front-screen-angle-76x76-c.jpg" class="attachment-width=76&amp;height=76&amp;crop=1" alt="Lenovo Yoga 13 review front screen angle"></a>
+
+					<h4><a href="http://www.digitaltrends.com/laptop-reviews/lenovo-yoga-2-review/">Lenovo Yoga 2 (13-inch) Review</a></h4>
+
+					<div class="rating">
+
+						<div class="dt-rating num-6">Our Score<span><span>: 6.5</span></span></div>
+
+						
+					</div>
+
+				</div>
+
+				
+									<a href="http://www.digitaltrends.com/laptop-reviews/" class="button flat icon more"><span>More Laptop Reviews</span></a>
+				
+			</div>
+
+			<!-- Last Rendered 2014-05-11 09:41:13 -->			<div id="dtadq-300-4" class="clearfix gpt-ad-slot">
+				<script type="text/javascript">googletag.cmd.push(function(){googletag.display('dtadq-300-4');});</script>
+			<div style="border: 0pt none;" id="google_ads_iframe_/5611/dt.dgt.www_5__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" name="google_ads_iframe_/5611/dt.dgt.www_5" id="google_ads_iframe_/5611/dt.dgt.www_5" frameborder="0" height="250" scrolling="no" width="300"></iframe></div></div>
+			<!-- Last Rendered 2014-05-11 09:37:04 -->
+			<div class="widget standard partner-news">
+
+				<h3>Tech News from our Partners</h3>
+
+				
+					<div class="item">
+
+						<a href="http://www.foxnews.com/tech/2014/05/09/techie-momkit-ideas-for-mothers-day/?cmpid=prn_digtrends" target="_blank" rel="nofollow" class="thumb">
+															<img src="details_news_files/050814_AfterShow_640.jpg" alt="Techie ‘MomKit’ ideas For Mother’s Day" height="76" width="76">
+													</a>
+
+						<h4>
+							<a href="http://www.foxnews.com/tech/2014/05/09/techie-momkit-ideas-for-mothers-day/?cmpid=prn_digtrends" target="_blank" rel="nofollow">
+								Techie ‘MomKit’ ideas For Mother’s Day							</a>
+						</h4>
+
+						<div class="byline">
+							<span class="date">May  9, 2014</span>
+							<span class="dash">—</span>
+							<span class="name">Fox News</span>
+						</div>
+
+					</div>
+
+					
+					<div class="item">
+
+						<a href="http://www.foxnews.com/tech/2014/05/09/special-effects-training-helps-medical-students-prepare-for-life-or-death/?cmpid=prn_digtrends" target="_blank" rel="nofollow" class="thumb">
+															<img src="details_news_files/050814_techtake_medtraining_640.jpg" alt="Special-effects training helps medical students prepare for…" height="76" width="76">
+													</a>
+
+						<h4>
+							<a href="http://www.foxnews.com/tech/2014/05/09/special-effects-training-helps-medical-students-prepare-for-life-or-death/?cmpid=prn_digtrends" target="_blank" rel="nofollow">
+								Special-effects training helps medical students prepare for…							</a>
+						</h4>
+
+						<div class="byline">
+							<span class="date">May  9, 2014</span>
+							<span class="dash">—</span>
+							<span class="name">Fox News</span>
+						</div>
+
+					</div>
+
+					
+					<div class="item">
+
+						<a href="http://www.foxnews.com/tech/2014/05/08/surprising-way-to-keep-geese-away/?cmpid=prn_digtrends" target="_blank" rel="nofollow" class="thumb">
+															<img src="details_news_files/050714_jrp_fido_640.jpg" alt="Surprising way to keep the geese away" height="76" width="76">
+													</a>
+
+						<h4>
+							<a href="http://www.foxnews.com/tech/2014/05/08/surprising-way-to-keep-geese-away/?cmpid=prn_digtrends" target="_blank" rel="nofollow">
+								Surprising way to keep the geese away							</a>
+						</h4>
+
+						<div class="byline">
+							<span class="date">May  8, 2014</span>
+							<span class="dash">—</span>
+							<span class="name">Fox News</span>
+						</div>
+
+					</div>
+
+					
+					<div class="item">
+
+						<a href="http://www.foxnews.com/tech/2014/05/07/navy-launching-nerd-e-reader-that-low-on-features-but-filled-with-content/?cmpid=prn_digtrends" target="_blank" rel="nofollow" class="thumb">
+															<img src="details_news_files/nerd-ereader.jpg" alt="Navy launching 'NeRD' e-reader that's low on features, but filled with…" height="76" width="76">
+													</a>
+
+						<h4>
+							<a href="http://www.foxnews.com/tech/2014/05/07/navy-launching-nerd-e-reader-that-low-on-features-but-filled-with-content/?cmpid=prn_digtrends" target="_blank" rel="nofollow">
+								Navy launching 'NeRD' e-reader that's low on features, but filled with…							</a>
+						</h4>
+
+						<div class="byline">
+							<span class="date">May  7, 2014</span>
+							<span class="dash">—</span>
+							<span class="name">Fox News</span>
+						</div>
+
+					</div>
+
+								</div>
+			
+</aside></div>
+
+
+				</div>
+			</div>
+
+							<div id="leaderboard-footer" class="leaderboard">
+
+	<div class="bb-wrap">
+
+					<div id="dtadq-footer" class="clearfix gpt-ad-slot">
+				<script type="text/javascript">googletag.cmd.push(function(){googletag.display('dtadq-footer');});</script>
+			<div style="border: 0pt none;" id="google_ads_iframe_/5611/dt.dgt.www_2__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" name="google_ads_iframe_/5611/dt.dgt.www_2" id="google_ads_iframe_/5611/dt.dgt.www_2" frameborder="0" height="90" scrolling="no" width="728"></iframe></div></div>
+			
+	</div>
+
+</div>			
+			<footer id="site-footer">
+				<div id="about-dt">
+					<div class="bb-wrap">
+						<div class="dt">
+							<div class="logo">Digital Trends</div>
+
+							<p>Straightforward product reviews, reliable technology news, and tools to navigate the digital world.</p>
+						</div>
+					</div>
+				</div>
+
+				<nav id="footer-links">
+					<div class="bb-wrap">
+						<div class="links">
+										<!--DTC HTML CACHE HIT START-->											<ul id="menu-footer-links" class="menu"><li id="menu-item-505456" class="title menu-item menu-item-type-custom menu-item-object-custom menu-item-505456"><a href="#">Sections</a></li>
+<li id="menu-item-505464" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505464"><a href="http://www.digitaltrends.com/product-reviews/">Product Reviews</a></li>
+<li id="menu-item-505458" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-505458 menu-item-object-id-4"><a href="http://www.digitaltrends.com/mobile/">Mobile</a></li>
+<li id="menu-item-505457" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-505457 menu-item-object-id-5"><a href="http://www.digitaltrends.com/computing/">Computing</a></li>
+<li id="menu-item-505460" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-505460 menu-item-object-id-7"><a href="http://www.digitaltrends.com/home-theater/">Home Theater</a></li>
+<li id="menu-item-505466" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-505466 menu-item-object-id-17"><a href="http://www.digitaltrends.com/photography/">Photography</a></li>
+<li id="menu-item-505463" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-505463 menu-item-object-id-431"><a href="http://www.digitaltrends.com/cars/">Cars</a></li>
+<li id="menu-item-505459" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-505459 menu-item-object-id-6"><a href="http://www.digitaltrends.com/gaming/">Gaming</a></li>
+<li id="menu-item-505462" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-505462 menu-item-object-id-279"><a href="http://www.digitaltrends.com/social-media/">Social Media</a></li>
+<li id="menu-item-505461" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-505461 menu-item-object-id-8"><a href="http://www.digitaltrends.com/home/">Home</a></li>
+<li id="menu-item-505467" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-505467 menu-item-object-id-571"><a href="http://www.digitaltrends.com/cool-tech/">Cool Tech</a></li>
+<li id="menu-item-505468" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-505468 menu-item-object-id-143173"><a href="http://www.digitaltrends.com/sports/">Sports</a></li>
+</ul>
+								<ul id="menu-footer-links-2" class="menu"><li id="menu-item-505451" class="title menu-item menu-item-type-custom menu-item-object-custom menu-item-505451"><a href="#">Review Categories</a></li>
+<li id="menu-item-505446" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-505446 menu-item-object-id-100008"><a href="http://www.digitaltrends.com/cell-phone-reviews/">Cell Phone Reviews</a></li>
+<li id="menu-item-505440" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-505440 menu-item-object-id-100007"><a href="http://www.digitaltrends.com/tv-reviews/">TV Reviews</a></li>
+<li id="menu-item-505442" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-505442 menu-item-object-id-100011"><a href="http://www.digitaltrends.com/digital-camera-reviews/">Camera Reviews</a></li>
+<li id="menu-item-505441" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-505441 menu-item-object-id-100015"><a href="http://www.digitaltrends.com/laptop-reviews/">Laptop Reviews</a></li>
+<li id="menu-item-505443" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-505443 menu-item-object-id-105121"><a href="http://www.digitaltrends.com/tablet-reviews/">Tablet Reviews</a></li>
+<li id="menu-item-505450" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-505450 menu-item-object-id-143751"><a href="http://www.digitaltrends.com/car-reviews/">Car Reviews</a></li>
+<li id="menu-item-505445" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-505445 menu-item-object-id-143758"><a href="http://www.digitaltrends.com/game-reviews/">Game Reviews</a></li>
+<li id="menu-item-505444" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-505444 menu-item-object-id-141340"><a href="http://www.digitaltrends.com/refrigerators-reviews/">Refrigerator Reviews</a></li>
+<li id="menu-item-505448" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-505448 menu-item-object-id-141430"><a href="http://www.digitaltrends.com/dishwasher-reviews/">Dishwasher Reviews</a></li>
+<li id="menu-item-505447" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-505447 menu-item-object-id-141338"><a href="http://www.digitaltrends.com/washing-machine-reviews/">Washing Machine Reviews</a></li>
+<li id="menu-item-505449" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-505449 menu-item-object-id-141339"><a href="http://www.digitaltrends.com/dryer-reviews/">Dryer Reviews</a></li>
+</ul>
+								<ul id="menu-footer-links-3" class="menu"><li id="menu-item-321382" class="title menu-item menu-item-type-custom menu-item-object-custom menu-item-321382"><a href="#">The Best of Everything</a></li>
+<li id="menu-item-505429" class="menu-item menu-item-type-post_type menu-item-object-best_of_page menu-item-505429"><a href="http://www.digitaltrends.com/best-cell-phones/">Best Cell Phones</a></li>
+<li id="menu-item-505427" class="menu-item menu-item-type-post_type menu-item-object-best_of_page menu-item-505427"><a href="http://www.digitaltrends.com/best-tvs/">Best TVs</a></li>
+<li id="menu-item-505431" class="menu-item menu-item-type-post_type menu-item-object-best_of_page menu-item-505431"><a href="http://www.digitaltrends.com/best-headphones/">Best Headphones</a></li>
+<li id="menu-item-342041" class="menu-item menu-item-type-post_type menu-item-object-best_of_page menu-item-342041"><a href="http://www.digitaltrends.com/best-digital-cameras/">Best Cameras</a></li>
+<li id="menu-item-505432" class="menu-item menu-item-type-post_type menu-item-object-best_of_page menu-item-505432"><a href="http://www.digitaltrends.com/best-laptops/">Best Laptops</a></li>
+<li id="menu-item-505430" class="menu-item menu-item-type-post_type menu-item-object-best_of_page menu-item-505430"><a href="http://www.digitaltrends.com/best-desktop-computers/">Best Desktop PCs</a></li>
+<li id="menu-item-505426" class="menu-item menu-item-type-post_type menu-item-object-best_of_page menu-item-505426"><a href="http://www.digitaltrends.com/best-tablets/">Best Tablets</a></li>
+<li id="menu-item-529572" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-529572"><a title="New York Auto Show" href="http://www.digitaltrends.com/ny-auto-show/">New York Auto Show</a></li>
+</ul>
+								<ul id="menu-footer-links-4" class="menu"><li id="menu-item-505416" class="title menu-item menu-item-type-custom menu-item-object-custom menu-item-505416"><a href="#">More</a></li>
+<li id="menu-item-505418" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505418"><a href="http://www.digitaltrends.com/about/advertise-on-digital-trends/">Advertise</a></li>
+<li id="menu-item-505417" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505417"><a href="http://www.digitaltrends.com/about/">About Us</a></li>
+<li id="menu-item-505419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505419"><a href="http://www.digitaltrends.com/contact/">Contact Us</a></li>
+<li id="menu-item-505420" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505420"><a href="http://www.digitaltrends.com/contact/corrections/">Corrections</a></li>
+<li id="menu-item-505422" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505422"><a href="http://www.digitaltrends.com/legal/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-505423" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505423"><a href="http://www.digitaltrends.com/legal/terms-of-use/">Terms of Use</a></li>
+<li id="menu-item-505421" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505421"><a href="http://www.digitaltrends.com/jobs-overview/">Jobs</a></li>
+<li id="menu-item-505425" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-505425"><a href="http://www.themanual.com/">The Manual</a></li>
+</ul>										<!--DTC HTML CACHE HIT STOP-->
+							<ul class="social">
+								<li class="rss"><a href="http://www.digitaltrends.com/feed/"><span>RSS</span></a></li>
+								<li class="twitter"><a href="http://twitter.com/DigitalTrends"><span>Twitter</span></a></li>
+								<li class="facebook"><a href="http://www.facebook.com/digitaltrendsftw"><span>Facebook</span></a></li>
+								<li class="gplus"><a href="https://plus.google.com/105021553983255532005/"><span>Google+</span></a></li>
+								<li class="pinterest"><a href="http://pinterest.com/digitaltrends/"><span>Pinterest</span></a></li>
+							</ul>
+						</div>
+
+						<div class="newsletter-register">
+							<span>Signup for Digital Trends Newsletter, its FREE!</span>
+
+							<form>
+								<input name="dt_newsletter_register_email" placeholder="Email Address" type="text">
+								<input class="button standard" value="Sign Up" type="submit">
+							</form>
+
+							<div class="msg"></div>
+						</div>
+
+						<div class="copyright">Copyright© 2014 Designtechnica Corporation. All rights reserved.</div>
+					</div>
+				</nav>
+			</footer>
+		</div>
+
+		<div id="logged-in-component-debugjs"></div>		<script type="text/javascript">var DTLazyLoadedImages='<img class=\"aligncenter size-large wp-image-551688\" alt=\"Falcon-NW-Talon-topdownWA\" src=\"http://icdn1.digitaltrends.com/image/falcon-nw-talon-topdownwa-625x625.jpg\" width=\"625\" height=\"416\" /><img class=\"aligncenter size-large wp-image-551670\" alt=\"Falcon-NW-Talon-CPURAM\" src=\"http://icdn7.digitaltrends.com/image/falcon-nw-talon-cpuram-625x625.jpg\" width=\"625\" height=\"416\" /><img class=\"aligncenter size-large wp-image-485498\" alt=\"Origin Millennium GEFORCE GTX macro\" src=\"http://icdn1.digitaltrends.com/image/origin-millennium-geforce-gtx-macro-625x625.jpg?ver=45\" width=\"625\" height=\"416\" /><img class=\"aligncenter size-large wp-image-579404\" alt=\"asusxonardg\" src=\"http://icdn3.digitaltrends.com/image/asusxonardg-625x625.jpg\" width=\"625\" height=\"416\" />';</script>
+		<div id="logged-in-component-comments">
+		<!-- dt_comments_js (lib/comments.php) -->
+		
+
+		</div><div id="logged-in-component-affiliate-keyword-link-injection">
+		
+
+		</div>		<div class="notification-bar tos-update">
+		Digital Trends has updated the Terms of Use. <a class="readmore" href="http://www.digitaltrends.com/legal/terms-of-use/">Read Now</a><a class="acknowledge" href="javascript:void(0)">Ok, Thanks</a> <a class="close">x</a>
+		</div>
+		<div id="logged-in-component-tos_update"></div><div id="logged-in-component-meganav">		
+		</div><div id="logged-in-component-footer-components"></div>	<script type="text/javascript">var DTCRequestedLoggedInComponents="account-links,single-admin-links,debugjs,comments,affiliate-keyword-link-injection,tos_update,meganav,footer-components";var DTCRequestedLoggedInComponentsArgs="YTozOntzOjc6InBvc3RfaWQiO2k6NTc5MzkyO3M6Njoic2luZ2xlIjtiOjE7czo5OiJwb3N0X3R5cGUiO3M6NDoicG9zdCI7fQ==";</script>
+	
+		<!-- Begin Chartbeat (dt-core/dt-core.analytics.php) -->
+		<script type="text/javascript">var _sf_async_config={uid:25785,domain:"digitaltrends.com"};(function(){function loadChartbeat(){window._sf_endpt=(new Date()).getTime();var e=document.createElement('script');e.setAttribute('language','javascript');e.setAttribute('type','text/javascript');e.setAttribute('src',(("https:"==document.location.protocol)?"https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/":"http://static.chartbeat.com/")+"js/chartbeat.js");document.body.appendChild(e);}
+var oldonload=window.onload;window.onload=(typeof window.onload!='function')?loadChartbeat:function(){oldonload();loadChartbeat();};})();</script>
+		<!-- End Chartbeat (dt-core/dt-core.analytics.php) -->
+
+			<!-- Begin Tynt (dt-core/dt-core.analytics.php) -->
+		<script>window.Tynt=window.Tynt||[];window.Tynt.push('a4WNn6KVyr4yHaacwqm_6r');window.Tynt.i={"ap":"Read more:"};(function(){var s=document.createElement('script');s.async="async";s.type="text/javascript";s.src='http://tcr.tynt.com/ti.js';var h=document.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})();</script>
+		<!-- End Tynt (dt-core/dt-core.analytics.php) -->
+			<!-- Begin Nielsen (dt-core/dt-core.analytics.php) -->
+	<script>(function(){var d=new Image(1,1);d.onerror=d.onload=function(){d.onerror=d.onload=null;};d.src=["//secure-us.imrworldwide.com/cgi-bin/m?ci=us-205280h&cg=0&cc=1&si=",escape(window.location.href),"&rp=",escape(document.referrer),"&ts=compact&rnd=",(new Date()).getTime()].join('');})();</script>
+	<noscript>
+	  <div>
+		<img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-205280h&amp;cg=0&amp;cc=1&amp;ts=noscript"
+		width="1" height="1" alt="" />
+	  </div>
+	</noscript>
+	<!-- End Nielsen (dt-core/dt-core.analytics.php) -->
+	
+		<!-- FBAds Pixel (dt-core/dt-core.analytics.php) -->
+		<script>(function(){var _fbq=window._fbq||(window._fbq=[]);if(!_fbq.loaded){var fbds=document.createElement('script');fbds.async=true;fbds.src='//connect.facebook.net/en_US/fbds.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(fbds,s);_fbq.loaded=true;}
+_fbq.push(['addPixelId',"256852357820076"]);})();window._fbq=window._fbq||[];window._fbq.push(["track","PixelInitialized",{}]);</script>
+		<noscript><img height="1" width="1" border="0" alt="" style="display:none"
+		src="https://www.facebook.com/tr?id=256852357820076&amp;ev=NoScript";
+		/></noscript>
+		<!-- End of FBAds Pixel (dt-core/dt-core.analytics.php) -->
+
+		<!-- Captify Pixel (dt-core/dt-core.analytics.php) -->
+	<script>(function(a){var d=document,c=d.createElement("script");c.async=!0,c.defer=!0,c.src=a,d.getElementsByTagName("head")[0].appendChild(c)})((iatDev=(window.location.href.indexOf("iatDev=1")>-1||document.cookie.indexOf("iatDev=1")>-1),"//"+(window.location.protocol=="http:"&&!iatDev?"":"s")+"data.captifymedia.com/322026.js?r="+Math.random()*1e16+"&m=1112&a=322026"+(iatDev?"&d=1":"")))</script>
+	<!-- End Captify Pixel (dt-core/dt-core.analytics.php) -->
+	
+		<!-- Segment Pixel - DT Gaming audience retargeting - DO NOT MODIFY -->
+		<script src="details_news_files/seg" type="text/javascript"></script><script src="details_news_files/ANX_async_usersync.js"></script>
+		<!-- End of Segment Pixel -->
+
+		<script type="text/javascript" src="details_news_files/dt-optimized-foot-js-0a4dbf94980a25629f46acff74cabb13.js"></script>
+
+		<script language="javascript" type="text/javascript">(function(){var zergnet=document.createElement('script');zergnet.type='text/javascript';zergnet.async=true;zergnet.src='http://www.zergnet.com/zerg.js?id=13914';var znscr=document.getElementsByTagName('script')[0];znscr.parentNode.insertBefore(zergnet,znscr);})();</script>
+
+		
+<script>var dt_interstitial_candidates=[{"fb_page_id":"8522591132","key":"facebook_like","nth_page":2,"force":false},{"key":"newsletter_register","nth_page":3,"force":false}];DT.Interstitial.init(dt_interstitial_candidates);</script>
+	<!-- BEGIN Quantcast Tag (dt-core/dt-core.analytics.php) -->
+	<script type="text/javascript">var _qevents=_qevents||[];(function(){var elem=document.createElement('script');elem.src=(document.location.protocol=="https:"?"https://secure":"http://edge")+".quantserve.com/quant.js";elem.async=true;elem.type="text/javascript";var scpt=document.getElementsByTagName('script')[0];scpt.parentNode.insertBefore(elem,scpt);})();_qevents.push({qacct:"p-4bfXFNBEfn2Vk"});</script>
+
+	<noscript>
+		<div style="display:none;">
+			<img src="//pixel.quantserve.com/pixel/p-4bfXFNBEfn2Vk.gif" border="0" height="1" width="1" alt="Quantcast"/>
+		</div>
+	</noscript>
+	<!-- END Quantcast Tag (dt-core/dt-core.analytics.php) -->
+	
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-6.newrelic.com","licenseKey":"053881f822","applicationID":"1100784","transactionName":"MgADYEpXXBVXAk1RDgtKIFdMX10IGRJQVgYJAExEV0VG","queueTime":0,"applicationTime":693,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"jserror.newrelic.com","agent":"js-agent.newrelic.com\/nr-400.min.js"}</script>
+
+<div id="iatDivInsert" style="display: none;"></div><iframe src="details_news_files/ooyala_storage.html" style="display: none;"></iframe><div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="details_news_files/dgdTycPTSRj.html" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0" scrolling="no"></iframe><iframe src="details_news_files/dgdTycPTSRj_002.html" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0" scrolling="no"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div><script src="details_news_files/nr-400.js"></script><script src="details_news_files/chartbeat.js" type="text/javascript" language="javascript"></script><div class="tyntShIh"></div><iframe style="display: none; width: 0px; height: 0px;" name="google_osd_static_frame" id="google_osd_static_frame_8610850739478"></iframe><script src="details_news_files/053881f822.js" type="text/javascript"></script></body></html>

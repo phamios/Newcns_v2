@@ -1,0 +1,1 @@
+Krux.ns._default.kxjsonp_userData({"status": "200", "body": {"prvx_segments": ["n3x055vti", "of2c7apqh", "of2nfo6er", "of2m9wpvv"], "segments": ["n3x055vti", "of2c7apqh", "of2nfo6er", "of2m9wpvv"], "geo": {"dma": null, "region": "hn", "domain": null, "zip": "100000", "country": "vn"}, "kuid_long": "obu6q7pia", "kuid": "JAicX9tQ"}})

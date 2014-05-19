@@ -1,0 +1,1 @@
+Tynt.sc({"d":true,"w":"digitaltrends","f":"digitaltrendsftw","ss":"fglpt"})
