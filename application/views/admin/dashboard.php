@@ -9,22 +9,22 @@
         <title>Dashboard</title>
         <meta name="description" content="Metis: Bootstrap Responsive Admin Theme">
         <meta name="viewport" content="width=device-width">
-        <link type="text/css" rel="stylesheet" href="<?php echo base_url('res/assets/');?>/css/bootstrap.min.css">
-        <link type="text/css" rel="stylesheet" href="<?php echo base_url('res/assets/');?>/css/bootstrap-responsive.min.css">
-        <link type="text/css" rel="stylesheet" href="<?php echo base_url('res/assets/');?>/Font-awesome/css/font-awesome.min.css">
-        <link type="text/css" rel="stylesheet" href="<?php echo base_url('res/assets/');?>/css/style.css">
-        <link type="text/css" rel="stylesheet" href="<?php echo base_url('res/assets/');?>/css/calendar.css">
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url('res/assets/'); ?>/css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url('res/assets/'); ?>/css/bootstrap-responsive.min.css">
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url('res/assets/'); ?>/Font-awesome/css/font-awesome.min.css">
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url('res/assets/'); ?>/css/style.css">
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url('res/assets/'); ?>/css/calendar.css">
 
-        <link rel="stylesheet" href="<?php echo base_url('res/assets/');?>/css/theme.css">
+        <link rel="stylesheet" href="<?php echo base_url('res/assets/'); ?>/css/theme.css">
 
         <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
         <!--[if IE 7]>
-        <link type="text/css" rel="stylesheet" href="<?php echo base_url('res/assets/');?>/Font-awesome/css/font-awesome-ie7.min.css"/>
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url('res/assets/'); ?>/Font-awesome/css/font-awesome-ie7.min.css"/>
         <![endif]-->
 
-        <script src="<?php echo base_url('res/assets/');?>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="<?php echo base_url('res/assets/'); ?>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
     <body>
         <!-- BEGIN WRAP -->
@@ -34,7 +34,7 @@
             <!-- BEGIN TOP BAR -->
             <div id="top">
                 <!-- .navbar -->
-              <?php //$this->load->view('widget/top_nav');?>
+                <?php //$this->load->view('widget/top_nav');?>
                 <!-- /.navbar -->
             </div>
             <!-- END TOP BAR -->
@@ -42,14 +42,14 @@
 
             <!-- BEGIN HEADER.head -->
             <header class="head">
-                <?php $this->load->view('widget/main_nav');?>
+                <?php $this->load->view('widget/main_nav'); ?>
                 <!-- /.main-bar -->
             </header>
             <!-- END HEADER.head -->
 
             <!-- BEGIN LEFT  -->
             <div id="left">
-               <?php $this->load->view('widget/left');?>
+                <?php $this->load->view('widget/left'); ?>
             </div>
             <!-- END LEFT -->
 
@@ -57,48 +57,59 @@
             <div id="content">
                 <!-- .outer -->
                 <div class="container-fluid outer"> 
-                 
-                <?php if( $this->router->class == 'category'):?>
-                    <?php if ($this->router->fetch_method() == 'index'): ?>
-                        <?php $this->load->view('admin/category/index'); ?>
-                    <?php endif; ?>
-                    <?php if ($this->router->fetch_method() == 'create'): ?>
-                        <?php $this->load->view('admin/category/create'); ?>
-                    <?php endif; ?>
-                    <?php if ($this->router->fetch_method() == 'edit'): ?>
-                        <?php $this->load->view('admin/category/edit'); ?>
-                    <?php endif; ?>
-                <?php endif;?>
 
-                <?php if( $this->router->class == 'post'):?>
-                    <?php if ($this->router->fetch_method() == 'index'): ?>
-                        <?php $this->load->view('admin/post/index'); ?>
+                    <?php if ($this->router->class == 'category'): ?>
+                        <?php if ($this->router->fetch_method() == 'index'): ?>
+                            <?php $this->load->view('admin/category/index'); ?>
+                        <?php endif; ?>
+                        <?php if ($this->router->fetch_method() == 'create'): ?>
+                            <?php $this->load->view('admin/category/create'); ?>
+                        <?php endif; ?>
+                        <?php if ($this->router->fetch_method() == 'edit'): ?>
+                            <?php $this->load->view('admin/category/edit'); ?>
+                        <?php endif; ?>
                     <?php endif; ?>
-                    <?php if ($this->router->fetch_method() == 'create'): ?>
-                        <?php $this->load->view('admin/post/create'); ?>
-                    <?php endif; ?>
-                    <?php if ($this->router->fetch_method() == 'edit'): ?>
-                        <?php $this->load->view('admin/post/edit'); ?>
-                    <?php endif; ?>
-                <?php endif;?>
 
-                <?php if( $this->router->class == 'review'):?>
-                    <?php if ($this->router->fetch_method() == 'index'): ?>
-                        <?php $this->load->view('admin/review/index'); ?>
+                    <?php if ($this->router->class == 'post'): ?>
+                        <?php if ($this->router->fetch_method() == 'index'): ?>
+                            <?php $this->load->view('admin/post/index'); ?>
+                        <?php endif; ?>
+                        <?php if ($this->router->fetch_method() == 'create'): ?>
+                            <?php $this->load->view('admin/post/create'); ?>
+                        <?php endif; ?>
+                        <?php if ($this->router->fetch_method() == 'edit'): ?>
+                            <?php $this->load->view('admin/post/edit'); ?>
+                        <?php endif; ?>
                     <?php endif; ?>
-                    <?php if ($this->router->fetch_method() == 'create'): ?>
-                        <?php $this->load->view('admin/review/create'); ?>
-                    <?php endif; ?>
-                    <?php if ($this->router->fetch_method() == 'edit'): ?>
-                        <?php $this->load->view('admin/review/edit'); ?>
-                    <?php endif; ?>
-                <?php endif;?>
 
-                 <?php if( $this->router->class == 'dashboard'):?>
- 					<?php if ($this->router->fetch_method() == 'index'): ?>
-                        <?php $this->load->view('admin/default'); ?>
-                    <?php endif; ?>                
-                <?php endif;?>    
+                    <?php if ($this->router->class == 'review'): ?>
+                        <?php if ($this->router->fetch_method() == 'index'): ?>
+                            <?php $this->load->view('admin/review/index'); ?>
+                        <?php endif; ?>
+                        <?php if ($this->router->fetch_method() == 'create'): ?>
+                            <?php $this->load->view('admin/review/create'); ?>
+                        <?php endif; ?>
+                        <?php if ($this->router->fetch_method() == 'edit'): ?>
+                            <?php $this->load->view('admin/review/edit'); ?>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                    <?php if ($this->router->class == 'review_cate'): ?>
+                        <?php if ($this->router->fetch_method() == 'index'): ?>
+                            <?php $this->load->view('admin/review_cate/index'); ?>
+                        <?php endif; ?>
+                        <?php if ($this->router->fetch_method() == 'create'): ?>
+                            <?php $this->load->view('admin/review_cate/create'); ?>
+                        <?php endif; ?>
+                        <?php if ($this->router->fetch_method() == 'edit'): ?>
+                            <?php $this->load->view('admin/review_cate/edit'); ?>
+                        <?php endif; ?>
+                    <?php endif; ?>
+
+                    <?php if ($this->router->class == 'dashboard'): ?>
+                        <?php if ($this->router->fetch_method() == 'index'): ?>
+                            <?php $this->load->view('admin/default'); ?>
+                        <?php endif; ?>                
+                    <?php endif; ?>    
 
                 </div>
                 <!-- /.outer -->
@@ -144,30 +155,30 @@
         <!-- /#helpModal -->
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="<?php echo base_url('res/assets/');?>/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+        <script>window.jQuery || document.write('<script src="<?php echo base_url('res/assets/'); ?>/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
 
 
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-        <script>window.jQuery.ui || document.write('<script src="<?php echo base_url('res/assets/');?>/js/vendor/jquery-ui-1.10.0.custom.min.js"><\/script>')</script>
+        <script>window.jQuery.ui || document.write('<script src="<?php echo base_url('res/assets/'); ?>/js/vendor/jquery-ui-1.10.0.custom.min.js"><\/script>')</script>
 
 
-        <script src="<?php echo base_url('res/assets/');?>/js/vendor/bootstrap.min.js"></script>
+        <script src="<?php echo base_url('res/assets/'); ?>/js/vendor/bootstrap.min.js"></script>
 
-        <script src="<?php echo base_url('res/assets/');?>/js/lib/jquery.tablesorter.min.js"></script>
+        <script src="<?php echo base_url('res/assets/'); ?>/js/lib/jquery.tablesorter.min.js"></script>
 
-        <script src="<?php echo base_url('res/assets/');?>/js/lib/jquery.mousewheel.js"></script>
-        <script src="<?php echo base_url('res/assets/');?>/js/lib/jquery.sparkline.min.js"></script>
+        <script src="<?php echo base_url('res/assets/'); ?>/js/lib/jquery.mousewheel.js"></script>
+        <script src="<?php echo base_url('res/assets/'); ?>/js/lib/jquery.sparkline.min.js"></script>
 
-        <script src="<?php echo base_url('res/assets/');?>/flot/jquery.flot.js"></script>
-        <script src="<?php echo base_url('res/assets/');?>/flot/jquery.flot.pie.js"></script>
-        <script src="<?php echo base_url('res/assets/');?>/flot/jquery.flot.selection.js"></script>
-        <script src="<?php echo base_url('res/assets/');?>/flot/jquery.flot.resize.js"></script>
+        <script src="<?php echo base_url('res/assets/'); ?>/flot/jquery.flot.js"></script>
+        <script src="<?php echo base_url('res/assets/'); ?>/flot/jquery.flot.pie.js"></script>
+        <script src="<?php echo base_url('res/assets/'); ?>/flot/jquery.flot.selection.js"></script>
+        <script src="<?php echo base_url('res/assets/'); ?>/flot/jquery.flot.resize.js"></script>
 
-        <script src="<?php echo base_url('res/assets/');?>/fullcalendar/fullcalendar/fullcalendar.min.js"></script>
-        
-        <script src="<?php echo base_url('res/assets/');?>/js/main.js"></script>
-        
+        <script src="<?php echo base_url('res/assets/'); ?>/fullcalendar/fullcalendar/fullcalendar.min.js"></script>
+
+        <script src="<?php echo base_url('res/assets/'); ?>/js/main.js"></script>
+
 
         <script type="text/javascript">
             $(function() {
@@ -175,7 +186,7 @@
             });
         </script>
 
-        <script type="text/javascript" src="<?php echo base_url('res/assets/');?>/js/style-switcher.js"></script>
+        <script type="text/javascript" src="<?php echo base_url('res/assets/'); ?>/js/style-switcher.js"></script>
 
     </body>
 </html>

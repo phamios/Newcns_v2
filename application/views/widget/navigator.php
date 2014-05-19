@@ -1,11 +1,11 @@
-<li class="accordion-group active">
-    <a data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#dashboard-nav">
+<li class="accordion-group">
+    <a data-parent="#menu" data-toggle="collapse" class="accordion-toggle" hreaf="<?php echo site_url('admincp/dashboard');?>" data-target="#dashboard-nav">
         <i class="icon-dashboard icon-large"></i> Dashboard <span
             class="label label-inverse pull-right"></span>
     </a>
 
 </li>
-<li class="accordion-group ">
+<li class="accordion-group">
     <a data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav">
         <i class="icon-tasks icon-large"></i> News<span class="label label-inverse pull-right"></span>
     </a>
@@ -17,5 +17,28 @@
 
     </ul>
 </li>
+
+<li class="accordion-group">
+    <a data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-review">
+        <i class="icon-tasks icon-large"></i> Review<span class="label label-inverse pull-right"></span>
+    </a>
+    <ul class="collapse" id="component-nav-review">
+        <li><a href="<?php echo base_url('admincp/review_cate') ?>"><i class="icon-angle-right"></i> List cate </a></li>
+        <li><a href="<?php echo base_url('admincp/review_cate/create') ?>"><i class="icon-angle-right"></i> Add category</a></li>
+        <li><a href="<?php echo base_url('admincp/reivew') ?>"><i class="icon-angle-right"></i> List news </a></li>
+        <li><a href="<?php echo base_url('admincp/review/create') ?>"><i class="icon-angle-right"></i> Add news </a></li>
+    </ul>
+</li>
+
+<li class="accordion-group">
+    <a data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-features">
+        <i class="icon-tasks icon-large"></i> Features <span class="label label-inverse pull-right"></span>
+    </a>
+    <ul class="collapse" id="component-nav-features">
+        <li><a href="<?php echo base_url('admincp/features') ?>"><i class="icon-angle-right"></i> List features </a></li>
+        <li><a href="<?php echo base_url('admincp/features/create') ?>"><i class="icon-angle-right"></i> Add features</a></li> 
+    </ul>
+</li>
+
  
-<li><a href="login.html"><i class="icon-signin icon-large"></i> Logout</a></li>
+<li><a href="<?php echo site_url('logout');?>"><i class="icon-signin icon-large"></i> Logout</a></li>

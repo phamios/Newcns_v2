@@ -1,1 +1,1 @@
-OK FUCKING
+Welcome to NewsCN
