@@ -1,5 +1,11 @@
-<link rel="stylesheet" href="<?php echo $this->config->base_url();?>css/tinyeditor.css">
-<script src="<?php echo $this->config->base_url();?>js/tiny.editor.packed.js"></script>
+<script src="http://tinymce.cachefly.net/4.0/tinymce.min.js"></script>
+<script type="text/javascript">
+tinymce.init({
+    selector: "textarea",
+    plugins : 'advlist autolink link image lists charmap print preview',
+    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+});
+</script>
 
 
 <div class="row-fluid">

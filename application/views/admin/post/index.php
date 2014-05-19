@@ -38,10 +38,10 @@
                                                 <p align="center"><img src="<?php echo base_url('src/post/' . $row->post_images); ?>" width="80px"/></p>
                                             </td>
                                             <td>
-                                                <a href="<?php echo site_url('admincp/edit_post/' . $row->id); ?>" ><?php echo $row->post_title; ?></a>
+                                                <a href="<?php echo site_url('admincp/post/edit/' . $row->id); ?>" ><?php echo $row->post_title; ?></a>
                                             </td>
                                             <td>
-                                                <a href="<?php echo site_url('admincp/edit_post/' . $row->id); ?>" ><?php echo word_limiter($row->post_description,20); ?></a>
+                                                <a href="<?php echo site_url('admincp/post/edit/' . $row->id); ?>" ><?php echo word_limiter($row->post_description,20); ?></a>
                                             </td>
                                             <td>
                                                  <?php foreach ($features as $feature): ?>
@@ -61,8 +61,8 @@
                                                 <?php endif; ?>
                                             </td>
                                             <td>
-                                                <a href="<?php echo site_url('admincp/post/update_post/' . $row->id) ?>"><i class="icon-edit bigger-120"></i></a>
-                                                <a href="<?php echo site_url('admincp/post/del_post/' . $row->id) ?>"><i class="icon-trash bigger-120"></i></a>
+                                                <a href="<?php echo site_url('admincp/post/edit/' . $row->id) ?>"><i class="icon-edit bigger-120"></i></a>
+                                                <a href="<?php echo site_url('admincp/post/delete/' . $row->id) ?>"><i class="icon-trash bigger-120"></i></a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

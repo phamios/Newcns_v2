@@ -1,3 +1,11 @@
+<script src="http://tinymce.cachefly.net/4.0/tinymce.min.js"></script>
+<script type="text/javascript">
+    tinymce.init({
+        selector: "textarea",
+        plugins : 'advlist autolink link image lists charmap print preview',
+        toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+    });
+</script>
 <div class="row-fluid">
     <div class="span12">
         <div class="box dark">
@@ -24,7 +32,7 @@
             </header>
             <div id="div-1" class="accordion-body collapse in body"> 
                 <div class="span7">
-                    <?php echo form_open_multipart('admin/review/create',array('id'=>'review-create','class'=>'form-horizontal')); ?>
+                    <?php echo form_open_multipart('admincp/review/create', array('id' => 'review-create', 'class' => 'form-horizontal')); ?>
                     <div class="control-group">
                         <label for="text1" class="control-label">Title<span class="require">*</span></label>
 
@@ -32,16 +40,36 @@
                             <input type="text" id="title" class="span10 input-tooltip" data-original-title="Please use your name" data-placement="bottom" name="title"/>
                         </div>
                     </div>
+                     <div class="control-group">
+                        <label for="autosize" class="control-label">Category</label>
+
+                        <div class="controls">
+                            <select name="category">
+                               <?php foreach($category as $cate):?>
+                                <option value="<?php echo $cate->id?>"><?php echo $cate->cate_rev_name?></option>
+                            <?php endforeach;?>
+                                </select>
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="autosize" class="control-label">Specification</label>
+
+                        <div class="controls">
+
+                            <textarea class="span10" id="specsion" name="specs"></textarea>
+                        </div>
+                    </div>
 
                     <div class="control-group">
-                       <label for="autosize" class="control-label">Content</label>
+                        <label for="autosize" class="control-label">Content</label>
 
-                       <div class="controls">
-                           <textarea class="span10" id="autosize" name="content"></textarea>
-                       </div>
-                   </div>
+                        <div class="controls">
+                            <textarea class="span10" id="autosize" name="content"></textarea>
+                        </div>
+                    </div>
 
-                     <div class="control-group">
+                    <div class="control-group">
                         <label for="limiter" class="control-label">Recommend</label>
 
                         <div class="controls">
@@ -65,13 +93,7 @@
                         </div>
                     </div>
 
-                    <div class="control-group">
-                       <label for="autosize" class="control-label">Specification</label>
 
-                       <div class="controls">
-                           <textarea class="span10" id="autosize" name="specs"></textarea>
-                       </div>
-                   </div>
 
                     <div class="control-group">
                         <label class="control-label">Status</label>
@@ -87,21 +109,21 @@
 
                     <div class="form-actions">
                         <input type="reset" value="Reset" id="back" class="navigation_button btn">
-                        <input type="button" onclick="create()" value="Create" id="next" class="navigation_button btn btn-primary" name="submit">
+                        <input type="button" onclick="create()" value="Create" id="next" class="navigation_button btn btn-primary" name="submit_review">
                     </div>
-                 <?php echo form_close(); ?>
+                    <?php echo form_close(); ?>
                 </div>
                 <div class="span5">
                     <div class="control-group">
-                    <label class="control-label">Image Upload</label>
-                    <div class="controls">
-                        <div class="fileupload fileupload-new" data-provides="fileupload">
-                            <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;"></div>
-                            <div>
-                                <input type="file" /></span>
+                        <label class="control-label">Image Upload</label>
+                        <div class="controls">
+                            <div class="fileupload fileupload-new" data-provides="fileupload">
+                                <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;"></div>
+                                <div>
+                                    <input type="file" /></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>
@@ -110,12 +132,12 @@
 </div>
 
 <script type="text/javascript">
-function create (argument) {
-    var title = $("#title").val();
-    if(title != '') {
-        $("#review-create").submit();
-    }else{
-        alert("Please enter review title");
+    function create (argument) {
+        var title = $("#title").val();
+        if(title != '') {
+            $("#review-create").submit();
+        }else{
+            alert("Please enter review title");
+        }
     }
-}
 </script>

@@ -14,10 +14,11 @@ class ImageClass
      */
     function do_upload_image($mypath, $filename) {
         
+        $this->load->library('upload');
         $config['upload_path'] = $mypath;
         $config['allowed_types'] = 'gif|jpg|png|bmp';
         $config['max_size'] = '80000';
-        
+        $this->load->library('upload', $config);
         $this->upload->initialize($config);
         if (isset($filename)) {
             if (!$this->upload->do_upload($filename)) {

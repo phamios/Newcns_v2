@@ -40,18 +40,15 @@ class post_model extends CI_Model {
         return $delete;
     }
 
-    function getDetail($id = null) {
-        //$query = $this->db->query('SELECT * FROM tbl_post WHERE id= $id');
-        $this->db->select('*');
-        $this->db->from('tbl_post');
-        $this->db->join('tbl_user', 'tbl_user.id = tbl_post.userid');
-        $this->db->join('tbl_category', 'tbl_category.id = tbl_post.cateid');
-        $this->db->join('tbl_features', 'tbl_features.id = tbl_post.featureid');
-        $this->db->where('tbl_post.id', $id);
-
-        $query = $this->db->get();
-
-        return $query->result();
+    function getDetail($userid = null,$post_id = null) {
+        $this->db->where('userid', $userid);
+        $this->db->where('id', $post_id);
+        $query = $this->db->get('tbl_post');
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        }else{
+            return null;
+        }
     }
 
     function addPost($object) {

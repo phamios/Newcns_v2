@@ -33,8 +33,18 @@ class Review extends CI_Controller {
         if ($this->session->userdata('adminid') == null) {
             redirect('admincp/login');
         } else {
-            if (isset($_POST['submit'])) {
-                $this->load->model('review_model');
+            $this->load->model('review_model');
+            $this->load->model('category_review_model');
+            $this->load->model('features_model');
+            if (isset($_REQUEST['submit_review'])) {
+                
+                 $title = $this->input->post('title', true);
+                $category = $this->input->post('category', true);
+                $userid = $this->session->userdata('adminid');
+                $specs = $this->input->post('specs', true);
+                $featureid = $this->input->post('feature', true);
+                $post_description = $this->input->post('post_description', true);
+                
                 $object = array(
                     'review_title' => $_POST['title'],
                     'review_content' => $_POST['content'],
@@ -46,9 +56,11 @@ class Review extends CI_Controller {
                     'review_active' => $_POST['active'],
                 );
                 $this->review_model->add_product_review($object);
-                redirect(site_url('admin/review/'));
+                redirect(site_url('admincp/review/'));
             } else {
                 $data['title'] = "Create Product Review";
+                $data['features'] = $this->features_model->getAll();
+                $data['category'] = $this->category_review_model->getAll();
                 $this->load->view('admin/dashboard', $data);
             }
         }
@@ -62,6 +74,7 @@ class Review extends CI_Controller {
                 $id = $_POST['id'];
                 $this->load->model('category_model');
                 $delete = $this->category_model->delete($id);
+                redirect(site_url('admincp/review/'));
             }
         }
     }

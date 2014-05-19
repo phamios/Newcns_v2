@@ -26,10 +26,10 @@ class post extends CI_Controller {
         if ($this->session->userdata('adminid') == null) {
             redirect('admincp/login');
         } else {
-            $data['title'] = "List Post"; 
+            $data['title'] = "List Post";
             $this->load->model('post_model');
             $data['listcontent'] = $this->post_model->getAll_by_User($this->session->userdata('adminid'));
-            $this->load->model('category_model'); 
+            $this->load->model('category_model');
             $this->load->model('features_model');
 
             $data['features'] = $this->features_model->getAll();
@@ -50,18 +50,18 @@ class post extends CI_Controller {
                 $userid = $this->session->userdata('adminid');
                 $post_type = $this->input->post('type', true);
                 $featureid = $this->input->post('feature', true);
-                $post_description = $this->input->post('post_description',true);
+                $post_description = $this->input->post('post_description', true);
                 $post_images = $this->do_upload_image('./src/post/', 'post_image');
-                
+
 
                 $object = array(
-                    'post_title' =>$title,
+                    'post_title' => $title,
                     'cateid' => $category,
                     'userid' => $userid,
                     'post_type' => $post_type,
                     'typeid' => $_POST['type'],
                     'featureid' => $featureid,
-                    'post_description' =>$post_description,
+                    'post_description' => $post_description,
                     'post_images' => $post_images,
                     'post_createdate' => date("Y-m-d H:i:s")
                 );
@@ -99,52 +99,24 @@ class post extends CI_Controller {
         if ($this->session->userdata('adminid') == null) {
             redirect('admincp/login');
         } else {
-            if (isset($_POST['title'])) {
-                $data['edit'] = 1;
-                $this->load->model('post_model');
-                //$this->post_model->query("INSERT ")
-                if (isset($_POST['image'])) {
-                    $image = $_POST['image'];
-                } else {
-                    $image = null;
-                }
-                $insert = array(
-                    'post_title' => $_POST['title'],
-                    'cateid' => $_POST['category'],
-                    //'userid' => '1',
-                    //'post_type' => '1',
-                    'typeid' => $_POST['type'],
-                    'featureid' => $_POST['feature'],
-                    'post_description' => $_POST['description'],
-                    'post_images' => $_POST['images'],
-                    'post_editdate' => date("Y-m-d H:i:s")
-                );
-                $this->db->update('tbl_post', $insert, array('id' => $id));
-                //redirect('admin/post', 'refresh');
-                redirect($this->config->base_url() . 'admincp/post/edit/' . $id . '?success=1');
-            } else {
-                $data['edit'] = 0;
-                $data['id'] = $id;
-                $data['title'] = "Edit post";
-                $this->load->model('post_model');
-                $data['model'] = $this->post_model->getDetail($id);
-                $data['model'] = $data['model'][0];
+            $this->load->model('post_model');
+            $this->load->model('category_model'); 
+            $this->load->model('features_model');
+             
+            $data['edit'] = 0;
+            $data['id'] = $id;
+            $data['title'] = "Edit post";
 
-                $this->load->model('category_model');
-                $this->load->model('user_model');
-                $this->load->model('features_model');
-
-                $data['features'] = $this->features_model->getAll();
-                $data['category'] = $this->category_model->getAll();
-                $data['user'] = $this->user_model->getAll();
-
-                $data['post'] = $this->post_model->getAll();
-                $this->load->view('admin/dashboard', $data);
-            }
+            $data['details_post'] = $this->post_model->getDetail($this->session->userdata('adminid'),$id);
+            
+            $data['features'] = $this->features_model->getAll();
+            $data['category'] = $this->category_model->getAll();
+           // $data['post'] = $this->post_model->getAll();
+            
+            $this->load->view('admin/dashboard', $data);
         }
     }
-    
-    
+
     /**
      * Upload Image 
      * @param type $mypath
@@ -152,7 +124,7 @@ class post extends CI_Controller {
      * @return null
      */
     function do_upload_image($mypath, $filename) {
-        
+
         $this->load->library('upload');
         $config['upload_path'] = $mypath;
         $config['allowed_types'] = 'gif|jpg|png|bmp';
@@ -162,12 +134,12 @@ class post extends CI_Controller {
         if (isset($filename)) {
             if (!$this->upload->do_upload($filename)) {
                 $error = array('error' => $this->upload->display_errors());
-                
+
                 return NULL;
             } else {
                 $data = array('upload_data' => $this->upload->data());
                 $imagename = $this->upload->file_name;
-                
+
                 $this->resize_image($mypath, 'thumb_' . $imagename, $imagename);
                 return $imagename;
             }
@@ -175,8 +147,7 @@ class post extends CI_Controller {
             echo $this->upload->display_errors();
         }
     }
-    
-    
+
     /**
      * Resize Image for Upload Images 
      * @param type $dir

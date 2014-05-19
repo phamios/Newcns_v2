@@ -16,15 +16,7 @@
         <link type="text/css" rel="stylesheet" href="<?php echo base_url('res/assets/'); ?>/css/calendar.css">
 
         <link rel="stylesheet" href="<?php echo base_url('res/assets/'); ?>/css/theme.css">
-
-        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-        <!--[if IE 7]>
-        <link type="text/css" rel="stylesheet" href="<?php echo base_url('res/assets/'); ?>/Font-awesome/css/font-awesome-ie7.min.css"/>
-        <![endif]-->
-
-        <script src="<?php echo base_url('res/assets/'); ?>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+ 
     </head>
     <body>
         <!-- BEGIN WRAP -->
@@ -170,10 +162,7 @@
         <script src="<?php echo base_url('res/assets/'); ?>/js/lib/jquery.mousewheel.js"></script>
         <script src="<?php echo base_url('res/assets/'); ?>/js/lib/jquery.sparkline.min.js"></script>
 
-        <script src="<?php echo base_url('res/assets/'); ?>/flot/jquery.flot.js"></script>
-        <script src="<?php echo base_url('res/assets/'); ?>/flot/jquery.flot.pie.js"></script>
-        <script src="<?php echo base_url('res/assets/'); ?>/flot/jquery.flot.selection.js"></script>
-        <script src="<?php echo base_url('res/assets/'); ?>/flot/jquery.flot.resize.js"></script>
+     
 
         <script src="<?php echo base_url('res/assets/'); ?>/fullcalendar/fullcalendar/fullcalendar.min.js"></script>
 
