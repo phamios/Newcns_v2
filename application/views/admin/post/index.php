@@ -60,10 +60,11 @@
                                                     Stop
                                                 <?php endif; ?>
                                             </td>
-                                            <td>
-                                                <a href="<?php echo site_url('admincp/post/edit/' . $row->id) ?>"><i class="icon-edit bigger-120"></i></a>
-                                                <a href="<?php echo site_url('admincp/post/delete/' . $row->id) ?>"><i class="icon-trash bigger-120"></i></a>
-                                            </td>
+                                             <td>
+		                                
+                                                <a href="<?php echo site_url('admincp/post/edit'.$row->id);?>"><i class="icon-edit"></i></a>
+		                                <button class="btn btn-danger" data-toggle="confirmation" onclick="deletepost(<?php echo $row->id ?>);"><i class="icon-remove"></i></button>
+		                            </td>
                                         </tr>
                                     <?php endforeach; ?>
                                 <?php endif; ?>
@@ -74,4 +75,23 @@
             </div>
         </div>
         <!--End Datatables-->
+<script type="text/javascript">
+ 
 
+function deletepost(id) {
+	var txt;
+    var r = confirm("Do you want to delete this category?");
+    if (r == true) {
+      	$.ajax({
+      		url: "<?php echo $this->config->base_url().'admincp/post/delete';?>",
+      		type: 'POST',
+      		//dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+      		data: {id: id},
+      		success: function(data) {
+      			window.location.href = "<?php echo $this->config->base_url().'admincp/post';?>";
+      		}
+      	});
+    }
+    //document.getElementById("demo").innerHTML = txt;
+}
+</script>

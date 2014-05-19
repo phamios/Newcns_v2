@@ -83,12 +83,11 @@ class post extends CI_Controller {
         }
     }
 
-    public function delete() {
+    public function delete($id) {
         if ($this->session->userdata('adminid') == null) {
             redirect('admincp/login');
         } else {
             if ($this->input->is_ajax_request()) {
-                $id = $_POST['id'];
                 $this->load->model('post_model');
                 $delete = $this->post_model->delete($id);
             }
