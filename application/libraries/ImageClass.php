@@ -1,7 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-if ( ! function_exists('image_helper'))
+class ImageClass
 {
+    
+  
+    
     
     /**
      * Upload Image 
@@ -10,18 +13,21 @@ if ( ! function_exists('image_helper'))
      * @return null
      */
     function do_upload_image($mypath, $filename) {
+        
         $config['upload_path'] = $mypath;
         $config['allowed_types'] = 'gif|jpg|png|bmp';
         $config['max_size'] = '80000';
-        $this->load->library('upload', $config);
+        
         $this->upload->initialize($config);
         if (isset($filename)) {
             if (!$this->upload->do_upload($filename)) {
                 $error = array('error' => $this->upload->display_errors());
+                echo $error; die;
                 return NULL;
             } else {
                 $data = array('upload_data' => $this->upload->data());
                 $imagename = $this->upload->file_name;
+                echo $imagename; die;
                 $this->resize_image($mypath, 'thumb_' . $imagename, $imagename);
                 return $imagename;
             }

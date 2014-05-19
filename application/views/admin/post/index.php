@@ -17,7 +17,7 @@
                                     <th>Hình ảnh</th>
                                     <th>Tiêu đề</th>
                                     <th>Miêu tả</th>
-                                    <th>Nội dung</th>
+                                    <th>Feature</th>
                                     <th>Ngày tạo</th>
                                     <th>Trạng thái</th>
                                     <th>Tùy chọn</th>
@@ -28,32 +28,36 @@
                                     <?php foreach ($listcontent as $row): ?>
                                         <tr>
                                             <td>
-                                                <?php foreach ($allcatenews as $cate): ?>
+                                                <?php foreach ($category as $cate): ?>
                                                     <?php if ($cate->id == $row->cateid): ?>
-                                                        <?php echo ucfirst($cate->cate_name); ?>
+                                                        <?php echo ucfirst($cate->catename); ?>
                                                     <?php endif; ?>
                                                 <?php endforeach; ?>
                                             </td>
                                             <td>
-                                                <p align="center"><img src="<?php echo base_url('src/admin/' . $row->post_image); ?>" width="80px"/></p>
+                                                <p align="center"><img src="<?php echo base_url('src/post/' . $row->post_images); ?>" width="80px"/></p>
                                             </td>
                                             <td>
                                                 <a href="<?php echo site_url('admincp/edit_post/' . $row->id); ?>" ><?php echo $row->post_title; ?></a>
                                             </td>
                                             <td>
-                                                <a href="<?php echo site_url('admincp/edit_post/' . $row->id); ?>" ><?php echo $row->post_short; ?></a>
+                                                <a href="<?php echo site_url('admincp/edit_post/' . $row->id); ?>" ><?php echo word_limiter($row->post_description,20); ?></a>
                                             </td>
                                             <td>
-                                                <a href="<?php echo site_url('admincp/edit_post/' . $row->id); ?>" ><?php echo $row->post_content; ?></a>
+                                                 <?php foreach ($features as $feature): ?>
+                                                    <?php if ($feature->id == $row->featureid): ?>
+                                                        <?php echo ucfirst($feature->features_name); ?>
+                                                    <?php endif; ?>
+                                                <?php endforeach; ?>
                                             </td>
                                             <td>
-                                                <?php echo $row->post_date; ?>
+                                                <?php echo $row->post_createdate; ?>
                                             </td>
                                             <td>
-                                                <?php if ($row->active == 1): ?>
-                                                    Đang hoạt động
+                                                <?php if ($row->post_status == 1): ?>
+                                                    Active
                                                 <?php else: ?>
-                                                    Dừng hoạt động
+                                                    Stop
                                                 <?php endif; ?>
                                             </td>
                                             <td>
