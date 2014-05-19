@@ -32,7 +32,7 @@
                 <!-- /.toolbar -->
             </header>
             <div id="div-1" class="accordion-body collapse in body">
-                <form class="form-horizontal" id="post-create" action="<?php echo $this->config->base_url().'admincp/post/create';?>" method="post">
+                    <?php echo form_open_multipart('admincp/review_cate/create',array('class'=>'form-horizontal','id'=>'post-create')); ?>
                     <div class="control-group">
                         <label for="text1" class="control-label">Title<span class="require">*</span></label>
 
@@ -43,7 +43,7 @@
 
                     <div class="control-group">
                         <label class="control-label">Image</label>
-                        <div class="controls"><input type="file" name="image" /></div>
+                        <div class="controls"><input type="file" name="post_image" /></div>
                     </div>
 
                     <div class="control-group">
@@ -95,10 +95,10 @@
 
                     <div class="form-actions">
                         <input type="reset" value="Reset" id="back" class="navigation_button btn">
-                        <input type="submit" value="Create" id="next" class="navigation_button btn btn-primary">
+                        <input type="submit" value="Create" id="next" name="submit_post" class="navigation_button btn btn-primary">
                         <!-- onclick="create()" -->
                     </div>
-                </form>
+                <?php echo form_close(); ?>
             </div>
         </div>
     </div>

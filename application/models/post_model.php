@@ -38,4 +38,9 @@ class post_model extends CI_Model {
 
 		return $query->result();
 	}
+        
+        function addPost($object=null){
+             $this->db->insert('tbl_post', $object);
+             return $this->db->insert_id();
+        }
 }

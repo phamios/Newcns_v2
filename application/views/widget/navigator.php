@@ -1,5 +1,5 @@
 <li class="accordion-group">
-    <a data-parent="#menu" data-toggle="collapse" class="accordion-toggle" hreaf="<?php echo site_url('admincp/dashboard');?>" data-target="#dashboard-nav">
+    <a data-parent="#menu" data-toggle="collapse" class="accordion-toggle" href="<?php echo site_url('admincp/dashboard');?>" data-target="#dashboard-nav">
         <i class="icon-dashboard icon-large"></i> Dashboard <span
             class="label label-inverse pull-right"></span>
     </a>
@@ -41,4 +41,4 @@
 </li>
 
  
-<li><a href="<?php echo site_url('logout');?>"><i class="icon-signin icon-large"></i> Logout</a></li>
+<li><a href="<?php echo site_url('admincp/logout');?>"><i class="icon-signin icon-large"></i> Logout</a></li>
