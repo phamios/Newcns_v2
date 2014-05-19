@@ -96,6 +96,28 @@
                             <?php $this->load->view('admin/review_cate/edit'); ?>
                         <?php endif; ?>
                     <?php endif; ?>
+                    <?php if ($this->router->class == 'features'): ?>
+                        <?php if ($this->router->fetch_method() == 'index'): ?>
+                            <?php $this->load->view('admin/features/index'); ?>
+                        <?php endif; ?>
+                        <?php if ($this->router->fetch_method() == 'create'): ?>
+                            <?php $this->load->view('admin/features/create'); ?>
+                        <?php endif; ?>
+                        <?php if ($this->router->fetch_method() == 'edit'): ?>
+                            <?php $this->load->view('admin/features/edit'); ?>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                    <?php if ($this->router->class == 'video'): ?>
+                        <?php if ($this->router->fetch_method() == 'index'): ?>
+                            <?php $this->load->view('admin/video/index'); ?>
+                        <?php endif; ?>
+                        <?php if ($this->router->fetch_method() == 'create'): ?>
+                            <?php $this->load->view('admin/video/create'); ?>
+                        <?php endif; ?>
+                        <?php if ($this->router->fetch_method() == 'edit'): ?>
+                            <?php $this->load->view('admin/video/edit'); ?>
+                        <?php endif; ?>
+                    <?php endif; ?>
 
                     <?php if ($this->router->class == 'dashboard'): ?>
                         <?php if ($this->router->fetch_method() == 'index'): ?>
