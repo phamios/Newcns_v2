@@ -40,18 +40,18 @@
                             <input type="text" id="title" class="span10 input-tooltip" data-original-title="Please use your name" data-placement="bottom" name="title"/>
                         </div>
                     </div>
-                     <div class="control-group">
+                    <div class="control-group">
                         <label for="autosize" class="control-label">Category</label>
 
                         <div class="controls">
                             <select name="category">
-                               <?php foreach($category as $cate):?>
-                                <option value="<?php echo $cate->id?>"><?php echo $cate->cate_rev_name?></option>
-                            <?php endforeach;?>
-                                </select>
+                                <?php foreach ($category as $cate): ?>
+                                    <option value="<?php echo $cate->id ?>"><?php echo $cate->cate_rev_name ?></option>
+                                <?php endforeach; ?>
+                            </select>
                         </div>
                     </div>
-                    
+
                     <div class="control-group">
                         <label for="autosize" class="control-label">Specification</label>
 
@@ -90,6 +90,14 @@
 
                         <div class="controls">
                             <textarea class="span10" id="limiter" name="lows"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="tags" class="control-label">Tags</label>
+
+                        <div class="controls">
+                            <input class="span6" name="tags" id="tags" value="foo,bar,baz"/>
                         </div>
                     </div>
 

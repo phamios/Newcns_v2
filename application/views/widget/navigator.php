@@ -39,6 +39,6 @@
         <li><a href="<?php echo base_url('admincp/features/create') ?>"><i class="icon-angle-right"></i> Add features</a></li> 
     </ul>
 </li>
-
- 
+<li><a href="<?php echo site_url('admincp/config');?>"><i class="icon-signin icon-large"></i> Site Config</a></li>
+  
 <li><a href="<?php echo site_url('admincp/logout');?>"><i class="icon-signin icon-large"></i> Logout</a></li>
