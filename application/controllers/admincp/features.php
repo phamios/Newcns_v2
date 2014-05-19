@@ -22,9 +22,9 @@ class features extends CI_Controller {
         if ($this->session->userdata('adminid') == null) {
             redirect('admincp/login');
         } else {
-            $data['title'] = "List Category";
-            $this->load->model('category_model');
-            $data['model'] = $this->category_model->getAll();
+            $data['title'] = "List Features";
+            $this->load->model('features_model');
+            $data['features'] = $this->features_model->getAll();
             $this->load->view('admin/dashboard', $data);
         }
     }
@@ -33,26 +33,29 @@ class features extends CI_Controller {
         if ($this->session->userdata('adminid') == null) {
             redirect('admincp/login');
         } else {
-            if (isset($_POST['name'])) {
-                $this->load->model('category_model');
-                //$this->category_model->query("INSERT ")
-                if (isset($_POST['image'])) {
-                    $image = $_POST['image'];
-                } else {
-                    $image = null;
-                }
-                $insert = array(
-                    'catename' => $_POST['name'],
-                    'cateroot' => $_POST['cate-root'],
-                    'cateimages' => $image
-                );
-                $this->db->insert('tbl_category', $insert);
-                //redirect('admin/category', 'refresh');
-                redirect($this->config->base_url() . 'admincp/category/');
+            $this->load->model('features_model');
+            if (isset($_REQUEST['add_button'])) {
+                 if(strlen($this->input->post('name_features',true)) <= 0 ){
+                     redirect('admincp/features/create');
+                 }else{
+                     $name_features = $this->input->post('name_features',true);
+                     $value_features = $this->input->post('value_features',true);
+                     $active = $this->input->post('active',true);
+                     $object = array(
+                         'features_name'=>$name_features,
+                         'features_value'=>$value_features,
+                         'features_status'=>$active,
+                     );
+                     $result = $this->features_model->addFeatures($object);
+                     if($result <> null ){
+                         redirect('admincp/features/index');
+                     } else {
+                         redirect('admincp/features/create');
+                     }
+                 }
             } else {
-                $data['title'] = "Create Category";
-                $this->load->model('category_model');
-                $data['category'] = $this->category_model->getAll();
+                $data['title'] = "Create Features";
+                
                 $this->load->view('admin/dashboard', $data);
             }
         }
@@ -64,8 +67,8 @@ class features extends CI_Controller {
         } else {
             if ($this->input->is_ajax_request()) {
                 $id = $_POST['id'];
-                $this->load->model('category_model');
-                $delete = $this->category_model->delete($id);
+                $this->load->model('features_model');
+                $delete = $this->features_model->delete($id);
             }
         }
     }
@@ -74,31 +77,28 @@ class features extends CI_Controller {
         if ($this->session->userdata('adminid') == null) {
             redirect('admincp/login');
         } else {
-            if (isset($_POST['name'])) {
-                $data['edit'] = 1;
-                $this->load->model('category_model');
-                //$this->category_model->query("INSERT ")
-                if (isset($_POST['image'])) {
-                    $image = $_POST['image'];
-                } else {
-                    $image = null;
-                }
-                $insert = array(
-                    'catename' => $_POST['name'],
-                    'cateroot' => $_POST['cate-root'],
-                    'cateimages' => $image
-                );
-                $this->db->update('tbl_category', $insert, array('id' => $id));
-
-                redirect($this->config->base_url() . 'admincp/category/edit/' . $id . '?success=1');
+            $this->load->model('features_model');
+           if (isset($_REQUEST['edit_button'])) {
+                 if(strlen($this->input->post('name_features',true)) <= 0 ){
+                     redirect('admincp/features/edit'.$id);
+                 }else{
+                     $name_features = $this->input->post('name_features',true);
+                     $value_features = $this->input->post('value_features',true);
+                     $active = $this->input->post('active',true);
+                     $object = array(
+                         'features_name'=>$name_features,
+                         'features_value'=>$value_features,
+                         'features_status'=>$active,
+                     );
+                     $result = $this->features_model->updateFeatures($object,$id);
+                     redirect('admincp/features/index');
+                 }
             } else {
                 $data['edit'] = 0;
                 $data['id'] = $id;
-                $data['title'] = "Edit Category";
-                $this->load->model('category_model');
-                $data['model'] = $this->category_model->getDetail($id);
-                $data['model'] = $data['model'][0];
-                $data['category'] = $this->category_model->getAll();
+                $data['title'] = "Edit Features"; 
+                $data['features_details'] = $this->features_model->getDetail($id);
+             
                 $this->load->view('admin/dashboard', $data);
             }
         }

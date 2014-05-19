@@ -124,6 +124,11 @@
                             <?php $this->load->view('admin/default'); ?>
                         <?php endif; ?>                
                     <?php endif; ?>    
+                    <?php if ($this->router->class == 'config'): ?>
+                        <?php if ($this->router->fetch_method() == 'index'): ?>
+                            <?php $this->load->view('admin/config/index'); ?>
+                        <?php endif; ?>                
+                    <?php endif; ?>  
 
                 </div>
                 <!-- /.outer -->
