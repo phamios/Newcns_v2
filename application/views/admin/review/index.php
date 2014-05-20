@@ -38,7 +38,7 @@
                                     <td><?php echo $row->user_id; ?></td>
                                     <td><?php echo $row->review_title; ?></td>
                                     <td><?php echo $row->review_created; ?></td>
-                                    <td><?php echo $row->review_scrore; ?></td>
+                                    <td><?php echo $row->review_score; ?></td>
                                     <td><?php echo $row->review_view; ?></td>
                                     <td><?php echo $row->review_like; ?></td>
                                     <td><?php echo $row->review_active; ?></td>
