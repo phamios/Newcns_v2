@@ -121,19 +121,6 @@
                     </div>
                     <?php echo form_close(); ?>
                 </div>
-                <div class="span5">
-                    <div class="control-group">
-                        <label class="control-label">Image Upload</label>
-                        <div class="controls">
-                            <div class="fileupload fileupload-new" data-provides="fileupload">
-                                <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;"></div>
-                                <div>
-                                    <input type="file" /></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

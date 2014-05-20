@@ -48,15 +48,18 @@ class Review extends CI_Controller {
                 $object = array(
                     'review_title' => $_POST['title'],
                     'review_content' => $_POST['content'],
-                    'review_recomment' => $_POST['recommend'],
+                    'review_recoment' => $_POST['recommend'],
                     'review_high' => $_POST['highs'],
                     'review_low' => $_POST['lows'],
                     'review_specific' => $_POST['specs'],
                     'review_created' => date("Y-m-d H:i:s"),
                     'review_active' => $_POST['active'],
                 );
-                $this->review_model->add_product_review($object);
-                redirect(site_url('admincp/review/'));
+                $review_id = $this->review_model->add_product_review($object);
+                if ($review_id) {
+                    $gallery['review_id'] = $review_id;
+                    redirect(site_url('admincp/review/gallery/'.$review_id));
+                }
             } else {
                 $data['title'] = "Create Product Review";
                 $data['features'] = $this->features_model->getAll();
@@ -83,4 +86,41 @@ class Review extends CI_Controller {
         
     }
 
+    public function gallery($review_id) {
+        if ($this->session->userdata('adminid') == null) {
+            redirect('admincp/login');
+        } else {
+            $adminid = $this->session->userdata('adminid');
+            $this->load->model('gallery_model');
+            if (isset($_FILES['upload']['name'])) {
+                // total files //
+                $count = count($_FILES['upload']['name']);
+                // all uploads //
+                $uploads = $_FILES['upload'];
+                #$itemid= $this->input->post('itemid', true);
+
+                for ($i = 0; $i < $count; $i++) {
+                    if ($uploads['error'][$i] == 0) {
+                        $name = str_replace('.jpg', '', $uploads['name'][$i]);
+                        $name = $adminid.'_'.time().'_'.$name.'.jpg';
+                        move_uploaded_file($uploads['tmp_name'][$i], './src/images'.'/'.$name);
+                        $this->gallery_model->add_image_for_item($review_id,$name);
+                    }
+                }
+            }
+            $data['review_id'] = $review_id; 
+            $data['images']    = $this->gallery_model->get_image_by_review_id($review_id);
+            $this->load->view('admin/dashboard', $data);
+        }
+    }
+
+    public function del_image_review($id, $review_id){
+        if ($this->session->userdata('adminid') == null) {
+            redirect('admincp/login');
+        } else {
+            $this->load->model('gallery_model');
+            $this->gallery_model->del_image_review($id);
+            redirect('admincp/review/gallery/'.$review_id);
+        }
+    }
 }

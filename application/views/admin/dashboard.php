@@ -87,7 +87,11 @@
                         <?php if ($this->router->fetch_method() == 'edit'): ?>
                             <?php $this->load->view('admin/review/edit'); ?>
                         <?php endif; ?>
+                        <?php if ($this->router->fetch_method() == 'gallery'): ?>
+                            <?php $this->load->view('admin/review/gallery'); ?>
+                        <?php endif; ?>
                     <?php endif; ?>
+
                     <?php if ($this->router->class == 'review_cate'): ?>
                         <?php if ($this->router->fetch_method() == 'index'): ?>
                             <?php $this->load->view('admin/review_cate/index'); ?>
