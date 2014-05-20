@@ -31,21 +31,34 @@ class post extends CI_Controller {
             $data['listcontent'] = $this->post_model->getAll_by_User($this->session->userdata('adminid'));
             $this->load->model('category_model');
             $this->load->model('features_model');
-
             $data['features'] = $this->features_model->getAll();
             $data['category'] = $this->category_model->getAll();
             $this->load->view('admin/dashboard', $data);
         }
     }
-    
-    public function hot() {
-       if ($this->session->userdata('adminid') == null) {
+
+    public function sethot($id) {
+        if ($this->session->userdata('adminid') == null) {
             redirect('admincp/login');
         } else {
-            if ($this->input->is_ajax_request()) {
-                $this->load->model('post_model');
-                $delete = $this->post_model->delete($id);
-            }
+
+            $this->load->model('post_model');
+            $object = array(
+                'post_id' => $id,
+            );
+            $result = $this->post_model->add_post_hot($object);
+            return $result;
+        }
+    }
+
+    public function hot() {
+        if ($this->session->userdata('adminid') == null) {
+            redirect('admincp/login');
+        } else {
+            $this->load->model('post_model');
+            $data['listhot'] = $this->post_model->getAll_hotpost();
+            $data['listcontent'] = $this->post_model->getAll_by_User($this->session->userdata('adminid'));
+            $this->load->view('admin/dashboard', $data);
         }
     }
 
@@ -110,19 +123,19 @@ class post extends CI_Controller {
             redirect('admincp/login');
         } else {
             $this->load->model('post_model');
-            $this->load->model('category_model'); 
+            $this->load->model('category_model');
             $this->load->model('features_model');
-             
+
             $data['edit'] = 0;
             $data['id'] = $id;
             $data['title'] = "Edit post";
 
-            $data['details_post'] = $this->post_model->getDetail($this->session->userdata('adminid'),$id);
-            
+            $data['details_post'] = $this->post_model->getDetail($this->session->userdata('adminid'), $id);
+
             $data['features'] = $this->features_model->getAll();
             $data['category'] = $this->category_model->getAll();
-           // $data['post'] = $this->post_model->getAll();
-            
+            // $data['post'] = $this->post_model->getAll();
+
             $this->load->view('admin/dashboard', $data);
         }
     }

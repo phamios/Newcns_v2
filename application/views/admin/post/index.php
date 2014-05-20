@@ -61,8 +61,8 @@
                                                 <?php endif; ?>
                                             </td>
                                             <td>
-                                                <a href="#" onclick="sethot(<?php echo $row->id ?>)">Set Hot</a>
-                                                <a href="<?php echo site_url('admincp/post/edit' . $row->id); ?>"><i class="icon-edit"></i></a>
+                                                <a class="btn edit" href="#" onclick="sethot(<?php echo $row->id ?>)">Hot</a>
+                                                <a class="btn edit" href="<?php echo site_url('admincp/post/edit/' . $row->id); ?>"><i class="icon-edit"></i></a>
                                                 <button class="btn btn-danger" data-toggle="confirmation" onclick="deletepost(<?php echo $row->id ?>);"><i class="icon-remove"></i></button>
                                             </td>
                                         </tr>
@@ -98,13 +98,12 @@
                 var r = confirm("Do you want to set hot this post?");
                 if (r == true) {
                     $.ajax({
-                        url: "<?php echo $this->config->base_url() . 'admincp/post/hot'; ?>",
-                        type: 'POST',
-                        //dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+                        url: "<?php echo site_url('admincp/post/hot/'); ?>/" + id,
+                        type: 'POST', 
                         data: {id: id},
                         success: function(data) {
-                            alert('Set Hot of Post Successfully !');
-                            window.location.href = "<?php echo $this->config->base_url() . 'admincp/post'; ?>";
+                            alert('Set Hot of Post Successfully !' + data);
+                           
                         }
                     });
                 }

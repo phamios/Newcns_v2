@@ -94,7 +94,7 @@ tinymce.init({
                         <label for="text1" class="control-label">Description</label>
 
                         <div class="controls with-tooltip">
-                            <textarea id="description" name="description" class="span6"></textarea>
+                            <textarea id="description" name="post_description" name="description" class="span6"></textarea>
                             <!-- <input type="text" id="description" class="span6 input-tooltip" data-original-title="Please use post title" data-placement="bottom" name="description"/> -->
                         </div>
                     </div>

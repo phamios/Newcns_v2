@@ -3,7 +3,26 @@
 tinymce.init({
     selector: "textarea",
     plugins : 'advlist autolink link image lists charmap print preview',
-    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+    font_formats: "Andale Mono=andale mono,times;"+
+        "Arial=arial,helvetica,sans-serif;"+
+        "Arial Black=arial black,avant garde;"+
+        "Book Antiqua=book antiqua,palatino;"+
+        "Comic Sans MS=comic sans ms,sans-serif;"+
+        "Courier New=courier new,courier;"+
+        "Georgia=georgia,palatino;"+
+        "Helvetica=helvetica;"+
+        "Impact=impact,chicago;"+
+        "Symbol=symbol;"+
+        "Tahoma=tahoma,arial,helvetica,sans-serif;"+
+        "Terminal=terminal,monaco;"+
+        "Times New Roman=times new roman,times;"+
+        "Trebuchet MS=trebuchet ms,geneva;"+
+        "Verdana=verdana,geneva;"+
+        "Webdings=webdings;"+
+        "Wingdings=wingdings,zapf dingbats"
+
+    
 });
 </script>
 <div class="row-fluid">
@@ -38,7 +57,7 @@ tinymce.init({
             <?php if($details_post <> null):?>
             <?php foreach($details_post as $post):?>
             <div id="div-1" class="accordion-body collapse in body">
-                    <?php echo form_open_multipart('admincp/post/edit'.$post->id,array('class'=>'form-horizontal','id'=>'post-create')); ?>
+                    <?php echo form_open_multipart('admincp/post/edit/'.$post->id,array('class'=>'form-horizontal','id'=>'post-create')); ?>
                     
                     <div class="control-group">
                         <label for="text1" class="control-label">Title<span class="require">*</span></label>
@@ -104,7 +123,7 @@ tinymce.init({
                         <label for="text1" class="control-label">Description</label>
 
                         <div class="controls with-tooltip">
-                            <textarea id="description" name="description" class="span6"><?php echo $post->post_description ?></textarea>
+                            <textarea id="description" name="description"  name="post_description" class="span6"><?php echo $post->post_description ?></textarea>
                             <!-- <input type="text" id="description" class="span6 input-tooltip" data-original-title="Please use post title" data-placement="bottom" name="description"/> -->
                         </div>
                     </div>

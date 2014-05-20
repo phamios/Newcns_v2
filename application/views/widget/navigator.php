@@ -14,7 +14,7 @@
         <li><a href="<?php echo base_url('admincp/category/create') ?>"><i class="icon-angle-right"></i> Add category</a></li>
         <li><a href="<?php echo base_url('admincp/post') ?>"><i class="icon-angle-right"></i> List news </a></li>
         <li><a href="<?php echo base_url('admincp/post/create') ?>"><i class="icon-angle-right"></i> Add news </a></li>
-
+        <li><a href="<?php echo base_url('admincp/post/hot') ?>"><i class="icon-angle-right"></i> List Hot Post </a></li>
     </ul>
 </li>
 

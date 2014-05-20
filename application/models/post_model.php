@@ -29,10 +29,9 @@ class post_model extends CI_Model {
         $query = $this->db->get('tbl_post');
         if ($query->num_rows() > 0) {
             return $query->result();
-        }else{
+        } else {
             return null;
         }
-        
     }
 
     function delete($id = null) {
@@ -40,13 +39,13 @@ class post_model extends CI_Model {
         return $delete;
     }
 
-    function getDetail($userid = null,$post_id = null) {
+    function getDetail($userid = null, $post_id = null) {
         $this->db->where('userid', $userid);
         $this->db->where('id', $post_id);
         $query = $this->db->get('tbl_post');
         if ($query->num_rows() > 0) {
             return $query->result();
-        }else{
+        } else {
             return null;
         }
     }
@@ -55,6 +54,21 @@ class post_model extends CI_Model {
 
         $this->db->insert('tbl_post', $object);
         return $this->db->insert_id();
+    }
+    
+    function add_post_hot($object){
+         $this->db->insert('tbl_hotpost', $object);
+        return $this->db->insert_id();
+    }
+    
+    function getAll_hotpost() { 
+        $this->db->order_by("id");
+        $query = $this->db->get('tbl_hotpost');
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return null;
+        }
     }
 
 }

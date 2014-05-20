@@ -61,7 +61,7 @@ function deleteCate(id) {
     var r = confirm("Do you want to delete this category?");
     if (r == true) {
       	$.ajax({
-      		url: "<?php echo $this->config->base_url().'admincp/category/delete';?>",
+      		url: "<?php echo $this->config->base_url().'admincp/category/delete';?>" + id,
       		type: 'POST',
       		//dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
       		data: {id: id},
