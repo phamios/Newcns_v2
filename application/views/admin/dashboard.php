@@ -66,6 +66,9 @@
                         <?php if ($this->router->fetch_method() == 'index'): ?>
                             <?php $this->load->view('admin/post/index'); ?>
                         <?php endif; ?>
+                     <?php if ($this->router->fetch_method() == 'hot'): ?>
+                            <?php $this->load->view('admin/post/hot'); ?>
+                        <?php endif; ?>
                         <?php if ($this->router->fetch_method() == 'create'): ?>
                             <?php $this->load->view('admin/post/create'); ?>
                         <?php endif; ?>

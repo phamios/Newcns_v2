@@ -37,6 +37,17 @@ class post extends CI_Controller {
             $this->load->view('admin/dashboard', $data);
         }
     }
+    
+    public function hot() {
+       if ($this->session->userdata('adminid') == null) {
+            redirect('admincp/login');
+        } else {
+            if ($this->input->is_ajax_request()) {
+                $this->load->model('post_model');
+                $delete = $this->post_model->delete($id);
+            }
+        }
+    }
 
     public function create() {
         if ($this->session->userdata('adminid') == null) {

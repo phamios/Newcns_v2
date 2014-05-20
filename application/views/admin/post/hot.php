@@ -41,10 +41,10 @@
                                                 <a href="<?php echo site_url('admincp/post/edit/' . $row->id); ?>" ><?php echo $row->post_title; ?></a>
                                             </td>
                                             <td>
-                                                <a href="<?php echo site_url('admincp/post/edit/' . $row->id); ?>" ><?php echo word_limiter($row->post_description, 20); ?></a>
+                                                <a href="<?php echo site_url('admincp/post/edit/' . $row->id); ?>" ><?php echo word_limiter($row->post_description,20); ?></a>
                                             </td>
                                             <td>
-                                                <?php foreach ($features as $feature): ?>
+                                                 <?php foreach ($features as $feature): ?>
                                                     <?php if ($feature->id == $row->featureid): ?>
                                                         <?php echo ucfirst($feature->features_name); ?>
                                                     <?php endif; ?>
@@ -60,11 +60,9 @@
                                                     Stop
                                                 <?php endif; ?>
                                             </td>
-                                            <td>
-                                                <a href="#" onclick="sethot(<?php echo $row->id ?>)">Set Hot</a>
-                                                <a href="<?php echo site_url('admincp/post/edit' . $row->id); ?>"><i class="icon-edit"></i></a>
-                                                <button class="btn btn-danger" data-toggle="confirmation" onclick="deletepost(<?php echo $row->id ?>);"><i class="icon-remove"></i></button>
-                                            </td>
+                                             <td>
+                                                 <a href="<?php echo site_url('admincp/post/hot/'.$row->id);?>"> Set Hot</a>
+		                            </td>
                                         </tr>
                                     <?php endforeach; ?>
                                 <?php endif; ?>
@@ -75,39 +73,23 @@
             </div>
         </div>
         <!--End Datatables-->
-        <script type="text/javascript">
- 
+<script type="text/javascript">
+function deletepost(id) {
+	var txt;
+    var r = confirm("Do you want to delete this category?");
+    if (r == true) {
+      	$.ajax({
+      		url: "<?php echo $this->config->base_url().'admincp/post/delete';?>",
+      		type: 'POST',
+      		//dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+      		data: {id: id},
+      		success: function(data) {
+      			window.location.href = "<?php echo $this->config->base_url().'admincp/post';?>";
+      		}
+      	});
+    }
+    //document.getElementById("demo").innerHTML = txt;
+}
 
-            function deletepost(id) { 
-                var r = confirm("Do you want to delete this post?");
-                if (r == true) {
-                    $.ajax({
-                        url: "<?php echo $this->config->base_url() . 'admincp/post/delete'; ?>",
-                        type: 'POST',
-                        //dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
-                        data: {id: id},
-                        success: function(data) {
-                            window.location.href = "<?php echo $this->config->base_url() . 'admincp/post'; ?>";
-                        }
-                    });
-                }
-                //document.getElementById("demo").innerHTML = txt;
-            }
 
-            function sethot(id) { 
-                var r = confirm("Do you want to set hot this post?");
-                if (r == true) {
-                    $.ajax({
-                        url: "<?php echo $this->config->base_url() . 'admincp/post/hot'; ?>",
-                        type: 'POST',
-                        //dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
-                        data: {id: id},
-                        success: function(data) {
-                            alert('Set Hot of Post Successfully !');
-                            window.location.href = "<?php echo $this->config->base_url() . 'admincp/post'; ?>";
-                        }
-                    });
-                }
-                //document.getElementById("demo").innerHTML = txt;
-            }
-        </script>
+</script>
