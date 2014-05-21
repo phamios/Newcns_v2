@@ -47,7 +47,8 @@ class post extends CI_Controller {
                 'post_id' => $id,
             );
             $result = $this->post_model->add_post_hot($object);
-            return $result;
+           
+            redirect('admincp/post/hot');
         }
     }
 
@@ -110,7 +111,7 @@ class post extends CI_Controller {
     public function delete($id) {
         if ($this->session->userdata('adminid') == null) {
             redirect('admincp/login');
-        } else {
+        } else { 
             if ($this->input->is_ajax_request()) {
                 $this->load->model('post_model');
                 $delete = $this->post_model->delete($id);
@@ -133,7 +134,8 @@ class post extends CI_Controller {
                 $featureid = $this->input->post('feature', true);
                 $post_description = $this->input->post('post_description', true);
                 $post_images = $this->do_upload_image('./src/post/', 'post_image');
-                if ($post_images == null) {
+                
+                if (strlen($post_images) <= 0 ) {
                     $object = array(
                         'post_id' => $id,
                         'post_title' => $title,
@@ -146,6 +148,7 @@ class post extends CI_Controller {
                         'post_createdate' => date("Y-m-d H:i:s")
                     );
                 } else {
+                     
                     $object = array(
                         'post_id' => $id,
                         'post_title' => $title,
@@ -156,7 +159,7 @@ class post extends CI_Controller {
                         'featureid' => $featureid,
                         'post_description' => $post_description, 
                         'post_createdate' => date("Y-m-d H:i:s"),
-                        'post_image' =>$post_images,
+                        'post_images' =>$post_images,
                     );
                 }
                

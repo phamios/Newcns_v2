@@ -45,8 +45,7 @@ tinymce.init({
 
                         <div class="controls">
                             <select id="type" name="type">
-                                <option value="1" selected>News</option>
-                                <option value="2">Features</option> 
+                                <option value="1" selected>News</option> 
                             </select>
                         </div>
                     </div>
@@ -77,20 +76,7 @@ tinymce.init({
                         </div>
                     </div>
                     
-
-                    <div class="control-group">
-                        <label class="control-label">Feature<span class="require">*</span></label>
-
-                        <div class="controls">
-                            <select id="feature" name="feature">
-                                <option value="">No select</option>
-                                <?php foreach($features as $row): ?>
-                                <option value="<?php echo $row->id; ?>"><?php echo $row->features_name ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
-                    </div>
-
+ 
                     <div class="control-group">
                         <label for="text1" class="control-label">Description</label>
 

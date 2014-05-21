@@ -30,7 +30,7 @@
                                                     <?php endif; ?>
                                                 <?php endforeach; ?>
                                             </td>
-                                            <td><input type="text" value="<?php echo $row->post_order;?>" onclick="updateorder()" id="post_order" name="post_order"/></td>
+                                            <td><input type="text" value="<?php echo $row->post_order;?>"  name="post_order"/></td>
                                         </tr>
                                     <?php endforeach; ?>
                                 <?php endif; ?> 

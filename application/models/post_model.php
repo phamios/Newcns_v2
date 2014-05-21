@@ -46,19 +46,8 @@ class post_model extends CI_Model {
         }
     }
 
-    public function update($object = null) {
-        if ($object['post_images'] == null) {
-            $data = array(
-                'post_title' => $object['post_title'],
-                'cateid' => $object['cateid'],
-                'userid' => $object['userid'],
-                'post_type' => 1,
-                'typeid' => 1,
-                'featureid' => $object['featureid'],
-                'post_description' => $object['post_description'],
-                'post_createdate' => date("Y-m-d H:i:s")
-            );
-        } else {
+    public function update($object) { 
+        if (isset($object['post_images'])) {
             $data = array(
                 'post_title' => $object['post_title'],
                 'cateid' => $object['cateid'],
@@ -69,6 +58,17 @@ class post_model extends CI_Model {
                 'post_description' => $object['post_description'],
                 'post_createdate' => date("Y-m-d H:i:s"),
                 'post_images' => $object['post_images'],
+            );
+        } else {
+            $data = array(
+                'post_title' => $object['post_title'],
+                'cateid' => $object['cateid'],
+                'userid' => $object['userid'],
+                'post_type' => 1,
+                'typeid' => 1,
+                'featureid' => $object['featureid'],
+                'post_description' => $object['post_description'],
+                'post_createdate' => date("Y-m-d H:i:s")
             );
         }
 

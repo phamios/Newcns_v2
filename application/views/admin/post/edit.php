@@ -68,11 +68,15 @@ tinymce.init({
                     </div>
 
                     <div class="control-group">
-                        <label class="control-label">Image</label>
-                        <?php if ($post->post_images != ''): ?>
-                            <img src="<?php echo $this->config->base_url() . 'img/post/' . $post->post_images; ?>" width="200">
+                        <label class="control-label">
+                            <?php if ($post->post_images != ''): ?>
+                            <img src="<?php echo base_url('src/post/' . 'thumb_'.$post->post_images); ?>" width="80">
+                            <?php else:?>
+                                Images
                         <?php endif; ?>
-                        <div class="controls"><input type="file" name="image" /></div>
+                        </label>
+                        
+                        <div class="controls"><input type="file" name="post_image" /></div>
                     </div>
 
                     <div class="control-group">
@@ -94,7 +98,7 @@ tinymce.init({
                         <label for="text1" class="control-label">Description</label>
 
                         <div class="controls with-tooltip">
-                            <textarea id="description" name="description"  name="post_description" class="span6"><?php echo $post->post_description ?></textarea>
+                            <textarea id="description"  name="post_description" class="span6"><?php echo $post->post_description ?></textarea>
                         </div>
                     </div>
 

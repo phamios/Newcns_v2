@@ -35,7 +35,7 @@
                                                 <?php endforeach; ?>
                                             </td>
                                             <td>
-                                                <p align="center"><img src="<?php echo base_url('src/post/' . $row->post_images); ?>" width="80px"/></p>
+                                                <p align="center"><img src="<?php echo base_url('src/post/' . 'thumb_'.$row->post_images); ?>" width="80px"/></p>
                                             </td>
                                             <td>
                                                 <a href="<?php echo site_url('admincp/post/edit/' . $row->id); ?>" ><?php echo $row->post_title; ?></a>
@@ -60,10 +60,10 @@
                                                     Stop
                                                 <?php endif; ?>
                                             </td>
-                                            <td>
-                                                <a class="btn edit" href="#" onclick="sethot(<?php echo $row->id ?>)">Hot</a>
+                                            <td> 
+                                                 <a class="btn edit" href="<?php echo site_url('admincp/post/sethot/'.$row->id);?>">HOT</a>
                                                 <a class="btn edit" href="<?php echo site_url('admincp/post/edit/' . $row->id); ?>"><i class="icon-edit"></i></a>
-                                                <button class="btn btn-danger" data-toggle="confirmation" onclick="deletepost(<?php echo $row->id ?>);"><i class="icon-remove"></i></button>
+                                                <a class="btn btn-danger" href="<?php echo site_url('admincp/post/delete/'.$row->id);?>"><i class="icon-remove"></i></a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
@@ -75,38 +75,4 @@
             </div>
         </div>
         <!--End Datatables-->
-        <script type="text/javascript">
- 
-
-            function deletepost(id) { 
-                var r = confirm("Do you want to delete this post?");
-                if (r == true) {
-                    $.ajax({
-                        url: "<?php echo $this->config->base_url() . 'admincp/post/delete'; ?>",
-                        type: 'POST',
-                        //dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
-                        data: {id: id},
-                        success: function(data) {
-                            window.location.href = "<?php echo $this->config->base_url() . 'admincp/post'; ?>";
-                        }
-                    });
-                }
-                //document.getElementById("demo").innerHTML = txt;
-            }
-
-            function sethot(id) { 
-                var r = confirm("Do you want to set hot this post?");
-                if (r == true) {
-                    $.ajax({
-                        url: "<?php echo site_url('admincp/post/hot/'); ?>/" + id,
-                        type: 'POST', 
-                        data: {id: id},
-                        success: function(data) {
-                            alert('Set Hot of Post Successfully !' + data);
-                           
-                        }
-                    });
-                }
-                //document.getElementById("demo").innerHTML = txt;
-            }
-        </script>
+        
