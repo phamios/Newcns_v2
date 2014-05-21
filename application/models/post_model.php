@@ -49,7 +49,7 @@ class post_model extends CI_Model {
     }
     
     public function update($object=null){ 
-        $id = $object['id'];
+        $id = $object['post_id'];
         $this->db->where('id', $id);
         $this->db->update('tbl_post', $object);
     }
