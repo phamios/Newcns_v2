@@ -11,17 +11,7 @@ class post_model extends CI_Model {
         $this->load->database();
     }
 
-    function getAll() {
-        //$query = $this->db->query('SELECT * FROM tbl_post INNER JOIN tbl_user ON tbl_user.id = tbl_post.userid INNER JOIN tbl_category ON tbl_category.id = tbl_post.cateid INNER JOIN tbl_features ON tbl_features.id = tbl_post.featureid');
-        $this->db->select('tbl_post.id, tbl_post.cateid, tbl_post.typeid, tbl_post.featureid, tbl_post.userid, tbl_post.post_type, tbl_post.post_title, tbl_post.post_description, tbl_post.post_images, tbl_post.post_view, tbl_post.post_like, tbl_post.post_status, tbl_user.username, tbl_category.catename, tbl_features.features_name');
-        $this->db->from('tbl_post');
-        $this->db->join('tbl_user', 'tbl_user.id = tbl_post.userid');
-        $this->db->join('tbl_category', 'tbl_category.id = tbl_post.cateid');
-        $this->db->join('tbl_features', 'tbl_features.id = tbl_post.featureid');
-        $this->db->order_by('tbl_post.id', 'DESC');
-        $query = $this->db->get();
-        return $query->result();
-    }
+   
 
     function getAll_by_User($userid) {
         $this->db->where('userid', $userid);
@@ -32,6 +22,42 @@ class post_model extends CI_Model {
         } else {
             return null;
         }
+    }
+    
+    function getAll_by_User_post($userid) {
+        $this->db->where('userid', $userid);
+        $this->db->where('post_type', 1);
+        $this->db->order_by("id");
+        $query = $this->db->get('tbl_post');
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return null;
+        }
+    }
+    
+    function getAll_by_User_features($userid) {
+        $this->db->where('userid', $userid);
+        $this->db->where('post_type', 2);
+        $this->db->order_by("id");
+        $query = $this->db->get('tbl_post');
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return null;
+        }
+    }
+    
+    public function update($object=null){
+        $data = array(
+                'cate_name'    => strtolower(trim($object['cate_name'])),
+                'cate_root'    => $object['cate_root'],
+                'cate_created' => date("Y-m-d h:s:m"),
+                'active'  => $object['active'],
+        );
+        $id = $object['id'];
+        $this->db->where('id', $id);
+        $this->db->update('tbl_post', $data);
     }
 
     function delete($id = null) {

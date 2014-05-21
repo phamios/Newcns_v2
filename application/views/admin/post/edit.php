@@ -57,7 +57,7 @@ tinymce.init({
             <?php if($details_post <> null):?>
             <?php foreach($details_post as $post):?>
             <div id="div-1" class="accordion-body collapse in body">
-                    <?php echo form_open_multipart('admincp/post/edit/'.$post->id,array('class'=>'form-horizontal','id'=>'post-create')); ?>
+                    <?php echo form_open_multipart('admincp/post/edit/'.  $post->id,array('class'=>'form-horizontal','id'=>'post-create')); ?>
                     
                     <div class="control-group">
                         <label for="text1" class="control-label">Title<span class="require">*</span></label>

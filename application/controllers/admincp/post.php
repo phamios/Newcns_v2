@@ -28,7 +28,7 @@ class post extends CI_Controller {
         } else {
             $data['title'] = "List Post";
             $this->load->model('post_model');
-            $data['listcontent'] = $this->post_model->getAll_by_User($this->session->userdata('adminid'));
+            $data['listcontent'] = $this->post_model->getAll_by_User_post($this->session->userdata('adminid'));
             $this->load->model('category_model');
             $this->load->model('features_model');
             $data['features'] = $this->features_model->getAll();
@@ -82,7 +82,7 @@ class post extends CI_Controller {
                     'post_title' => $title,
                     'cateid' => $category,
                     'userid' => $userid,
-                    'post_type' => $post_type,
+                    'post_type' => 1,
                     'typeid' => $_POST['type'],
                     'featureid' => $featureid,
                     'post_description' => $post_description,
@@ -126,12 +126,37 @@ class post extends CI_Controller {
             $this->load->model('category_model');
             $this->load->model('features_model');
 
+
+            if (isset($_REQUEST['update_post'])) { 
+                $title = $this->input->post('title', true);
+                $category = $this->input->post('category', true);
+                $userid = $this->session->userdata('adminid');
+                $post_type = $this->input->post('type', true);
+                $featureid = $this->input->post('feature', true);
+                $post_description = $this->input->post('post_description', true);
+                $post_images = $this->do_upload_image('./src/post/', 'post_image');
+                if ($post_images == null) {
+                    $object = array(
+                        'post_title' => $title,
+                        'cateid' => $category,
+                        'userid' => $userid,
+                        'post_type' => 1,
+                        'typeid' => $post_type,
+                        'featureid' => $featureid,
+                        'post_description' => $post_description, 
+                        'post_createdate' => date("Y-m-d H:i:s")
+                    );
+                }
+               
+                $this->post_model->addPost($object);
+                //redirect('admin/post', 'refresh');
+                redirect($this->config->base_url() . 'admincp/post/');
+            }
             $data['edit'] = 0;
             $data['id'] = $id;
             $data['title'] = "Edit post";
 
             $data['details_post'] = $this->post_model->getDetail($this->session->userdata('adminid'), $id);
-
             $data['features'] = $this->features_model->getAll();
             $data['category'] = $this->category_model->getAll();
             // $data['post'] = $this->post_model->getAll();

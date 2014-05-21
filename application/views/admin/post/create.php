@@ -39,6 +39,18 @@ tinymce.init({
             </header>
             <div id="div-1" class="accordion-body collapse in body">
                     <?php echo form_open_multipart('admincp/post/create',array('class'=>'form-horizontal','id'=>'post-create')); ?>
+                    
+                    <div class="control-group">
+                        <label class="control-label">Type</label>
+
+                        <div class="controls">
+                            <select id="type" name="type">
+                                <option value="1" selected>News</option>
+                                <option value="2">Features</option> 
+                            </select>
+                        </div>
+                    </div>
+                
                     <div class="control-group">
                         <label for="text1" class="control-label">Title<span class="require">*</span></label>
 
@@ -64,18 +76,7 @@ tinymce.init({
                             </select>
                         </div>
                     </div>
-                    <div class="control-group">
-                        <label class="control-label">Type</label>
-
-                        <div class="controls">
-                            <select id="type" name="type">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                            </select>
-                        </div>
-                    </div>
+                    
 
                     <div class="control-group">
                         <label class="control-label">Feature<span class="require">*</span></label>
