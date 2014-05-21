@@ -1208,16 +1208,7 @@
                         </ul>
                     </div>
 
-                    <div class="newsletter-register">
-                        <span>Signup for Digital Trends Newsletter, its FREE!</span>
-
-                        <form>
-                            <input name="dt_newsletter_register_email" placeholder="Email Address" type="text">
-                            <input class="button standard" value="Sign Up" type="submit">
-                        </form>
-
-                        <div class="msg"></div>
-                    </div>
+                     
 
                     <div class="copyright">Copyright© 2014 Designtechnica Corporation. All rights reserved.</div>
                 </div>
@@ -1225,17 +1216,8 @@
         </footer>
     </div>
 
-    <div id="logged-in-component-debugjs"></div>		
+   
     
-    <div class="notification-bar tos-update">
-        Digital Trends has updated the Terms of Use. <a class="readmore" href="http://www.digitaltrends.com/legal/terms-of-use/">Read Now</a><a class="acknowledge" href="javascript:void(0)">Ok, Thanks</a> <a class="close">x</a>
-    </div>
-    <div id="logged-in-component-tos_update"></div><div id="logged-in-component-meganav">		
-    </div><div id="logged-in-component-footer-components"></div>	
-    <script type="text/javascript">var DTCRequestedLoggedInComponents="account-links,debugjs,tos_update,meganav,footer-components";var DTCRequestedLoggedInComponentsArgs="Tjs=";</script>
-
-    
- 
     <!-- End Nielsen (dt-core/dt-core.analytics.php) -->
 
     <!-- FBAds Pixel (dt-core/dt-core.analytics.php) -->
