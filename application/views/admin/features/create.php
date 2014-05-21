@@ -38,15 +38,14 @@ tinymce.init({
                 <!-- /.toolbar -->
             </header>
             <div id="div-1" class="accordion-body collapse in body">
-                    <?php echo form_open_multipart('admincp/post/create',array('class'=>'form-horizontal','id'=>'post-create')); ?>
+                    <?php echo form_open_multipart('admincp/features/create',array('class'=>'form-horizontal','id'=>'features-create')); ?>
                     
                     <div class="control-group">
                         <label class="control-label">Type</label>
 
                         <div class="controls">
                             <select id="type" name="type">
-                                <option value="1" selected>News</option>
-                                <option value="2">Features</option> 
+                                <option value="2" selected>Features</option> 
                             </select>
                         </div>
                     </div>
@@ -61,34 +60,7 @@ tinymce.init({
 
                     <div class="control-group">
                         <label class="control-label">Image</label>
-                        <div class="controls"><input type="file" name="post_image" /></div>
-                    </div>
-
-                    <div class="control-group">
-                        <label class="control-label">Category<span class="require">*</span></label>
-
-                        <div class="controls">
-                            <select id="post-category" name="category">
-                                <option value="">No select</option>
-                                <?php foreach($category as $row): ?>
-                                <option value="<?php echo $row->id; ?>"><?php echo $row->catename ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
-                    </div>
-                    
-
-                    <div class="control-group">
-                        <label class="control-label">Feature<span class="require">*</span></label>
-
-                        <div class="controls">
-                            <select id="feature" name="feature">
-                                <option value="">No select</option>
-                                <?php foreach($features as $row): ?>
-                                <option value="<?php echo $row->id; ?>"><?php echo $row->features_name ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
+                        <div class="controls"><input type="file" name="feature_image" /></div>
                     </div>
 
                     <div class="control-group">
@@ -102,7 +74,7 @@ tinymce.init({
 
                     <div class="form-actions">
                         <input type="reset" value="Reset" id="back" class="navigation_button btn">
-                        <input type="submit" value="Create" id="next" name="submit_post" class="navigation_button btn btn-primary">
+                        <input type="submit" value="Create" id="next" name="submit_features" class="navigation_button btn btn-primary">
                         <!-- onclick="create()" -->
                     </div>
                 <?php echo form_close(); ?>
@@ -116,20 +88,11 @@ $(function () {
     $('#post-create').validate({
         rules: {
             'title': 'required',
-            'category' : {
-                required: true,
-                digits: true
-            },
-            'feature' : {
-                required: true,
-                digits: true
             },
         },
         ignore: [],
         messages: {
             title: "Please enter title",
-            category: "Please select category",
-            feature: "Please select feature"
         },
         submitHandler: function(form) {
             editor.post();
@@ -137,21 +100,19 @@ $(function () {
             var description = $("<input>")
                .attr("type", "hidden")
                .attr("name", "description").val(editor.t.value);
-            $('#post-create').append($(input));
+            $('#features-create').append($(input));
             form.submit();
         }
     });
 });
 function create (argument) {
 	var name = $("#name").val();
-    var category = $("#post-category").val();
-    var feature = $("#feature").val();
 
     editor.post();
     var description = editor.t.value;
     console.log(description);
-	if(name != '' && category != 0 && feature != 0 && description != '') {
-		$("#post-create").submit();
+	if(name != '' && description != '') {
+		$("#features-create").submit();
 	}else{
 		alert("Please enter");
 	}
