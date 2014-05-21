@@ -10,181 +10,9 @@
         <link rel="apple-touch-icon" href="http://cdn2.digitaltrends.com/touch-icon-iphone.png?ver=2">
         <link rel="apple-touch-icon" sizes="72x72" href="http://cdn2.digitaltrends.com/touch-icon-ipad.png?ver=2">
         <link rel="apple-touch-icon" sizes="114x114" href="http://cdn2.digitaltrends.com/touch-icon-iphone4.png?ver=2">
-
-
-
-        <!-- Begin comScore Tag  (dt-core/dt-core.analytics.php) -->
-    <div class="kxhead" data-id="IwNLJc7X" style="display:none;"><span class="kxtag kxinvisible" data-id="28081" data-alias="Appnexus Connect"><script>
-        (function(){
-            var kuid = Krux('get', 'user');
-            if (kuid) {
-                var prefix = location.protocol == 'https:' ? "https:" : "http:";
-                var kurl = prefix + '//beacon.krxd.net/usermatch.gif?src=digitaltrends&adnxs_uid=$UID';
-                var appnexus_url = '//ib.adnxs.com/getuid?' + kurl
-                var i = new Image();
-                i.src = appnexus_url;
-            }
-        })();
-            </script></span><span class="kxtag kxinvisible" data-id="27573" data-alias="Krux Load Segments v2"><script type="text/javascript">
-// DFP premium
-(function(require) {
-var store = require('store');
-var _ = require('util');  
-var segments;
-  
-function handleUserDataResponse(r) {
-// Handle the response as usual.
-segments.handleUserDataResponse(r);
-    
-// Override localStorage.kxuser with a case-insensitive value for DFP premium.
-// This will get read by the interchange direct snippet for Krux.user
-// and Krux.dfpKeyValues
-if(r.kuid_long) {
-store.set('user', r.kuid_long, store.DAYS*30);
-}
-}
-  
-// Our own fetch uses our own handleResponse
-function fetch() {
-var options = {
-url: _.get('url_userData'),
-data: {pubid: _.get('pubid')},
-callback: 'kxjsonp_userData',
-done: handleUserDataResponse
-};
-if(!segments.readTechFromStore()) {
-options.data.technographics = 1;
-}
-require('http').jsonp(options);  
-}
-  
-  
-if(!store.get('segWait')) {
-// disable segments.fetch and use our own
-_.set('segWait', 1, store.MINUTES*5);
-_.onOnce('dom:load', fetch);
-_.fire('user_data_fetch_scheduled');
-}
-  
-// Finally, require segments as usual.
-segments = require('segments');
-}(Krux.require));
-            </script></span><span class="kxtag kxinvisible" data-id="27761" data-alias="Krux Data Transfer Code"><script>
-// Using UrlPath 1 to produce page attribute url_path_1
-Krux('scrape', { "page_attr_url_path_1": {url_path: "1"}});
-// Using UrlPath 2 to produce page attribute url_path_2
-Krux('scrape', { "page_attr_url_path_2": {url_path: "2"}});
-// Using UrlPath 3 to produce page attribute url_path_3
-Krux('scrape', { "page_attr_url_path_3": {url_path: "3"}});
-Krux('scrape', { "page_attr_manufacturer": {meta_name: "manufacturer"}});
-Krux('scrape', { "page_attr_model": {meta_name: "model"}});
-Krux('scrape', { "page_attr_tags": {meta_name: "tags"}});
-            </script></span><span class="kxtag kxinvisible" data-id="28421" data-alias="AdAdvisor S2S provider tag"><script>
-(function() {
-// adadvisor redirects to http://logger... so it's not https safe
-if (location.protocol == "http:") {
-var u = "https://adadvisor.net/adscores/g.js?sid=9212244187&_kdpid=2111c0af-fc3a-446f-ab07-63aa74fbde8e";
-(new Image()).src = u;
-}
-})();
-            </script></span><span class="kxtag kxinvisible" data-id="28422" data-alias="Targus/AdAdvisor provider tag"><script>
-(function() {
-// adadvisor redirects to http://logger... so it's not https safe
-if (location.protocol == "http:") {
-var u = "http://adadvisor.net/adscores/g.js?sid=9212244187&_kdpid=911765d2-536f-4475-8fd5-92b73478fb8f";
-(new Image()).src = u;
-}
-})();
-            </script>
-        </span><span class="kxtag kxinvisible" data-id="28423" data-alias="Nielsen (via Exelate) provider tag"><script>
-            // Blank
-            </script></span><span class="kxtag kxinvisible" data-id="28424" data-alias="Bluekai provider tag"><img src="<?php echo base_url('res_home/index_files');?>/um.gif"></span><span class="kxtag kxinvisible" data-id="27548" data-alias="Technographic Data provider tag"><script>
-            // this tag is intentionally blank
-            </script></span><span class="kxtag kxinvisible" data-id="27549" data-alias="Krux Geographic Data provider tag"></span><span class="kxtag kxinvisible" data-id="28103" data-alias="Acxiom S2S provider tag"><script>
-            (function(){
-                var kuid = Krux('get', 'user');
-                if (kuid) {
-                    Krux('require:http').pixel({
-                        url: "//p.acxiom-online.com/pixel/sci",
-                        data: {
-                            uid: kuid,
-                            _kdpid: 'f19b7626-3732-4dcc-bac5-8d2c937dae9a',
-                            pid: 3021
-                        }});
-                }
-            })();
-            </script></span><span class="kxtag kxinvisible" data-id="28104" data-alias="Brilig provider tag"><script>
-            Krux('require:http').pixel({
-                url: "//p.brilig.com/contact/bct",
-                data: {
-                    pid: "9354001b-d428-4e7c-9115-ffd042a2f184",
-                    _ct: "pixel",
-                    puid: Krux('get', 'user'),
-                    REDIR: "http://beacon.krxd.net/data.gif?_kdpid=c3f63723-4104-46a9-9bda-e72960b2959a"
-                }
-            });
-            </script></span><span class="kxtag kxinvisible" data-id="28105" data-alias="DataLogix provider tag"><script>
-            (function() {
-                // krxd.nexac.com throws SSL cert errors so only fire this tag
-                // on HTTP pages
-                if (location.protocol == "http:") {
-                    var Krux = window.Krux;
-                    var kuid = Krux('get', 'user');
-                    if (kuid) {
-                        var u = "http://krxd.nexac.com/dlx.gif?_kdpid=2dd640a6-6ebd-4d4f-af30-af8baa441a0d&kuid=" + kuid;
-                        (new Image()).src = u;
-                    }
-                }
-            })();
-            </script></span><span class="kxtag kxinvisible" data-id="28106" data-alias="IXI Digital (Open Market) provider tag"><script>
-            Krux('require:http').pixel({
-                url: "//s.ixiaa.com/digi/C726AB29-0470-440B-B8D2-D552CED3A3DC/a.gif"
-            });
-            </script></span><span class="kxtag kxinvisible" data-id="28107" data-alias="Bizo provider tag"><script>
-            (function(){
-                if (window.KRUX) {
-                    var pubid = KRUXSetup.pubid;
-                } else if (window.Krux) {
-                    var pubid = Krux('get', 'pubid');
-                } else { 
-                    return;
-                }
-                var prefix = location.protocol == 'https:' ? "https:" : "http:";
-                var kurl = prefix + '//beacon.krxd.net/data.gif?_kdpid=890a6228-04af-4630-85b6-0b49dee6157f&pid=' + pubid;
-                var u = prefix + '//api.bizographics.com/v1/profile.redirect?api_key=595bae8dbc0c4c42b4544e688b10c002' + 
-                    '&callback_url=' + escape(kurl);
-                var i = new Image();
-                i.src = u;
-            })();
-            </script></span><span class="kxtag kxinvisible" data-id="28108" data-alias="eXelate Media provider tag"><script>
-            (function(){
-                var kuid = Krux('get', 'user');
-                if (kuid) {
-                    Krux('require:http').pixel({
-                        url: "//loadm.exelator.com/load",
-                        data: {
-                            _kdpid: 'e4942ff0-4070-4896-a7ef-e6a5a30ce9f9',
-                            buid: kuid,
-                            p: '204',
-                            g: '270',
-                            j: '0'
-                        }});
-                }
-            })();
-            </script></span></div><script src="<?php echo base_url('res_home/index_files');?>/controltag.ae7f2374304abe49e3ec18a3fb32755f" async=""></script><script src="<?php echo base_url('res_home/index_files');?>/fbds.js" async=""></script><script src="<?php echo base_url('res_home/index_files');?>/ti.js" type="text/javascript" async=""></script><script src="<?php echo base_url('res_home/index_files');?>/gpt.js" type="text/javascript" async=""></script><script src="<?php echo base_url('res_home/index_files');?>/controltag.js" async="" type="text/javascript"></script><script src="<?php echo base_url('res_home/index_files');?>/beacon.js" async=""></script><script>var blacklisted=false;var no_comscore_cookie=(result=new RegExp('(?:^|; )'+encodeURIComponent('dt_no_comscore')+'=([^;]*)').exec(document.cookie))?(result[1]):null;if(no_comscore_cookie===null){var utm_source_blacklist=JSON.parse('[\"a1\\r\",\"d1\\r\",\"n2\"]');var utm_content_blacklist=JSON.parse('[\"\"]');var query_string=window.location.search.substring(1);var query_vars=query_string.split("&");var utm_source='';var utm_content='';for(var i=0;i<query_vars.length;i++){var keyval=query_vars[i].split('=');if(keyval[0]!==undefined&&keyval[1]!==undefined&&keyval[0]=='utm_source'){utm_source=keyval[1];}else if(keyval[0]!==undefined&&keyval[1]!==undefined&&keyval[0]=='utm_content'){utm_content=keyval[1];}}
-            if(utm_source){for(var j=0;j<utm_source_blacklist.length;j++){if(utm_source_blacklist[j].trim().toLowerCase()===utm_source.trim().toLowerCase()){blacklisted=true;break;}}}
-            if(utm_content){for(var j=0;j<utm_content_blacklist.length;j++){if(utm_content_blacklist[j].trim().toLowerCase()===utm_content.trim().toLowerCase()){blacklisted=true;break;}}}}else
-            blacklisted=true;if(!blacklisted){var _comscore=_comscore||[];_comscore.push({c1:"2",c2:"7518287"});(function(){var s=document.createElement("script"),el=document.getElementsByTagName("script")[0];s.async=true;s.src=(document.location.protocol=="https:"?"https://sb":"http://b")+".scorecardresearch.com/beacon.js";el.parentNode.insertBefore(s,el);})();}else
-                document.cookie='dt_no_comscore=dt_no_comscore; expires=0; path=/';</script>
-    <!-- End comScore Tag -->
-
-
-    <!-- Begin dt_utm_source (lib/analytics.php) -->
-    <script>var utm_source_cookie=(result=new RegExp('(?:^|; )'+encodeURIComponent('dt_utm_source')+'=([^;]*)').exec(document.cookie))?(result[1]):null;if(utm_source_cookie===null){var query_string=window.location.search.substring(1);var query_vars=query_string.split("&");var dt_utm_source='';for(var i=0;i<query_vars.length;i++){var keyval=query_vars[i].split('=');if(keyval[0]!==undefined&&keyval[1]!==undefined&&keyval[0]=='utm_source'){dt_utm_source=keyval[1];}}
-            if(dt_utm_source)
-                document.cookie='dt_utm_source='+dt_utm_source+'; expires=0; path=/';}else
-        dt_utm_source=utm_source_cookie;</script>
-    <!-- End dt_utm_source (lib/analytics.php) -->
+ 
+     
+ 
 
     <!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.21 - http://yoast.com/wordpress/seo/ -->
     <link rel="canonical" href="http://www.digitaltrends.com/">
@@ -207,30 +35,20 @@ var u = "http://adadvisor.net/adscores/g.js?sid=9212244187&_kdpid=911765d2-536f-
     <!-- Source: /snippet/controltag?confid=IwNLJc7X&site=Digital%20Trends&edit=1 -->
     <script class="kxct" data-id="IwNLJc7X" data-timing="async" data-version="1.9" type="text/javascript">window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);(function(){var k=document.createElement('script');k.type='text/javascript';k.async=true;var m,src=(m=location.href.match(/\bkxsrc=([^&]+)/))&&decodeURIComponent(m[1]);k.src=/^https?:\/\/([^\/]+\.)?krxd\.net(:\d{1,5})?\//i.test(src)?src:src==="disable"?"":(location.protocol==="https:"?"https:":"http:")+"//cdn.krxd.net/controltag?confid=IwNLJc7X";var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(k,s);}());</script>
     <!-- END Krux Controltag -->
-
-    <!-- BEGIN Krux GPT (dt-core/dt-core.analytics.php)-->
-    <script>window.Krux||((Krux=function(){Krux.q.push(arguments);}).q=[]);(function(){function retrieve(n){var m,k='kx'+n;if(window.localStorage){return window.localStorage[k]||"";}else if(navigator.cookieEnabled){m=document.cookie.match(k+'=([^;]*)');return(m&&unescape(m[1]))||"";}else{return'';}}
-            Krux.user=retrieve('user');Krux.segments=retrieve('segs')&&retrieve('segs').split(',')||[];})();</script>
-    <!-- END Krux GPT (dt-core/dt-core.analytics.php)-->
-    <link rel="alternate" type="application/rss+xml" title="Digital Trends | Feed" href="http://www.digitaltrends.com/feed/">
-    <script>var DTSSO_Facebook_AppId='61377565444';var DTSSO_Facebook_ChannelUrl='http://www.digitaltrends.com/fb-channel.php';</script>
+ 
+    
     <link rel="stylesheet" id="dt-css-b39b787d60a3d8e785cd09b859cd2848-css" href="<?php echo base_url('res_home/index_files');?>/dt-optimized-css-b39b787d60a3d8e785cd09b859cd2848.css" type="text/css" media="all">
     <script type="text/javascript" src="<?php echo base_url('res_home/index_files');?>/dt-optimized-head-js-b01f1491305a136a71d8987915470f03.js"></script>
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.digitaltrends.com/xmlrpc.php?rsd">
     <link rel="shortlink" href="http://www.digitaltrends.com/?p=444226">
 
-    <!-- Chartbeat (dt-core/dt-core.analytics.php) -->
-    <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
-    <!-- End Chartbeat -->
+   
 
 
-    <!-- Begin Google Analytics (dt-core/dt-core.analytics.php) -->
-
-    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-82208-8']);_gaq.push(['_setDomainName','.digitaltrends.com']);_gaq.push(['_setMaxCustomVariables',50]);_gaq.push(['_trackPageview']);_gaq.push(['_trackPageLoadTime']);(function(){var ga=document.createElement('script');ga.type='text/javascript';ga.async=true;ga.src=('https:'==document.location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(ga);})();</script><script src="<?php echo base_url('res_home/index_files');?>/ga.js" async="" type="text/javascript"></script>
-    <!-- End Google Analytics -->
+    
 
 
-    <style type="text/css">span.dropcap{display:inline;float:left;margin:0;padding: .25em .08em 0 0;#padding: 0.25em 0.08em 0.2em 0.00em;_padding:0.25em 0.08em 0.4em 0.00em;font-size:3.2em;line-height: .4em;text-transform:capitalize;color:#c30;font-family:Georgia,Times New Romans,Trebuchet MS,Lucida Grande}</style>
+   
     <!--Begin GPT -->
     <script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[];(function(){var gads=document.createElement("script");gads.async=true;gads.type="text/javascript";var useSSL="https:"==document.location.protocol;gads.src=(useSSL?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var node=document.getElementsByTagName("script")[0];node.parentNode.insertBefore(gads,node);})();</script>
     <!--End GPT -->
@@ -1317,264 +1135,7 @@ var u = "http://adadvisor.net/adscores/g.js?sid=9212244187&_kdpid=911765d2-536f-
                     </aside></div>
 
 
-                <nav class="more-content">
-
-                    <h2>More from Digital Trends</h2>
-
-                    <!--DTC HTML CACHE HIT START-->			
-
-                    <div class="top  ">
-
-                        <h3>
-                            Worth Checking Out
-                        </h3>
-
-                        <ul>
-                            <li><a href="http://www.digitaltrends.com/mobile/best-ipad-apps/">100 Awesome iPad Apps for 2014</a></li>
-                            <li><a href="http://www.digitaltrends.com/mobile/best-android-apps/">153 Awesome Android Apps for 2014…</a></li>
-                            <li><a href="http://www.digitaltrends.com/mobile/best-iphone-apps/">150 Awesome iPhone Apps (Updated Spring…</a></li>
-                            <li><a href="http://www.digitaltrends.com/mobile/best-samsung-galaxy-s3-cases/">Best Samsung Galaxy S3 cases</a></li>
-                            <li><a href="http://www.digitaltrends.com/mobile/best-ipod-touch-games/">Best iPod Touch games</a></li>
-
-                        </ul>
-
-                    </div>
-
-
-
-                    <div class="top  ">
-
-                        <h3>
-
-                            <a href="http://www.digitaltrends.com/movies/">
-                                Movies						</a>
-                        </h3>
-
-                        <ul>
-                            <li><a href="http://www.digitaltrends.com/movies/sigourney-weaver-transform-avatar-sequels/">Sigourney Weaver to…</a></li>
-                            <li><a href="http://www.digitaltrends.com/gaming/roberto-orci-talks-direct-star-trek-3/">Roberto Orci in talks to direct Star…</a></li>
-                            <li><a href="http://www.digitaltrends.com/gaming/mission-impossible-5-adds-call-duty-modern-warfare-3-writer/">Mission: Impossible 5 adds Call Of Duty:…</a></li>
-                            <li><a href="http://www.digitaltrends.com/movies/captain-america-spin-series-agent-carter-headed-television/">Captain America spin-off series Agent…</a></li>
-                            <li><a href="http://www.digitaltrends.com/movies/transformers-age-extinction-adds-john-goodman-ken-watanabe-cast/">Transformers: Age Of Extinction adds…</a></li>
-
-                        </ul>
-
-                    </div>
-
-
-
-                    <div class="top  right">
-
-                        <h3>
-
-                            <a href="http://www.digitaltrends.com/sports/">
-                                Sports						</a>
-                        </h3>
-
-                        <ul>
-                            <li><a href="http://www.digitaltrends.com/photography/new-broncos-wide-receiver-cody-latimer-turns-nfl-draft-family-trip-mom/">Denver Broncos’ wide receiver Cody…</a></li>
-                            <li><a href="http://www.digitaltrends.com/gaming/shaq-fu-sequel-actually-happening/">Shaq Fu sequel is actually happening</a></li>
-                            <li><a href="http://www.digitaltrends.com/mobile/moves-facebook-what-you-should-know/">What happens when Facebook knows every…</a></li>
-                            <li><a href="http://www.digitaltrends.com/music/apple-earpods-will-use-heart-rate-sensor-ibeacon-tech/">Apple EarPods could include heart rate…</a></li>
-                            <li><a href="http://www.digitaltrends.com/sports/fit-band-kids-atrocity-just-necessary-evil-2014/">Is a fit band for kids an atrocity, or…</a></li>
-
-                        </ul>
-
-                    </div>
-
-
-
-                    <div class="  ">
-
-                        <h3>
-
-                            <a href="http://www.digitaltrends.com/music/">
-                                Music						</a>
-                        </h3>
-
-                        <ul>
-                            <li><a href="http://www.digitaltrends.com/music/apple-throw-reported-3-2-billion-beats-electronics/">Apple to throw down $3.2 billion for…</a></li>
-                            <li><a href="http://www.digitaltrends.com/music/tunein-review-and-interview/">TuneIn is doing for radio what Spotify…</a></li>
-                            <li><a href="http://www.digitaltrends.com/music/oppos-releases-ha-1/">Heaphones are just the beginning for…</a></li>
-                            <li><a href="http://www.digitaltrends.com/music/best-new-music-2014/">New music this week: Coldplay, Lil…</a></li>
-                            <li><a href="http://www.digitaltrends.com/music/pandora-introduces-promoted-stations/">What kind of music does Taco Bell like?…</a></li>
-
-                        </ul>
-
-                    </div>
-
-
-
-                    <div class="  ">
-
-                        <h3>
-
-                            <a href="http://www.digitaltrends.com/photography/">
-                                Photography						</a>
-                        </h3>
-
-                        <ul>
-                            <li><a href="http://www.digitaltrends.com/photography/new-broncos-wide-receiver-cody-latimer-turns-nfl-draft-family-trip-mom/">Denver Broncos’ wide receiver Cody…</a></li>
-                            <li><a href="http://www.digitaltrends.com/photography/drone-and-us-airways-jet-almost-collide-in-incident-over-florida/">Drone and US Airways jet almost collide…</a></li>
-                            <li><a href="http://www.digitaltrends.com/photography/travelling-across-universe-astrophotographer-mike-taylor/">Travelling across the universe with…</a></li>
-                            <li><a href="http://www.digitaltrends.com/photography/izitru-service-spots-bogus-images-using-forensics/">Real or fake? Izitru uses forensic…</a></li>
-                            <li><a href="http://www.digitaltrends.com/mobile/your-incriminating-selfies-on-snapchat-werent-deleted/">Surprise! Your incriminating selfies on…</a></li>
-
-                        </ul>
-
-                    </div>
-
-
-
-                    <div class="  right">
-
-                        <h3>
-
-                            <a href="http://www.digitaltrends.com/cars/">
-                                Cars						</a>
-                        </h3>
-
-                        <ul>
-                            <li><a href="http://www.digitaltrends.com/cars/camry-versus-accord/">Family sedan throw-down: 2015 Toyota…</a></li>
-                            <li><a href="http://www.digitaltrends.com/cars/2015-audi-r8-lmx-news/">Audi’s R8 LMX will be the first to…</a></li>
-                            <li><a href="http://www.digitaltrends.com/cars/chrysler-300-srt-get-axe-jeep-grand-cherokee-srt-lives/">Chrysler 300 SRT to meet the reaper…</a></li>
-                            <li><a href="http://www.digitaltrends.com/cars/solar/">BMW’s solar charging carport is…</a></li>
-                            <li><a href="http://www.digitaltrends.com/cars/ducatis-exotic-200-horsepower-1198-superleggera-bristles-lightweight-tech/">Even in the rarified air of Ducatis, the…</a></li>
-
-                        </ul>
-
-                    </div>
-
-
-
-                    <div class="  ">
-
-                        <h3>
-
-                            <a href="http://www.digitaltrends.com/how-to/">
-                                How-To						</a>
-                        </h3>
-
-                        <ul>
-                            <li><a href="http://www.digitaltrends.com/mobile/lg-g-flex-helpful-tips-and-tricks/">17 tips to help you get ahead of curve…</a></li>
-                            <li><a href="http://www.digitaltrends.com/mobile/ios-7-problems/">45 problems with iOS 7.1, and how to fix…</a></li>
-                            <li><a href="http://www.digitaltrends.com/mobile/galaxy-note-3-problems/">10 slick solutions to the biggest Galaxy…</a></li>
-                            <li><a href="http://www.digitaltrends.com/music/spotify-helpful-tips-and-tricks/">Crank Spotify beyond simple streaming…</a></li>
-                            <li><a href="http://www.digitaltrends.com/music/playing-flac-files-on-ios-devices/">How to convert and play FLAC music files…</a></li>
-
-                        </ul>
-
-                    </div>
-
-
-
-                    <div class="  ">
-
-                        <h3>
-
-                            <a href="http://www.digitaltrends.com/cool-tech/">
-                                Cool Tech						</a>
-                        </h3>
-
-                        <ul>
-                            <li><a href="http://www.digitaltrends.com/photography/drone-and-us-airways-jet-almost-collide-in-incident-over-florida/">Drone and US Airways jet almost collide…</a></li>
-                            <li><a href="http://www.digitaltrends.com/cool-tech/thieves-tampering-with-atms-could-soon-face-nasty-blast-of-hot-foam/">Thieves tampering with ATMs could soon…</a></li>
-                            <li><a href="http://www.digitaltrends.com/mobile/mothers-day-baby-pictures-in-times-square/">Looking for a Mother’s Day gift?…</a></li>
-                            <li><a href="http://www.digitaltrends.com/cool-tech/federal-election-commission-approves-bitcoin-campaign-contributions/">Bitcoin can now be used to donate to…</a></li>
-                            <li><a href="http://www.digitaltrends.com/cool-tech/scientists-just-built-working-tractor-beam/">Scientists just built a working tractor…</a></li>
-
-                        </ul>
-
-                    </div>
-
-
-
-                    <div class="  right">
-
-                        <h3>
-
-                            <a href="http://www.digitaltrends.com/opinion/">
-                                Opinion						</a>
-                        </h3>
-
-                        <ul>
-                            <li><a href="http://www.digitaltrends.com/home-theater/purchasing-beats-smartest-move-apple-made-years/">From Compton to Cupertino: Why…</a></li>
-                            <li><a href="http://www.digitaltrends.com/mobile/why-the-look-up-video-is-sentimental-nonsense/">Why the viral video ‘Look…</a></li>
-                            <li><a href="http://www.digitaltrends.com/sports/fit-band-kids-atrocity-just-necessary-evil-2014/">Is a fit band for kids an atrocity, or…</a></li>
-                            <li><a href="http://www.digitaltrends.com/mobile/customized-gadgets-google-project-ara-future-of-tech/">Soon, the perfect device for you will be…</a></li>
-                            <li><a href="http://www.digitaltrends.com/photography/quo-vadis-canon-future-eos-m-mirrorless-system/">Are mirrorless cameras in Canon’s…</a></li>
-
-                        </ul>
-
-                    </div>
-
-
-
-                    <div class=" bottom ">
-
-                        <h3>
-
-                            <a href="http://www.digitaltrends.com/web/">
-                                Web						</a>
-                        </h3>
-
-                        <ul>
-                            <li><a href="http://www.digitaltrends.com/mobile/google-io-2014-news/">From Android Wear to Project Ara:…</a></li>
-                            <li><a href="http://www.digitaltrends.com/cool-tech/federal-election-commission-approves-bitcoin-campaign-contributions/">Bitcoin can now be used to donate to…</a></li>
-                            <li><a href="http://www.digitaltrends.com/web/amazon-expands-sunday-delivery-15-cities/">Amazon expands USPS Sunday delivery to…</a></li>
-                            <li><a href="http://www.digitaltrends.com/computing/google-facebook-amazon-slam-fccs-internet-fast-lanes-plan/">Google, Facebook and Amazon blast the…</a></li>
-                            <li><a href="http://www.digitaltrends.com/mobile/net-neutrality-finds-new-champion-al-franken/">Net Neutrality finds new champion in Al…</a></li>
-
-                        </ul>
-
-                    </div>
-
-
-
-                    <div class=" bottom ">
-
-                        <h3>
-
-                            <a href="http://www.digitaltrends.com/apple/">
-                                Apple						</a>
-                        </h3>
-
-                        <ul>
-                            <li><a href="http://www.digitaltrends.com/mobile/best-ipad-apps/">100 Awesome iPad Apps for 2014</a></li>
-                            <li><a href="http://www.digitaltrends.com/computing/2014-macbook-air-refresh/">Is Apple asleep at the wheel on the…</a></li>
-                            <li><a href="http://www.digitaltrends.com/mobile/apple-targets-iphone-4-4s-users-new-trade-program/">Apple targets iPhone 4, 4S users in new…</a></li>
-                            <li><a href="http://www.digitaltrends.com/mobile/best-ifttt-recipes-for-iphone/">10 deliciously fun IFTTT recipes for…</a></li>
-                            <li><a href="http://www.digitaltrends.com/mobile/iphone-6-air-features-release-rumors/">iPhone 6 Rumors and News: August release…</a></li>
-
-                        </ul>
-
-                    </div>
-
-
-
-                    <div class=" bottom right">
-
-                        <h3>
-
-                            <a href="http://www.digitaltrends.com/android/">
-                                Android Army						</a>
-                        </h3>
-
-                        <ul>
-                            <li><a href="http://www.digitaltrends.com/mobile/google-io-2014-news/">From Android Wear to Project Ara:…</a></li>
-                            <li><a href="http://www.digitaltrends.com/mobile/your-incriminating-selfies-on-snapchat-werent-deleted/">Surprise! Your incriminating selfies on…</a></li>
-                            <li><a href="http://www.digitaltrends.com/mobile/best-android-apps/">153 Awesome Android Apps for 2014…</a></li>
-                            <li><a href="http://www.digitaltrends.com/mobile/sprint-throttling-heavy-data-users/">Sprint plans on throttling heavy data…</a></li>
-                            <li><a href="http://www.digitaltrends.com/mobile/top-android-security-apps/">Top 5 Android security apps: Do they…</a></li>
-
-                        </ul>
-
-                    </div>
-
-
-
-                    <!--DTC HTML CACHE HIT STOP-->
-                </nav>
+                 
             </div>
         </div>
 
@@ -1583,8 +1144,7 @@ var u = "http://adadvisor.net/adscores/g.js?sid=9212244187&_kdpid=911765d2-536f-
             <div id="about-dt">
                 <div class="bb-wrap">
                     <div class="dt">
-                        <div class="logo">Digital Trends</div>
-
+                        <div class="logo">Digital Trends</div> 
                         <p>Straightforward product reviews, reliable technology news, and tools to navigate the digital world.</p>
                     </div>
                 </div>
@@ -1665,29 +1225,17 @@ var u = "http://adadvisor.net/adscores/g.js?sid=9212244187&_kdpid=911765d2-536f-
         </footer>
     </div>
 
-    <div id="logged-in-component-debugjs"></div>		<script type="text/javascript">var DTLazyLoadedImages='<img src=\"http://icdn2.digitaltrends.com/image/cyberpower-zeus-mini-review-side-angle-2-200x150-c.jpg\" class=\"attachment-width=200&amp;height=150&amp;crop=1\" alt=\"Cyberpower Zeus Mini review side angle 2\" /><img src=\"http://icdn2.digitaltrends.com/image/cody-latier-polaroid-z2300-featured-200x150-c.jpg\" class=\"attachment-width=200&amp;height=150&amp;crop=1\" alt=\"cody-latier-polaroid-z2300-featured\" /><img width=\"360\" height=\"193\" src=\"http://icdn2.digitaltrends.com/image/2015_toyota_camry_xse_02-360x193-c.jpg\" class=\"attachment-width=360&amp;height=193&amp;crop=1\" alt=\"2015 Toyota Camry\" /><img width=\"144\" height=\"96\" src=\"http://icdn3.digitaltrends.com/image/2015_toyota_camry_xse_04-144x96-c.jpg\" class=\"attachment-width=144&amp;height=96&amp;crop=1\" alt=\"2015 Toyota Camry\" /><img width=\"144\" height=\"96\" src=\"http://icdn4.digitaltrends.com/image/2015_toyota_camry_006-144x96-c.jpg\" class=\"attachment-width=144&amp;height=96&amp;crop=1\" alt=\"2015 Toyota Camry\" /><img width=\"144\" height=\"96\" src=\"http://icdn5.digitaltrends.com/image/2015_toyota_camry_007-144x96-c.jpg\" class=\"attachment-width=144&amp;height=96&amp;crop=1\" alt=\"2015 Toyota Camry\" /><img width=\"144\" height=\"96\" src=\"http://icdn6.digitaltrends.com/image/2015_toyota_camry_002-144x96-c.jpg\" class=\"attachment-width=144&amp;height=96&amp;crop=1\" alt=\"2015 Toyota Camry\" /><img src=\"http://icdn2.digitaltrends.com/image/pc-parts-scrounging-200x150-c.jpg\" class=\"attachment-width=200&amp;height=150&amp;crop=1\" alt=\"PC Parts Scrounging\" /><img src=\"http://icdn2.digitaltrends.com/image/kinivo-200x150-c.jpg\" class=\"attachment-width=200&amp;height=150&amp;crop=1\" alt=\"Kinivo\" /><img src=\"http://icdn2.digitaltrends.com/image/ch014_028th-200x150-c.jpg\" class=\"attachment-width=200&amp;height=150&amp;crop=1\" alt=\"2014 Chrysler 300 SRT\" /><img src=\"http://icdn2.digitaltrends.com/image/android-wear-weather-200x150-c.jpg\" class=\"attachment-width=200&amp;height=150&amp;crop=1\" alt=\"Android Wear weather\" /><img src=\"http://icdn2.digitaltrends.com/image/sigourney-weaver-avatar-200x150-c.jpg\" class=\"attachment-width=200&amp;height=150&amp;crop=1\" alt=\"sigourney weaver avatar\" /><img src=\"http://icdn2.digitaltrends.com/image/twitter-37-200x150-c.jpg\" class=\"attachment-width=200&amp;height=150&amp;crop=1\" alt=\"twitter\" /><img src=\"http://icdn2.digitaltrends.com/image/iphone-5s-hands-on-home-angle-200x150-c.jpg\" class=\"attachment-width=200&amp;height=150&amp;crop=1\" alt=\"iPhone 5S hands on home angle\" /><img src=\"http://icdn2.digitaltrends.com/image/selfie-abc-200x150-c.jpg\" class=\"attachment-width=200&amp;height=150&amp;crop=1\" alt=\"Selfie-ABC\" />';</script>
+    <div id="logged-in-component-debugjs"></div>		
+    
     <div class="notification-bar tos-update">
         Digital Trends has updated the Terms of Use. <a class="readmore" href="http://www.digitaltrends.com/legal/terms-of-use/">Read Now</a><a class="acknowledge" href="javascript:void(0)">Ok, Thanks</a> <a class="close">x</a>
     </div>
     <div id="logged-in-component-tos_update"></div><div id="logged-in-component-meganav">		
-    </div><div id="logged-in-component-footer-components"></div>	<script type="text/javascript">var DTCRequestedLoggedInComponents="account-links,debugjs,tos_update,meganav,footer-components";var DTCRequestedLoggedInComponentsArgs="Tjs=";</script>
+    </div><div id="logged-in-component-footer-components"></div>	
+    <script type="text/javascript">var DTCRequestedLoggedInComponents="account-links,debugjs,tos_update,meganav,footer-components";var DTCRequestedLoggedInComponentsArgs="Tjs=";</script>
 
-    <!-- Begin Chartbeat (dt-core/dt-core.analytics.php) -->
-    <script type="text/javascript">var _sf_async_config={uid:25785,domain:"digitaltrends.com"};(function(){function loadChartbeat(){window._sf_endpt=(new Date()).getTime();var e=document.createElement('script');e.setAttribute('language','javascript');e.setAttribute('type','text/javascript');e.setAttribute('src',(("https:"==document.location.protocol)?"https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/":"http://static.chartbeat.com/")+"js/chartbeat.js");document.body.appendChild(e);}
-                    var oldonload=window.onload;window.onload=(typeof window.onload!='function')?loadChartbeat:function(){oldonload();loadChartbeat();};})();</script>
-    <!-- End Chartbeat (dt-core/dt-core.analytics.php) -->
-
-    <!-- Begin Tynt (dt-core/dt-core.analytics.php) -->
-    <script>window.Tynt=window.Tynt||[];window.Tynt.push('a4WNn6KVyr4yHaacwqm_6r');window.Tynt.i={"ap":"Read more:"};(function(){var s=document.createElement('script');s.async="async";s.type="text/javascript";s.src='http://tcr.tynt.com/ti.js';var h=document.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})();</script>
-    <!-- End Tynt (dt-core/dt-core.analytics.php) -->
-    <!-- Begin Nielsen (dt-core/dt-core.analytics.php) -->
-    <script>(function(){var d=new Image(1,1);d.onerror=d.onload=function(){d.onerror=d.onload=null;};d.src=["//secure-us.imrworldwide.com/cgi-bin/m?ci=us-205280h&cg=0&cc=1&si=",escape(window.location.href),"&rp=",escape(document.referrer),"&ts=compact&rnd=",(new Date()).getTime()].join('');})();</script>
-    <noscript>
-    <div>
-        <img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-205280h&amp;cg=0&amp;cc=1&amp;ts=noscript"
-             width="1" height="1" alt="" />
-    </div>
-    </noscript>
+    
+ 
     <!-- End Nielsen (dt-core/dt-core.analytics.php) -->
 
     <!-- FBAds Pixel (dt-core/dt-core.analytics.php) -->
@@ -1700,13 +1248,7 @@ var u = "http://adadvisor.net/adscores/g.js?sid=9212244187&_kdpid=911765d2-536f-
     <!-- End Captify Pixel (dt-core/dt-core.analytics.php) -->
     <script type="text/javascript" src="<?php echo base_url('res_home/index_files');?>/dt-optimized-foot-js-b01f1491305a136a71d8987915470f03.js"></script>
     <!-- BEGIN Quantcast Tag (dt-core/dt-core.analytics.php) -->
-    <script type="text/javascript">var _qevents=_qevents||[];(function(){var elem=document.createElement('script');elem.src=(document.location.protocol=="https:"?"https://secure":"http://edge")+".quantserve.com/quant.js";elem.async=true;elem.type="text/javascript";var scpt=document.getElementsByTagName('script')[0];scpt.parentNode.insertBefore(elem,scpt);})();_qevents.push({qacct:"p-4bfXFNBEfn2Vk"});</script>
-
-    <noscript>
-    <div style="display:none;">
-        <img src="//pixel.quantserve.com/pixel/p-4bfXFNBEfn2Vk.gif" border="0" height="1" width="1" alt="Quantcast"/>
-    </div>
-    </noscript>
+ 
     <!-- END Quantcast Tag (dt-core/dt-core.analytics.php) -->
 
 
