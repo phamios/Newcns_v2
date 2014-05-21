@@ -48,16 +48,10 @@ class post_model extends CI_Model {
         }
     }
     
-    public function update($object=null){
-        $data = array(
-                'cate_name'    => strtolower(trim($object['cate_name'])),
-                'cate_root'    => $object['cate_root'],
-                'cate_created' => date("Y-m-d h:s:m"),
-                'active'  => $object['active'],
-        );
+    public function update($object=null){ 
         $id = $object['id'];
         $this->db->where('id', $id);
-        $this->db->update('tbl_post', $data);
+        $this->db->update('tbl_post', $object);
     }
 
     function delete($id = null) {

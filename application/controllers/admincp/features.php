@@ -83,7 +83,7 @@ class features extends CI_Controller {
                     'cateid' => $category,
                     'userid' => $userid,
                     'post_type' => 2,
-                    'typeid' => $_POST['type'],
+                    'typeid' => 2,
                     'featureid' => $featureid,
                     'post_description' => $post_description,
                     'post_images' => $post_images,

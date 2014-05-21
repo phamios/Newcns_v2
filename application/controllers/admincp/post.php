@@ -124,9 +124,7 @@ class post extends CI_Controller {
         } else {
             $this->load->model('post_model');
             $this->load->model('category_model');
-            $this->load->model('features_model');
-
-
+            $this->load->model('features_model'); 
             if (isset($_REQUEST['update_post'])) { 
                 $title = $this->input->post('title', true);
                 $category = $this->input->post('category', true);
