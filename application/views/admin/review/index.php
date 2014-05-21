@@ -27,6 +27,7 @@
                                 <th>Views</th>
                                 <th>Like</th>
                                 <th>Status</th>
+                                <th>Option</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -42,6 +43,9 @@
                                     <td><?php echo $row->review_view; ?></td>
                                     <td><?php echo $row->review_like; ?></td>
                                     <td><?php echo $row->review_active; ?></td>
+                                    <td>
+                                    <a href="<?php echo site_url('admincp/review/edit/'.$row->id)?>"><i class="icon-edit bigger-120"></i></a>
+                                    </td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>

@@ -83,7 +83,44 @@ class Review extends CI_Controller {
     }
 
     public function edit($id = null) {
-        
+        if ($this->session->userdata('adminid') == null) {
+            redirect('admincp/login');
+        } else {
+            $this->load->model('review_model');
+            $this->load->model('category_review_model');
+            $this->load->model('features_model');
+            if (isset($_REQUEST['submit_review'])) {
+
+                $title = $this->input->post('title', true);
+                $category = $this->input->post('category', true);
+                $userid = $this->session->userdata('adminid');
+                $specs = $this->input->post('specs', true);
+                $featureid = $this->input->post('feature', true);
+                $post_description = $this->input->post('post_description', true);
+
+                $object = array(
+                    'review_title' => $_POST['title'],
+                    'review_content' => $_POST['content'],
+                    'review_recoment' => $_POST['recommend'],
+                    'review_high' => $_POST['highs'],
+                    'review_low' => $_POST['lows'],
+                    'review_specific' => $_POST['specs'],
+                    'review_active' => $_POST['active'],
+                );
+                $review_id = $this->review_model->update_product_review($object);
+                if ($review_id) {
+                    $gallery['review_id'] = $review_id;
+                    redirect(site_url('admincp/review/gallery/'.$review_id));
+                }
+            } else {
+                $data['title'] = "Edit Product Review";
+                $data['features'] = $this->features_model->getAll();
+                $data['category'] = $this->category_review_model->getAll();
+                $data['reviews'] = $this->review_model->get_product_review_by_id($id);
+                $data['id'] = $id;
+                $this->load->view('admin/dashboard', $data);
+            }
+        }
     }
 
     public function gallery($review_id) {
