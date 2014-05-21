@@ -47,16 +47,31 @@ class post_model extends CI_Model {
     }
 
     public function update($object = null) {
-        $data = array(
-            'post_title' => $object['post_title'],
-            'cateid' => $object['cateid'],
-            'userid' => $object['userid'],
-            'post_type' => 1,
-            'typeid' => 1,
-            'featureid' => $object['featureid'],
-            'post_description' => $object['post_description'],
-            'post_createdate' => date("Y-m-d H:i:s")
-        );
+        if ($object['post_images'] == null) {
+            $data = array(
+                'post_title' => $object['post_title'],
+                'cateid' => $object['cateid'],
+                'userid' => $object['userid'],
+                'post_type' => 1,
+                'typeid' => 1,
+                'featureid' => $object['featureid'],
+                'post_description' => $object['post_description'],
+                'post_createdate' => date("Y-m-d H:i:s")
+            );
+        } else {
+            $data = array(
+                'post_title' => $object['post_title'],
+                'cateid' => $object['cateid'],
+                'userid' => $object['userid'],
+                'post_type' => 1,
+                'typeid' => 1,
+                'featureid' => $object['featureid'],
+                'post_description' => $object['post_description'],
+                'post_createdate' => date("Y-m-d H:i:s"),
+                'post_images' => $object['post_images'],
+            );
+        }
+
         $id = $object['post_id'];
         $this->db->where('id', $id);
         $this->db->update('tbl_post', $data);

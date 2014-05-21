@@ -95,7 +95,6 @@ tinymce.init({
 
                         <div class="controls with-tooltip">
                             <textarea id="description" name="description"  name="post_description" class="span6"><?php echo $post->post_description ?></textarea>
-                            <!-- <input type="text" id="description" class="span6 input-tooltip" data-original-title="Please use post title" data-placement="bottom" name="description"/> -->
                         </div>
                     </div>
 

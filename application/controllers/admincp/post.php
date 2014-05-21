@@ -145,10 +145,22 @@ class post extends CI_Controller {
                         'post_description' => $post_description, 
                         'post_createdate' => date("Y-m-d H:i:s")
                     );
+                } else {
+                    $object = array(
+                        'post_id' => $id,
+                        'post_title' => $title,
+                        'cateid' => $category,
+                        'userid' => $userid,
+                        'post_type' => 1,
+                        'typeid' => 1,
+                        'featureid' => $featureid,
+                        'post_description' => $post_description, 
+                        'post_createdate' => date("Y-m-d H:i:s"),
+                        'post_image' =>$post_images,
+                    );
                 }
                
-                $this->post_model->update($object);
-                //redirect('admin/post', 'refresh');
+                $this->post_model->update($object); 
                 redirect($this->config->base_url() . 'admincp/post/');
             }
             $data['edit'] = 0;
