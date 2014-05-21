@@ -89,36 +89,7 @@ tinymce.init({
                             </select>
                         </div>
                     </div>
-                    <div class="control-group">
-                        <label class="control-label">Type</label>
-
-                        <div class="controls">
-                            <select id="type" name="type">
-                                <?php for ($i = 1; $i <= 4; $i++) { ?>
-                                    <option value="<?php echo $i; ?>" <?php if ($id == $post->typeid) {
-                                    echo "selected";
-                                } ?> ><?php echo $i; ?></option>
-<?php } ?>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label class="control-label">Feature<span class="require">*</span></label>
-
-                        <div class="controls">
-                            <select id="feature" name="feature">
-                                <option value="">No select</option>
-                                    <?php foreach ($features as $row): ?>
-                                                                        <option value="<?php echo $row->id; ?>" <?php if ($row->id == $post->featureid) {
-                                            echo "selected";
-                                        } ?> ><?php echo $row->features_name ?>
-                                                                        </option>
-                                    <?php endforeach; ?>
-                            </select>
-                        </div>
-                    </div>
-
+                     
                     <div class="control-group">
                         <label for="text1" class="control-label">Description</label>
 
