@@ -25,4 +25,18 @@ class review_model extends CI_Model {
         return $this->db->insert_id();
     }
 
+    function update_product_review($object) {
+        $this->db->update('tbl_review', $object);
+    }
+
+    function get_product_review_by_id($id) {
+        $this->db->where('id', $id);
+        $query = $this->db->get('tbl_review');
+        if ($query <> null) {
+            return $query->result();
+        } else {
+            return null;
+        }
+    }
+
 }
