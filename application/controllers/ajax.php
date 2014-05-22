@@ -17,6 +17,13 @@ class ajax extends CI_Controller {
         $this->load->helper(array('form', 'url'));
         @session_start();
     }
+    
+    
+    public function ajax_post($type){
+        if($type="post"){
+            
+        }
+    }
 
     
     /**

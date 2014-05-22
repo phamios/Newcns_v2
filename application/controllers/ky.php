@@ -12,12 +12,19 @@ class ky extends CI_Controller {
 		$this->load->library('parser');
 		$this->load->helper('cookie');
 		$this->load->helper(array('form', 'url'));
+                $this->load->helper('text');
 		@session_start();
 	}
         
 	public function index()
 	{ 
-            $this->load->view('welcome_message');
+            $this->load->model('post_model');
+            $data['listcontent'] = $this->post_model->getAll_by_User_post($this->session->userdata('adminid'));
+            $this->load->model('category_model');
+            $this->load->model('features_model');
+            $data['features'] = $this->features_model->getAll();
+            $data['category'] = $this->category_model->getAll();
+            $this->load->view('welcome_message',$data);
 	}
         
         

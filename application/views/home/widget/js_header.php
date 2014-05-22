@@ -21,7 +21,7 @@
         category_news(); 
         
         $('#rev_cate').hover(function(){
-           alert("asdasd");
+           //alert("asdasd");
         });
         
     });
@@ -51,4 +51,6 @@
             }
         });
     };
+    
+    
 </script>
