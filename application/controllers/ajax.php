@@ -26,10 +26,10 @@ class ajax extends CI_Controller {
         $this->load->model('category_review_model');
         $rev_cate = $this->category_review_model->getAll();
 
-        echo '<ul class="sub-menu">';
+        echo '<ul class="sub-menu" id="sub-menu-rev">';
         foreach ($rev_cate as $cate) {
             echo '<li id="menu-item-411306" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-411306 menu-item-object-id-100008">';
-            echo '        <a href="' . site_url('rev_cate') . '/' . mb_strtolower(url_title($this->removesign($cate->cate_rev_name . "-" . $cate->id))) . ".html" . '"> ' . $cate->cate_rev_name . '</a>';
+            echo '        <a id="a-hover" href="' . site_url('rev_cate') . '/' . mb_strtolower(url_title($this->removesign($cate->cate_rev_name . "-" . $cate->id))) . ".html" . '"> ' . $cate->cate_rev_name . '</a>';
             echo '    </li> ';
         }
         echo '   <li id="menu-item-411328" class="more menu-item menu-item-type-post_type menu-item-object-page menu-item-411328">';

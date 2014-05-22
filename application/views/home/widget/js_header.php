@@ -14,11 +14,16 @@
 
 
 
- <script type="text/javascript">
+<script type="text/javascript">
     
     $(document).ready(function(){
         category_review();
         category_news(); 
+        
+        $('#rev_cate').hover(function(){
+           alert("asdasd");
+        });
+        
     });
 
     function category_review(){

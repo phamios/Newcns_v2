@@ -33,7 +33,8 @@
         <meta name="twitter:domain" content="Digital Trends">
         <meta name="twitter:creator" content="@digitaltrends">
         <meta name="twitter:image" content=""><!-- / Yoast WordPress SEO plugin. -->
-
+        
+ 
     
         <link rel="stylesheet" id="dt-css-b39b787d60a3d8e785cd09b859cd2848-css" href="<?php echo base_url('res_home/index_files'); ?>/dt-optimized-css-b39b787d60a3d8e785cd09b859cd2848.css" type="text/css" media="all">
 
