@@ -6,21 +6,19 @@
 <!--Begin Define GPT Ad Slots-->
 
 
+<!-- DT Variables (digitaltrends-2013/functions.php) -->
+<script type="text/javascript">var ajaxurl="http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/ajax-actions.php";var ord=Math.random()*10000000000000000;</script>
+<!-- End DT Variables -->
 
 
 
-<script type="text/javascript">
+
+
+ <script type="text/javascript">
     
-      $(document).ready(function(){
+    $(document).ready(function(){
         category_review();
-        category_news();
-        
-        $.each($("#rev_cate").find("li"), function(index, value){
-            $(value).hover(function(){
-                alert("ok");
-            });
-        });  
-        
+        category_news(); 
     });
 
     function category_review(){
@@ -49,8 +47,3 @@
         });
     };
 </script>
- 
-<!-- DT Variables (digitaltrends-2013/functions.php) -->
-<script type="text/javascript">var ajaxurl="http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/ajax-actions.php";var ord=Math.random()*10000000000000000;</script>
-<!-- End DT Variables -->
-
