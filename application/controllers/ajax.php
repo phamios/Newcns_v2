@@ -29,7 +29,24 @@ class ajax extends CI_Controller {
             echo '    </li> ';
         }
         echo '   <li id="menu-item-411328" class="more menu-item menu-item-type-post_type menu-item-object-page menu-item-411328">';
-        echo '        <a href="">+ More Reviews</a>';
+        echo '        <a href="'.site_url('review_category').'">+ More Reviews</a>';
+        echo '    </li>';
+        echo '</ul>';
+    }
+    
+    
+    public function new_cate_ajax(){
+        $this->load->model('category_model');
+        $rev_cate = $this->category_model->getAll();
+
+        echo '<ul class="sub-menu">';
+        foreach ($rev_cate as $cate) {
+            echo '<li id="menu-item-411306" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-411306 menu-item-object-id-100008">';
+            echo '        <a href="' . site_url('rev_cate') . '/' . mb_strtolower(url_title($this->removesign($cate->catename . "-" . $cate->id))) . ".html" . '"> ' . $cate->catename . '</a>';
+            echo '    </li> ';
+        }
+        echo '   <li id="menu-item-411328" class="more menu-item menu-item-type-post_type menu-item-object-page menu-item-411328">';
+        echo '        <a href="'.site_url('news_category').'">+ More Reviews</a>';
         echo '    </li>';
         echo '</ul>';
     }

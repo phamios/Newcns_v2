@@ -18,6 +18,7 @@
 <script type="text/javascript">
     $(document).ready(function(){
        category_review();
+       category_news();
 });
 
 
@@ -27,6 +28,19 @@ function category_review(){
             type:'POST',
             success: function(response){ 
                 $("#rev_cate").html(response);
+            },
+            error: function (x, status, error) {
+                alert("Error code: " + x + "\nAn error occurred: " + status + "\nError: " + error);
+            }
+        });
+    };
+    
+ function category_news(){
+        $.ajax({
+            url: '<?php echo site_url('ajax/new_cate_ajax');?>',
+            type:'POST',
+            success: function(response){ 
+                $("#new_cate").html(response);
             },
             error: function (x, status, error) {
                 alert("Error code: " + x + "\nAn error occurred: " + status + "\nError: " + error);
