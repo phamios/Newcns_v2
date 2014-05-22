@@ -18,6 +18,10 @@ class ajax extends CI_Controller {
         @session_start();
     }
 
+    
+    /**
+     *  Get Category of Review
+     */
     public function rev_cate_ajax() {
         $this->load->model('category_review_model');
         $rev_cate = $this->category_review_model->getAll();
@@ -35,6 +39,9 @@ class ajax extends CI_Controller {
     }
     
     
+    /**
+     * Get Category of News
+     */
     public function new_cate_ajax(){
         $this->load->model('category_model');
         $rev_cate = $this->category_model->getAll();
@@ -42,7 +49,7 @@ class ajax extends CI_Controller {
         echo '<ul class="sub-menu">';
         foreach ($rev_cate as $cate) {
             echo '<li id="menu-item-411306" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-411306 menu-item-object-id-100008">';
-            echo '        <a href="' . site_url('rev_cate') . '/' . mb_strtolower(url_title($this->removesign($cate->catename . "-" . $cate->id))) . ".html" . '"> ' . $cate->catename . '</a>';
+            echo '        <a href="' . site_url('rev_cate') . '/' . mb_strtolower(url_title($this->removesign($cate->catename . "-" .$cate->id))) . ".html" . '"> ' . $cate->catename . '</a>';
             echo '    </li> ';
         }
         echo '   <li id="menu-item-411328" class="more menu-item menu-item-type-post_type menu-item-object-page menu-item-411328">';
@@ -51,6 +58,12 @@ class ajax extends CI_Controller {
         echo '</ul>';
     }
 
+    
+    /**
+     * Remove all sign in string and change string to url
+     * @param type $str
+     * @return type
+     */
     function removesign($str) {
         $coDau = array("à", "á", "ạ", "ả", "ã", "â", "ầ", "ấ", "ậ", "ẩ", "ẫ", "ă", "ằ", "ắ"
             , "ặ", "ẳ", "ẵ", "è", "é", "ẹ", "ẻ", "ẽ", "ê", "ề", "ế", "ệ", "ể", "ễ", "ì", "í", "ị", "ỉ", "ĩ",
