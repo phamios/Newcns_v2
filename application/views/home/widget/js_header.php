@@ -13,3 +13,24 @@
 <script src="<?php echo base_url('res_home/index_files'); ?>/osd.js" type="text/javascript"></script>
 <script src="<?php echo base_url('res_home/index_files'); ?>/seg" type="text/javascript" async=""></script>
 <script src="<?php echo base_url('res_home/index_files'); ?>/nonSecureAnonymousFramework.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+       category_review();
+});
+
+
+function category_review(){
+        $.ajax({
+            url: '<?php echo site_url('ajax/rev_cate_ajax');?>',
+            type:'POST',
+            success: function(response){ 
+                $("#rev_cate").html(response);
+            },
+            error: function (x, status, error) {
+                alert("Error code: " + x + "\nAn error occurred: " + status + "\nError: " + error);
+            }
+        });
+    };
+</script>

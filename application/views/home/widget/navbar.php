@@ -6,15 +6,25 @@
             <ul id="menu-primary-navigation-2013" class="menu">
                 <li id="menu-item-411326" class="sub menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-411326">
                     <a href="http://www.digitaltrends.com/product-reviews/">Product Reviews</a>
-                    <div class="mega-wrap"><div><ul class="sub-menu">
-                                   
+                    <div class="mega-wrap">
+                        <div>
+                            
+                            <ul class="sub-menu" id="rev_cate">
+                                
                                 <li id="menu-item-411306" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-411306 menu-item-object-id-100008">
                                     <a href="http://www.digitaltrends.com/cell-phone-reviews/">Smartphones</a>
                                 </li> 
+                                
                                 <li id="menu-item-411328" class="more menu-item menu-item-type-post_type menu-item-object-page menu-item-411328">
                                     <a href="http://www.digitaltrends.com/product-reviews/">+ More Reviews</a>
                                 </li>
-                            </ul><div class="mega-container reviews"></div></div></div>
+                            </ul>
+                            
+                            <div class="mega-container reviews"></div>
+                            
+                        </div>
+                            
+                    </div>
                 </li>
                 <li id="menu-item-411314" class="sub menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-411314"><a>News</a>
                     <div class="mega-wrap"><div><ul class="sub-menu">
