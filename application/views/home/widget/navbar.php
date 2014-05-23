@@ -8,6 +8,8 @@
                     <div class="mega-wrap">
                         <div id="rev_cate"> 
                         </div> 
+                        <div id="rev_cate_sub" class="mega-container reviews" style="float:right">
+                        </div>
                     </div>
                 </li>
                 <li id="menu-item-411314" class="sub menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-411314"><a>News</a>
