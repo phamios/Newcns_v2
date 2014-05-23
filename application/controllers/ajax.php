@@ -35,41 +35,17 @@ class ajax extends CI_Controller {
 
         echo '<ul class="sub-menu" id="sub-menu-rev">';
         foreach ($rev_cate as $cate) {
-            echo '<li id="menu-item-411306" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-411306 menu-item-object-id-100008 li-hover">';
-            echo '        <a id="a-hover" cateid="'.$cate->id.'" href="' . site_url('rev_cate') . '/' . mb_strtolower(url_title($this->removesign($cate->cate_rev_name . "-" . $cate->id))) . ".html" . '"> ' . $cate->cate_rev_name . '</a>';
+            echo '<li id="menu-item-411306" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-411306 menu-item-object-id-100008">';
+            echo '        <a id="a-hover" href="' . site_url('rev_cate') . '/' . mb_strtolower(url_title($this->removesign($cate->cate_rev_name . "-" . $cate->id))) . ".html" . '"> ' . $cate->cate_rev_name . '</a>';
             echo '    </li> ';
         }
         echo '   <li id="menu-item-411328" class="more menu-item menu-item-type-post_type menu-item-object-page menu-item-411328">';
         echo '        <a href="'.site_url('review_category').'">+ More Reviews</a>';
         echo '    </li>';
+        echo '</ul>';
     }
     
     
-    /**
-     * Get review cate sub
-     */
-    public function rev_cate_sub_ajax($cateid) {
-        $this->load->model('review_model');
-        $newest_reviews = $this->review_model->get_product_review_by_cateid($cateid);
-
-        echo '<div class="col-a-b">';
-        echo '<h3>LASTEST REVIEWS</h3>';
-        foreach ($newest_reviews as $r) {
-            echo '<div class="item">';
-            echo '<div class="thumb">';
-            echo '</div>';
-            echo '<div class="content">';
-            echo '<h4><a href="#">'.$r->post_title.'</a></h4>';
-            echo '<div class="rating">';
-            echo 'Our Scores: '.$r->review_score;
-            echo '</div>';
-            echo '</div>';
-            echo '</div>';
-        }
-        echo '</div>';
-    }
-
-
     /**
      * Get Category of News
      */
