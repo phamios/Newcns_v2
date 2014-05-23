@@ -1,7 +1,5 @@
 <div class="links">
-                <!--DTC HTML CACHE HIT START-->											
-                <ul id="menu-footer-links" class="menu">
-                    <li id="menu-item-505456" class="title menu-item menu-item-type-custom menu-item-object-custom menu-item-505456"><a href="#">Sections</a></li>
+                <!--DTC HTML CACHE HIT START-->											<ul id="menu-footer-links" class="menu"><li id="menu-item-505456" class="title menu-item menu-item-type-custom menu-item-object-custom menu-item-505456"><a href="#">Sections</a></li>
                     <li id="menu-item-505464" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505464"><a href="http://www.digitaltrends.com/product-reviews/">Product Reviews</a></li>
                     <li id="menu-item-505458" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-505458 menu-item-object-id-4"><a href="http://www.digitaltrends.com/mobile/">Mobile</a></li>
                     <li id="menu-item-505457" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-505457 menu-item-object-id-5"><a href="http://www.digitaltrends.com/computing/">Computing</a></li>

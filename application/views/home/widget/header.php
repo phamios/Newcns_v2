@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<html class="js no-flexbox flexboxlegacy canvas canvastext geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache" style="" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en">
-    
-    
-    <head> 
+<html class=" js no-flexbox flexboxlegacy canvas canvastext geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache" style="" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en"><head><script src="<?php echo base_url('res_home/index_files'); ?>/v2" async=""></script><script src="<?php echo base_url('res_home/index_files'); ?>/3.js" type="text/javascript"></script><script src="<?php echo base_url('res_home/index_files'); ?>/a4WNn6KVyr4yHaacwqm_6r.js" async=""></script><script async="" src="<?php echo base_url('res_home/index_files'); ?>/cbgapi.js"></script><script type="text/javascript" async="" src="<?php echo base_url('res_home/index_files'); ?>/quant.js"></script><script src="<?php echo base_url('res_home/index_files'); ?>/all.js" async="" id="facebook-jssdk"></script>
 
         <meta charset="UTF-8">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -33,9 +30,13 @@
         <meta name="twitter:domain" content="Digital Trends">
         <meta name="twitter:creator" content="@digitaltrends">
         <meta name="twitter:image" content=""><!-- / Yoast WordPress SEO plugin. -->
-        
- 
-    
+
+        <!-- BEGIN Krux Control Tag for "Digital Trends" (dt-core/dt-core.analytics.php) -->
+        <!-- Source: /snippet/controltag?confid=IwNLJc7X&site=Digital%20Trends&edit=1 -->
+        <script class="kxct" data-id="IwNLJc7X" data-timing="async" data-version="1.9" type="text/javascript">window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);(function(){var k=document.createElement('script');k.type='text/javascript';k.async=true;var m,src=(m=location.href.match(/\bkxsrc=([^&]+)/))&&decodeURIComponent(m[1]);k.src=/^https?:\/\/([^\/]+\.)?krxd\.net(:\d{1,5})?\//i.test(src)?src:src==="disable"?"":(location.protocol==="https:"?"https:":"http:")+"//cdn.krxd.net/controltag?confid=IwNLJc7X";var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(k,s);}());</script>
+        <!-- END Krux Controltag -->
+
+
         <link rel="stylesheet" id="dt-css-b39b787d60a3d8e785cd09b859cd2848-css" href="<?php echo base_url('res_home/index_files'); ?>/dt-optimized-css-b39b787d60a3d8e785cd09b859cd2848.css" type="text/css" media="all">
 
         <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.digitaltrends.com/xmlrpc.php?rsd">
