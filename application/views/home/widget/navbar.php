@@ -1,21 +1,21 @@
 <div id="nav-bar">
     <div class="bb-wrap">
         <nav class="primary mega">
-            <!--DTC HTML CACHE HIT START-->			
+            <!--DTC HTML CACHE HIT START-->
             <ul id="menu-primary-navigation-2013" class="menu">
                 <li id="menu-item-411326" class="sub menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-411326">
                     <a href="http://www.digitaltrends.com/product-reviews/">Product Reviews</a>
                     <div class="mega-wrap">
-                        <div id="rev_cate"> 
-                        </div> 
-                        <div id="rev_cate_sub" class="mega-container reviews" style="float:right">
+                        <div id="rev_cate">
+                        </div>
+                        <div id="rev_cate_sub" class="mega-container reviews">
                         </div>
                     </div>
                 </li>
                 <li id="menu-item-411314" class="sub menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-411314"><a>News</a>
                     <div class="mega-wrap">
-                        <div id="new_cate"> 
-                        </div> 
+                        <div id="new_cate">
+                        </div>
                     </div>
                 </li>
 
@@ -35,7 +35,7 @@
         </nav>
 
 
-        <!--DTC HTML CACHE HIT START-->			
+        <!--DTC HTML CACHE HIT START-->
         <div id="sitewide-social">
 
             <div class="facebook cached">
