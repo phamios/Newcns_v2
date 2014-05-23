@@ -10,6 +10,17 @@ class post_model extends CI_Model {
         parent::__construct();
         $this->load->database();
     }
+    
+    function postAll(){
+       $this->db->where('post_type', "1");
+        $this->db->order_by("id");
+        $query = $this->db->get('tbl_post');
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return null;
+        } 
+    }
 
     function getAll_by_User($userid) {
         $this->db->where('userid', $userid);

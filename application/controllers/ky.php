@@ -19,7 +19,7 @@ class ky extends CI_Controller {
 	public function index()
 	{ 
             $this->load->model('post_model');
-            $data['listcontent'] = $this->post_model->getAll_by_User_post($this->session->userdata('adminid'));
+            $data['listcontent'] = $this->post_model->postAll();
             $this->load->model('category_model');
             $this->load->model('features_model');
             $data['features'] = $this->features_model->getAll();
