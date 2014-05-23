@@ -10,10 +10,7 @@
 <script type="text/javascript">var ajaxurl="http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/ajax-actions.php";var ord=Math.random()*10000000000000000;</script>
 <!-- End DT Variables -->
 
-
-
-
-
+ 
 <script type="text/javascript">
     
     $(document).ready(function(){
