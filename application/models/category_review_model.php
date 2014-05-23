@@ -25,6 +25,8 @@ class category_review_model extends CI_Model {
             return null;
         }
     }
+    
+     
 
     /*
      * Delete rows by ID 

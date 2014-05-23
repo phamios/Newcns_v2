@@ -26,13 +26,9 @@ class features extends CI_Controller {
         if ($this->session->userdata('adminid') == null) {
             redirect('admincp/login');
         } else {
-            $data['title'] = "List Post";
+            $data['title'] = "List Features";
             $this->load->model('post_model');
             $data['listcontent'] = $this->post_model->getAll_by_User_features($this->session->userdata('adminid'));
-            $this->load->model('category_model');
-            $this->load->model('features_model');
-            $data['features'] = $this->features_model->getAll();
-            $data['category'] = $this->category_model->getAll();
             $this->load->view('admin/dashboard', $data);
         }
     }
@@ -67,42 +63,29 @@ class features extends CI_Controller {
             redirect('admincp/login');
         } else {
             $this->load->model('post_model');
-            if (isset($_REQUEST['submit_post'])) {
+            if (isset($_REQUEST['submit_features'])) {
 
                 $title = $this->input->post('title', true);
-                $category = $this->input->post('category', true);
                 $userid = $this->session->userdata('adminid');
-                $post_type = $this->input->post('type', true);
-                $featureid = $this->input->post('feature', true);
+                $post_type = 2;
                 $post_description = $this->input->post('post_description', true);
-                $post_images = $this->do_upload_image('./src/post/', 'post_image');
+                $post_images = $this->do_upload_image('./src/features/', 'feature_image');
 
 
                 $object = array(
                     'post_title' => $title,
-                    'cateid' => $category,
                     'userid' => $userid,
                     'post_type' => 2,
-                    'typeid' => 2,
-                    'featureid' => $featureid,
                     'post_description' => $post_description,
                     'post_images' => $post_images,
                     'post_createdate' => date("Y-m-d H:i:s")
                 );
                 $this->post_model->addPost($object);
-                //redirect('admin/post', 'refresh');
-                redirect($this->config->base_url() . 'admincp/post/');
+                redirect(site_url('admincp/features/'));
             }
-            $data['title'] = "Create Post";
-
-            $this->load->model('category_model');
+            $data['title'] = "Create Feature";
             $this->load->model('user_model');
-            $this->load->model('features_model');
-
-            $data['features'] = $this->features_model->getAll();
-            $data['category'] = $this->category_model->getAll();
             $data['user'] = $this->user_model->getAll();
-
             $this->load->view('admin/dashboard', $data);
         }
     }
@@ -123,18 +106,33 @@ class features extends CI_Controller {
             redirect('admincp/login');
         } else {
             $this->load->model('post_model');
-            $this->load->model('category_model');
-            $this->load->model('features_model');
+            if (isset($_REQUEST['update_feature'])) {
 
-            $data['edit'] = 0;
-            $data['id'] = $id;
-            $data['title'] = "Edit post"; 
-            $data['details_post'] = $this->post_model->getDetail($this->session->userdata('adminid'), $id);
+                $title = $this->input->post('title', true);
+                $userid = $this->session->userdata('adminid');
+                $post_type = 2;
+                $post_description = $this->input->post('post_description', true);
+                $post_images = $this->do_upload_image('./src/features/', 'feature_image');
 
-            $data['features'] = $this->features_model->getAll();
-            $data['category'] = $this->category_model->getAll();
-            // $data['post'] = $this->post_model->getAll();
 
+                $object = array(
+                    'post_id' => $id,
+                    'cateid' => null,
+                    'featureid' => null,
+                    'post_title' => $title,
+                    'userid' => $userid,
+                    'post_type' => 2,
+                    'post_description' => $post_description,
+                    'post_images' => $post_images,
+                    'post_createdate' => date("Y-m-d H:i:s")
+                );
+                $this->post_model->update($object);
+                redirect(site_url('admincp/features/'));
+            }
+            $data['title'] = "Update Feature";
+            $data['details_features'] = $this->post_model->getDetail($this->session->userdata('adminid'), $id);
+            $this->load->model('user_model');
+            $data['user'] = $this->user_model->getAll();
             $this->load->view('admin/dashboard', $data);
         }
     }
