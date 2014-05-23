@@ -10,6 +10,17 @@ class post_model extends CI_Model {
         parent::__construct();
         $this->load->database();
     }
+    
+    function postAll(){
+       $this->db->where('post_type', "1");
+        $this->db->order_by("id");
+        $query = $this->db->get('tbl_post');
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return null;
+        } 
+    }
 
     function getAll_by_User($userid) {
         $this->db->where('userid', $userid);
@@ -84,6 +95,16 @@ class post_model extends CI_Model {
 
     function getDetail($userid = null, $post_id = null) {
         $this->db->where('userid', $userid);
+        $this->db->where('id', $post_id);
+        $query = $this->db->get('tbl_post');
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return null;
+        }
+    }
+    
+    function getDetail_byID($post_id = null){ 
         $this->db->where('id', $post_id);
         $query = $this->db->get('tbl_post');
         if ($query->num_rows() > 0) {

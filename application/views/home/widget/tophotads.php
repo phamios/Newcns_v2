@@ -68,11 +68,13 @@
 
 
                         <div class="ad ad-300">
+                            <!--
 
                             <div id="dtadq-300-2" class="clearfix gpt-ad-slot">
                                 <script type="text/javascript">googletag.cmd.push(function(){googletag.display('dtadq-300-2');});</script>
-                                <div style="border: 0pt none;" id="google_ads_iframe_/5611/dt.dgt.www/home-page_2__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" name="google_ads_iframe_/5611/dt.dgt.www/home-page_2" id="google_ads_iframe_/5611/dt.dgt.www/home-page_2" frameborder="0" height="250" scrolling="no" width="300"></iframe></div></div>
-
+                                <div style="border: 0pt none;" id="google_ads_iframe_/5611/dt.dgt.www/home-page_2__container__">
+                                    <iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" name="google_ads_iframe_/5611/dt.dgt.www/home-page_2" id="google_ads_iframe_/5611/dt.dgt.www/home-page_2" frameborder="0" height="250" scrolling="no" width="300"></iframe></div></div>
+                                  -->
                         </div>
 
 

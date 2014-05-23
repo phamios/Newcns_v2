@@ -77,8 +77,7 @@ class post extends CI_Controller {
                 $featureid = $this->input->post('feature', true);
                 $post_description = $this->input->post('post_description', true);
                 $post_images = $this->do_upload_image('./src/post/', 'post_image');
-
-
+                
                 $object = array(
                     'post_title' => $title,
                     'cateid' => $category,
@@ -86,7 +85,7 @@ class post extends CI_Controller {
                     'post_type' => 1,
                     'typeid' => $_POST['type'],
                     'featureid' => $featureid,
-                    'post_description' => $post_description,
+                    'post_description' => strip_tags($post_description, '<p>'),
                     'post_images' => $post_images,
                     'post_createdate' => date("Y-m-d H:i:s")
                 );
@@ -143,7 +142,7 @@ class post extends CI_Controller {
                         'post_type' => 1,
                         'typeid' => 1,
                         'featureid' => $featureid,
-                        'post_description' => $post_description, 
+                        'post_description' => strip_tags($post_description, '<p>'), 
                         'post_createdate' => date("Y-m-d H:i:s")
                     );
                 } else {
@@ -156,7 +155,7 @@ class post extends CI_Controller {
                         'post_type' => 1,
                         'typeid' => 1,
                         'featureid' => $featureid,
-                        'post_description' => $post_description, 
+                        'post_description' => strip_tags($post_description, '<p>'), 
                         'post_createdate' => date("Y-m-d H:i:s"),
                         'post_images' =>$post_images,
                     );
