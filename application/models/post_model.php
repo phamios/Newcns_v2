@@ -103,6 +103,16 @@ class post_model extends CI_Model {
             return null;
         }
     }
+    
+    function getDetail_byID($post_id = null){ 
+        $this->db->where('id', $post_id);
+        $query = $this->db->get('tbl_post');
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return null;
+        }
+    }
 
     function addPost($object) {
 
