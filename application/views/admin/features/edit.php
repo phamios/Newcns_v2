@@ -54,39 +54,83 @@ tinymce.init({
                 </div>
                 <!-- /.toolbar -->
             </header>
-            <?php if($details_features <> null):?>
-            <?php foreach($details_features as $feature):?>
+            <?php if($details_post <> null):?>
+            <?php foreach($details_post as $post):?>
             <div id="div-1" class="accordion-body collapse in body">
-                    <?php echo form_open_multipart('admincp/features/edit/'.$feature->id,array('class'=>'form-horizontal','id'=>'feature-create')); ?>
+                    <?php echo form_open_multipart('admincp/post/edit/'.$post->id,array('class'=>'form-horizontal','id'=>'post-create')); ?>
                     
                     <div class="control-group">
                         <label for="text1" class="control-label">Title<span class="require">*</span></label>
 
                         <div class="controls with-tooltip">
-                            <input type="text" id="title" class="span6 input-tooltip" data-original-title="Please use post title" data-placement="bottom" name="title" value="<?php echo $feature->post_title ?>"/>
+                            <input type="text" id="title" class="span6 input-tooltip" data-original-title="Please use post title" data-placement="bottom" name="title" value="<?php echo $post->post_title ?>"/>
                         </div>
                     </div>
 
                     <div class="control-group">
                         <label class="control-label">Image</label>
-                        <?php if ($feature->post_images != ''): ?>
-                            <img src="<?php echo site_url('src/features/') . $feature->post_images; ?>" width="200">
+                        <?php if ($post->post_images != ''): ?>
+                            <img src="<?php echo $this->config->base_url() . 'img/post/' . $post->post_images; ?>" width="200">
                         <?php endif; ?>
-                        <div class="controls"><input type="file" name="feature_image" /></div>
+                        <div class="controls"><input type="file" name="image" /></div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">Category<span class="require">*</span></label>
+
+                        <div class="controls">
+                            <select id="post-category" name="category">
+                                <option value="">No select</option>
+                                <?php foreach ($category as $row): ?>
+                                    <option value="<?php echo $row->id; ?>" <?php if ($row->id == $post->cateid) {
+                                    echo "selected";
+                                } ?> ><?php echo $row->catename ?></option>
+<?php endforeach; ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Type</label>
+
+                        <div class="controls">
+                            <select id="type" name="type">
+                                <?php for ($i = 1; $i <= 4; $i++) { ?>
+                                    <option value="<?php echo $i; ?>" <?php if ($id == $post->typeid) {
+                                    echo "selected";
+                                } ?> ><?php echo $i; ?></option>
+<?php } ?>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">Feature<span class="require">*</span></label>
+
+                        <div class="controls">
+                            <select id="feature" name="feature">
+                                <option value="">No select</option>
+                                    <?php foreach ($features as $row): ?>
+                                                                        <option value="<?php echo $row->id; ?>" <?php if ($row->id == $post->featureid) {
+                                            echo "selected";
+                                        } ?> ><?php echo $row->features_name ?>
+                                                                        </option>
+                                    <?php endforeach; ?>
+                            </select>
+                        </div>
                     </div>
 
                     <div class="control-group">
                         <label for="text1" class="control-label">Description</label>
 
                         <div class="controls with-tooltip">
-                            <textarea id="description" name="post_description" class="span6"><?php echo $feature->post_description ?></textarea>
+                            <textarea id="description" name="description"  name="post_description" class="span6"><?php echo $post->post_description ?></textarea>
                             <!-- <input type="text" id="description" class="span6 input-tooltip" data-original-title="Please use post title" data-placement="bottom" name="description"/> -->
                         </div>
                     </div>
 
                     <div class="form-actions">
                         <input type="reset" value="Reset" id="back" class="navigation_button btn">
-                        <input type="submit" value="Update"  name="update_feature" id="next" class="navigation_button btn btn-primary">
+                        <input type="submit" value="Update"  name="update_post" id="next" class="navigation_button btn btn-primary">
                         <!--     -->
                     </div>
                 <?php echo form_close(); ?>
