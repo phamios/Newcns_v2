@@ -11,19 +11,12 @@
 
                                 <div class="byline">
                                     <img src="<?php echo base_url('res_home/index_files'); ?>/url-cc2a67b5fd9328f132a27c78067f0b33-30x30-c.jpg" data-avatar-provider="uploaded">									<span>by Williams Pelegrin</span>								</div>
-
-
-
-
-
+ 
                                 <img src="<?php echo base_url('res_home/index_files'); ?>/nintendo-grasps-mem-1-970x250-c.png" class="attachment-width=970&amp;height=250&amp;crop=1" alt="Nintendo-grasps-mem-1" height="250" width="970">
                             </a>
 
                         </div>
-
-
-
-
+ 
                         <div class="two black tape byline-black byline-tape">
 
                             <a href="http://www.digitaltrends.com/mobile/best-ipad-apps/">

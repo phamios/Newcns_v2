@@ -2,11 +2,7 @@
 
 <body data-twttr-rendered="true" class="home page-id-444226 blog sticky-nav stuck-nav">
     <!--<![endif]--> 
-    
-   
-
-
-
+     
     <div id="main-wrap" class="dt-site-skin-wrap">
         <header id="site-header">
             <div id="top-bar">
@@ -24,7 +20,9 @@
         <div id="page">
             <div class="bb-wrap"> 
                 <!--DTC HTML CACHE HIT START-->	 
+               <?php if ($this->router->class == 'ky1'): ?>
                 <?php $this->load->view('home/widget/tophotads'); ?>
+                <?php endif;?>
                 <!--DTC HTML CACHE HIT STOP-->
 
                 <div id="primary-wrap">

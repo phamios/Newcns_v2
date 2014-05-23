@@ -18,12 +18,8 @@ class category_review_model extends CI_Model {
      
     public function getAll() {
         
-        $query = $this->db->get('tbl_category_review');
-        if ($query->num_rows() > 0) {
-            return $query->result();
-        } else {
-            return null;
-        }
+        $query = $this->db->query('SELECT * FROM tbl_category_review');
+	return $query->result();
     }
     
      

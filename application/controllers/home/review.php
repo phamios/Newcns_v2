@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class news_cate extends CI_Controller {
+class Review extends CI_Controller {
 
     public $product_id;
 
@@ -25,12 +25,13 @@ class news_cate extends CI_Controller {
     public function _remap() {
         //Lay gia tri class & function hien tai - xu ly tracking user
         $this->load->model('post_model');
-        $data['listcontent'] = $this->post_model->get_news_by_cateid($this->product_id);
         $this->load->model('category_model');
         $this->load->model('features_model');
         $data['features'] = $this->features_model->getAll();
         $data['category'] = $this->category_model->getAll();
-        $this->load->view('welcome_message', $data);
+        $data['details_news'] = $this->post_model->getDetail_byID_by_rev($this->product_id);
+        
+         $this->load->view('welcome_message',$data);
     }
 
     /**

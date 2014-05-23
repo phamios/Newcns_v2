@@ -1,13 +1,19 @@
+<?php 
+if ($this->router->class == 'rev_cate'){
+    $link_router = 'review'; 
+}else{
+    $link_router = "news";
+}
+?>
+
 <section id="river" class="standard">
-    <h1>Recent Stories</h1>
-
-
+    <h1>Recent Stories</h1> 
     <!--DTC HTML CACHE HIT START-->			
     <?php if($listcontent <> null):?>
     <?php foreach($listcontent as $content):?>
     <div class="post " data-post-type="post">
         <div class="thumb"> 
-            <a href="<?php echo site_url('home/news/'.mb_strtolower(url_title(removesign($content->post_title.'-'.$content->id))).'.html' );?>">
+            <a href="<?php echo site_url('home/'.$link_router.'/'.mb_strtolower(url_title(removesign($content->post_title.'-'.$content->id))).'.html' );?>">
                 <span class="image-holder">
                     <img src="<?php echo site_url('src/post/thumb_'.$content->post_images)?>" alt="<?php echo $content->post_title?>"/>
                 </span>							
@@ -16,7 +22,7 @@
 
         <div class="content">
             <h3>
-                <a href="#">
+                <a href="<?php echo site_url('home/'.$link_router.'/'.mb_strtolower(url_title(removesign($content->post_title.'-'.$content->id))).'.html' );?>">
                     <?php echo $content->post_title?>
                 </a>
             </h3>
@@ -62,7 +68,7 @@
 
 
     <div class="river-pagination">
-        <a href="http://www.digitaltrends.com/page/2/" class="button flat icon more"><span>See More</span></a>
+        <a href="#" class="button flat icon more"><span>See More</span></a>
     </div>
 </section>
 

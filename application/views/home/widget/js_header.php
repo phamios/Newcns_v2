@@ -9,16 +9,13 @@
 <!-- DT Variables (digitaltrends-2013/functions.php) -->
 <script type="text/javascript">var ajaxurl="http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/ajax-actions.php";var ord=Math.random()*10000000000000000;</script>
 <!-- End DT Variables -->
-
-
-
-
-
+ 
 <script type="text/javascript">
     
     $(document).ready(function(){
         category_review();
         category_news(); 
+        get_last_new();
         
         $('#rev_cate').hover(function(){
            //alert("asdasd");
@@ -38,6 +35,20 @@
             }
         });
     };
+    
+    function get_last_new(){
+        
+        $.ajax({
+            url: '<?php echo site_url('ajax/last_new'); ?>',
+            type:'POST',
+            success: function(response){ 
+                $("#new_last_get").html(response);
+            },
+            error: function (x, status, error) {
+                alert("Error code: " + x + "\nAn error occurred: " + status + "\nError: " + error);
+            }
+        });
+    }
     
     function category_news(){
         $.ajax({

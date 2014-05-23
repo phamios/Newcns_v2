@@ -29,7 +29,7 @@ class News extends CI_Controller {
         $this->load->model('features_model');
         $data['features'] = $this->features_model->getAll();
         $data['category'] = $this->category_model->getAll();
-        $data['details_news'] = $this->post_model->getDetail_byID($this->product_id);
+        $data['details_news'] = $this->post_model->getDetail_byID_by_news($this->product_id);
         
          $this->load->view('welcome_message',$data);
     }

@@ -242,88 +242,11 @@
 
         <h3>Latest Reviews</h3>
 
-
-        <div class="item">
-
-            <a href="http://www.digitaltrends.com/digital-camera-reviews/canon-powershot-sx600-hs-review/" class="thumb alt"><img src="<?php echo base_url('res_home/index_files'); ?>/canon-sx600-front-open-76x76-c.jpg" class="attachment-width=76&amp;height=76&amp;crop=1" alt="Canon SX600 front open"></a>
-
-            <h4><a href="http://www.digitaltrends.com/digital-camera-reviews/canon-powershot-sx600-hs-review/">Canon PowerShot SX600 HS review</a></h4>
-
-            <div class="rating">
-
-                <div class="dt-rating num-6">Our Score<span><span>: 6</span></span></div>
-
-
-            </div>
-
-        </div>
-
-
-        <div class="item">
-
-            <a href="http://www.digitaltrends.com/cell-phone-reviews/htc-one-m8-harman-kardon-edition-review/" class="thumb alt"><img src="<?php echo base_url('res_home/index_files'); ?>/htc-one-m8-harman-kardon-edition-front-apps-76x76-c.jpg" class="attachment-width=76&amp;height=76&amp;crop=1" alt="HTC One M8 Harman Kardon edition front apps"></a>
-
-            <h4><a href="http://www.digitaltrends.com/cell-phone-reviews/htc-one-m8-harman-kardon-edition-review/">HTC One M8 Harman Kardon Edition review</a></h4>
-
-            <div class="rating">
-
-                <div class="dt-rating num-7">Our Score<span><span>: 7</span></span></div>
-
-
-            </div>
-
-        </div>
-
-
-        <div class="item">
-
-            <a href="http://www.digitaltrends.com/game-reviews/kirby-triple-deluxe-review/" class="thumb alt"><img src="<?php echo base_url('res_home/index_files'); ?>/kirby-triple-deluxe-screenshot-1-76x76-c.jpg" class="attachment-width=76&amp;height=76&amp;crop=1" alt="Kirby Triple Deluxe screenshot 1"></a>
-
-            <h4><a href="http://www.digitaltrends.com/game-reviews/kirby-triple-deluxe-review/">Kirby: Triple Deluxe review</a></h4>
-
-            <div class="rating">
-
-                <div class="dt-rating num-9">Our Score<span><span>: 9</span></span></div>
-
-
-            </div>
-
-        </div>
-
-
-        <div class="item">
-
-            <a href="http://www.digitaltrends.com/car-reviews/2014-toyota-tundra-review/" class="thumb alt"><img src="<?php echo base_url('res_home/index_files'); ?>/2014-toyota-tundra-review-front-angle-4-76x76-c.jpg" class="attachment-width=76&amp;height=76&amp;crop=1" alt="2014 toyota tundra review front angle 4"></a>
-
-            <h4><a href="http://www.digitaltrends.com/car-reviews/2014-toyota-tundra-review/">2014 Toyota Tundra review</a></h4>
-
-            <div class="rating">
-
-                <div class="dt-rating num-7">Our Score<span><span>: 7.5</span></span></div>
-
-
-            </div>
-
-        </div>
-
-
-        <div class="item">
-
-            <a href="http://www.digitaltrends.com/headphone-reviews/nuforce-primo-8-review/" class="thumb alt"><img src="<?php echo base_url('res_home/index_files'); ?>/nuforce-primo-8-earbuds-lefyearbudbk-76x76-c.jpg" class="attachment-width=76&amp;height=76&amp;crop=1" alt="NuForce Primo 8"></a>
-
-            <h4><a href="http://www.digitaltrends.com/headphone-reviews/nuforce-primo-8-review/">Nuforce Primo 8 review</a></h4>
-
-            <div class="rating">
-
-                <div class="dt-rating num-9">Our Score<span><span>: 9</span></span></div>
-
-
-            </div>
-
-        </div>
-
-
-        <a href="http://www.digitaltrends.com/product-reviews/" class="button flat icon more"><span>More Reviews</span></a>
+       <div id="new_last_get">     
+           
+       </div>
+ 
+        <a href="#" class="button flat icon more"><span>More Reviews</span></a>
 
     </div>
 

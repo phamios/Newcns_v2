@@ -12,10 +12,6 @@ class Cate_model extends CI_Model {
         $this->load->database();
         $this->db->order_by("id");
         $query=$this->db->get('tbl_cate_post');
-        if ($query->num_rows() > 0)
-        {
-            return $query->result();
-        }
         return $query->result();
     }
 
@@ -44,10 +40,6 @@ class Cate_model extends CI_Model {
         $this->load->database();
         $this->db->where('id', $id);
         $query = $this->db->get('tbl_cate_post');
-        if ($query->num_rows() > 0)
-        {
-            return $query->result();
-        }
         return $query->result();
     }
 

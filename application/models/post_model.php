@@ -10,27 +10,47 @@ class post_model extends CI_Model {
         parent::__construct();
         $this->load->database();
     }
-    
-    function postAll(){
-       $this->db->where('post_type', "1");
+
+    function postAll() {
+        $this->db->where('post_type', "1");
         $this->db->order_by("id");
         $query = $this->db->get('tbl_post');
-        if ($query->num_rows() > 0) {
-            return $query->result();
-        } else {
-            return null;
-        } 
+        return $query->result();
+    }
+
+    function get_news_ajax() {
+        $this->db->where('post_type', "1");
+        $this->db->order_by("id");
+        $this->db->limit(10);
+        $query = $this->db->get('tbl_post');
+        return $query->result();
+    }
+
+    function get_news_by_cateid($cateid) {
+
+        $this->db->where('post_type', "1");
+        $this->db->where('cateid', $cateid);
+        $this->db->order_by("id");
+        $this->db->limit(10);
+        $query = $this->db->get('tbl_post');
+        return $query->result();
+    }
+
+    function get_rev_by_cateid($cateid) {
+
+        $this->db->where('post_type', "2");
+        $this->db->where('cateid', $cateid);
+        $this->db->order_by("id");
+        $this->db->limit(10);
+        $query = $this->db->get('tbl_post');
+        return $query->result();
     }
 
     function getAll_by_User($userid) {
         $this->db->where('userid', $userid);
         $this->db->order_by("id");
         $query = $this->db->get('tbl_post');
-        if ($query->num_rows() > 0) {
-            return $query->result();
-        } else {
-            return null;
-        }
+        return $query->result();
     }
 
     function getAll_by_User_post($userid) {
@@ -38,11 +58,7 @@ class post_model extends CI_Model {
         $this->db->where('post_type', 1);
         $this->db->order_by("id");
         $query = $this->db->get('tbl_post');
-        if ($query->num_rows() > 0) {
-            return $query->result();
-        } else {
-            return null;
-        }
+        return $query->result();
     }
 
     function getAll_by_User_features($userid) {
@@ -50,14 +66,10 @@ class post_model extends CI_Model {
         $this->db->where('post_type', 2);
         $this->db->order_by("id");
         $query = $this->db->get('tbl_post');
-        if ($query->num_rows() > 0) {
-            return $query->result();
-        } else {
-            return null;
-        }
+        return $query->result();
     }
 
-    public function update($object) { 
+    public function update($object) {
         if (isset($object['post_images'])) {
             $data = array(
                 'post_title' => $object['post_title'],
@@ -97,21 +109,27 @@ class post_model extends CI_Model {
         $this->db->where('userid', $userid);
         $this->db->where('id', $post_id);
         $query = $this->db->get('tbl_post');
-        if ($query->num_rows() > 0) {
-            return $query->result();
-        } else {
-            return null;
-        }
+        return $query->result();
     }
-    
-    function getDetail_byID($post_id = null){ 
+
+    function getDetail_byID($post_id = null) {
         $this->db->where('id', $post_id);
         $query = $this->db->get('tbl_post');
-        if ($query->num_rows() > 0) {
-            return $query->result();
-        } else {
-            return null;
-        }
+        return $query->result();
+    }
+
+    function getDetail_byID_by_rev($post_id = null) {
+        $this->db->where('typeid', 2);
+        $this->db->where('id', $post_id);
+        $query = $this->db->get('tbl_post');
+        return $query->result();
+    }
+
+    function getDetail_byID_by_news($post_id = null) {
+        $this->db->where('typeid', 1);
+        $this->db->where('id', $post_id);
+        $query = $this->db->get('tbl_post');
+        return $query->result();
     }
 
     function addPost($object) {
@@ -128,11 +146,7 @@ class post_model extends CI_Model {
     function getAll_hotpost() {
         $this->db->order_by("id");
         $query = $this->db->get('tbl_hotpost');
-        if ($query->num_rows() > 0) {
-            return $query->result();
-        } else {
-            return null;
-        }
+        return $query->result();
     }
 
 }
