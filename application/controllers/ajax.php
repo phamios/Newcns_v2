@@ -60,6 +60,30 @@ class ajax extends CI_Controller {
     }
 
     /**
+     * Get review cate sub
+     */
+    public function rev_cate_sub_ajax($cateid) {
+        $this->load->model('review_model');
+        $newest_reviews = $this->review_model->get_product_review_by_cateid($cateid);
+
+        echo '<div class="col-a-b">';
+        echo '<h3>LASTEST REVIEWS</h3>';
+        foreach ($newest_reviews as $r) {
+            echo '<div class="item">';
+            echo '<div class="thumb">';
+            echo '</div>';
+            echo '<div class="content">';
+            echo '<h4><a href="#">'.$r->post_title.'</a></h4>';
+            echo '<div class="rating">';
+            echo 'Our Scores: '.$r->review_score;
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
+        }
+        echo '</div>';
+    }
+
+    /**
      * Get Category of News
      */
     public function new_cate_ajax() {
