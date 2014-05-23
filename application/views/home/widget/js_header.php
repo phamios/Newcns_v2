@@ -15,13 +15,26 @@
     $(document).ready(function(){
         category_review();
         category_news(); 
-        get_last_new();
-        
-        $('#rev_cate').hover(function(){
-           //alert("asdasd");
+
+        $(document).on('mouseover', '.sub-menu #a-hover', function(e) {
+            var cateid = $(e.target).attr('cateid');
+            rev_cate_sub(cateid);
         });
-        
     });
+
+    function rev_cate_sub(cateid){
+        $.ajax({ 
+            url: '<?php echo site_url('ajax/rev_cate_sub_ajax'); ?>' + '/' +  cateid,
+            type:'POST',
+            data: cateid,
+            success: function(response){
+                $("#rev_cate_sub").html(response);
+            },
+            error: function (x, status, error) {
+                alert("Error code: " + x + "\nAn error occurred: " + status + "\nError: " + error);
+            }
+        });
+    }
 
     function category_review(){
         $.ajax({
