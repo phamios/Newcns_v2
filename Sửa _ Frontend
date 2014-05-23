@@ -1,0 +1,25 @@
+Site bên ngoài cần chỉnh sửa một chút về giao diện như sau:
+Trang chủ: 
++ Thay tên trong menu,... thành tiếng việt (Phần này do code chỉnh hay admin có thể tự chỉnh được hả anh)
++ Phần tin nổi bật ở đầu trang chủ: chuyển phần tiêu đề nền đen chữ trắng như hiện tại thành nền mờ chữ trắng và để sát vào 
+chân ảnh như techz.vn
++ Thêm phần tổng hợp giống như techz.vn như demo (để mình giới thiệu thêm các tin từ site khác trong hệ thống của 
+mình)
++ Phần footer thay nội dung thành: 
+* Tư vấn/đánh giá
+* Tin tức
+* Website: Các site khác của kim ý
+* Thêm: Giới thiệu, điều khoản sử dụng, liên hệ
+* G+, FB,....
+* Giấy phép.......
+=> Trong admin nên có phần để quản trị những nội dung này
+
+Phần Feature (thực chất là phần shop): Đây là phần giới thiệu các cửa hàng công nghệ trên toàn quốc
++ Về cơ bản giữ nguyên giao diện hiện tại (cũng thay tiêu đề như phần tin nổi bật trang chủ)
++ Sau phần sumary ở mỗi tin sẽ hiển thị thêm đánh giá 
++ Khi click vào một tin, giao diện không thay đổi nhưng cuối tin thêm phần đánh giá cửa hàng 
+(tham khảo thêm phần đánh giá tại http://www.techz.vn/dia-chi-cong-nghe/cong-nghe-nhat-ylt1.html)
+
+Thêm một nội dung nữa trên thanh menu là phần quà tặng
++ Giao diện giống như http://gift.techz.vn/ (lưu ý phần này chèn được video youtube)
+
