@@ -19,7 +19,7 @@ class ky extends CI_Controller {
 	public function index()
 	{ 
             $this->load->model('post_model');
-            $data['listcontent'] = $this->post_model->getDetail_byID_by_news();
+            $data['listcontent'] = $this->post_model->get_news_ajax();
             $this->load->model('category_model');
             $this->load->model('features_model');
             $data['features'] = $this->features_model->getAll();
