@@ -17,10 +17,29 @@
         category_news(); 
 
         $(document).on('mouseover', '.sub-menu #a-hover', function(e) {
-            var cateid = $(e.target).attr('cateid');
+            var cateid = parseInt($(e.target).attr('cateid'));
             rev_cate_sub(cateid);
         });
+        
+        $(document).on('mouseover', '.sub-menu #a-hover', function(e) {
+            var cateid = parseInt($(e.target).attr('cateid'));
+            new_cate_sub(cateid);
+        });
     });
+    
+    function new_cate_sub(cateid){
+        $.ajax({ 
+            url: '<?php echo site_url('ajax/news_cate_sub_ajax'); ?>' + '/' +  cateid,
+            type:'POST',
+            data: cateid,
+            success: function(response){
+                $("#news_cate_sub").html(response);
+            },
+            error: function (x, status, error) {
+                alert("Error code: " + x + "\nAn error occurred: " + status + "\nError: " + error);
+            }
+        });
+    }
 
     function rev_cate_sub(cateid){
         $.ajax({ 

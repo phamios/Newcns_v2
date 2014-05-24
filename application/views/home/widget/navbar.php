@@ -5,12 +5,14 @@
             <ul id="menu-primary-navigation-2013" class="menu">
                 <li id="menu-item-411326" class="sub menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-411326">
                     <a href="http://www.digitaltrends.com/product-reviews/">Product Reviews</a>
+                     
                     <div class="mega-wrap">
                         <div id="rev_cate">
+                            
                         </div>
-                        <div id="rev_cate_sub" class="mega-container reviews">
-                        </div>
+                        
                     </div>
+                   
                 </li>
                 <li id="menu-item-411314" class="sub menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-411314"><a>News</a>
                     <div class="mega-wrap">
