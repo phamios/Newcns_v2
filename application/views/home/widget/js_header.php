@@ -15,6 +15,8 @@
     $(document).ready(function(){
         category_review();
         category_news(); 
+        get_last_new();
+        
 
         $(document).on('mouseover', '.sub-menu #a-hover', function(e) {
             var cateid = parseInt($(e.target).attr('cateid'));

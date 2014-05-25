@@ -25,6 +25,14 @@ class post_model extends CI_Model {
         $query = $this->db->get('tbl_post');
         return $query->result();
     }
+    
+    function get_news_default() {
+        $this->db->where('post_type', "1");
+        $this->db->order_by("id");
+        $this->db->limit(20);
+        $query = $this->db->get('tbl_post');
+        return $query->result();
+    }
 
     function get_news_by_cateid($cateid) {
 
