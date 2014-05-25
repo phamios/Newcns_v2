@@ -254,81 +254,11 @@
     <div class="widget standard latest-posts">
 
         <h3>Latest Features</h3>
+        <div id="features_last_get">     
+           
+       </div>
 
-
-        <div class="item">
-
-            <a href="http://www.digitaltrends.com/photography/travelling-across-universe-astrophotographer-mike-taylor/" class="thumb alt"><img src="<?php echo base_url('res_home/index_files'); ?>/cold_calm-76x76-c.jpg" class="attachment-width=76&amp;height=76&amp;crop=1" alt="Cold Calm"></a>
-
-            <h4><a href="http://www.digitaltrends.com/photography/travelling-across-universe-astrophotographer-mike-taylor/">Travelling across the universe with astrophotographer Mike Taylor</a></h4>
-
-        </div>
-
-
-        <div class="item">
-
-            <a href="http://www.digitaltrends.com/music/tunein-review-and-interview/" class="thumb alt"><img src="<?php echo base_url('res_home/index_files'); ?>/tunein-npr-105-76x76-c.jpg" class="attachment-width=76&amp;height=76&amp;crop=1" alt="TuneIn"></a>
-
-            <h4><a href="http://www.digitaltrends.com/music/tunein-review-and-interview/">TuneIn is doing for radio what Spotify did for music, and we love it</a></h4>
-
-        </div>
-
-
-        <div class="item">
-
-            <a href="http://www.digitaltrends.com/features/facebook-bing-twitter-saving-sociology-screwing/" class="thumb alt"><img src="<?php echo base_url('res_home/index_files'); ?>/microsoft-lab-opening-1-2-76x76-c.jpg" class="attachment-width=76&amp;height=76&amp;crop=1" alt="Microsoft lab opening"></a>
-
-            <h4><a href="http://www.digitaltrends.com/features/facebook-bing-twitter-saving-sociology-screwing/">How Facebook, Twitter, and Bing are giving researchers the perfect guinea pig (you)</a></h4>
-
-        </div>
-
-
-        <div class="item">
-
-            <a href="http://www.digitaltrends.com/features/peter-lee-head-microsoft-research-google-x-windows-9-future-computing/" class="thumb alt"><img src="<?php echo base_url('res_home/index_files'); ?>/peter-lee-microsoft-research_-76x76-c.jpg" class="attachment-width=76&amp;height=76&amp;crop=1" alt="Peter Lee Microsoft Research"></a>
-
-            <h4><a href="http://www.digitaltrends.com/features/peter-lee-head-microsoft-research-google-x-windows-9-future-computing/">Microsoft’s head of research opens up about Google X, Windows 9, and the future</a></h4>
-
-        </div>
-
-
-        <div class="item">
-
-            <a href="http://www.digitaltrends.com/gaming/amazing-spider-man-2-producers-villains-video-games-making-peter-parker-funny/" class="thumb alt"><img src="<?php echo base_url('res_home/index_files'); ?>/spiderman-2-producer-qa-047-76x76-c.jpg" class="attachment-width=76&amp;height=76&amp;crop=1" alt="Spiderman-2-producer-Q&amp;A-047"></a>
-
-            <h4><a href="http://www.digitaltrends.com/gaming/amazing-spider-man-2-producers-villains-video-games-making-peter-parker-funny/">Chatting villains, reboots and video games with the producers behind Spider-Man 2</a></h4>
-
-        </div>
-
-
-        <div class="item">
-
-            <a href="http://www.digitaltrends.com/mobile/healbe-gobe-impressions/" class="thumb alt"><img src="<?php echo base_url('res_home/index_files'); ?>/healbe-gobe-top-3-76x76-c.jpg" class="attachment-width=76&amp;height=76&amp;crop=1" alt="Healbe GoBe top"></a>
-
-            <h4><a href="http://www.digitaltrends.com/mobile/healbe-gobe-impressions/">Exclusive: The Healbe GoBe calorie-counting wristband is real, and we saw it in action</a></h4>
-
-        </div>
-
-
-        <div class="item">
-
-            <a href="http://www.digitaltrends.com/features/us-icann-ending-oversight/" class="thumb alt"><img src="<?php echo base_url('res_home/index_files'); ?>/icann-fadi-chehade-76x76-c.jpg" class="attachment-width=76&amp;height=76&amp;crop=1" alt="icann-fadi-chehade"></a>
-
-            <h4><a href="http://www.digitaltrends.com/features/us-icann-ending-oversight/">Can the inmates run the asylum? The U.S. plan to stop ruling the open Internet</a></h4>
-
-        </div>
-
-
-        <div class="item">
-
-            <a href="http://www.digitaltrends.com/cars/how-audi-redesigned-the-2015-audi-tt/" class="thumb alt"><img src="<?php echo base_url('res_home/index_files'); ?>/audi-tt-coupe-scuba-blue-front-left-76x76-c.jpg" class="attachment-width=76&amp;height=76&amp;crop=1" alt="Audi TT Coupé Scuba Blue front left"></a>
-
-            <h4><a href="http://www.digitaltrends.com/cars/how-audi-redesigned-the-2015-audi-tt/">How Audi reincarnated a revolution with its new Audi TT</a></h4>
-
-        </div>
-
-
-        <a href="http://www.digitaltrends.com/features/" class="button flat icon more"><span>More Features</span></a>
+        <a href="#" class="button flat icon more"><span>More Features</span></a>
     </div>
 
 </aside>

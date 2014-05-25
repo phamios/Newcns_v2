@@ -26,6 +26,14 @@ class post_model extends CI_Model {
         return $query->result();
     }
     
+    function get_features_ajax() {
+        $this->db->where('post_type', "2");
+        $this->db->order_by("id");
+        $this->db->limit(10);
+        $query = $this->db->get('tbl_post');
+        return $query->result();
+    }
+    
     function get_news_default() {
         $this->db->where('post_type', "1");
         $this->db->order_by("id");

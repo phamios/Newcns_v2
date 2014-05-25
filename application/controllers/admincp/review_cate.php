@@ -56,22 +56,21 @@ class review_cate extends CI_Controller {
     public function edit($id = null) {
         $this->load->model('category_review_model');
 
-        if (isset($_POST['name'])) {
+        if (isset($_POST['submit_editcate'])) {
             $data['edit'] = 1;
 
-            $insert = array(
-                'catename' => $_POST['cate_name'],
-                'cateroot' => $_POST['cate_root'],
-                'cateimages' => $image
+           $objects = array(
+                'cateroot' => $this->input->post('cate_root', true),
+                'cate_rev_name' => $this->input->post('cate_name', true),
+                'cate_rev_icon' => $this->input->post('cate_icon', true),
             );
-            $this->db->update('tbl_category', $insert, array('id' => $id));
-
-            redirect('admincp/review_cate/edit/' . $id . '?success=1');
+            $this->category_review_model->update_cate_review($id,$objects);
+            redirect('admincp/review_cate');
         }
         $data['edit'] = 0; 
         $data['id'] = $id;
         $data['title'] = "Edit Category";
-        $data['model'] = $this->category_review_model->getDetail($id);
+        $data['detailscate'] = $this->category_review_model->getDetail($id);
         $data['category'] = $this->category_review_model->getAll();
         $this->load->view('admin/dashboard', $data);
     }

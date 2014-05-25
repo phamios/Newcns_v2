@@ -69,8 +69,8 @@ class category_review_model extends CI_Model {
      * @Sonpx
      */
 
-    function update_cate_review($object) {
-        $this->db->update('tbl_category_review', $data, array('id' => $id));
+    function update_cate_review($id,$object) {
+        $this->db->update('tbl_category_review', $object, array('id' => $id));
     }
 
 }

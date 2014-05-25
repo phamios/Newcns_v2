@@ -5,7 +5,7 @@
             <header>
                 <div class="icons"><i class="icon-edit"></i></div>
                 <h5><?php echo $title; ?></h5>
-                <a class="cate-create" href="<?php echo $this->config->base_url().'admin/category/create';?>">Create</a>
+                <a class="cate-create" href="<?php echo $this->config->base_url().'admincp/category/create';?>">Create</a>
                 <!-- <div class="toolbar">
                     <a href="#actionTable" data-toggle="collapse" class="accordion-toggle minimize-box">
                         <i class="icon-chevron-up"></i>

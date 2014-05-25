@@ -13,11 +13,11 @@
                         <table id="dataTable" class="table table-bordered table-condensed table-hover table-striped">
                             <thead>
                                 <tr>
-                                    <th>Cate</th>
+                                    <th>Danh mục</th>
                                     <th>Hình ảnh</th>
                                     <th>Tiêu đề</th>
                                     <th>Miêu tả</th>
-                                    <th>Feature</th>
+                                    <th>Đặc trưng</th>
                                     <th>Ngày tạo</th>
                                     <th>Trạng thái</th>
                                     <th>Tùy chọn</th>
@@ -35,13 +35,13 @@
                                                 <?php endforeach; ?>
                                             </td>
                                             <td>
-                                                <p align="center"><img src="<?php echo base_url('src/post/' . 'thumb_'.$row->post_images); ?>" width="80px"/></p>
+                                                <p align="center"><img src="<?php echo base_url('src/post/' . 'thumb_' . $row->post_images); ?>" width="50px"/></p>
                                             </td>
                                             <td>
                                                 <a href="<?php echo site_url('admincp/post/edit/' . $row->id); ?>" ><?php echo $row->post_title; ?></a>
                                             </td>
                                             <td>
-                                                <a href="<?php echo site_url('admincp/post/edit/' . $row->id); ?>" ><?php echo word_limiter($row->post_description, 20); ?></a>
+                                                <?php echo word_limiter(strip_tags($row->post_description), 20); ?>
                                             </td>
                                             <td>
                                                 <?php foreach ($features as $feature): ?>
@@ -61,9 +61,9 @@
                                                 <?php endif; ?>
                                             </td>
                                             <td> 
-                                                 <a class="btn edit" href="<?php echo site_url('admincp/post/sethot/'.$row->id);?>">HOT</a>
+                                                <a class="btn edit" href="<?php echo site_url('admincp/post/sethot/' . $row->id); ?>">HOT</a>
                                                 <a class="btn edit" href="<?php echo site_url('admincp/post/edit/' . $row->id); ?>"><i class="icon-edit"></i></a>
-                                                <a class="btn btn-danger" href="<?php echo site_url('admincp/post/delete/'.$row->id);?>"><i class="icon-remove"></i></a>
+                                                <a class="btn btn-danger" href="<?php echo site_url('admincp/post/delete/' . $row->id); ?>"><i class="icon-remove"></i></a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
@@ -75,4 +75,3 @@
             </div>
         </div>
         <!--End Datatables-->
-        

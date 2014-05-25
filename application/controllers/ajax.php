@@ -32,13 +32,33 @@ class ajax extends CI_Controller {
             echo '     <a href="'.site_url('home/news/'.mb_strtolower(url_title($this->removesign($content->post_title.'-'.$content->id))).'.html' ).'" class="thumb alt">';
             echo '        <img src="'.base_url('src/post/thumb_'.$content->post_images).'" class="attachment-width=76&amp;height=76&amp;crop=1" alt="Canon SX600 front open">';
             echo '    </a>';
-            echo '    <h4><a href=" ">'.$content->post_title.'</a></h4>';
+            echo '    <h4><a href="'.site_url('home/news/'.mb_strtolower(url_title($this->removesign($content->post_title.'-'.$content->id))).'.html' ).'">'.$content->post_title.'</a></h4>';
             echo '    <div class="rating"> ';
-            echo '        <div class="dt-rating num-6">Điểm đánh giá<span><span>: '.$content->post_view.'</span></span></div> ';
+            echo '        <div class="dt-rating num-6" style="color:grey;">Điểm đánh giá<span><span>: '.$content->post_view.'</span></span></div> ';
             echo '    </div> ';
             echo ' </div>';
         }
     }
+    
+    
+     public function last_features() {
+        $this->load->model('post_model');
+        $result = $this->post_model->get_features_ajax();
+        foreach ($result as $content) {
+            echo '<div class="item">';
+            echo '     <a href="'.site_url('home/news/'.mb_strtolower(url_title($this->removesign($content->post_title.'-'.$content->id))).'.html' ).'" class="thumb alt">';
+            echo '        <img src="'.base_url('src/post/thumb_'.$content->post_images).'" class="attachment-width=76&amp;height=76&amp;crop=1" alt="Canon SX600 front open">';
+            echo '    </a>';
+            echo '    <h4><a href="'.site_url('home/news/'.mb_strtolower(url_title($this->removesign($content->post_title.'-'.$content->id))).'.html' ).'">'.$content->post_title.'</a></h4>';
+            echo '    <div class="rating"> ';
+            echo '        <div class="dt-rating" style="color:grey;"> '.$content->post_createdate.'</div> ';
+            echo '    </div> ';
+            echo ' </div>';
+        }
+    }
+    
+    
+    
 
     /**
      *  Get Category of Review

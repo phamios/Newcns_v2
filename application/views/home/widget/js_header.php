@@ -16,6 +16,7 @@
         category_review();
         category_news(); 
         get_last_new();
+        get_last_features();
         
 
         $(document).on('mouseover', '.sub-menu #a-hover', function(e) {
@@ -77,6 +78,19 @@
             type:'POST',
             success: function(response){ 
                 $("#new_last_get").html(response);
+            },
+            error: function (x, status, error) {
+                alert("Error code: " + x + "\nAn error occurred: " + status + "\nError: " + error);
+            }
+        });
+    }
+    
+    function get_last_features(){
+    $.ajax({
+            url: '<?php echo site_url('ajax/last_features'); ?>',
+            type:'POST',
+            success: function(response){ 
+                $("#features_last_get").html(response);
             },
             error: function (x, status, error) {
                 alert("Error code: " + x + "\nAn error occurred: " + status + "\nError: " + error);

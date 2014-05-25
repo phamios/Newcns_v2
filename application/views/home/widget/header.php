@@ -18,13 +18,13 @@
 
 
         <!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.21 - http://yoast.com/wordpress/seo/ -->
-        <link rel="canonical" href="http://www.digitaltrends.com/">
+        <link rel="canonical" href="<?php echo site_url();?>">
         <meta property="og:locale" content="en_US">
         <meta property="og:type" content="article">
         <meta property="og:title" content="Homepage">
-        <meta property="og:url" content="http://www.digitaltrends.com/">
+        <meta property="og:url" content="<?php echo site_url();?>">
         <meta property="og:site_name" content="Digital Trends">
-        <meta property="article:publisher" content="https://www.facebook.com/digitaltrendsftw">
+        <meta property="article:publisher" content="<?php echo site_url();?>">
         <meta property="article:published_time" content="2013-05-20T20:23:50+00:00">
         <meta property="article:modified_time" content="2014-02-05T10:52:02+00:00">
         <meta property="og:image" content="http://cdn2.digitaltrends.com/dt-logo-200x200.png">
@@ -39,7 +39,7 @@
         <link rel="stylesheet" id="dt-css-b39b787d60a3d8e785cd09b859cd2848-css" href="<?php echo base_url('res_home/index_files'); ?>/dt-optimized-css-b39b787d60a3d8e785cd09b859cd2848.css" type="text/css" media="all">
 
         <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.digitaltrends.com/xmlrpc.php?rsd">
-        <link rel="shortlink" href="http://www.digitaltrends.com/?p=444226">
+        <link rel="shortlink" href="<?php echo site_url();?>?p=444226">
 
 
        <?php $this->load->view('home/widget/js_header');?>

@@ -29,55 +29,52 @@
             </header>
 
             <div id="div-1" class="accordion-body collapse in body">
-                <form class="form-horizontal" id="category-create" action="<?php echo $this->config->base_url().'admincp/category/edit/'.$id;?>" method="post">
-                    <?php if(isset($_GET['success']) && $_GET['success'] == 1): ?>
-                        <div id="edit-success">Edit Category Success</div>
-                    <?php endif; ?>
+                <div id="div-1" class="accordion-body collapse in body">    
+                    <?php foreach($detailscate as $cate): ?>
+                    <?php echo form_open_multipart('admincp/review_cate/edit/'.$cate->id, array('class' => 'form-horizontal')); ?>
                     <div class="control-group">
                         <label for="text1" class="control-label">Name<span class="require">*</span></label>
 
                         <div class="controls with-tooltip">
-                            <input type="text" id="name" class="span6 input-tooltip" data-original-title="Please use your name" data-placement="bottom" name="name" value="<?php echo $model->catename ?>"/>
+                            <input type="text" id="cate_name" class="span6 input-tooltip"  name="cate_name" value="<?php echo $cate->cate_rev_name?>"/> 
                         </div>
                     </div>
-                    <div class="control-group">
-                        <label class="control-label">Image</label>
-                        <?php if($model->cateimages != ''): ?>
-                            <img src="<?php echo $this->config->base_url().'img/category/'.$model->cateimages;?>" width="200">
-                        <?php endif; ?>
-                        <div class="controls"><input type="file" name="image" /></div>
-                    </div>
+
                     <div class="control-group">
                         <label class="control-label">Category Root</label>
 
                         <div class="controls">
-                            <select id="cate-root" name="cate-root">
+                            <select id="cate-root" name="cate_root">
                                 <option value="0">No Category Root</option>
-                                <?php foreach($category as $row): ?>
-                                <option value="<?php echo $row->id; ?>" <?php if($model->cateroot == $row->id) {echo "selected";} ?> ><?php echo $row->catename ?></option>
-                            	<?php endforeach; ?>
+                                <?php if ($category <> null): ?>
+                                    <?php foreach ($category as $row): ?> 
+                                        <option <?php if($cate->cateroot == $row->id):?> selected <?php endif;?> value="<?php echo $row->id; ?>"><?php echo $row->cate_rev_name ?></option>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
                             </select>
                         </div>
                     </div>
 
                     <div class="form-actions">
                         <input type="reset" value="Reset" id="back" class="navigation_button btn">
-                        <input type="button" onclick="create()" value="Update" id="next" class="navigation_button btn btn-primary">
+                        <input type="submit" name="submit_editcate" onclick="create()" value="Sửa" id="next" class="navigation_button btn btn-primary">
                     </div>
-                </form>
+                    <?php echo form_close(); ?>
+                    <?php endforeach; ?>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 <script type="text/javascript">
-function create (argument) {
-	var name = $("#name").val();
-	if(name != '') {
-		$("#category-create").submit();
-        //document.getElementById("edit-success").style.display="block";
-	}else{
-		alert("Please enter catogory name");
-	}
-}
+    function create (argument) {
+        var name = $("#name").val();
+        if(name != '') {
+            $("#category-create").submit();
+            //document.getElementById("edit-success").style.display="block";
+        }else{
+            alert("Please enter catogory name");
+        }
+    }
 </script>
