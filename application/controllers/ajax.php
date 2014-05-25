@@ -66,7 +66,7 @@ class ajax extends CI_Controller {
     public function rev_cate_sub_ajax($cateid) {
         $this->load->model('review_model');
         $newest_reviews = $this->review_model->get_product_review_by_cateid($cateid);
-         
+         var_dump($newest_reviews); die;
         echo '<div class="col-a-b" style="color:white;">'; 
         foreach ($newest_reviews as $r) {
             echo '<div class="item">';
@@ -97,7 +97,7 @@ class ajax extends CI_Controller {
         echo '<ul class="sub-menu">';
         foreach ($rev_cate as $cate) {
             echo '<li id="menu-item-411306" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-411306 menu-item-object-id-100008">';
-            echo '        <a  cateid = "'.$cate->id.'" id="a-hover" href="' . site_url('home/news_cate') . '/' . mb_strtolower(url_title($this->removesign($cate->catename . "-" . $cate->id))) . ".html" . '"> ' . $cate->catename . '</a>';
+            echo '        <a  cateid = "'.$cate->id.'" id="a-hover2" href="' . site_url('home/news_cate') . '/' . mb_strtolower(url_title($this->removesign($cate->catename . "-" . $cate->id))) . ".html" . '"> ' . $cate->catename . '</a>';
             echo '    </li> ';
         }
         echo '   <li id="menu-item-411328" class="more menu-item menu-item-type-post_type menu-item-object-page menu-item-411328">';

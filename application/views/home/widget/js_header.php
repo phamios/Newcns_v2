@@ -21,7 +21,7 @@
             rev_cate_sub(cateid);
         });
         
-        $(document).on('mouseover', '.sub-menu #a-hover', function(e) {
+        $(document).on('mouseover', '.sub-menu #a-hover2', function(e) {
             var cateid = parseInt($(e.target).attr('cateid'));
             new_cate_sub(cateid);
         });

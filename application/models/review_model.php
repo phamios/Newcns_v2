@@ -13,10 +13,7 @@ class review_model extends CI_Model {
 
     function getAll() {
         //$query = $this->db->query('SELECT * FROM tbl_post INNER JOIN tbl_user ON tbl_user.id = tbl_post.userid INNER JOIN tbl_category ON tbl_category.id = tbl_post.cateid INNER JOIN tbl_features ON tbl_features.id = tbl_post.featureid');
-        $this->db->select('*');
-        $this->db->from('tbl_review'); 
-        $this->db->order_by('id', 'DESC');
-        $query = $this->db->get();
+        $query = $this->db->get('tbl_review');
         return $query->result();
     }
 
@@ -25,7 +22,8 @@ class review_model extends CI_Model {
         return $this->db->insert_id();
     }
 
-    function update_product_review($object) {
+    function update_product_review($id,$object) {
+        $this->db->where('id', $id);
         $this->db->update('tbl_review', $object);
     }
 

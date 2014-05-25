@@ -35,7 +35,16 @@
                             <?php foreach ($model as $row) : ?>
                                 <tr>
                                     <td><?php echo $row->id; ?></td>
-                                    <td><?php echo $row->cate_review_id; ?></td>
+                                    <td><?php 
+                                        foreach($categories as $cate){
+                                            if($cate->id == $row->cate_review_id){
+                                                ?> 
+                                        <?php echo $cate->cate_rev_name;?>
+                                        <?php 
+                                            }
+                                                
+                                        }?>
+                                    </td>
                                     <td><?php echo $row->user_id; ?></td>
                                     <td><?php echo $row->review_title; ?></td>
                                     <td><?php echo $row->review_created; ?></td>

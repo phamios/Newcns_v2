@@ -24,7 +24,9 @@ class Review extends CI_Controller {
         } else {
             $data['title'] = "List Product";
             $this->load->model('review_model');
+            $this->load->model('category_review_model');
             $data['model'] = $this->review_model->getAll();
+            $data['categories'] = $this->category_review_model->getAll();
             $this->load->view('admin/dashboard', $data);
         }
     }
@@ -46,6 +48,7 @@ class Review extends CI_Controller {
                 $post_description = $this->input->post('post_description', true);
                 
                 $object = array(
+                    'cate_review_id' =>$category,
                     'review_title' => $_POST['title'],
                     'review_content' => $_POST['content'],
                     'review_recoment' => $_POST['recommend'],
@@ -98,7 +101,8 @@ class Review extends CI_Controller {
                 $featureid = $this->input->post('feature', true);
                 $post_description = $this->input->post('post_description', true);
 
-                $object = array(
+                $object = array( 
+                    'cate_review_id' =>$category,
                     'review_title' => $_POST['title'],
                     'review_content' => $_POST['content'],
                     'review_recoment' => $_POST['recommend'],
@@ -107,10 +111,10 @@ class Review extends CI_Controller {
                     'review_specific' => $_POST['specs'],
                     'review_active' => $_POST['active'],
                 );
-                $review_id = $this->review_model->update_product_review($object);
-                if ($review_id) {
-                    $gallery['review_id'] = $review_id;
-                    redirect(site_url('admincp/review/gallery/'.$review_id));
+                $this->review_model->update_product_review($id,$object);
+                if ($id <> null ) {
+                    $gallery['review_id'] = $id;
+                    redirect(site_url('admincp/review/gallery/'.$id));
                 }
             } else {
                 $data['title'] = "Edit Product Review";
