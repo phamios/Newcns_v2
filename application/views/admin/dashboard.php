@@ -125,6 +125,17 @@
                             <?php $this->load->view('admin/video/edit'); ?>
                         <?php endif; ?>
                     <?php endif; ?>
+                     <?php if ($this->router->class == 'advertis'): ?>
+                        <?php if ($this->router->fetch_method() == 'index'): ?>
+                            <?php $this->load->view('admin/advertis/index'); ?>
+                        <?php endif; ?>
+                        <?php if ($this->router->fetch_method() == 'create'): ?>
+                            <?php $this->load->view('admin/advertis/create'); ?>
+                        <?php endif; ?>
+                        <?php if ($this->router->fetch_method() == 'edit'): ?>
+                            <?php $this->load->view('admin/advertis/edit'); ?>
+                        <?php endif; ?>
+                    <?php endif; ?>
 
                     <?php if ($this->router->class == 'dashboard'): ?>
                         <?php if ($this->router->fetch_method() == 'index'): ?>
@@ -136,6 +147,7 @@
                             <?php $this->load->view('admin/config/index'); ?>
                         <?php endif; ?>                
                     <?php endif; ?>  
+                    
 
                 </div>
                 <!-- /.outer -->
