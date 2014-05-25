@@ -65,18 +65,23 @@ class ajax extends CI_Controller {
      */
     public function rev_cate_sub_ajax($cateid) {
         $this->load->model('review_model');
+        $this->load->model('gallery_model');
         $newest_reviews = $this->review_model->get_product_review_by_cateid($cateid);
-         var_dump($newest_reviews); die;
         echo '<div class="col-a-b" style="color:white;">'; 
         foreach ($newest_reviews as $r) {
             echo '<div class="item">';
             echo '<div class="thumb">';
-            echo '<img src="'.base_url('src/post/thumb_'.$r->post_images).'" width="10%"/>';
+            $images = $this->gallery_model->get_image_by_review_id_once($r->id);
+            foreach($images as $image){
+                if($image->review_id == $r->id){
+                    echo '<img src="'.base_url('src/images/'.$image->image_link).'" width="10%"/>';
+                }
+            } 
             echo '</div>';
             echo '<div class="content">';
-            echo '<h4><a href="#">'.$r->post_title.'</a></h4>';
+            echo '<h4><a href="#">'.$r->review_title.'</a></h4>';
             echo '<div class="rating">';
-            echo 'Our Scores: '.$r->post_view;
+            echo 'Our Scores: '.$r->review_view;
             echo '</div>';
             echo '</div>';
             echo '</div>';

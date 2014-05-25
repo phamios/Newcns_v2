@@ -35,6 +35,7 @@ class review_model extends CI_Model {
 
     function get_product_review_by_cateid($cateid) {
         $this->db->where('cate_review_id', $cateid);
+        $this->db->limit(3);
         $query = $this->db->get('tbl_review');
         if ($query <> null) {
             return $query->result();

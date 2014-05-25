@@ -23,6 +23,13 @@ class Gallery_model extends CI_Model {
         $query = $this->db->get('tbl_review_images');
         return $query->result();
     }
+    
+    function get_image_by_review_id_once($review_id) {
+        $this->db->where('review_id', $review_id);
+        $this->db->limit(1);
+        $query = $this->db->get('tbl_review_images');
+        return $query->result();
+    }
 
     function del_image_review($id) {
         $this->db->where('id', $id);
