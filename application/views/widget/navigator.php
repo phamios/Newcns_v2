@@ -39,6 +39,15 @@
         <li><a href="<?php echo base_url('admincp/features/create') ?>"><i class="icon-angle-right"></i> Add features</a></li> 
     </ul>
 </li>
+<li class="accordion-group">
+    <a data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-advertis">
+        <i class="icon-tasks icon-large"></i> Quảng cáo <span class="label label-inverse pull-right"></span>
+    </a>
+    <ul class="collapse" id="component-nav-advertis">
+        <li><a href="<?php echo base_url('admincp/advertis') ?>"><i class="icon-angle-right"></i> Danh sách quảng cáo  </a></li>
+        <li><a href="<?php echo base_url('admincp/advertis/create') ?>"><i class="icon-angle-right"></i> Thêm mới quảng cáo</a></li> 
+    </ul>
+</li>
 <li><a href="<?php echo site_url('admincp/config');?>"><i class="icon-signin icon-large"></i> Site Config</a></li>
   
 <li><a href="<?php echo site_url('admincp/logout');?>"><i class="icon-signin icon-large"></i> Logout</a></li>
