@@ -13,6 +13,8 @@
 <script type="text/javascript">
     
     $(document).ready(function(){
+        jQuery('body').removeClass('stick-nav stuck-nav');
+        jQuery('body').addClass('stick-nav stuck-nav');
         category_review();
         category_news(); 
         get_last_new();
