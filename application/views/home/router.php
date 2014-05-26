@@ -14,7 +14,7 @@
 <?php endif; ?>
 
 <?php if ($this->router->class == 'rev_cate'): ?>  
-        <?php $this->load->view('home/default/default'); ?> 
+        <?php $this->load->view('home/rev_cate/index'); ?> 
 <?php endif; ?>
 
 <?php if ($this->router->class == 'news_cate'): ?> 

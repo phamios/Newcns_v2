@@ -16,11 +16,7 @@
             <?php $this->load->view('home/widget/ads'); ?>
         </div>
 
-        <?php if ($this->router->class == 'rev_cate'): ?>
-            <?php if ($this->router->fetch_method() == 'index'): ?> 
-                <?php $this->load->view('home/rev_cate/index'); ?>
-            <?php endif; ?> 
-        <?php else: ?>
+      
             <div id="page">
                 <div class="bb-wrap"> 
                     <!--DTC HTML CACHE HIT START-->	 
@@ -39,8 +35,7 @@
                         </aside>  
                     </div> 
                 </div>
-            </div>
-        <?php endif; ?>
+            </div> 
 
 
         <?php $this->load->view('home/widget/footer') ?>

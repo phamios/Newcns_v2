@@ -33,8 +33,7 @@ class review_model extends CI_Model {
         return $query->result();
     }
     
-    
-
+     
     function get_product_review_by_cateid($cateid) {
         $this->db->where('cate_review_id', $cateid);
         $this->db->limit(3);

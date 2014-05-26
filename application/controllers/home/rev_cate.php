@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 if (!defined('BASEPATH'))
@@ -23,13 +24,15 @@ class rev_cate extends CI_Controller {
 
     public function _remap() {
         //Lay gia tri class & function hien tai - xu ly tracking user
-       $this->load->model('post_model');
-            $data['listcontent'] = $this->post_model->get_rev_by_cateid($this->product_id);
-            $this->load->model('category_model');
-            $this->load->model('features_model');
-            $data['features'] = $this->features_model->getAll();
-            $data['category'] = $this->category_model->getAll();
-            $this->load->view('welcome_message',$data);
+        $this->load->model('review_model');
+        $this->load->model('category_model');
+        $this->load->model('features_model');
+        $this->load->model('gallery_model');
+        $data['listcontent'] = $this->review_model->get_product_review_by_cateid($this->product_id);
+        
+        $data['features'] = $this->features_model->getAll();
+        $data['category'] = $this->category_model->getAll();
+        $this->load->view('welcome_message', $data);
     }
 
     /**
