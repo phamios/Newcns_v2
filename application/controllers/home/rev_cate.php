@@ -29,7 +29,7 @@ class rev_cate extends CI_Controller {
         $this->load->model('features_model');
         $this->load->model('gallery_model');
         $data['listcontent'] = $this->review_model->get_product_review_by_cateid($this->product_id);
-        
+         
         $data['features'] = $this->features_model->getAll();
         $data['category'] = $this->category_model->getAll();
         $this->load->view('welcome_message', $data);
