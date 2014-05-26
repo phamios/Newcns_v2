@@ -24,13 +24,13 @@ class Review extends CI_Controller {
 
     public function _remap() {
         //Lay gia tri class & function hien tai - xu ly tracking user
-        $this->load->model('post_model');
-        $this->load->model('category_model');
+        $this->load->model('review_model');
+        $this->load->model('category_review_model');
         $this->load->model('features_model');
         $this->load->model('gallery_model');
         $data['features'] = $this->features_model->getAll();
-        $data['category'] = $this->category_model->getAll();
-        $data['details_news'] = $this->post_model->getDetail_byID_by_rev($this->product_id);
+        $data['category'] = $this->category_review_model->getAll();
+        $data['details_news'] = $this->review_model->get_product_review_by_id($this->product_id);
         $data['galleries'] = $this->gallery_model->get_review_images($this->product_id);
 
         $this->load->view('welcome_message', $data);

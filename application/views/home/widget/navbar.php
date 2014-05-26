@@ -4,7 +4,7 @@
             <!--DTC HTML CACHE HIT START-->
             <ul id="menu-primary-navigation-2013" class="menu">
                 <li id="menu-item-411326" class="sub menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-411326">
-                    <a href="http://www.digitaltrends.com/product-reviews/">Product Reviews</a>
+                    <a href="#">Sản phẩm</a>
                      
                     <div class="mega-wrap">
                         <div id="rev_cate">
@@ -14,7 +14,8 @@
                     </div>
                    
                 </li>
-                <li id="menu-item-411314" class="sub menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-411314"><a>News</a>
+                <li id="menu-item-411314" class="sub menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-411314">
+                    <a>Tin tức</a>
                     <div class="mega-wrap">
                         <div id="new_cate">
                         </div>
@@ -22,15 +23,15 @@
                 </li>
 
                 <li id="menu-item-411327" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-411327">
-                    <a href="http://www.digitaltrends.com/videos/">Videos</a>
+                    <a href="#">Videos</a>
                 </li>
 
                 <li id="menu-item-520473" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-520473 menu-item-object-id-19">
-                    <a href="http://www.digitaltrends.com/features/">Features</a>
+                    <a href="#">Đặc trưng</a>
                 </li>
 
                 <li id="menu-item-552394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-552394">
-                    <a href="http://deals.digitaltrends.com/">Deals</a>
+                    <a href="#">Deals</a>
                 </li>
             </ul>
             <!--DTC HTML CACHE HIT STOP-->
