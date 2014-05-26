@@ -158,6 +158,9 @@
                         <?php if ($this->router->fetch_method() == 'edit'): ?>
                             <?php $this->load->view('admin/config/edit'); ?>
                         <?php endif; ?>
+                        <?php if ($this->router->fetch_method() == 'site'): ?>
+                            <?php $this->load->view('admin/config/site'); ?>
+                        <?php endif; ?>
                     <?php endif; ?>  
                     
 

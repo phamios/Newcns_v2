@@ -65,6 +65,7 @@
     <ul class="collapse" id="component-nav-config">
         <li><a href="<?php echo base_url('admincp/config') ?>"><i class="icon-angle-right"></i> Danh sách cấu hình  </a></li>
         <li><a href="<?php echo base_url('admincp/config/create') ?>"><i class="icon-angle-right"></i> Thêm cấu hình  </a></li>
+        <li><a href="<?php echo base_url('admincp/config/site') ?>"><i class="icon-angle-right"></i> Cấu hình site  </a></li>
     </ul>
 </li>
 

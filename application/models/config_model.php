@@ -39,4 +39,15 @@ class Config_model extends CI_Model {
         $this->db->update('tbl_options', $object);
     }
 
+    function get_site_config() {
+        $this->db->where('id', 1);
+        $query = $this->db->get('tbl_site');
+        return $query->result();
+    }
+
+    function update_site_config($object) {
+        $this->db->where('id', 1);
+        $this->db->update('tbl_site', $object);
+    }
+
 }
