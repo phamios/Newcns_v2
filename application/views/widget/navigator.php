@@ -40,6 +40,15 @@
     </ul>
 </li>
 <li class="accordion-group">
+    <a data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-video">
+        <i class="icon-tasks icon-large"></i> Video <span class="label label-inverse pull-right"></span>
+    </a>
+    <ul class="collapse" id="component-nav-video">
+        <li><a href="<?php echo base_url('admincp/video') ?>"><i class="icon-angle-right"></i> Danh sách video  </a></li>
+        <li><a href="<?php echo base_url('admincp/video/create') ?>"><i class="icon-angle-right"></i> Thêm mới Video</a></li> 
+    </ul>
+</li>
+<li class="accordion-group">
     <a data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-advertis">
         <i class="icon-tasks icon-large"></i> Quảng cáo <span class="label label-inverse pull-right"></span>
     </a>
