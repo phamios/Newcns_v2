@@ -49,7 +49,7 @@
             <div id="content">
                 <!-- .outer -->
                 <div class="container-fluid outer"> 
-                       <?php echo md5('admega123!@#admin'); die;?>
+                       
                     <?php if ($this->router->class == 'category'): ?>
                         <?php if ($this->router->fetch_method() == 'index'): ?>
                             <?php $this->load->view('admin/category/index'); ?>
