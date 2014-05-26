@@ -34,7 +34,7 @@ if ($this->router->class == 'rev_cate'){
                 <div>
                     <?php foreach($category as $cate):?>
                         <?php if($cate->id == $content->cateid):?>
-                            <a class="cat" href="#">
+                            <a class="cat" href="<?php echo site_url('home/news_cate') . '/' . mb_strtolower(url_title(removesign($cate->catename . "-" . $cate->id))) . ".html"; ?>">
                                 <?php echo $cate->catename;?>
                             </a>
                         <?php endif;?>
