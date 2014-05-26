@@ -29,9 +29,9 @@ class Profile extends CI_Controller {
             $this->load->model('admin_model');
             $userid = $this->session->userdata('adminid');
             $data['user'] = $this->admin_model->get_user_info_by_id($userid);
-            if (isset($_REQUEST['save_profile'])) {
-                $username  = $this->input->post('username',true);
-                $userpass  = $this->input->post('password',true);
+            if ($_POST) {
+                $username  = $this->input->post('username', true);
+                $userpass  = $this->input->post('password', true);
                 $this->admin_model->update_user_info($userid,$username,$userpass);
             }
             $this->load->view('admin/dashboard', $data);
