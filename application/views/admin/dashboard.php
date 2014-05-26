@@ -137,6 +137,12 @@
                         <?php endif; ?>
                     <?php endif; ?>
 
+                    <?php if ($this->router->class == 'profile'): ?>
+                        <?php if ($this->router->fetch_method() == 'index'): ?>
+                            <?php $this->load->view('admin/profile/index'); ?>
+                        <?php endif; ?>
+                    <?php endif; ?>
+
                     <?php if ($this->router->class == 'dashboard'): ?>
                         <?php if ($this->router->fetch_method() == 'index'): ?>
                             <?php $this->load->view('admin/default'); ?>

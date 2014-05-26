@@ -58,5 +58,14 @@
     </ul>
 </li>
 <li><a href="<?php echo site_url('admincp/config');?>"><i class="icon-signin icon-large"></i> Site Config</a></li>
+
+<li class="accordion-group">
+    <a data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-profile">
+        <i class="icon-tasks icon-large"></i> Cá nhân <span class="label label-inverse pull-right"></span>
+    </a>
+    <ul class="collapse" id="component-nav-profile">
+        <li><a href="<?php echo base_url('admincp/profile') ?>"><i class="icon-angle-right"></i> Thông tin cá nhân  </a></li>
+    </ul>
+</li>
   
 <li><a href="<?php echo site_url('admincp/logout');?>"><i class="icon-signin icon-large"></i> Logout</a></li>
