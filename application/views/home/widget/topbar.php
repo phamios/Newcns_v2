@@ -1,7 +1,10 @@
 <div class="bb-wrap">
 
-                        <div class="dt"><a href="<?php echo site_url();?>">DT</a></div>
-                        <div class="logo"><a href="<?php echo site_url();?>">Digital Trends</a></div>
+                        <div class="dt">  <img src="<?php echo base_url('res_home/logo1.png');?>" alt="<?php echo site_url();?>"/></div>
+                        <div class="logo">
+                            <img src="<?php echo base_url('res_home/newcnlogo.png');?>" alt="<?php echo site_url();?>"/>
+                            
+                        </div>
 
                        <!-- <form id="search" method="get" action="<?php echo site_url();?>">
 
