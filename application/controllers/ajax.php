@@ -147,7 +147,7 @@ class ajax extends CI_Controller {
             echo '<img src="'.base_url('src/post/thumb_'.$r->post_images).'" width="10%"/>';
             echo '</div>';
             echo '<div class="content">';
-            echo '<h4><a href="#">'.$r->post_title.'</a></h4>';
+            echo '<h4><a href="'.site_url('home/news/'.mb_strtolower(url_title($this->removesign($r->post_title.'-'.$r->id))).'.html' ).'" >'.$r->post_title.'</a></h4>';
             echo '<div class="rating">';
             echo 'Our Scores: '.$r->post_view;
             echo '</div>';
