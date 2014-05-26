@@ -23,4 +23,6 @@ class category_model extends CI_Model {
 		$query = $this->db->get_where('tbl_category', array('id' => $id));
 		return $query->result();	
 	}
+        
+        
 }

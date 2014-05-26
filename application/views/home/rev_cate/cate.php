@@ -1,43 +1,66 @@
-<?php
+ 
+<section id="river" class="standard">
+    <h1>Bài mới nhất</h1> 
+    <!--DTC HTML CACHE HIT START-->			
+    <?php if($listcontent <> null):?>
+    <?php foreach($listcontent as $content):?>
+    <div class="post " data-post-type="post">
+        <div class="thumb"> 
+            <a href="<?php echo site_url('home/review/'.mb_strtolower(url_title(removesign($content->review_title.'-'.$content->id))).'.html' );?>">
+                <span class="image-holder">
+                    <?php $images = $this->gallery_model->get_image_by_review_id_once($content->id);?>
+                    <?php foreach($images as $image):?>
+                    <img src="<?php echo base_url('src/images/'.$image->image_link);?>" alt="<?php echo $content->review_title?>"/>
+                    <?php endforeach;?>
+                </span>							
+            </a>
+        </div>
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-if (!defined('BASEPATH'))
-    exit('No direct script access allowed');
+        <div class="content">
+            <h3>
+                <a href="<?php echo site_url('home/review/'.mb_strtolower(url_title(removesign($content->review_title.'-'.$content->id))).'.html' );?>">
+                    <?php echo $content->review_title?>
+                </a>
+            </h3>
 
-class news_category extends CI_Controller {
+            <p>
+                <?php echo word_limiter($content->review_content, 40); ?>
+            </p>
 
-    public $product_id;
+            <div class="byline"> 
+                By <a class="author" href="#">Matt Smith</a> 
+                <span class="dash">—</span> 
+                <time datetime="<?php echo $content->review_created?>" pubdate="">
+                    <?php 
+                        $new_time = new DateTime($content->review_created);
+                        echo $new_time->format('M-d-Y');
+                    ?>
+                </time>
+            </div>
+        </div>
+    </div>
+    <?php endforeach;?>
+    <?php endif;?>
 
-    function __construct() {
-        parent::__construct();
-        $this->load->library('session');
-        $this->load->helper('url');
-        $this->load->library('upload');
-        $this->load->library('pagination');
-        $this->load->library('parser');
-        $this->load->helper('cookie');
-        $this->load->helper("text");
-        $this->load->helper(array('form', 'url')); 
-    }
 
-    public function _remap() {
-        //Lay gia tri class & function hien tai - xu ly tracking user
-        $this->load->model('post_model');
-        $data['listcontent'] = $this->post_model->get_news_by_cateid_limit();
-        $this->load->model('category_model');
-        $this->load->model('features_model');
-        $data['features'] = $this->features_model->getAll();
-        $data['category'] = $this->category_model->getAll();
-        $this->load->view('welcome_message', $data);
-    }
 
-    /**
-     * Remove all sign in string and change string to url
-     * @param type $str
-     * @return type
-     */
-    public function removesign($str) {
+    <!--DTC HTML CACHE HIT STOP-->
+
+ 
+
+
+
+    <!--DTC HTML CACHE HIT STOP-->
+
+
+    <div class="river-pagination">
+        <a href="#" class="button flat icon more"><span>See More</span></a>
+    </div>
+</section>
+
+<?php 
+
+ function removesign($str) {
         $coDau = array("à", "á", "ạ", "ả", "ã", "â", "ầ", "ấ", "ậ", "ẩ", "ẫ", "ă", "ằ", "ắ"
             , "ặ", "ẳ", "ẵ", "è", "é", "ẹ", "ẻ", "ẽ", "ê", "ề", "ế", "ệ", "ể", "ễ", "ì", "í", "ị", "ỉ", "ĩ",
             "ò", "ó", "ọ", "ỏ", "õ", "ô", "ồ", "ố", "ộ", "ổ", "ỗ", "ơ"
@@ -74,5 +97,5 @@ class news_category extends CI_Controller {
             "D", "e", "u", "a");
         return str_replace($coDau, $khongDau, $str);
     }
-
-}
+    
+?>

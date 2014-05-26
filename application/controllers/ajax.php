@@ -70,7 +70,7 @@ class ajax extends CI_Controller {
             echo '    </li> ';
         }
         echo '   <li id="menu-item-411328" class="more menu-item menu-item-type-post_type menu-item-object-page menu-item-411328">';
-        echo '        <a href="' . site_url('review_category') . '">+ More Reviews</a>';
+        echo '        <a href="' . site_url('home/review_category') . '">+ More Reviews</a>';
         echo '    </li>';
         echo '</ul>';
         echo '<div id="rev_cate_sub" class="mega-container reviews"> </div>';
@@ -133,7 +133,7 @@ class ajax extends CI_Controller {
             echo '    </li> ';
         }
         echo '   <li id="menu-item-411328" class="more menu-item menu-item-type-post_type menu-item-object-page menu-item-411328">';
-        echo '        <a href="' . site_url('news_category') . '">+ More Reviews</a>';
+        echo '        <a href="' . site_url('home/news_category') . '">+ More Reviews</a>';
         echo '    </li>';
         echo '</ul>';
         echo '<div id="news_cate_sub" class="mega-container reviews"> </div>';

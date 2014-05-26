@@ -17,6 +17,15 @@
         <?php $this->load->view('home/rev_cate/index'); ?> 
 <?php endif; ?>
 
+<?php if ($this->router->class == 'review_category'): ?>  
+        <?php $this->load->view('home/rev_cate/cate'); ?> 
+<?php endif; ?>
+
+<?php if ($this->router->class == 'news_category'): ?>  
+        <?php $this->load->view('home/default/default'); ?> 
+<?php endif; ?>
+
+
 <?php if ($this->router->class == 'news_cate'): ?> 
         <?php $this->load->view('home/default/default'); ?> 
 <?php endif; ?>
