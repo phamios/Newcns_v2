@@ -27,6 +27,7 @@ class News extends CI_Controller {
         $this->load->model('post_model');
         $this->load->model('category_model');
         $this->load->model('features_model');
+        $this->post_model->update_view($this->product_id);
         $data['features'] = $this->features_model->getAll();
         $data['category'] = $this->category_model->getAll();
         $data['details_news'] = $this->post_model->getDetail_byID_by_news($this->product_id);

@@ -28,6 +28,7 @@ class post extends CI_Controller {
         } else {
             $data['title'] = "List Post";
             $this->load->model('post_model');
+            
             $data['listcontent'] = $this->post_model->getAll_by_User_post($this->session->userdata('adminid'));
             $this->load->model('category_model');
             $this->load->model('features_model');

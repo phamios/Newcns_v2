@@ -13,30 +13,48 @@ class post_model extends CI_Model {
 
     function postAll() {
         $this->db->where('post_type', "1");
-        $this->db->order_by("id");
+        $this->db->order_by("id",'DESC');
         $query = $this->db->get('tbl_post');
         return $query->result();
     }
 
+    function update_view($id) {
+       $count = $this->get_view($id);
+       $data  = array(
+           'post_view'=>$count+1,
+       ); 
+        $this->db->where('id', $id);
+        $this->db->update('tbl_post', $data); 
+    }
+
+    function get_view($id) {
+        $this->db->select('post_view');
+        $this->db->where('id', $id);
+        $query = $this->db->get('tbl_post');
+        foreach ($query->result() as $row) {
+            return $row->post_view;
+        }
+    }
+
     function get_news_ajax() {
         $this->db->where('post_type', "1");
-        $this->db->order_by("id");
+        $this->db->order_by("id",'DESC');
         $this->db->limit(10);
         $query = $this->db->get('tbl_post');
         return $query->result();
     }
-    
+
     function get_features_ajax() {
         $this->db->where('post_type', "2");
-        $this->db->order_by("id");
+        $this->db->order_by("id",'DESC');
         $this->db->limit(10);
         $query = $this->db->get('tbl_post');
         return $query->result();
     }
-    
+
     function get_news_default() {
         $this->db->where('post_type', "1");
-        $this->db->order_by("id");
+        $this->db->order_by("id",'DESC');
         $this->db->limit(20);
         $query = $this->db->get('tbl_post');
         return $query->result();
@@ -46,15 +64,15 @@ class post_model extends CI_Model {
 
         $this->db->where('post_type', "1");
         $this->db->where('cateid', $cateid);
-        $this->db->order_by("id");
+        $this->db->order_by("id",'DESC');
         $this->db->limit(10);
         $query = $this->db->get('tbl_post');
         return $query->result();
     }
-    
-    function get_news_by_cateid_limit() { 
-        $this->db->where('post_type', "1"); 
-        $this->db->order_by("id");
+
+    function get_news_by_cateid_limit() {
+        $this->db->where('post_type', "1");
+        $this->db->order_by("id",'DESC');
         $this->db->limit(20);
         $query = $this->db->get('tbl_post');
         return $query->result();
@@ -64,7 +82,7 @@ class post_model extends CI_Model {
 
         $this->db->where('post_type', "2");
         $this->db->where('cateid', $cateid);
-        $this->db->order_by("id");
+        $this->db->order_by("id",'DESC');
         $this->db->limit(10);
         $query = $this->db->get('tbl_post');
         return $query->result();
@@ -72,7 +90,7 @@ class post_model extends CI_Model {
 
     function getAll_by_User($userid) {
         $this->db->where('userid', $userid);
-        $this->db->order_by("id");
+        $this->db->order_by("id",'DESC');
         $query = $this->db->get('tbl_post');
         return $query->result();
     }
@@ -80,7 +98,7 @@ class post_model extends CI_Model {
     function getAll_by_User_post($userid) {
         $this->db->where('userid', $userid);
         $this->db->where('post_type', 1);
-        $this->db->order_by("id");
+        $this->db->order_by("id",'DESC');
         $query = $this->db->get('tbl_post');
         return $query->result();
     }
@@ -88,7 +106,7 @@ class post_model extends CI_Model {
     function getAll_by_User_features($userid) {
         $this->db->where('userid', $userid);
         $this->db->where('post_type', 2);
-        $this->db->order_by("id");
+        $this->db->order_by("id",'DESC');
         $query = $this->db->get('tbl_post');
         return $query->result();
     }
@@ -168,7 +186,7 @@ class post_model extends CI_Model {
     }
 
     function getAll_hotpost() {
-        $this->db->order_by("id");
+        $this->db->order_by("id",'DESC');
         $query = $this->db->get('tbl_hotpost');
         return $query->result();
     }

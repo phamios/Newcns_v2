@@ -24,6 +24,7 @@ class Review extends CI_Controller {
         } else {
             $data['title'] = "List Product";
             $this->load->model('review_model');
+            
             $this->load->model('category_review_model');
             $data['model'] = $this->review_model->getAll();
             $data['categories'] = $this->category_review_model->getAll();

@@ -6,13 +6,13 @@
 .fancybox-wrap iframe,
 .fancybox-wrap object,
 .fancybox-nav,
-.fancybox-nav span,.fancybox-tmp{padding:0;margin:0;border:0;outline:none;vertical-align:top}.fancybox-wrap{position:absolute;top:0;left:0;z-index:8020}.fancybox-skin{position:relative;background:#f9f9f9;color:#444;text-shadow:none;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}.fancybox-opened{z-index:8030}.fancybox-opened .fancybox-skin{-webkit-box-shadow:0 10px 25px rgba(0, 0, 0, 0.5);-moz-box-shadow:0 10px 25px rgba(0, 0, 0, 0.5);box-shadow:0 10px 25px rgba(0,0,0,0.5)}.fancybox-outer,.fancybox-inner{position:relative}.fancybox-inner{overflow:hidden}.fancybox-type-iframe .fancybox-inner{-webkit-overflow-scrolling:touch}.fancybox-error{color:#444;font:14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;margin:0;padding:15px;white-space:nowrap}.fancybox-image,.fancybox-iframe{display:block;width:100%;height:100%}.fancybox-image{max-width:100%;max-height:100%}#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next
+.fancybox-nav span,.fancybox-tmp{padding:0;margin:0;border:0;outline:none;vertical-align:top}.fancybox-wrap{position:absolute;top:0;left:0;z-index:8020}.fancybox-skin{position:relative;background:#f9f9f9;color:#444;text-shadow:none;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}.fancybox-opened{z-index:8030}.fancybox-opened .fancybox-skin{-webkit-box-shadow:0 10px 25px rgba(0, 0, 0, 0.5);-moz-box-shadow:0 10px 25px rgba(0, 0, 0, 0.5);box-shadow:0 10px 25px rgba(0,0,0,0.5)}.fancybox-outer,.fancybox-inner{position:relative}.fancybox-inner{overflow:hidden}.fancybox-type-iframe .fancybox-inner{-webkit-overflow-scrolling:touch}.fancybox-error{color:#444;font:14px/20px "Roboto Condensed",'Roboto Condensed',Arial,sans-serif;margin:0;padding:15px;white-space:nowrap}.fancybox-image,.fancybox-iframe{display:block;width:100%;height:100%}.fancybox-image{max-width:100%;max-height:100%}#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next
 span{background-image:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/fancybox/fancybox_sprite.png')}#fancybox-loading{position:fixed;top:50%;left:50%;margin-top:-22px;margin-left:-22px;background-position:0 -108px;opacity:0.8;cursor:pointer;z-index:8060}#fancybox-loading
 div{width:44px;height:44px;background:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/fancybox/fancybox_loading.gif') center center no-repeat}.fancybox-close{position:absolute;top:-18px;right:-18px;width:36px;height:36px;cursor:pointer;z-index:8040}.fancybox-nav{position:absolute;top:0;width:40%;height:100%;cursor:pointer;text-decoration:none;background:transparent url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/fancybox/blank.gif');-webkit-tap-highlight-color:rgba(0,0,0,0);z-index:8040}.fancybox-prev{left:0}.fancybox-next{right:0}.fancybox-nav
 span{position:absolute;top:50%;width:36px;height:34px;margin-top:-18px;cursor:pointer;z-index:8040;visibility:hidden}.fancybox-prev
 span{left:10px;background-position:0 -36px}.fancybox-next
 span{right:10px;background-position:0 -72px}.fancybox-nav:hover
-span{visibility:visible}.fancybox-tmp{position:absolute;top:-99999px;left:-99999px;visibility:hidden;max-width:99999px;max-height:99999px;overflow:visible !important}.fancybox-lock{overflow:hidden}.fancybox-overlay{position:absolute;top:0;left:0;overflow:hidden;display:none;z-index:8010;background:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/fancybox/fancybox_overlay.png')}.fancybox-overlay-fixed{position:fixed;bottom:0;right:0}.fancybox-lock .fancybox-overlay{overflow:auto;overflow-y:scroll}.fancybox-title{visibility:hidden;font:normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;position:relative;text-shadow:none;z-index:8050}.fancybox-opened .fancybox-title{visibility:visible}.fancybox-title-float-wrap{position:absolute;bottom:0;right:50%;margin-bottom:-35px;z-index:8050;text-align:center}.fancybox-title-float-wrap
+span{visibility:visible}.fancybox-tmp{position:absolute;top:-99999px;left:-99999px;visibility:hidden;max-width:99999px;max-height:99999px;overflow:visible !important}.fancybox-lock{overflow:hidden}.fancybox-overlay{position:absolute;top:0;left:0;overflow:hidden;display:none;z-index:8010;background:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/fancybox/fancybox_overlay.png')}.fancybox-overlay-fixed{position:fixed;bottom:0;right:0}.fancybox-lock .fancybox-overlay{overflow:auto;overflow-y:scroll}.fancybox-title{visibility:hidden;font:normal 13px/20px "Roboto Condensed",'Roboto Condensed',Arial,sans-serif;position:relative;text-shadow:none;z-index:8050}.fancybox-opened .fancybox-title{visibility:visible}.fancybox-title-float-wrap{position:absolute;bottom:0;right:50%;margin-bottom:-35px;z-index:8050;text-align:center}.fancybox-title-float-wrap
 .child{display:inline-block;margin-right:-100%;padding:2px
 20px;background:transparent;background:rgba(0, 0, 0, 0.8);-webkit-border-radius:15px;-moz-border-radius:15px;border-radius:15px;text-shadow:0 1px 2px #222;color:#FFF;font-weight:bold;line-height:24px;white-space:nowrap}.fancybox-title-outside-wrap{position:relative;margin-top:10px;color:#fff}.fancybox-title-inside-wrap{padding-top:10px}.fancybox-title-over-wrap{position:absolute;bottom:0;left:0;color:#fff;padding:10px;background:#000;background:rgba(0, 0, 0, .8)}
 .jspContainer{overflow:hidden;position:relative}.jspPane{position:absolute}.jspVerticalBar{position:absolute;top:0;right:0;width:16px;height:100%;background:red}.jspHorizontalBar{position:absolute;bottom:0;left:0;width:100%;height:16px;background:red}.jspVerticalBar *,
@@ -31,7 +31,7 @@ span{background-image:url('main-sa417b104d4.png');background-repeat:no-repeat}.m
 span{background-image:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/arrow-sfabc2d5cbb.png');background-repeat:no-repeat}.arrow-longtail_m_r_blue{background-position:0 0}.arrow-longtail_m_r_white{background-position:0 -16px}.arrow-tri_cs_r_blue{background-position:0 -32px}.arrow-tri_s_d_white{background-position:0 -43px}.arrow-tri_xs_d_blue{background-position:0 -56px}.arrow-tri_xs_d_white{background-position:0 -67px}.arrow-v_lg_l{background-position:0 -75px}.arrow-v_lg_l_mute{background-position:0 -106px}.arrow-v_lg_l_white{background-position:0 -137px}.arrow-v_lg_r{background-position:0 -168px}.arrow-v_lg_r_mute{background-position:0 -199px}.arrow-v_lg_r_white{background-position:0 -230px}.arrow-v_m2_l_blue{background-position:0 -261px}.arrow-v_m2_l_gray{background-position:0 -282px}.arrow-v_m2_r_blue{background-position:0 -303px}.arrow-v_m2_r_gray{background-position:0 -324px}.arrow-v_m3_r_gray{background-position:0 -345px}.arrow-v_m_d_white{background-position:0 -374px}.arrow-v_m_r_gray{background-position:0 -388px}.arrow-v_m_r_gray_alt{background-position:0 -407px}.arrow-v_m_r_white{background-position:0 -433px}.arrow-v_s_d_gray{background-position:0 -452px}.arrow-v_s_l_gray{background-position:0 -464px}.arrow-v_s_r_gray{background-position:0 -479px}.arrow-v_s_u_gray{background-position:0 -494px}.arrow-v_s_u_white{background-position:0 -506px}.arrow-vbold_s_d_blue{background-position:0 -518px}.arrow-vbold_s_d_gray{background-position:0 -530px}.arrow-vbold_s_d_white{background-position:0 -542px}.arrow-vbold_s_l_white{background-position:0 -554px}.arrow-vbold_s_u_blue{background-position:0 -570px}.arrow-vbold_s_u_gray{background-position:0 -582px}.arrow-vbold_s_u_white{background-position:0 -594px}.smallstar-sprite,.smallstar-off,.smallstar-on,.smallstar-orange_off,.smallstar-orange_on{background-image:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/stars/smallstar-sc1f1c3f78d.png');background-repeat:no-repeat}.smallstar-off{background-position:0 0}.smallstar-on{background-position:0 -17px}.smallstar-orange_off{background-position:0 -34px}.smallstar-orange_on{background-position:0 -51px}.mediumstar-sprite,.mediumstar-alt,.mediumstar-off,.mediumstar-on{background-image:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/stars/mediumstar-s0d207aedab.png');background-repeat:no-repeat}.mediumstar-alt{background-position:0 0}.mediumstar-off{background-position:0 -21px}.mediumstar-on{background-position:0 -42px}.largestar-sprite,.largestar-off,.largestar-on{background-image:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/stars/largestar-s51a97b8590.png');background-repeat:no-repeat}.largestar-off{background-position:0 0}.largestar-on{background-position:0 -29px}.button-sprite,.button-blue,.button-email,.button-facebook,.button-google,.button-twitter,.button.standard,.gform_button,.button.standard span,.gform_button span,.button.method.facebook-login,.button.method.facebook-login span,.button.method.twitter-login,.button.method.twitter-login span,.button.method.google-login,.button.method.google-login span,.button.method.email,.button.method.email
 span{background-image:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/button-s64d182643e.png');background-repeat:no-repeat}.button-blue{background-position:0 0}.button-email{background-position:0 -41px}.button-facebook{background-position:0 -97px}.button-google{background-position:0 -153px}.button-twitter{background-position:0 -209px}.buttonsmall-sprite,.buttonsmall-facebook,.buttonsmall-google,.buttonsmall-twitter,.button.method.small.facebook-login,.button.method.small.facebook-login span,.button.method.small.twitter-login,.button.method.small.twitter-login span,.button.method.small.google-login,.button.method.small.google-login
 span{background-image:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/buttonsmall-s7044c3512c.png');background-repeat:no-repeat}.buttonsmall-facebook{background-position:0 0}.buttonsmall-google{background-position:0 -42px}.buttonsmall-twitter{background-position:0 -84px}.buttoncontrol-sprite,.buttoncontrol-active,.buttoncontrol-off,.buttoncontrol-on{background-image:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/buttoncontrol-s6bdf60665e.png');background-repeat:no-repeat}.buttoncontrol-active{background-position:0 0}.buttoncontrol-off{background-position:0 -31px}.buttoncontrol-on{background-position:0 -62px}.ribbon-sprite,.ribbon-blue_l,.ribbon-blue_r,.dt-ribbon,.dt-ribbon span,.sidebar-block .widget.partner-news
-h3{background-image:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/ribbon-sed53e38e27.png');background-repeat:no-repeat}.ribbon-blue_l{background-position:0 0}.ribbon-blue_r{background-position:0 -66px}.form-sprite,.form-check_15_gray_off,.form-check_15_gray_on{background-image:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/form-sa9c683ed32.png');background-repeat:no-repeat}.form-check_15_gray_off{background-position:0 0}.form-check_15_gray_on{background-position:0 -15px}@font-face{font-family:"Novecentowide-Book";src:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/fonts/24DA9D_3_0.eot?1374177902');src:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/fonts/24DA9D_3_0.eot?&1374177902#iefix') format('embedded-opentype'),url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/fonts/24DA9D_3_0.woff?1374177902') format('woff'),url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/fonts/24DA9D_3_0.ttf?1374177902') format('truetype')}strong,b{font-weight:bold}em,i{font-style:italic}html{font-family:Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;font-size:14px;color:#282828}html
+h3{background-image:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/ribbon-sed53e38e27.png');background-repeat:no-repeat}.ribbon-blue_l{background-position:0 0}.ribbon-blue_r{background-position:0 -66px}.form-sprite,.form-check_15_gray_off,.form-check_15_gray_on{background-image:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/form-sa9c683ed32.png');background-repeat:no-repeat}.form-check_15_gray_off{background-position:0 0}.form-check_15_gray_on{background-position:0 -15px}@font-face{font-family:"Roboto Condensed";src:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/fonts/24DA9D_3_0.eot?1374177902');src:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/fonts/24DA9D_3_0.eot?&1374177902#iefix') format('embedded-opentype'),url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/fonts/24DA9D_3_0.woff?1374177902') format('woff'),url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/fonts/24DA9D_3_0.ttf?1374177902') format('truetype')}strong,b{font-weight:bold}em,i{font-style:italic}html{font-family:'Roboto Condensed',Arial,sans-serif;-webkit-font-smoothing:antialiased;font-size:14px;color:#282828}html
 a{text-decoration:none;color:inherit}html a:hover,html a:focus{text-decoration:underline}html a.admin-link,html .admin-link
 a{color:#0095da}#content,.content-styling{font-size:14px;line-height:1.71429;color:#282828}#content a,.content-styling
 a{color:#006999}#content p,#content h2,#content h3,#content h4,#content h5,#content h6,.content-styling p,.content-styling h2,.content-styling h3,.content-styling h4,.content-styling h5,.content-styling
@@ -51,7 +51,7 @@ p{margin:0}#content .simplePullQuote strong,.content-styling .simplePullQuote
 strong{font-weight:normal}#content ul,#content ol,.content-styling ul,.content-styling
 ol{padding-left:15px}#content ul,.content-styling
 ul{list-style-type:square}#content ol,.content-styling
-ol{list-style-type:decimal}textarea,input,select{font-family:Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}.force-css-increment-fake-class{display:none}.hidden{display:none !important}.button.standard,.gform_button{display:block;width:133px;height:35px;padding-left:1px;margin-right:1px;text-decoration:none;background-position:0 0;font-size:12px;text-align:center;color:#fff}.button.standard span,.gform_button
+ol{list-style-type:decimal}textarea,input,select{font-family:'Roboto Condensed',Arial,sans-serif;-webkit-font-smoothing:antialiased}.force-css-increment-fake-class{display:none}.hidden{display:none !important}.button.standard,.gform_button{display:block;width:133px;height:35px;padding-left:1px;margin-right:1px;text-decoration:none;background-position:0 0;font-size:12px;text-align:center;color:#fff}.button.standard span,.gform_button
 span{display:block;height:24px;padding:11px
 13px 0 13px;position:relative;top:0;left:1px;background-position:0 0;background-position:right 0}.button.standard.icon span,.gform_button.icon
 span{text-align:left}.button.standard.icon span em.plus,.gform_button.icon span
@@ -74,7 +74,7 @@ span{background-position:right -84px}.button.method.small.google-login
 span{background-position:right -42px}.button.method.small
 span{height:24px;padding:12px
 13px 0 13px;position:relative;top:0;left:1px;font-size:12px}.button.simple{display:inline-block;height:27px;padding:0
-12px;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:12px;line-height:27px;text-transform:uppercase;color:#fff;background:#282828 url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/bg_button_gray.png?1374177902') no-repeat right top;text-decoration:none}.button.simple
+12px;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:12px;line-height:27px;text-transform:uppercase;color:#fff;background:#282828 url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/bg_button_gray.png?1374177902') no-repeat right top;text-decoration:none}.button.simple
 .count{display:inline-block;height:100%;margin-left:10px;border-left:1px solid #3e3e3e;font-size:18px}.button.simple .count
 span{display:block;height:100%;padding-left:12px;border-left:1px solid #181818}.button.simple
 .icon{float:left}.button.simple.facebook
@@ -109,7 +109,7 @@ solid #e8e8e8;background-position:0 -1px;background-image:url('http://www.digita
 img{width:94px;height:94px;margin-bottom:15px}.author-block.full.alt .avatar-wrap .author-link{font-size:12px;font-weight:bold;color:#0095da}.author-block.full.alt
 .wrap{width:420px;margin:-9px 0 0 144px;color:#444}.author-block.full.alt .wrap
 h3{margin-bottom:10px;font-weight:bold;font-size:14px;color:#0095da}.author-block.full.alt .wrap h3
-.name{display:block;margin-bottom:-2px;font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:24px;font-weight:normal;color:#000}.author-block.full.alt .wrap h3
+.name{display:block;margin-bottom:-2px;font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:24px;font-weight:normal;color:#000}.author-block.full.alt .wrap h3
 .title{color:#555}.author-block.full.alt .wrap h3
 .dash{padding:0
 5px;font-weight:normal;color:#ababab}.author-block.full.alt .wrap p:last-child{margin-bottom:0}.author-block.full.alt .social-buttons{float:right;width:320px;margin:0}.author-block.full.alt .social-buttons
@@ -122,10 +122,10 @@ li{padding-left:18px}.pagination ul li
 a{display:block;padding-bottom:7px}nav.in-page .current a,nav.in-page .current-menu-item a,nav.in-page-list .current a,nav.in-page-list .current-menu-item
 a{color:inherit;text-decoration:inherit;cursor:inherit;background:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/inpage_subnav_current.png?1374177902') center bottom no-repeat;font-weight:bold}nav.in-page .current a:active,nav.in-page .current a:focus,nav.in-page .current-menu-item a:active,nav.in-page .current-menu-item a:focus,nav.in-page-list .current a:active,nav.in-page-list .current a:focus,nav.in-page-list .current-menu-item a:active,nav.in-page-list .current-menu-item a:focus{outline:none}nav.in-page>div{display:inline-block;margin-bottom:-6px}nav.in-page>div>div{display:inline-block;margin-right:27px}nav.in-page>div>div:last-child{margin-right:0 !important}nav.in-page>div>div.last{margin-right:0 !important}nav.in-page:after{content:'';display:inline-block;width:100%;height:0;font-size:0;line-height:0}nav.in-page
 .label{font-weight:bold;color:gray}nav.in-page
-.count{font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:18px;color:#000}nav.in-page-list
+.count{font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:18px;color:#000}nav.in-page-list
 ul{margin:0;padding:0;border:0;overflow:hidden;*zoom:1;margin-bottom:-6px}nav.in-page-list ul
 li{list-style-image:none;list-style-type:none;margin-left:0;display:inline-block;vertical-align:middle;*vertical-align:auto;*zoom:1;*display:inline;white-space:nowrap}nav.in-page-list ul:after{content:'';display:inline-block;width:100%;height:0;font-size:0;line-height:0}.dt-ribbon{display:block;height:60px;margin-bottom:30px;background-position:0 -66px;background-position:right -66px;background-color:#0095da}.dt-ribbon
-span{display:block;height:100%;padding-left:30px;font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:24px;line-height:2.5;background-position:0 0;color:#fff}.gauge.standard{height:7px;background:#e5e5e5}.gauge.standard
+span{display:block;height:100%;padding-left:30px;font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:24px;line-height:2.5;background-position:0 0;color:#fff}.gauge.standard{height:7px;background:#e5e5e5}.gauge.standard
 span{display:block;width:10%;height:100%;background:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/bg_gauge_m_blue.png?1374177902') no-repeat right top}.jspVerticalBar{width:7px}.jspHorizontalBar{height:7px}.jspTrack{background:#cdcdcd}.jspDrag{background:#919191}input.fallback{display:none}input[type=checkbox]{-moz-appearance:none;width:13px;height:13px;padding:0;margin:0;vertical-align:bottom}form.standard .info,#content .gform_wrapper
 .info{margin:0
 0 30px 10px;color:#555}form.standard .info h3,#content .gform_wrapper .info
@@ -172,7 +172,7 @@ li.gfield_error{margin-top:0}#content .gform_wrapper
 a{color:#0095da}header.title-block .crumbs
 em{padding:0
 6px;font-size:9px;position:relative;top:-2px;left:0}header.title-block
-h1{margin-bottom:17px;font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:36px;line-height:1;color:#000}header.title-block h1
+h1{margin-bottom:17px;font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:36px;line-height:1;color:#000}header.title-block h1
 .DT{color:#0095da;padding-right:5px}header.title-block
 h1.small{font-size:18px;line-height:1}header.title-block
 .byline{margin:-3px 0 30px 0;position:relative}header.title-block .byline
@@ -203,7 +203,7 @@ a{z-index:2}.social-share>div
 .icon{float:left}.social-share>div
 .text{float:left;font-size:10px;font-weight:bold;text-transform:uppercase;color:#9d9d9d}.social-share>div
 .num{float:left;margin:0
-15px 0 0;font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:25px;line-height:44px;color:#0095da}.social-share>div.expanded
+15px 0 0;font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:25px;line-height:44px;color:#0095da}.social-share>div.expanded
 .wrap{padding:0
 1px 0 0;border-right:none;border-top:2px solid #0095da;background:#fff}.social-share>div.expanded .wrap
 .expand{display:block}.social-share>div.comment
@@ -238,7 +238,7 @@ spinPulse{0%{-webkit-transform:rotate(160deg);opacity:0;box-shadow:0 0 1px #2187
 spinoffPulse{0%{-webkit-transform:rotate(0deg)}100%{-webkit-transform:rotate(360deg)}}@keyframes
 spinPulse{0%{transform:rotate(160deg);opacity:0;box-shadow:0 0 1px #2187e7}50%{transform:rotate(145deg);opacity:1}100%{transform:rotate(-320deg);opacity:0}}@keyframes
 spinoffPulse{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.blue-balls{margin-top:-25px;margin-left:-25px;position:absolute;z-index:3000101;top:50%;left:50%}body>.blue-balls{position:fixed}.dt-ui.bucket-slider
-.title{margin-bottom:15px;font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:18px;text-transform:capitalize}.dt-ui.bucket-slider
+.title{margin-bottom:15px;font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:18px;text-transform:capitalize}.dt-ui.bucket-slider
 .bucket{border:1px
 solid #e8e8e8;overflow:hidden;*zoom:1;position:relative;background:#f9f9f9}.dt-ui.bucket-slider
 .button{width:55px;height:100%;position:absolute}.dt-ui.bucket-slider .button
@@ -343,7 +343,7 @@ span{display:none}#top-bar
 solid #3e3e3e;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;font-size:12px;background:none;color:#0095da}#top-bar #search input[type=text]::-webkit-input-placeholder{color:inherit}#top-bar #search input[type=text]:-moz-placeholder{color:inherit}#top-bar #search input[type=text]::-moz-placeholder{color:inherit}#top-bar #search input[type=text]:-ms-input-placeholder{color:inherit}#top-bar #search input[type=image]{width:11px;height:11px;position:absolute;top:21px;right:10px;cursor:pointer}#top-bar.with-header-banner .bb-wrap{height:54px;position:relative}#top-bar.with-header-banner .bb-wrap .header-banner-link{position:absolute;text-indent:-119988px;overflow:hidden;text-align:left;text-transform:capitalize}#top-bar.with-header-banner.verizon .bb-wrap{background:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/content/partners/verizon/connected-home/site-header.jpg?1395871181') 2px 0 no-repeat}#top-bar.with-header-banner.verizon .bb-wrap .header-banner-link{width:254px;height:40px;top:6px;left:306px}#nav-bar{overflow:visible;background:#282828 url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/nav_bg.png?1374177902') repeat-x}#nav-bar
 nav.primary{float:left;margin-left:-1px;border-right:1px solid #000;border-left:1px solid rgba(255,255,255,0.1)}#nav-bar nav.primary>ul{margin:0;padding:0;border:0;overflow:hidden;*zoom:1;overflow:visible}#nav-bar nav.primary>ul
 li{list-style-image:none;list-style-type:none;margin-left:0;white-space:nowrap;float:left}#nav-bar nav.primary>ul>li{border-left:1px solid #000;border-right:1px solid rgba(255,255,255,0.1)}#nav-bar nav.primary>ul>li>a{display:block;height:36px;padding:18px
-20px 0 20px;font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:16px;color:#0095da;text-decoration:none}#nav-bar nav.primary>ul>li>a:hover{background:rgba(0,0,0,0.17)}#nav-bar nav.primary>ul>li.sub{background:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/nav_drop_arrow.png?1374177902') center 37px no-repeat}#nav-bar nav.primary>ul>li.sub:hover>a{padding-left:21px;margin:-2px 0 0 -1px;border-top:2px solid #0095da;background:#161819}#nav-bar nav.primary>ul>li.sub:hover>ul.sub-menu{display:block}#nav-bar nav.primary>ul li.sub>ul.sub-menu{display:none;margin-left:-1px;position:absolute;z-index:1000002;background:#161819}#nav-bar nav.primary>ul li.sub>ul.sub-menu
+20px 0 20px;font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:16px;color:#0095da;text-decoration:none}#nav-bar nav.primary>ul>li>a:hover{background:rgba(0,0,0,0.17)}#nav-bar nav.primary>ul>li.sub{background:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/nav_drop_arrow.png?1374177902') center 37px no-repeat}#nav-bar nav.primary>ul>li.sub:hover>a{padding-left:21px;margin:-2px 0 0 -1px;border-top:2px solid #0095da;background:#161819}#nav-bar nav.primary>ul>li.sub:hover>ul.sub-menu{display:block}#nav-bar nav.primary>ul li.sub>ul.sub-menu{display:none;margin-left:-1px;position:absolute;z-index:1000002;background:#161819}#nav-bar nav.primary>ul li.sub>ul.sub-menu
 li{float:none;display:block;padding:0
 100px 15px 20px}#nav-bar nav.primary>ul li.sub>ul.sub-menu li:first-child{padding-top:15px}#nav-bar nav.primary>ul li.sub>ul.sub-menu li:last-child{padding-bottom:20px}#nav-bar nav.primary>ul li.sub>ul.sub-menu
 li.more{padding-top:23px;padding-bottom:38px;font-weight:bold}#nav-bar nav.primary>ul li.sub>ul.sub-menu li
@@ -356,7 +356,7 @@ a{color:#0095da;text-decoration:none}#nav-bar nav.primary .mega-wrap ul.sub-menu
 a{font-weight:bold;color:#e2e2e2}#nav-bar nav.primary .mega-wrap ul.sub-menu li
 .loader{display:none;width:16px;height:16px;position:absolute;margin-left:6px;margin-top:-3px;background:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/loaders/meganav_small.gif?1374177902') 0 0 no-repeat}#nav-bar nav.primary .mega-wrap .mega-container{margin-left:191px;padding-top:17px;overflow:hidden;*zoom:1;white-space:normal}#nav-bar nav.primary .mega-wrap .mega-container
 .col{float:left;margin-bottom:-100%;padding-bottom:100%;padding-top:3px}#nav-bar nav.primary .mega-wrap .mega-container .col
-h3{margin-bottom:14px;font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:15px;text-transform:uppercase;color:#e2e2e2}#nav-bar nav.primary .mega-wrap .mega-container .col .item
+h3{margin-bottom:14px;font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:15px;text-transform:uppercase;color:#e2e2e2}#nav-bar nav.primary .mega-wrap .mega-container .col .item
 .thumb{position:relative}#nav-bar nav.primary .mega-wrap .mega-container .col .item
 h4{margin-bottom:4px;font-size:12px;line-height:1.16667}#nav-bar nav.primary .mega-wrap .mega-container .col .item h4
 a{color:#0095da}#nav-bar nav.primary .mega-wrap .mega-container .col .item
@@ -408,7 +408,7 @@ a.more{display:inline-block;padding-top:7px;clear:both;color:#f0ba12;text-decora
 .expand{display:none;height:54px;min-width:100%;padding-right:20px;padding-left:20px;position:absolute;top:54px;left:-20px;line-height:54px;text-align:center;background:#000;z-index:1000003}#nav-bar #sitewide-social>div .wrap .expand div,#nav-bar #sitewide-social>div .wrap .expand span,#nav-bar #sitewide-social>div .wrap .expand a,#nav-bar #sitewide-social>a .wrap .expand div,#nav-bar #sitewide-social>a .wrap .expand span,#nav-bar #sitewide-social>a .wrap .expand
 a{z-index:2}#nav-bar #sitewide-social>div .icon,#nav-bar #sitewide-social>a
 .icon{float:left}#nav-bar #sitewide-social>div .num,#nav-bar #sitewide-social>a
-.num{float:left;font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:18px;color:#fff;margin:18px
+.num{float:left;font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:18px;color:#fff;margin:18px
 12px 0 0}#nav-bar #sitewide-social>div .num sup,#nav-bar #sitewide-social>a .num
 sup{padding-left:2px;position:relative;top:-5px;left:0;font-size:12px;text-transform:uppercase}#nav-bar #sitewide-social>div.expanded,#nav-bar #sitewide-social>a.expanded{border-top:2px solid #0095da;position:relative;top:-2px;left:0;background:#000}#nav-bar #sitewide-social>div.expanded .wrap .expand,#nav-bar #sitewide-social>a.expanded .wrap
 .expand{display:block}#nav-bar #sitewide-social>div.facebook .icon,#nav-bar #sitewide-social>a.facebook
@@ -456,7 +456,7 @@ li.pinterest{background-position:0 -963px}iframe[name=__bkframe]{position:absolu
 iframe{width:1px;height:1px}.auth-modal,.other-modal{position:relative;overflow:hidden;*zoom:1;background:#fff}.auth-modal .logo,.other-modal
 .logo{width:80px;height:7px;position:absolute;z-index:2;bottom:40px;left:40px;background-position:0 -1228px;text-indent:-119988px;overflow:hidden;text-align:left;text-transform:capitalize}.auth-modal .close,.other-modal
 .close{display:block;width:12px;height:12px;position:absolute;z-index:2;top:15px;right:14px;background-position:0 -1188px;text-indent:-119988px;overflow:hidden;text-align:left;text-transform:capitalize}.auth-modal h3,.other-modal
-h3{margin:-6px 0 24px 0;font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:36px;color:#000}.auth-modal h4,.other-modal
+h3{margin:-6px 0 24px 0;font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:36px;color:#000}.auth-modal h4,.other-modal
 h4{margin:-2px 0 33px 0;font-size:16px;line-height:1.25;color:gray}.auth-modal p.description,.other-modal
 p.description{margin:-2px 0 13px 0;font-size:12px;line-height:1.5;color:gray}.auth-modal p.description a,.other-modal p.description
 a{color:#0095da}.auth-modal .form-messages,.other-modal .form-messages{margin-bottom:20px;font-size:12px;line-height:1.16667}.auth-modal .form-messages li,.other-modal .form-messages
@@ -530,11 +530,11 @@ a{line-height:20px;display:inline-block;margin-left:45px;border:1px
 solid #fff;padding:0
 5px;background-color:white;color:#0095da}body .notification-bar.tos-update
 a.close{position:absolute;right:15px;top:4px;cursor:pointer}.sidebar-block>.widget,.sidebar-block>.ad,.sidebar-block>#dtadq-300,.sidebar-block>#dtadq-300-1,.sidebar-block>#dtadq-300-2,.sidebar-block>#dtadq-300-3,.sidebar-block>#dtadq-300-4,.sidebar-block>#dtadq-300-5{margin-top:50px}.sidebar-block>.widget:first-child,.sidebar-block>.ad:first-child,.sidebar-block>#dtadq-300:first-child,.sidebar-block>#dtadq-300-1:first-child,.sidebar-block>#dtadq-300-2:first-child,.sidebar-block>#dtadq-300-3:first-child,.sidebar-block>#dtadq-300-4:first-child,.sidebar-block>#dtadq-300-5:first-child{margin-top:0}.sidebar-block .widget
-h3{padding-bottom:13px;margin-bottom:20px;border-bottom:1px solid #7a7a7a;font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:18px;line-height:1;color:#000}.sidebar-block
+h3{padding-bottom:13px;margin-bottom:20px;border-bottom:1px solid #7a7a7a;font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:18px;line-height:1;color:#000}.sidebar-block
 .button.flat{font-size:11px}.sidebar-block .button.flat:hover
 span{text-decoration:underline}.sidebar-block
 .button.flat.icon.more{min-height:8px}.sidebar-block .button.flat.icon.more:after{width:8px;height:8px;margin-left:8px;background-position:0 -1044px}.widget.standard
-h3{padding-bottom:13px;margin-bottom:20px;border-bottom:1px solid #7a7a7a;font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:18px;line-height:1;color:#000}.widget.standard
+h3{padding-bottom:13px;margin-bottom:20px;border-bottom:1px solid #7a7a7a;font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:18px;line-height:1;color:#000}.widget.standard
 .item{width:250px;height:76px;margin-bottom:20px;position:relative;overflow:hidden;*zoom:1;font-size:12px;color:#000}.widget.standard .item
 a{text-decoration:none;color:#000}.widget.standard .item a:hover,.widget.standard .item a:focus{text-decoration:underline}.widget.standard .item
 h4{margin-top:4px;line-height:1.16667}.widget.standard .item
@@ -568,7 +568,7 @@ span{display:block;position:relative;z-index:3;background:none}.widget.standard 
 .byline{padding-right:10px;background:#000}.widget.review-categories
 h3{margin-bottom:-18px}.widget.review-categories
 ul{margin-bottom:-3px}.widget.review-categories ul
-li{height:35px;margin-bottom:1px;font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:14px;color:#000}.widget.review-categories ul li
+li{height:35px;margin-bottom:1px;font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:14px;color:#000}.widget.review-categories ul li
 a{display:block;height:100%}.widget.review-categories ul li a
 span{display:block;float:right;width:18px;height:18px;margin-right:7px}.widget.review-categories ul li a
 .laptop{background-position:0 -564px}.widget.review-categories ul li a
@@ -606,7 +606,7 @@ a{color:#0095da}.widget.pricegrabber-alt .pricegrabber-link{font-size:12px;color
 .item{clear:both;height:47px;position:relative;background:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/main/i_plus_boxed_s.png?1374177902') 0 3px no-repeat}.widget.popular-list
 h4{width:205px;padding-left:15px;font-size:12px;line-height:1.16667}.widget.popular-list h4
 a{color:#0095da}.widget.popular-list
-.count{min-width:64px;position:absolute;top:0;right:0;font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:25px;color:#b9b9b9}.widget.popular-list .count
+.count{min-width:64px;position:absolute;top:0;right:0;font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:25px;color:#b9b9b9}.widget.popular-list .count
 .icon{float:left;margin:6px
 6px 0 0}.widget.popular-list.trending-stories .count
 .icon{width:8px;height:14px;background-position:0 -1493px;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);opacity:0.5}.widget.popular-list.most-commented .count
@@ -630,7 +630,7 @@ a{height:45px !important;border-top:none !important;border-bottom:none !importan
 .item{clear:both;margin-top:16px;position:relative}.widget.trending-tabbed .item:first-child{margin-top:0}.widget.trending-tabbed .item
 h4{width:205px;height:30px;overflow:hidden;font-size:12px;line-height:1.16667}.widget.trending-tabbed .item h4
 a{color:#0095da}.widget.trending-tabbed .item
-.count{position:absolute;top:0;right:0;font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:25px;line-height:1;color:#9d9d9d}.widget.trending-tabbed .item .count
+.count{position:absolute;top:0;right:0;font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:25px;line-height:1;color:#9d9d9d}.widget.trending-tabbed .item .count
 .icon{float:left;margin:6px
 6px 0 0}.widget.trending-tabbed .item
 .gauge{margin-top:13px}.widget.trending-tabbed .tab.trending .item
@@ -640,7 +640,7 @@ h4{width:240px}.widget.trending-tabbed .tab.trending .item.hotness
 .icon{margin-top:8px;width:12px;height:12px;background-position:0 -1419px;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);opacity:0.5}.widget.trending-tabbed .tab.most-shared
 .count{min-width:46px;text-align:right}.sidebar-block .widget.partner-news
 h3{height:40px;padding:0
-0 0 12px;border:none;font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;line-height:40px;background-position:0 -66px;background-position:190px -66px;background-color:#0095da;color:#fff;font-size:15px}.sidebar-block .widget.brand-highlights
+0 0 12px;border:none;font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;line-height:40px;background-position:0 -66px;background-position:190px -66px;background-color:#0095da;color:#fff;font-size:15px}.sidebar-block .widget.brand-highlights
 h3{border-bottom:none;margin-bottom:0}.sidebar-block .widget.latest-news
 .item{width:300px;height:67px;font-size:12px}.sidebar-block .widget.latest-news .item
 a{text-decoration:none;color:#0095da}.sidebar-block .widget.latest-news .item a:hover,.sidebar-block .widget.latest-news .item a:focus{text-decoration:underline}.sidebar-block .widget.latest-news .item
@@ -653,7 +653,7 @@ solid #e1e1e1;font-size:14px;line-height:36px;background:#fff;color:#555}.sideba
 .msg.fix{margin-bottom:8px;font-size:12px;line-height:1.16667;font-weight:bold;font-style:italic;color:#f24f4f}.sidebar-block .widget.newsletter-register
 form.off{filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=30);opacity:0.3}.sidebar-block .widget.newsletter-register.style-a{padding:26px
 30px 30px 35px}.sidebar-block .widget.newsletter-register.style-a .style-b-only{display:none}.sidebar-block .widget.newsletter-register.style-a
-h4{margin-bottom:9px;font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:34px;line-height:1.05882}.sidebar-block .widget.newsletter-register.style-a>p{margin-bottom:20px;font-size:17px;line-height:1.29412}.sidebar-block .widget.newsletter-register.style-a
+h4{margin-bottom:9px;font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:34px;line-height:1.05882}.sidebar-block .widget.newsletter-register.style-a>p{margin-bottom:20px;font-size:17px;line-height:1.29412}.sidebar-block .widget.newsletter-register.style-a
 input.button.standard{width:105px}.sidebar-block .widget.newsletter-register.style-b{padding:22px
 20px 20px 20px}.sidebar-block .widget.newsletter-register.style-b .style-a-only{display:none}.sidebar-block .widget.newsletter-register.style-b
 h4{margin-bottom:20px;text-align:center;font-size:21px;line-height:1.14286}.sidebar-block .widget.newsletter-register.style-b
@@ -675,7 +675,7 @@ h4{float:left;max-height:55px;width:153px;padding:35px
 10px 0 10px;font-size:12px}.widget.hands-ons .item
 h4{padding:15px
 10px 0 10px !important}#river.standard{overflow:hidden;*zoom:1}#river.standard h1,#river.standard
-h2{padding-bottom:13px;margin-bottom:20px;border-bottom:1px solid #7a7a7a;font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:18px;line-height:1;color:#000;margin-bottom:0}#river.standard
+h2{padding-bottom:13px;margin-bottom:20px;border-bottom:1px solid #7a7a7a;font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:18px;line-height:1;color:#000;margin-bottom:0}#river.standard
 .post{padding:40px
 0;border-bottom:1px solid #d7d7d7;position:relative;overflow:hidden;*zoom:1}#river.standard .post
 .thumb{float:left;width:200px;height:150px;position:relative}#river.standard .post .thumb
@@ -720,7 +720,7 @@ li{padding-left:19px;background:url('http://www.digitaltrends.com/wp-content/the
 li{margin:14px
 0 -1px 0}#river.standard .post .full-coverage ul li:first-child{margin-top:0}#river.standard .post .full-coverage ul li
 a{color:#0095da}#river.standard .post.badged .thumb a:before{display:none}#river.standard .post.badged .badge-wash{width:100%;height:100%;position:absolute;top:0;left:0;content:'';pointer-events:none;background-repeat:no-repeat;background-position:0 0;background:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/bg_black_angle_grad_v2.png?1391032921') right bottom no-repeat}#river.standard .post.badged
-.badge{position:absolute;bottom:10px;right:10px;z-index:2;text-align:center;font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:16px;line-height:1.1;font-weight:bold}#river.standard .post.badged .badge>div{border-top:1px solid #fff;border-bottom:1px solid #fff;padding:3px
+.badge{position:absolute;bottom:10px;right:10px;z-index:2;text-align:center;font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:16px;line-height:1.1;font-weight:bold}#river.standard .post.badged .badge>div{border-top:1px solid #fff;border-bottom:1px solid #fff;padding:3px
 0}#river.standard
 .post.sponsored{background:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/bg_gradient_f5f5f5_d5e9f4.gif?1391032921') top right repeat-y}#river.standard .post.sponsored.sponsored-fiat:before{content:"Presented by";display:block;width:124px;height:42px;position:absolute;bottom:7px;right:13px;line-height:42px;font-size:13px;background:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/content/partners/fiat/fiat_logo_river.png?1391032921') top right no-repeat;color:#9a001a}#river.standard .post.review
 .content{min-height:110px;padding-bottom:40px}#river.standard .post.video
@@ -739,7 +739,7 @@ a{float:left;width:144px;height:96px;margin:0
 .button.prev{float:left}#river.standard .river-pagination .button.next,#river.standard .river-pagination
 .button.more{float:right}#mem{overflow:hidden;*zoom:1}#mem
 a{text-decoration:none}#mem>div{float:left;position:relative;height:250px}#mem>div h4,#mem>div h5,#mem>div div,#mem>div ul,#mem>div
-p{position:absolute;font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;text-transform:uppercase;color:#fff}#mem>div
+p{position:absolute;font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;text-transform:uppercase;color:#fff}#mem>div
 .byline{height:30px;font-size:14px;line-height:2.07143;color:#fff}#mem>div .byline>span{padding:0
 10px}#mem>div .byline
 img{width:30px;height:30px;float:left}#mem .byline.no-author{width:29px;height:29px;background-position:0 -282px}#mem .white h4,#mem .white h5,#mem .white div,#mem .white ul,#mem .white
@@ -797,7 +797,7 @@ h3{padding-top:18px}.dt-focus-block{width:630px;margin-bottom:40px;position:rela
 30px 14px 30px}.dt-focus-block .title
 img{position:absolute;top:0;right:0}.dt-focus-block
 h3{font-size:12px;font-weight:bold;color:#0095da;text-transform:uppercase}.dt-focus-block
-h4{margin-top:6px;font-size:24px;line-height:1.08333;font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;color:#eee}.dt-focus-block .featured-post{clear:both;margin-left:30px}.dt-focus-block .featured-post
+h4{margin-top:6px;font-size:24px;line-height:1.08333;font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;color:#eee}.dt-focus-block .featured-post{clear:both;margin-left:30px}.dt-focus-block .featured-post
 .thumb{float:left;width:194px;height:120px}.dt-focus-block .featured-post .thumb
 img{width:100%;height:100%;-webkit-box-reflect:below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(85%, transparent), to(rgba(255,255,255,0.28)))}.dt-focus-block .featured-post
 .wrap{min-height:123px;margin:-3px 30px 0 214px}.dt-focus-block .featured-post .wrap
@@ -883,7 +883,7 @@ a{color:#0095da}body.topic #primary .intro>.wrap
 div{margin-top:38px;line-height:1;color:gray}body.topic #primary .intro>.wrap div
 span{padding:0
 6px}body.topic #primary .intro>.wrap.floated{margin-left:220px}body.topic #primary .intro .social-sharing-wrap{clear:both;padding-top:10px}body.topic #primary .must-see{margin-bottom:50px}body.topic #primary .must-see
-h2{float:left;font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:18px;color:#0095da}body.topic #primary .must-see h2
+h2{float:left;font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:18px;color:#0095da}body.topic #primary .must-see h2
 span{display:block;width:20px;height:10px;margin-top:7px;background-position:0 0}body.topic #primary .must-see
 .post{padding-bottom:20px;margin:0
 0 20px 220px;border-bottom:1px solid #e3e3e3;overflow:hidden;*zoom:1}body.topic #primary .must-see .post
@@ -909,14 +909,14 @@ a{color:#0095da}body.videos-home .extra-bb.featured-player .crumbs
 em{padding:0
 6px;font-size:9px;position:relative;top:-2px;left:0}body.videos-home .extra-bb.featured-player .video-player-container{width:575px;height:323px;float:left;background:#000}body.videos-home .extra-bb.featured-player
 .wrap{width:360px;margin-left:605px;padding-top:32px;color:#e2e2e2}body.videos-home .extra-bb.featured-player .wrap
-h3{font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:36px;line-height:1;color:#fff}body.videos-home .extra-bb.featured-player .wrap
+h3{font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:36px;line-height:1;color:#fff}body.videos-home .extra-bb.featured-player .wrap
 .byline{margin-top:10px;font-size:12px}body.videos-home .extra-bb.featured-player .wrap .byline
 .author{font-weight:bold;color:#0095da}body.videos-home .extra-bb.featured-player .wrap .byline
 .dash{color:#ababab}body.videos-home .extra-bb.featured-player .wrap
 p{margin-top:30px;font-size:12px;line-height:1.33333}body.videos-home .extra-bb.featured-player .wrap p
 .dash{color:#80919a}body.videos-home .extra-bb.featured-player .wrap p
 a{color:#0095da}body.videos-home .extra-bb.featured-videos{margin-top:462px;padding-top:60px;background:#eee;overflow:hidden;*zoom:1}body.videos-home .extra-bb.featured-videos>div{width:996px;padding-left:26px}body.videos-home .extra-bb.featured-videos
-h2{padding-bottom:13px;margin-bottom:20px;border-bottom:1px solid #7a7a7a;font-family:"Novecentowide-Book";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:18px;line-height:1;color:#000;margin-bottom:40px;margin-right:26px}body.videos-home .extra-bb.featured-videos
+h2{padding-bottom:13px;margin-bottom:20px;border-bottom:1px solid #7a7a7a;font-family:"Roboto Condensed";-webkit-font-smoothing:subpixel-antialiased;text-transform:uppercase;font-size:18px;line-height:1;color:#000;margin-bottom:40px;margin-right:26px}body.videos-home .extra-bb.featured-videos
 .post{width:306px;height:325px;margin-right:26px;float:left;position:relative}body.videos-home .extra-bb.featured-videos .post
 .thumb{display:block;width:306px;height:171px;position:relative}body.videos-home .extra-bb.featured-videos .post .thumb
 .play{width:35px;height:35px;position:absolute;bottom:0;right:0;background-color:#fff}body.videos-home .extra-bb.featured-videos .post .thumb .play
@@ -1008,7 +1008,7 @@ input.button{width:78px;border-right:1px solid #0095da;background-position:cente
 .gallery{width:647px}body.ie8.single.premium-variant #primary #content .gallery,body.ie7.single.premium-variant #primary #content
 .gallery{width:622px}body.ie8 .carousel-gallery .caption,body.ie7 .carousel-gallery
 .caption{background:transparent;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#77000000,endColorstr=#77000000);zoom:1}body.ie8 .carousel-gallery .caption .button:hover,body.ie7 .carousel-gallery .caption .button:hover{background-color:transparent;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#19FFFFFF,endColorstr=#19FFFFFF);zoom:1}
-#dtrvl{position:absolute;top:0;left:0;z-index:1000001}#dtrvl .dtrvl-tile{display:none;position:absolute !important}#dtrvl .dtrvl-tile .dtrvl-wrap{height:100%;background:#333}#dtrvl .dtrvl-tile .dtrvl-tile-content{display:none;height:100%;background-repeat:no-repeat;background-position:left top}#dtrvl .dtrvl-tile .dtrvl-tile-border{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;width:100%;height:100%}#dtrvl .dtrvl-timer{position:absolute;top:10px;right:10px;z-index:2;font-family:Helvetica,Arial,sans-serif;font-size:12px;color:#fff}#dtrvl .dtrvl-timer
+#dtrvl{position:absolute;top:0;left:0;z-index:1000001}#dtrvl .dtrvl-tile{display:none;position:absolute !important}#dtrvl .dtrvl-tile .dtrvl-wrap{height:100%;background:#333}#dtrvl .dtrvl-tile .dtrvl-tile-content{display:none;height:100%;background-repeat:no-repeat;background-position:left top}#dtrvl .dtrvl-tile .dtrvl-tile-border{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;width:100%;height:100%}#dtrvl .dtrvl-timer{position:absolute;top:10px;right:10px;z-index:2;font-family:'Roboto Condensed',Arial,sans-serif;font-size:12px;color:#fff}#dtrvl .dtrvl-timer
 span{display:inline-block;width:18px;height:16px;margin-left:3px;border:1px
 solid #fff;font-size:12px;line-height:16px;text-align:center}#dtrvl .dtrvl-timer:hover{cursor:pointer}.dtrvl-precache{width:1px;height:1px;position:absolute;left:-100%;font-size:0;line-height:0}.dtrvl-precache
 img{width:1px;height:1px}body.home.dtrvl

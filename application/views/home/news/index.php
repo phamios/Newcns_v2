@@ -14,10 +14,9 @@
                         <span typeof="v:Breadcrumb">
                             <?php foreach ($category as $cate): ?>
                                 <?php if ($cate->id == $content->cateid): ?>
-                                    <a class="cat" href="#">
-                                        <?php echo $cate->catename; ?>
+                                   
                                         <a href="<?php echo site_url('rev_cate/' . mb_strtolower(url_title(removesign($cate->catename . "-" . $cate->id))) . ".html"); ?>" rel="v:url" property="v:title"><?php echo $cate->catename ?></a>
-                                    </a>
+                                     
                                 <?php endif; ?>
                             <?php endforeach; ?>
                         </span> 
