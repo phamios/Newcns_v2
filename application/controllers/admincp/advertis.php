@@ -33,27 +33,18 @@ class advertis extends CI_Controller {
         if ($this->session->userdata('adminid') == null) {
             redirect('admincp/login');
         } else {
-            if (isset($_POST['name'])) {
-                $this->load->model('advertis_model');
-                //$this->advertis_model->query("INSERT ")
-                if (isset($_POST['image'])) {
-                    $image = $_POST['image'];
-                } else {
-                    $image = null;
-                }
+            $this->load->model('advertis_model');
+            if (isset($_REQUEST['create_advertis'])) {
                 $insert = array(
-                    'catename' => $_POST['name'],
-                    'cateroot' => $_POST['cate-root'],
-                    'cateimages' => $image
+                    'advertis_name'    => $this->input->post('name', true),
+                    'advertis_content' => $this->input->post('content', true),
+                    'advertis_order'   => $this->input->post('order', true),
+                    'advertis_status'  => $this->input->post('status', true),
                 );
                 $this->db->insert('tbl_advertis', $insert);
-                //redirect('admin/advertis', 'refresh');
-                redirect($this->config->base_url() . 'admincp/advertis/');
+                redirect('admincp/advertis');
             } else {
-                $data['title'] = "Create Advertis";
-                $this->load->model('advertis_model');
-                $data['advertis'] = $this->advertis_model->getAll();
-                $this->load->view('admin/dashboard', $data);
+                $this->load->view('admin/dashboard');
             }
         }
     }
@@ -74,31 +65,18 @@ class advertis extends CI_Controller {
         if ($this->session->userdata('adminid') == null) {
             redirect('admincp/login');
         } else {
-            if (isset($_POST['name'])) {
-                $data['edit'] = 1;
-                $this->load->model('advertis_model');
-                //$this->advertis_model->query("INSERT ")
-                if (isset($_POST['image'])) {
-                    $image = $_POST['image'];
-                } else {
-                    $image = null;
-                }
-                $insert = array(
-                    'catename' => $_POST['name'],
-                    'cateroot' => $_POST['cate-root'],
-                    'cateimages' => $image
+            $this->load->model('advertis_model');
+            if (isset($_REQUEST['update_advertis'])) {
+                $object = array(
+                    'advertis_name'    => $this->input->post('name', true),
+                    'advertis_content' => $this->input->post('content', true),
+                    'advertis_order'   => $this->input->post('order', true),
+                    'advertis_status'  => $this->input->post('status', true),
                 );
-                $this->db->update('tbl_advertis', $insert, array('id' => $id));
-
-                redirect($this->config->base_url() . 'admincp/advertis/edit/' . $id . '?success=1');
+                $this->advertis_model->update_adver($object, $id);
+                redirect('admincp/advertis');
             } else {
-                $data['edit'] = 0;
-                $data['id'] = $id;
-                $data['title'] = "Sửa quảng cáo";
-                $this->load->model('advertis_model');
-                $data['model'] = $this->advertis_model->getDetail($id);
-                $data['model'] = $data['model'][0];
-                $data['advertis'] = $this->advertis_model->getAll();
+                $data['advertis'] = $this->advertis_model->getDetail($id);
                 $this->load->view('admin/dashboard', $data);
             }
         }

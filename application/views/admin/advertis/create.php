@@ -1,9 +1,17 @@
+<script src="http://tinymce.cachefly.net/4.0/tinymce.min.js"></script>
+<script type="text/javascript">
+    tinymce.init({
+        selector: "textarea",
+        plugins : 'advlist autolink link image lists charmap print preview',
+        toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+    });
+</script>
 <div class="row-fluid">
     <div class="span12">
         <div class="box dark">
             <header>
                 <div class="icons"><i class="icon-edit"></i></div>
-                <h5><?php echo $title; ?></h5>
+                <h5>Thêm mới quảng cáo</h5>
                 <!-- .toolbar -->
                 <div class="toolbar">
                     <ul class="nav">
@@ -12,11 +20,6 @@
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <i class="icon-th-large"></i>
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="">q</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">b</a></li>
-                            </ul>
                         </li>
                         <li>
                             <a class="accordion-toggle minimize-box" data-toggle="collapse" href="#div-1">
@@ -27,49 +30,57 @@
                 </div>
                 <!-- /.toolbar -->
             </header>
-            <div id="div-1" class="accordion-body collapse in body">
-                <form class="form-horizontal" id="category-create" action="<?php echo site_url('admincp/category/create');?>" method="post">
+            <div id="div-1" class="accordion-body collapse in body"> 
+                <div class="span7">
+                    <?php echo form_open_multipart('admincp/advertis/create', array('id' => 'advertis-create', 'class' => 'form-horizontal')); ?>
                     <div class="control-group">
-                        <label for="text1" class="control-label">Name<span class="require">*</span></label>
+                        <label for="text1" class="control-label">Tên quảng cáo</label>
 
                         <div class="controls with-tooltip">
-                            <input type="text" id="name" class="span6 input-tooltip" data-original-title="Please use your name" data-placement="bottom" name="name"/>
+                        <input type="text" id="name" class="span10 input-tooltip" name="name" />
                         </div>
                     </div>
+
                     <div class="control-group">
-                        <label class="control-label">Image</label>
-                        <div class="controls"><input type="file" name="image" /></div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label">Category Root</label>
+                        <label for="limiter" class="control-label">Nội dung</label>
 
                         <div class="controls">
-                            <select id="cate-root" name="cate-root">
-                                <option value="0">No Category Root</option>
-                                <?php foreach($category as $row): ?>
-                                <option value="<?php echo $row->id; ?>"><?php echo $row->catename ?></option>
-                            	<?php endforeach; ?>
+                            <textarea class="span10" name="content">
+                            </textarea>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">Thứ tự</label>
+
+                        <div class="controls">
+                            <select name="order">
+                                <option value="">No select</option>
+                                <?php foreach(range(1,10) as $i): ?>
+                                <option value="<?php echo $i ?>"><?php echo $i ?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                     </div>
 
-                    <div class="form-actions">
-                        <input type="reset" value="Reset" id="back" class="navigation_button btn">
-                        <input type="button" onclick="create()" value="Create" id="next" class="navigation_button btn btn-primary">
+                    <div class="control-group">
+                        <label class="control-label">Trạng thái</label>
+                        <div class="controls">
+                            <label>
+                                <input class="uniform" type="radio" name="status" value="1" checked/>Active
+                            </label>
+                            <label>
+                                <input class="uniform" type="radio" name="status" value="0"/>Disable
+                            </label>
+                        </div>
                     </div>
-                </form>
+
+                    <div class="form-actions">
+                        <input type="submit" value="Tạo mới" class="navigation_button btn btn-primary" name="create_advertis">
+                    </div>
+                    <?php echo form_close(); ?>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
-<script type="text/javascript">
-function create (argument) {
-	var name = $("#name").val();
-	if(name != '') {
-		$("#category-create").submit();
-	}else{
-		alert("Please enter catogory name");
-	}
-}
-</script>
