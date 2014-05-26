@@ -752,8 +752,11 @@ h4{color:#fff !important}#mem .tape.black h4>span{background:#000 !important}#me
 .byline{color:#0095da}#mem .byline-black
 .byline{color:#000}#mem .byline-tape .byline,#mem .byline-tape.byline-white
 .byline{color:#000;background:#fff}#mem .byline-tape.byline-black
-.byline{color:#fff !important;background:#000 !important}body.home #primary-wrap{padding-top:40px}body.home
-#primary{width:630px}body.home #river.standard .post.gallery .thumbs a:first-child{width:340px}body.index.archive #primary-wrap{padding-top:40px}#mem.home
+.byline{color:#fff !important;background:#000 !important}body.home #primary-wrap{padding-top:1px}body.home
+#primary{width:630px}
+body.home #river.standard .post.gallery .thumbs a:first-child{width:340px}
+body.index.archive #primary-wrap{padding-top:40px}
+#mem.home
 .one{width:970px;margin-bottom:1px}#mem.home .one
 h4{top:35px;left:39px;font-size:30px;line-height:1}#mem.home .one
 .byline{bottom:40px;left:40px}#mem.home .one.tape

@@ -13,10 +13,8 @@
 
                         <span typeof="v:Breadcrumb">
                             <?php foreach ($category as $cate): ?>
-                                <?php if ($cate->id == $content->cateid): ?>
-                                   
-                                        <a href="<?php echo site_url('rev_cate/' . mb_strtolower(url_title(removesign($cate->catename . "-" . $cate->id))) . ".html"); ?>" rel="v:url" property="v:title"><?php echo $cate->catename ?></a>
-                                     
+                                <?php if ($cate->id == $content->cateid): ?> 
+                                        <a href="<?php echo site_url('home/news_cate/' . mb_strtolower(url_title(removesign($cate->catename . "-" . $cate->id))) . ".html"); ?>" rel="v:url" property="v:title"><?php echo $cate->catename ?></a>
                                 <?php endif; ?>
                             <?php endforeach; ?>
                         </span> 

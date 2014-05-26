@@ -1,6 +1,6 @@
 <div class="bb-wrap">
 
-    <div class="dt">  <img src="<?php echo base_url('res_home/54X54.PNG'); ?>" alt="<?php echo site_url(); ?>"/></div>
+    <a href="<?php echo site_url(); ?>"><div class="dt"><img src="<?php echo base_url('res_home/54X54.PNG'); ?>" alt="<?php echo site_url(); ?>"/></div></a>
     <div class="logo">
         <img src="<?php echo base_url('res_home/178X16.PNG'); ?>" alt="<?php echo site_url(); ?>"/>
 

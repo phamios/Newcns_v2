@@ -25,6 +25,10 @@
         <?php $this->load->view('home/default/default'); ?> 
 <?php endif; ?>
 
+<?php if ($this->router->class == 'features'): ?>  
+        <?php $this->load->view('home/review/features'); ?> 
+<?php endif; ?>
+
 
 <?php if ($this->router->class == 'news_cate'): ?> 
         <?php $this->load->view('home/default/default'); ?> 
