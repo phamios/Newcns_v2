@@ -18,11 +18,44 @@ class ajax extends CI_Controller {
         @session_start();
     }
 
-    public function ajax_post($type) {
-        if ($type = "post") {
-            
+    public function trend_ajax() {
+        $this->load->model('review_model');
+        $result = $this->review_model->get_trend();
+        foreach($result as $row){
+            echo '<div class="item">';
+            echo '    <h4><a href="' . site_url('home/review/' . mb_strtolower(url_title($this->removesign($row->review_title . '-' . $row->id))) . '.html') . '">'.$row->review_title.'</a></h4>';
+            echo '    <span class="extra"></span>';
+            echo '<span class="count">';
+            echo ' <span class="icon"></span>';
+            echo  $row->review_view;											
+            echo '</span>';
+            echo '    <div class="gauge standard" data-percent="'.$row->review_view.'">';
+            echo '        <span style="width: '.$row->review_view.'%"></span>';
+            echo '    </div>';
+            echo '</div>';
         }
     }
+    
+    
+    public function news_hot_ajax() {
+        $this->load->model('post_model');
+        $result = $this->post_model->get_news_trend();
+        foreach($result as $row){
+            echo '<div class="item">';
+            echo '    <h4><a href="' . site_url('home/news/' . mb_strtolower(url_title($this->removesign($row->post_title . '-' . $row->id))) . '.html') . '">'.$row->post_title.'</a></h4>';
+            echo '    <span class="extra"></span>';
+             echo '<span class="count">';
+            echo ' <span class="icon"></span>';
+            echo  $row->post_view;											
+            echo '</span>';
+            echo '    <div class="gauge standard" data-percent="'.$row->post_view.'">';
+            echo '        <span style="width: '.$row->post_view.'%"></span>';
+            echo '    </div>';
+            echo '</div>';
+        }
+    }
+    
+    
 
     public function last_new() {
         $this->load->model('post_model');

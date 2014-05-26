@@ -9,7 +9,7 @@
 <!-- DT Variables (digitaltrends-2013/functions.php) -->
 <script type="text/javascript">var ajaxurl="http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/ajax-actions.php";var ord=Math.random()*10000000000000000;</script>
 <!-- End DT Variables -->
- 
+
 <script type="text/javascript">
     
     $(document).ready(function(){
@@ -19,7 +19,8 @@
         category_news(); 
         get_last_new();
         get_last_features();
-        
+        get_trend();
+        get_news_trend();
 
         $(document).on('mouseover', '.sub-menu #a-hover', function(e) {
             var cateid = parseInt($(e.target).attr('cateid'));
@@ -45,6 +46,7 @@
             }
         });
     }
+    
 
     function rev_cate_sub(cateid){
         $.ajax({ 
@@ -88,7 +90,7 @@
     }
     
     function get_last_features(){
-    $.ajax({
+        $.ajax({
             url: '<?php echo site_url('ajax/last_features'); ?>',
             type:'POST',
             success: function(response){ 
@@ -112,6 +114,34 @@
             }
         });
     };
+    
+    
+    function get_trend(){ 
+        $.ajax({
+            url: '<?php echo site_url('ajax/trend_ajax'); ?>',
+            type:'POST',
+            success: function(response){ 
+                $("#trend_load").html(response);
+            },
+            error: function (x, status, error) {
+                alert("Error code: " + x + "\nAn error occurred: " + status + "\nError: " + error);
+            }
+        });
+    }
+    
+    
+    function get_news_trend(){ 
+        $.ajax({
+            url: '<?php echo site_url('ajax/news_hot_ajax'); ?>',
+            type:'POST',
+            success: function(response){ 
+                $("#news_trend_load").html(response);
+            },
+            error: function (x, status, error) {
+                alert("Error code: " + x + "\nAn error occurred: " + status + "\nError: " + error);
+            }
+        });
+    }
     
     
 </script>

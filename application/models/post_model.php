@@ -17,6 +17,13 @@ class post_model extends CI_Model {
         $query = $this->db->get('tbl_post');
         return $query->result();
     }
+    
+    function get_news_trend() {
+       $this->db->order_by("post_view",'DESC');
+       $this->db->limit(10);
+        $query = $this->db->get('tbl_post');
+        return $query->result();
+    }
 
     function update_view($id) {
        $count = $this->get_view($id);
