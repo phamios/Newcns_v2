@@ -57,7 +57,16 @@
         <li><a href="<?php echo base_url('admincp/advertis/create') ?>"><i class="icon-angle-right"></i> Thêm mới quảng cáo</a></li> 
     </ul>
 </li>
-<li><a href="<?php echo site_url('admincp/config');?>"><i class="icon-signin icon-large"></i> Site Config</a></li>
+
+<li class="accordion-group">
+    <a data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-config">
+        <i class="icon-tasks icon-large"></i> Cấu hình <span class="label label-inverse pull-right"></span>
+    </a>
+    <ul class="collapse" id="component-nav-config">
+        <li><a href="<?php echo base_url('admincp/config') ?>"><i class="icon-angle-right"></i> Danh sách cấu hình  </a></li>
+        <li><a href="<?php echo base_url('admincp/config/create') ?>"><i class="icon-angle-right"></i> Thêm cấu hình  </a></li>
+    </ul>
+</li>
 
 <li class="accordion-group">
     <a data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-profile">
