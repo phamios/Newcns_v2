@@ -29,7 +29,7 @@
             </header>
             <?php foreach ($user as $u): ?>
             <div id="div-1" class="accordion-body collapse in body">
-                    <?php echo form_open_multipart('admincp/profile/index/'.$u->id,array('class'=>'form-horizontal','id'=>'profile-create')); ?>
+                    <?php echo form_open_multipart('admincp/profile/index/'.$u->id,array('class'=>'form-horizontal','id'=>'profile-update')); ?>
                     
                     <div class="control-group">
                         <label for="text1" class="control-label">Tên tài khoản</label>
@@ -47,8 +47,16 @@
                         </div>
                     </div>
 
+                    <div class="control-group">
+                        <label for="text1" class="control-label">Xác nhận mật khẩu</label>
+
+                        <div class="controls with-tooltip">
+                            <input type="password" id="confirm_password" class="span6 input-tooltip" placeholder="************" value=""/>
+                        </div>
+                    </div>
+
                     <div class="form-actions">
-                        <input type="submit" value="Cập nhật" name="save_profile" class="navigation_button btn btn-primary">
+                        <input type="button" onClick="check_matched_password()" id="save_profile" value="Cập nhật" name="save_profile" class="navigation_button btn btn-primary">
                         <!-- onclick="create()" -->
                     </div>
                 <?php echo form_close(); ?>
@@ -57,3 +65,19 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    
+    function check_matched_password() {
+        var username = $("#uername").val();
+        var password = $("#password").val();
+        var confirm_password = $("#confirm_password").val();
+    
+        if (password !== confirm_password) {
+            alert("Password xác nhận chưa đúng!");
+        } else {
+            $("#profile-update").submit();
+        }
+    }
+
+</script>
