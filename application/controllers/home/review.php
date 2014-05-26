@@ -27,11 +27,13 @@ class Review extends CI_Controller {
         $this->load->model('post_model');
         $this->load->model('category_model');
         $this->load->model('features_model');
+        $this->load->model('gallery_model');
         $data['features'] = $this->features_model->getAll();
         $data['category'] = $this->category_model->getAll();
         $data['details_news'] = $this->post_model->getDetail_byID_by_rev($this->product_id);
-        
-         $this->load->view('welcome_message',$data);
+        $data['galleries'] = $this->gallery_model->get_review_images($this->product_id);
+
+        $this->load->view('welcome_message', $data);
     }
 
     /**

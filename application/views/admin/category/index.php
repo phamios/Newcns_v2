@@ -60,6 +60,7 @@ function deleteCate(id) {
 	var txt;
     var r = confirm("Do you want to delete this category?");
     if (r == true) {
+        
       	$.ajax({
       		url: "<?php echo $this->config->base_url().'admincp/category/delete';?>" + id,
       		type: 'POST',
