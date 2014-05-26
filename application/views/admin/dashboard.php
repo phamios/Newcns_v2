@@ -152,6 +152,12 @@
                         <?php if ($this->router->fetch_method() == 'index'): ?>
                             <?php $this->load->view('admin/config/index'); ?>
                         <?php endif; ?>                
+                        <?php if ($this->router->fetch_method() == 'create'): ?>
+                            <?php $this->load->view('admin/config/create'); ?>
+                        <?php endif; ?>
+                        <?php if ($this->router->fetch_method() == 'edit'): ?>
+                            <?php $this->load->view('admin/config/edit'); ?>
+                        <?php endif; ?>
                     <?php endif; ?>  
                     
 
