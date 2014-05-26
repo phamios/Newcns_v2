@@ -437,7 +437,7 @@ form{margin:8px
 .msg.fix{font-weight:bold;color:#f4b366}#site-footer .newsletter-register
 form.off{filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=30);opacity:0.3}#about-dt{background-color:#000}#about-dt
 .dt{height:112px;padding:34px
-0 0 181px;background:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/dt_lg.png?1374177902') no-repeat}#about-dt
+0 0 181px;background:url('') no-repeat}#about-dt
 .logo{width:178px;height:16px;margin-bottom:20px;background-position:0 -1206px;text-indent:-119988px;overflow:hidden;text-align:left;text-transform:capitalize}#about-dt
 p{width:435px;margin-top:-2px;font-size:12px;line-height:1.33333;color:gray}#footer-links{font-size:14px;line-height:2;background-color:#282828;color:#555}#footer-links
 .links{margin:-7px 0 32px 0;overflow:hidden;*zoom:1}#footer-links .links
@@ -1087,8 +1087,10 @@ img{width:87px;height:31px}#review-block .details .scorecard .widget.pricegrabbe
 td.link{width:55px;padding:15px
             0 0 10px}#review-block .details
 .testimonial{position:relative;padding:43px
-                 90px 55px 90px;font-size:18px;line-height:1.33333;background:url('/wp-content/themes/digitaltrends-2013/assets/images/bg_carbonfiber.png?1369414271') repeat}#review-block .details .testimonial .open,#review-block .details .testimonial
+                 90px 55px 90px;font-size:18px;line-height:1.33333;background:url('http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/assets/images/bg_carbonfiber.png?1369414271') repeat}#review-block .details .testimonial .open,#review-block .details .testimonial
 .close{display:absolute;position:absolute;text-indent:-119988px;overflow:hidden;text-align:left;text-transform:capitalize}#review-block .details .testimonial
 .open{width:33px;height:31px;top:30px;left:30px;background-position:0 -1345px}#review-block .details .testimonial
 .close{width:33px;height:31px;bottom:30px;right:30px;background-position:0 -1382px}body.single-review .partner-tab-text.compare,body.single-simple_review .partner-tab-text.compare,body.single-hands_on_review .partner-tab-text.compare{display:inline-block;position:relative;top:-6px;left:0;text-align:center}body.single-review .partner-tab-text.compare.samsung,body.single-simple_review .partner-tab-text.compare.samsung,body.single-hands_on_review .partner-tab-text.compare.samsung{color:#0c4f9c}body.single-review .partner-tab-text.compare.canon,body.single-simple_review .partner-tab-text.compare.canon,body.single-hands_on_review .partner-tab-text.compare.canon{color:#d40d14}body.single-review .selected .partner-tab-text.compare,body.single-simple_review .selected .partner-tab-text.compare,body.single-hands_on_review .selected .partner-tab-text.compare{color:#fff}body.single-review .partner-tab.compare .summary,body.single-simple_review .partner-tab.compare .summary,body.single-hands_on_review .partner-tab.compare
 .summary{margin-top:-40px;padding:20px;position:relative;background-color:#000}
+ 
+ 

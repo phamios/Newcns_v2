@@ -5,7 +5,6 @@ if ($this->router->class == 'rev_cate'){
     $link_router = "news";
 }
 ?>
-
 <section id="river" class="standard">
     <h1>Recent Stories</h1> 
     <!--DTC HTML CACHE HIT START-->			

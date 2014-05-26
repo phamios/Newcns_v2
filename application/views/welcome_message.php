@@ -2,7 +2,7 @@
 
 <body data-twttr-rendered="true" class="home page-id-444226 blog sticky-nav stuck-nav">
     <!--<![endif]--> 
-     
+
     <div id="main-wrap" class="dt-site-skin-wrap">
         <header id="site-header">
             <div id="top-bar">
@@ -16,27 +16,31 @@
             <?php $this->load->view('home/widget/ads'); ?>
         </div>
 
+        <?php if ($this->router->class == 'rev_cate'): ?>
+            <?php if ($this->router->fetch_method() == 'index'): ?> 
+                <?php $this->load->view('home/rev_cate/index'); ?>
+            <?php endif; ?> 
+        <?php else: ?>
+            <div id="page">
+                <div class="bb-wrap"> 
+                    <!--DTC HTML CACHE HIT START-->	 
+                    <?php if ($this->router->class == 'ky1'): ?>
+                        <?php $this->load->view('home/widget/tophotads'); ?>
+                    <?php endif; ?>
+                    <!--DTC HTML CACHE HIT STOP-->
 
-        <div id="page">
-            <div class="bb-wrap"> 
-                <!--DTC HTML CACHE HIT START-->	 
-               <?php if ($this->router->class == 'ky1'): ?>
-                <?php $this->load->view('home/widget/tophotads'); ?>
-                <?php endif;?>
-                <!--DTC HTML CACHE HIT STOP-->
-
-                <div id="primary-wrap">
-
-                    <div id="primary">
-                        <?php $this->load->view('home/router'); ?>
-                    </div>
-
-                    <aside class="sidebar-block"> 
-                        <?php $this->load->view('home/widget/widget_right'); ?> 
-                    </aside> 
-                </div> 
+                    <div id="primary-wrap"> 
+                        <div id="primary">
+                            <?php $this->load->view('home/router'); ?>
+                        </div>
+ 
+                        <aside class="sidebar-block"> 
+                            <?php $this->load->view('home/widget/widget_right'); ?> 
+                        </aside>  
+                    </div> 
+                </div>
             </div>
-        </div>
+        <?php endif; ?>
 
 
         <?php $this->load->view('home/widget/footer') ?>

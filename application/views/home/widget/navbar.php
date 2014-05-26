@@ -73,7 +73,7 @@
                 </div>
             </div>
 
-            <a class="rss" href="http://www.digitaltrends.com/feed/" title="Subscribe to our RSS Feed">
+            <a class="rss" href="#" title="Subscribe to our RSS Feed">
                 <div class="wrap">
                     <span class="icon"></span>
                 </div>

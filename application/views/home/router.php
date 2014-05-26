@@ -13,7 +13,7 @@
         <?php $this->load->view('home/review/index'); ?>
 <?php endif; ?>
 
-<?php if ($this->router->class == 'rev_cate'): ?> 
+<?php if ($this->router->class == 'rev_cate'): ?>  
         <?php $this->load->view('home/default/default'); ?> 
 <?php endif; ?>
 

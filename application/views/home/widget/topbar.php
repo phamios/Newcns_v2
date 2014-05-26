@@ -1,12 +1,12 @@
 <div class="bb-wrap">
 
-                        <div class="dt">  <img src="<?php echo base_url('res_home/logo1.png');?>" alt="<?php echo site_url();?>"/></div>
-                        <div class="logo">
-                            <img src="<?php echo base_url('res_home/newcnlogo.png');?>" alt="<?php echo site_url();?>"/>
-                            
-                        </div>
+    <div class="dt">  <img src="<?php echo base_url('res_home/54X54.PNG'); ?>" alt="<?php echo site_url(); ?>"/></div>
+    <div class="logo">
+        <img src="<?php echo base_url('res_home/178X16.PNG'); ?>" alt="<?php echo site_url(); ?>"/>
 
-                       <!-- <form id="search" method="get" action="<?php echo site_url();?>">
+    </div>
+
+                       <!-- <form id="search" method="get" action="<?php echo site_url(); ?>">
 
                             <input class="search" name="s" placeholder="Search DT" type="text">
                             <input src="<?php echo base_url('res_home/index_files'); ?>/i_search.png" alt="Search" height="11" type="image" width="11">
@@ -23,4 +23,4 @@
                             </div>
 
                         </div>	 -->				
-                    </div>
+</div>
