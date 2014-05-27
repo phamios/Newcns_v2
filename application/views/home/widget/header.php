@@ -6,7 +6,7 @@
 
         <meta charset="UTF-8">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
+
         <?php $config_custom = $this->config->item('custom'); ?>
         <title><?php echo $config_custom['meta']['title']; ?></title>
 
@@ -14,7 +14,13 @@
         <link rel="apple-touch-icon" href="<?php echo base_url('res_home/faviconnewcn c.ico'); ?>">
         <link rel="apple-touch-icon" sizes="72x72" href="<?php echo base_url('res_home/faviconnewcn c.ico'); ?>">
         <link rel="apple-touch-icon" sizes="114x114" href="<?php echo base_url('res_home/faviconnewcn c.ico'); ?>">
-        
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-title" content="<?php echo site_url();?>" />
+        <meta name="description" content="<?php echo $config_custom['meta']['description']; ?>" >
+        <meta name="keywords" content="<?php echo $config_custom['meta']['meta']; ?>" >            
+        <meta name="tt_category_id" content="1000000" />
+        <meta name="tt_article_id" content="1000000" />
+
 
         <!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.21 - http://yoast.com/wordpress/seo/ -->
         <link rel="canonical" href="<?php echo site_url(); ?>">

@@ -4,7 +4,7 @@
             <div class="dt">
                 <img src="<?php echo base_url('res_home/54X54.PNG'); ?>" alt="<?php echo site_url(); ?>"/>
                 <p><?php $config_custom = $this->config->item('custom'); ?>
-                <?php echo $config_custom['meta']['footer2']; ?></p>
+                    <?php echo $config_custom['meta']['footer2']; ?></p>
             </div>
         </div>
     </div>
@@ -16,6 +16,19 @@
                 <?php $config_custom = $this->config->item('custom'); ?>
                 <?php echo $config_custom['meta']['footer']; ?>
             </div>
+            <div class="copyright">  
+                <?php echo $config_custom['meta']['footer2']; ?>
+            </div>
+            <div class="copyright">  
+                <?php echo $config_custom['meta']['mail_support']; ?>
+            </div>
+            <div class="copyright">  
+                <?php echo $config_custom['meta']['contact_phone']; ?>
+            </div>
+
+
         </div>
     </nav>
+
+
 </footer>

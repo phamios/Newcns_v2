@@ -51,13 +51,13 @@
     <!-- Last Rendered 2014-05-11 09:32:49 -->
     <div class="widget standard latest-reviews">
 
-        <h3>Latest Reviews</h3>
+        <h3>Bài viết mới nhất</h3>
 
        <div id="new_last_get">     
            
        </div>
  
-        <a href="#" class="button flat icon more"><span>More Reviews</span></a>
+        <a href="#" class="button flat icon more"><span>Xem thêm</span></a>
 
     </div>
 
@@ -69,7 +69,7 @@
            
        </div>
 
-        <a href="#" class="button flat icon more"><span>More Features</span></a>
+        <a href="#" class="button flat icon more"><span>Xem thêm</span></a>
     </div>
 
 </aside>
