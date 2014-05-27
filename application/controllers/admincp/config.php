@@ -39,14 +39,14 @@ class Config extends CI_Controller {
             $this->load->model('config_model');
             if (isset($_REQUEST['submit_config'])) {
 
-                $option_name         = $this->input->post('name', true);
-                $option_value        = $this->input->post('value', true);
-                $config_status       = $this->input->post('status', true);
+                $option_name = $this->input->post('name', true);
+                $option_value = $this->input->post('value', true);
+                $config_status = $this->input->post('status', true);
 
                 $object = array(
-                    'option_name'   => $option_name,
-                    'option_value'  => $option_value,
-                    'option_type'   => 1,
+                    'option_name' => $option_name,
+                    'option_value' => $option_value,
+                    'option_type' => 1,
                     'option_status' => $option_status,
                 );
                 $this->config_model->add_config($object);
@@ -63,16 +63,16 @@ class Config extends CI_Controller {
             $this->load->model('config_model');
             if (isset($_REQUEST['update_config'])) {
 
-                $option_name         = $this->input->post('name', true);
-                $option_value        = $this->input->post('value', true);
-                $config_status       = $this->input->post('status', true);
+                $option_name = $this->input->post('name', true);
+                $option_value = $this->input->post('value', true);
+                $config_status = $this->input->post('status', true);
 
                 $object = array(
-                    'option_name'   => $option_name,
-                    'option_value'  => $option_value,
+                    'option_name' => $option_name,
+                    'option_value' => $option_value,
                     'option_status' => $option_status,
                 );
-                $this->config_model->update_config($id,$object);
+                $this->config_model->update_config($id, $object);
                 redirect(site_url('admincp/config/'));
             }
             $data['config'] = $this->config_model->get_config_by_id($id);
@@ -87,45 +87,87 @@ class Config extends CI_Controller {
             $this->load->model('config_model');
             if (isset($_REQUEST['update_site_config'])) {
 
-                $site_title       = $this->input->post('title', true);
-                $site_meta        = $this->input->post('meta', true);
+                $site_title = $this->input->post('title', true);
+                $site_meta = $this->input->post('meta', true);
                 $site_description = $this->input->post('description', true);
-                $site_footer      = $this->input->post('footer', true);
-                $site_footer2     = $this->input->post('footer2', true);
-                $site_fb_link     = $this->input->post('fb', true);
-                $site_tw_link     = $this->input->post('tw', true);
-                $site_gg_link     = $this->input->post('gg', true);
-                $site_support     = $this->input->post('mail', true);
-                $site_phone       = $this->input->post('phone', true);
-                $site_logo        = $this->do_upload_image('./src/admin/site/', 'logo');
-                $site_fv_icon     = $this->do_upload_image('./src/admin/site/', 'fv_icon');
+                $site_footer = $this->input->post('footer', true);
+                $site_footer2 = $this->input->post('footer2', true);
+                $site_fb_link = $this->input->post('fb', true);
+                $site_tw_link = $this->input->post('tw', true);
+                $site_gg_link = $this->input->post('gg', true);
+                $site_support = $this->input->post('mail', true);
+                $site_phone = $this->input->post('phone', true);
+                $site_logo = $this->do_upload_image('./src/admin/site/', 'logo');
+                $site_fv_icon = $this->do_upload_image('./src/admin/site/', 'fv_icon');
 
                 $object = array(
-                    'title'           => $site_title, 
-                    'meta'            => $site_meta,
-                    'description'     => $site_description,
-                    'footer'          => $site_footer,
-                    'footer2'         => $site_footer2,
-                    'facebook_link'   => $site_fb_link,
-                    'twitter_link'    => $site_tw_link,
-                    'googleplus_link' => $site_gg_link,
-                    'mail_support'    => $site_support,
-                    'contact_phone'   => $site_phone,
-                    //'logo'            => $site_logo,
-                    //'favorite_icon'   => $site_fv_icon,
+                    'title' => trim($site_title),
+                    'meta' => trim($site_meta),
+                    'description' => trim($site_description),
+                    'footer' => trim($site_footer),
+                    'footer2' => trim($site_footer2),
+                    'facebook_link' => trim($site_fb_link),
+                    'twitter_link' => trim($site_tw_link),
+                    'googleplus_link' => trim($site_gg_link),
+                    'mail_support' => trim($site_support),
+                    'contact_phone' => trim($site_phone),
                 );
+
+
+
+                
+
                 if ($site_logo <> null) {
                     $object['logo'] = $site_logo;
                 }
                 if ($site_fv_icon <> null) {
                     $object['favorite_icon'] = $site_fv_icon;
                 }
+                
+                // Xu ly add vao file config 
+                $this->write_php_ini($object, 'config.ini');
+                
+                
                 $this->config_model->update_site_config($object);
                 redirect(site_url('admincp/config/site'));
             }
             // lay du lieu config tu db 
             $data['site_config'] = $this->config_model->get_site_config();
             $this->load->view('admin/dashboard', $data);
+        }
+    }
+
+    function write_php_ini($array, $file) {
+        $res = array('[meta]');
+        foreach ($array as $key => $val) {
+            if (is_array($val)) {
+                $res[] = "[$key]";
+                foreach ($val as $skey => $sval)
+                    $res[] = "$skey = " . (is_numeric($sval) ? $sval : '"' . $sval . '"');
+            }
+            else
+                $res[] = "$key = " . (is_numeric($val) ? $val : '"' . $val . '"');
+        }
+        $this->safefilerewrite($file, implode("\r\n", $res));
+    }
+
+    
+    function safefilerewrite($fileName, $dataToSave) {
+        if ($fp = fopen($fileName, 'w')) {
+            $startTime = microtime();
+            do {
+                $canWrite = flock($fp, LOCK_EX);
+                // If lock not obtained sleep for 0 - 100 milliseconds, to avoid collision and CPU load
+                if (!$canWrite)
+                    usleep(round(rand(0, 100) * 1000));
+            } while ((!$canWrite) and ((microtime() - $startTime) < 1000));
+
+            //file was locked so now we can store information
+            if ($canWrite) {
+                fwrite($fp, $dataToSave);
+                flock($fp, LOCK_UN);
+            }
+            fclose($fp);
         }
     }
 

@@ -11,7 +11,8 @@
     <nav id="footer-links">
         <div class="bb-wrap">
             <?php $this->load->view('home/widget/link_footer');?> 
-            <div class="copyright">Copyright© 2014 Designtechnica Corporation. All rights reserved.</div>
+            <?php $config_custom = $this->config->item('custom'); ?>
+            <div class="copyright"> <?php echo $config_custom['meta']['footer']; ?></div>
         </div>
     </nav>
 </footer>

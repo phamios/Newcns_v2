@@ -10,7 +10,7 @@
 | variable so that it is blank.
 |
 */
-$config['custom'] = parse_ini_file(dirname(__FILE__).'/config.ini', true);
+$config['custom'] = parse_ini_file('config.ini', true);
 
 /*
 |--------------------------------------------------------------------------
