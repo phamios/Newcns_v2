@@ -29,7 +29,7 @@ class features extends CI_Controller {
         $this->load->model('features_model');
         $this->load->model('gallery_model');
         /// Added
-        $data['siteconfig'] = $this->config_model->get_site_config();
+        
         //// site config 
         $data['features'] = $this->features_model->getAll();
         $data['category'] = $this->category_review_model->getAll();

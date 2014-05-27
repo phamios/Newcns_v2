@@ -1,4 +1,4 @@
-<?php foreach($siteconfig as $config):?>
+ 
 <?php $this->load->view('home/widget/header'); ?>
 
 <body data-twttr-rendered="true" class="home page-id-444226 blog">
@@ -44,4 +44,4 @@
 
     <?php $this->load->view('home/widget/js_footer'); ?>
 </body></html>
-<?php endforeach;?>
+ 
