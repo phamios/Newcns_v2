@@ -5,12 +5,6 @@
             <header>
                 <div class="icons"><i class="icon-edit"></i></div>
                 <h5><?php echo $title; ?></h5>
-                <a class="cate-create" href="<?php echo site_url('admincp/review_cate/create'); ?>">Create</a>
-                <!-- <div class="toolbar">
-                    <a href="#actionTable" data-toggle="collapse" class="accordion-toggle minimize-box">
-                        <i class="icon-chevron-up"></i>
-                    </a>
-                </div> -->
             </header>
             <div id="category-list" class="body collapse in">
                 <?php if (!$model): ?>
@@ -51,7 +45,7 @@
 <script type="text/javascript">
    
     function edit(id) {
-        window.location.href = "<?php echo site_url('admin/review_cate/edit/'); ?>/" + id;
+        window.location.href = "<?php echo site_url('admincp/review_cate/edit/'); ?>/" + id;
     }
 
     function deleteCate(id) {
@@ -59,12 +53,11 @@
         var r = confirm("Do you want to delete this category?");
         if (r == true) {
             $.ajax({
-                url: "<?php echo $this->config->base_url() . 'admin/review_cate/delete'; ?>",
+                url: "<?php echo $this->config->base_url() . 'admincp/review_cate/delete'; ?>",
                 type: 'POST',
-                //dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
                 data: {id: id},
                 success: function(data) {
-                    window.location.href = "<?php echo $this->config->base_url() . 'admin/review_cate'; ?>";
+                    window.location.href = "<?php echo $this->config->base_url() . 'admincp/review_cate'; ?>";
                 }
             });
         }
