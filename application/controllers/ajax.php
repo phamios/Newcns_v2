@@ -21,41 +21,38 @@ class ajax extends CI_Controller {
     public function trend_ajax() {
         $this->load->model('review_model');
         $result = $this->review_model->get_trend();
-        foreach($result as $row){
+        foreach ($result as $row) {
             echo '<div class="item">';
-            echo '    <h4><a href="' . site_url('home/review/' . mb_strtolower(url_title($this->removesign($row->review_title . '-' . $row->id))) . '.html') . '">'.$row->review_title.'</a></h4>';
+            echo '    <h4><a href="' . site_url('home/review/' . mb_strtolower(url_title($this->removesign($row->review_title . '-' . $row->id))) . '.html') . '">' . $row->review_title . '</a></h4>';
             echo '    <span class="extra"></span>';
             echo '<span class="count">';
             echo ' <span class="icon"></span>';
-            echo  $row->review_view;											
+            echo $row->review_view;
             echo '</span>';
-            echo '    <div class="gauge standard" data-percent="'.$row->review_view.'">';
-            echo '        <span style="width: '.$row->review_view.'%"></span>';
+            echo '    <div class="gauge standard" data-percent="' . $row->review_view . '">';
+            echo '        <span style="width: ' . $row->review_view . '%"></span>';
             echo '    </div>';
             echo '</div>';
         }
     }
-    
-    
+
     public function news_hot_ajax() {
         $this->load->model('post_model');
         $result = $this->post_model->get_news_trend();
-        foreach($result as $row){
+        foreach ($result as $row) {
             echo '<div class="item">';
-            echo '    <h4><a href="' . site_url('home/news/' . mb_strtolower(url_title($this->removesign($row->post_title . '-' . $row->id))) . '.html') . '">'.$row->post_title.'</a></h4>';
+            echo '    <h4><a href="' . site_url('home/news/' . mb_strtolower(url_title($this->removesign($row->post_title . '-' . $row->id))) . '.html') . '">' . $row->post_title . '</a></h4>';
             echo '    <span class="extra"></span>';
-             echo '<span class="count">';
+            echo '<span class="count">';
             echo ' <span class="icon"></span>';
-            echo  $row->post_view;											
+            echo $row->post_view;
             echo '</span>';
-            echo '    <div class="gauge standard" data-percent="'.$row->post_view.'">';
-            echo '        <span style="width: '.$row->post_view.'%"></span>';
+            echo '    <div class="gauge standard" data-percent="' . $row->post_view . '">';
+            echo '        <span style="width: ' . $row->post_view . '%"></span>';
             echo '    </div>';
             echo '</div>';
         }
     }
-    
-    
 
     public function last_new() {
         $this->load->model('post_model');
@@ -142,8 +139,8 @@ class ajax extends CI_Controller {
             echo '<h4><a href="' . site_url('home/review/' . mb_strtolower(url_title($this->removesign($r->review_title . '-' . $r->id))) . '.html') . '" >' . $r->review_title . '</a></h4>';
             echo '</div>';
             echo '<div class="rating">';
-            $new_time = new DateTime($r->review_created); 
-            echo '<span style="font-size:9px; color:grey;">'.$new_time->format('M-d-Y').'</span>';
+            $new_time = new DateTime($r->review_created);
+            echo '<span style="font-size:9px; color:grey;">' . $new_time->format('M-d-Y') . '</span>';
             echo '</div>';
             echo '</div>';
             echo '</div>';
@@ -200,7 +197,7 @@ class ajax extends CI_Controller {
             echo '<h4><a href="' . site_url('home/news/' . mb_strtolower(url_title($this->removesign($r->post_title . '-' . $r->id))) . '.html') . '" >' . $r->post_title . '</a></h4>';
             echo '<div class="rating">';
             $new_time = new DateTime($r->post_createdate);
-            echo '<span style="font-size:9px; color:grey;">'.$new_time->format('M-d-Y').'</span>';
+            echo '<span style="font-size:9px; color:grey;">' . $new_time->format('M-d-Y') . '</span>';
             echo '</div>';
             echo '</div>';
             echo '</div>';
@@ -209,8 +206,38 @@ class ajax extends CI_Controller {
             $i = $i + 1;
         }
     }
-    
- 
+
+    /**
+     *  Get Category of Review
+     */
+    public function review_category_autoload() {
+        $this->load->model('category_review_model');
+        $rev_cate = $this->category_review_model->getAll();
+
+        echo '<li id="menu-item-505451" class="title menu-item menu-item-type-custom menu-item-object-custom menu-item-505451">Đánh giá sản phẩm</li>';
+        foreach ($rev_cate as $cate) {
+            echo '<li id="menu-item-505418" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505418">';
+            echo '        <a  href="' . site_url('home/rev_cate') . '/' . mb_strtolower(url_title($this->removesign($cate->cate_rev_name . "-" . $cate->id))) . ".html" . '"> ' . $cate->cate_rev_name . '</a>';
+            echo '</li>';
+        }
+    }
+
+    /**
+     *  Get Category of Review
+     */
+    public function news_category_autoload() {
+        $this->load->model('category_model');
+        $rev_cate = $this->category_model->getAll();
+
+        echo '<li id="menu-item-505451" class="title menu-item menu-item-type-custom menu-item-object-custom menu-item-505451">Tin tức</li>';
+        foreach ($rev_cate as $cate) {
+            echo '<li id="menu-item-411306" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-411306 menu-item-object-id-100008">';
+            echo '        <a  cateid = "' . $cate->id . '" id="a-hover2" href="' . site_url('home/news_cate') . '/' . mb_strtolower(url_title($this->removesign($cate->catename . "-" . $cate->id))) . ".html" . '"> ' . $cate->catename . '</a>';
+            echo '    </li> ';
+        }
+
+        
+    }
 
     /**
      * Remove all sign in string and change string to url

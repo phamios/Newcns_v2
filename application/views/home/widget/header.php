@@ -14,7 +14,7 @@
         <link rel="apple-touch-icon" href="<?php echo base_url('res_home/faviconnewcn c.ico'); ?>">
         <link rel="apple-touch-icon" sizes="72x72" href="<?php echo base_url('res_home/faviconnewcn c.ico'); ?>">
         <link rel="apple-touch-icon" sizes="114x114" href="<?php echo base_url('res_home/faviconnewcn c.ico'); ?>">
-
+        
 
         <!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.21 - http://yoast.com/wordpress/seo/ -->
         <link rel="canonical" href="<?php echo site_url(); ?>">

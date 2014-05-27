@@ -86,7 +86,7 @@ class post extends CI_Controller {
                     'post_type' => 1,
                     'typeid' => $_POST['type'],
                     'featureid' => $featureid,
-                    'post_description' => strip_tags($post_description, '<p>'),
+                    'post_description' => strip_tags($post_description),
                     'post_images' => $post_images,
                     'post_createdate' => date("Y-m-d H:i:s")
                 );
@@ -143,7 +143,7 @@ class post extends CI_Controller {
                         'post_type' => 1,
                         'typeid' => 1,
                         'featureid' => $featureid,
-                        'post_description' => strip_tags($post_description, '<p>'), 
+                        'post_description' => strip_tags($post_description), 
                         'post_createdate' => date("Y-m-d H:i:s")
                     );
                 } else {

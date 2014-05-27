@@ -21,6 +21,8 @@
         get_last_features();
         get_trend();
         get_news_trend();
+        review_category_autoload();
+        news_category_autoload();
 
         $(document).on('mouseover', '.sub-menu #a-hover', function(e) {
             var cateid = parseInt($(e.target).attr('cateid'));
@@ -142,6 +144,38 @@
             }
         });
     }
+    
+    function review_category_autoload(){ 
+        $.ajax({
+            url: '<?php echo site_url('ajax/review_category_autoload'); ?>',
+            type:'POST',
+            success: function(response){ 
+                $("#menu-footer-links").html(response);
+            },
+            error: function (x, status, error) {
+                alert("Error code: " + x + "\nAn error occurred: " + status + "\nError: " + error);
+            }
+        });
+    }
+    
+    function news_category_autoload(){ 
+        $.ajax({
+            url: '<?php echo site_url('ajax/news_category_autoload'); ?>',
+            type:'POST',
+            success: function(response){ 
+                $("#menu-footer-links-2").html(response);
+            },
+            error: function (x, status, error) {
+                alert("Error code: " + x + "\nAn error occurred: " + status + "\nError: " + error);
+            }
+        });
+    }
+    
+    
+    
+    
+    
+    
     
     
 </script>
