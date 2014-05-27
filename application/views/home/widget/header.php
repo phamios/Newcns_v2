@@ -6,8 +6,9 @@
 
         <meta charset="UTF-8">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-        <title>DT | Technology News, Product Reviews and More | Digital Trends</title>
+        
+        <?php $config_custom = $this->config->item('custom'); ?>
+        <title><?php echo $config_custom['meta']['title']; ?></title>
 
         <link rel="shortcut icon" href="<?php echo base_url('res_home/faviconnewcn c.ico'); ?>">
         <link rel="apple-touch-icon" href="<?php echo base_url('res_home/faviconnewcn c.ico'); ?>">

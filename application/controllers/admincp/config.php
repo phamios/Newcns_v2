@@ -123,6 +123,7 @@ class Config extends CI_Controller {
                 $this->config_model->update_site_config($object);
                 redirect(site_url('admincp/config/site'));
             }
+            // lay du lieu config tu db 
             $data['site_config'] = $this->config_model->get_site_config();
             $this->load->view('admin/dashboard', $data);
         }
