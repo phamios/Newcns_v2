@@ -14,9 +14,9 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Name</th> 
-                                <th>Category Root</th>
-                                <th>Action</th>
+                                <th>Tên</th> 
+                                <th>Category Cha</th>
+                                <th>Tùy chọn</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -50,7 +50,7 @@
 
     function deleteCate(id) {
         var txt;
-        var r = confirm("Do you want to delete this category?");
+        var r = confirm("Bạn có muốn xóa Category này không?");
         if (r == true) {
             $.ajax({
                 url: "<?php echo $this->config->base_url() . 'admincp/review_cate/delete'; ?>",
@@ -61,6 +61,5 @@
                 }
             });
         }
-        //document.getElementById("demo").innerHTML = txt;
     }
 </script>

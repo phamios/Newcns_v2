@@ -39,7 +39,6 @@ tinymce.init({
                 <!-- .toolbar -->
                 <div class="toolbar">
                     <ul class="nav">
-                        <li><a href="#">Link</a></li>
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <i class="icon-th-large"></i>
@@ -60,7 +59,7 @@ tinymce.init({
                         <?php foreach ($reviews as $review): ?>
                             <?php echo form_open_multipart('admincp/review/edit/' . $review->id, array('id' => 'review-create', 'class' => 'form-horizontal')); ?>
                             <div class="control-group">
-                                <label for="text1" class="control-label">Title<span class="require">*</span></label>
+                                <label for="text1" class="control-label">Tiêu đề<span class="require">*</span></label>
 
                                 <div class="controls with-tooltip">
                                     <input type="text" id="title" class="span10 input-tooltip" data-original-title="Please use your name" data-placement="bottom" name="title"
@@ -80,7 +79,7 @@ tinymce.init({
                             </div>
 
                             <div class="control-group">
-                                <label for="autosize" class="control-label">Specification</label>
+                                <label for="autosize" class="control-label">Đặc trưng kỹ thuật</label>
 
                                 <div class="controls">
 
@@ -89,7 +88,7 @@ tinymce.init({
                             </div>
 
                             <div class="control-group">
-                                <label for="autosize" class="control-label">Content</label>
+                                <label for="autosize" class="control-label">Nội dung</label>
 
                                 <div class="controls">
                                     <textarea class="span10" id="autosize" name="content"><?php echo $review->review_content ?></textarea>
@@ -97,7 +96,7 @@ tinymce.init({
                             </div>
 
                             <div class="control-group">
-                                <label for="limiter" class="control-label">Recommend</label>
+                                <label for="limiter" class="control-label">Khuyến cáo</label>
 
                                 <div class="controls">
                                     <textarea class="span10" id="limiter" name="recommend"><?php echo $review->review_recoment ?></textarea>
@@ -131,7 +130,7 @@ tinymce.init({
 
 
                             <div class="control-group">
-                                <label class="control-label">Status</label>
+                                <label class="control-label">Trạng thái</label>
                                 <div class="controls">
                                     <?php if ($review->review_active == 1): ?>
                                         <label>

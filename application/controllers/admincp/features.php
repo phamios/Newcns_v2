@@ -26,7 +26,6 @@ class features extends CI_Controller {
         if ($this->session->userdata('adminid') == null) {
             redirect('admincp/login');
         } else {
-            $data['title'] = "List Features";
             $this->load->model('post_model');
             $data['listcontent'] = $this->post_model->getAll_by_User_features($this->session->userdata('adminid'));
             $this->load->view('admin/dashboard', $data);
@@ -83,7 +82,6 @@ class features extends CI_Controller {
                 $this->post_model->addPost($object);
                 redirect(site_url('admincp/features/'));
             }
-            $data['title'] = "Create Feature";
             $this->load->model('user_model');
             $data['user'] = $this->user_model->getAll();
             $this->load->view('admin/dashboard', $data);
@@ -129,7 +127,6 @@ class features extends CI_Controller {
                 $this->post_model->update($object);
                 redirect(site_url('admincp/features/'));
             }
-            $data['title'] = "Update Feature";
             $data['details_features'] = $this->post_model->getDetail($this->session->userdata('adminid'), $id);
             $this->load->model('user_model');
             $data['user'] = $this->user_model->getAll();

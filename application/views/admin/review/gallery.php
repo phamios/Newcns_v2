@@ -5,7 +5,7 @@
                 <div class="span7">
                     <?php echo form_open_multipart('admincp/review/gallery/'.$review_id, array('id' => 'review-create', 'class' => 'form-horizontal')); ?>
                     <div class="control-group">
-                        <label for="text1" class="control-label">Image Upload<span class="require">*</span></label>
+                        <label for="text1" class="control-label">Upload Ảnh<span class="require">*</span></label>
                         <div class="controls">
                             <div class="fileupload fileupload-new" data-provides="fileupload">
                                 <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;"></div>

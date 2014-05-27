@@ -94,7 +94,7 @@ class post extends CI_Controller {
                 //redirect('admin/post', 'refresh');
                 redirect($this->config->base_url() . 'admincp/post/');
             }
-            $data['title'] = "Create Post";
+            $data['title'] = "Thêm mới tin";
 
             $this->load->model('category_model');
             $this->load->model('user_model');

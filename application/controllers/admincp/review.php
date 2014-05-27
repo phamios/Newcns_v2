@@ -22,7 +22,7 @@ class Review extends CI_Controller {
         if ($this->session->userdata('adminid') == null) {
             redirect('admincp/login');
         } else {
-            $data['title'] = "List Product";
+            $data['title'] = "Danh sách review";
             $this->load->model('review_model');
             
             $this->load->model('category_review_model');
@@ -65,7 +65,7 @@ class Review extends CI_Controller {
                     redirect(site_url('admincp/review/gallery/'.$review_id));
                 }
             } else {
-                $data['title'] = "Create Product Review";
+                $data['title'] = "Tạo mới review";
                 $data['features'] = $this->features_model->getAll();
                 $data['category'] = $this->category_review_model->getAll();
                 $this->load->view('admin/dashboard', $data);
@@ -118,7 +118,7 @@ class Review extends CI_Controller {
                     redirect(site_url('admincp/review/gallery/'.$id));
                 }
             } else {
-                $data['title'] = "Edit Product Review";
+                $data['title'] = "Chỉnh sửa review";
                 $data['features'] = $this->features_model->getAll();
                 $data['category'] = $this->category_review_model->getAll();
                 $data['reviews'] = $this->review_model->get_product_review_by_id($id);

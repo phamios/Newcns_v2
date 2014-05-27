@@ -37,11 +37,9 @@ tinymce.init({
         <div class="box dark">
             <header>
                 <div class="icons"><i class="icon-edit"></i></div>
-                <h5><?php echo $title; ?></h5>
-                <!-- .toolbar -->
+                <h5>Tạo mới feature</h5>
                 <div class="toolbar">
                     <ul class="nav">
-                        <li><a href="#">Link</a></li>
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <i class="icon-th-large"></i>
@@ -65,7 +63,7 @@ tinymce.init({
                     <?php echo form_open_multipart('admincp/features/create',array('class'=>'form-horizontal','id'=>'features-create')); ?>
                     
                     <div class="control-group">
-                        <label class="control-label">Type</label>
+                        <label class="control-label">Loại tin</label>
 
                         <div class="controls">
                             <select id="type" name="type">
@@ -75,7 +73,7 @@ tinymce.init({
                     </div>
                 
                     <div class="control-group">
-                        <label for="text1" class="control-label">Title<span class="require">*</span></label>
+                        <label for="text1" class="control-label">Tiêu đề<span class="require">*</span></label>
 
                         <div class="controls with-tooltip">
                             <input type="text" id="title" class="span6 input-tooltip" data-original-title="Please use post title" data-placement="bottom" name="title"/>
@@ -83,12 +81,12 @@ tinymce.init({
                     </div>
 
                     <div class="control-group">
-                        <label class="control-label">Image</label>
+                        <label class="control-label">Hình ảnh</label>
                         <div class="controls"><input type="file" name="feature_image" /></div>
                     </div>
 
                     <div class="control-group">
-                        <label for="text1" class="control-label">Description</label>
+                        <label for="text1" class="control-label">Mô tả</label>
 
                         <div class="controls with-tooltip">
                             <textarea id="description" name="post_description" name="description" class="span6"></textarea>
@@ -116,7 +114,7 @@ $(function () {
         },
         ignore: [],
         messages: {
-            title: "Please enter title",
+            title: "Hãy thêm tiêu đề cho feature!",
         },
         submitHandler: function(form) {
             editor.post();
@@ -138,7 +136,7 @@ function create (argument) {
 	if(name != '' && description != '') {
 		$("#features-create").submit();
 	}else{
-		alert("Please enter");
+		alert("!!!!!!!!!!!!!!!");
 	}
 }
 </script>

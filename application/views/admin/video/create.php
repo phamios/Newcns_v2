@@ -38,10 +38,8 @@ tinymce.init({
             <header>
                 <div class="icons"><i class="icon-edit"></i></div>
                 <h5>Tạo mới Video</h5>
-                <!-- .toolbar -->
                 <div class="toolbar">
                     <ul class="nav">
-                        <li><a href="#">Link</a></li>
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <i class="icon-th-large"></i>
@@ -65,7 +63,7 @@ tinymce.init({
                     <?php echo form_open_multipart('admincp/video/create',array('class'=>'form-horizontal','id'=>'video-create')); ?>
                     
                     <div class="control-group">
-                        <label for="text1" class="control-label">Title<span class="require">*</span></label>
+                        <label for="text1" class="control-label">Tiêu đề<span class="require">*</span></label>
 
                         <div class="controls with-tooltip">
                             <input type="text" id="title" class="span6 input-tooltip" data-original-title="Please use video title" data-placement="bottom" name="title"/>
@@ -81,7 +79,7 @@ tinymce.init({
                     </div>
 
                     <div class="control-group">
-                        <label for="text1" class="control-label">Description</label>
+                        <label for="text1" class="control-label">Miêu tả</label>
 
                         <div class="controls with-tooltip">
                             <textarea id="description" name="description" class="span6"></textarea>
@@ -89,7 +87,7 @@ tinymce.init({
                     </div>
 
                     <div class="control-group">
-                        <label class="control-label">Status</label>
+                        <label class="control-label">Trạng thái</label>
                         <div class="controls">
                             <label>
                                 <input class="uniform" type="radio" name="status" value="1" checked/>Active
@@ -120,7 +118,7 @@ function create (argument) {
 	if(name != '' && description != '') {
 		$("#video-create").submit();
 	}else{
-		alert("Please enter title");
+		alert("Hãy điền tiêu đề cho video!");
 	}
 }
 </script>
