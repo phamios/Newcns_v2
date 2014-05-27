@@ -63,23 +63,21 @@
  
 
             function deletepost(id) { 
-                var r = confirm("Do you want to delete this feature?");
+                var r = confirm("Bạn có muốn xóa feature này?");
                 if (r == true) {
                     $.ajax({
                         url: "<?php echo $this->config->base_url() . 'admincp/features/delete'; ?>",
                         type: 'POST',
-                        //dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
                         data: {id: id},
                         success: function(data) {
                             window.location.href = "<?php echo $this->config->base_url() . 'admincp/features'; ?>";
                         }
                     });
                 }
-                //document.getElementById("demo").innerHTML = txt;
             }
 
             function sethot(id) { 
-                var r = confirm("Do you want to set hot this feature?");
+                var r = confirm("Bạn có muốn thiết lập hot cho feature này?");
                 if (r == true) {
                     $.ajax({
                         url: "<?php echo site_url('admincp/features/hot/'); ?>/" + id,
@@ -91,6 +89,5 @@
                         }
                     });
                 }
-                //document.getElementById("demo").innerHTML = txt;
             }
         </script>

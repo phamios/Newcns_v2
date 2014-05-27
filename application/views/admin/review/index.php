@@ -5,29 +5,24 @@
             <header>
                 <div class="icons"><i class="icon-edit"></i></div>
                 <h5><?php echo $title; ?></h5>
-                <!-- <div class="toolbar">
-                    <a href="#actionTable" data-toggle="collapse" class="accordion-toggle minimize-box">
-                        <i class="icon-chevron-up"></i>
-                    </a>
-                </div> -->
             </header>
             <div id="category-list" class="body collapse in">
                 <?php if(!$model): ?>
-                    <?php echo "No products"; ?>
+                    <?php echo "Không có sản phẩm nào"; ?>
                 <?php else: ?>
                     <table class="table table-bordered responsive">
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Cate ID</th>
+                                <th>Category ID</th>
                                 <th>User ID</th>
-                                <th>Title</th>
-                                <th>Created</th>
-                                <th>Score</th>
-                                <th>Views</th>
+                                <th>Tiêu đề</th>
+                                <th>Ngày tạo</th>
+                                <th>Điểm đánh giá</th>
+                                <th>Lượt xem</th>
                                 <th>Like</th>
-                                <th>Status</th>
-                                <th>Option</th>
+                                <th>Trạng thái</th>
+                                <th>Tùy chọn</th>
                             </tr>
                         </thead>
                         <tbody>

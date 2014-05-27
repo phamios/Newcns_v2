@@ -22,7 +22,7 @@ class category extends CI_Controller {
         if ($this->session->userdata('adminid') == null) {
             redirect('admincp/login');
         } else {
-            $data['title'] = "List Category";
+            $data['title'] = "Danh sách Category";
             $this->load->model('category_model');
             $data['model'] = $this->category_model->getAll();
             $this->load->view('admin/dashboard', $data);
@@ -35,7 +35,6 @@ class category extends CI_Controller {
         } else {
             if (isset($_POST['name'])) {
                 $this->load->model('category_model');
-                //$this->category_model->query("INSERT ")
                 if (isset($_POST['image'])) {
                     $image = $_POST['image'];
                 } else {
@@ -47,10 +46,9 @@ class category extends CI_Controller {
                     'cateimages' => $image
                 );
                 $this->db->insert('tbl_category', $insert);
-                //redirect('admin/category', 'refresh');
                 redirect($this->config->base_url() . 'admincp/category/');
             } else {
-                $data['title'] = "Create Category";
+                $data['title'] = "Tạo mới Category";
                 $this->load->model('category_model');
                 $data['category'] = $this->category_model->getAll();
                 $this->load->view('admin/dashboard', $data);
@@ -94,7 +92,7 @@ class category extends CI_Controller {
             } else {
                 $data['edit'] = 0;
                 $data['id'] = $id;
-                $data['title'] = "Edit Category";
+                $data['title'] = "Chỉnh sửa Category";
                 $this->load->model('category_model');
                 $data['model'] = $this->category_model->getDetail($id);
                 $data['model'] = $data['model'][0];

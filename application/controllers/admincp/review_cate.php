@@ -19,7 +19,7 @@ class review_cate extends CI_Controller {
     }
 
     public function index() {
-        $data['title'] = "List Category of Review";
+        $data['title'] = "Danh sách Category Review";
         $this->load->model('category_review_model');
         $data['model'] = $this->category_review_model->getAll();
         $this->load->view('admin/dashboard', $data);
@@ -38,7 +38,7 @@ class review_cate extends CI_Controller {
 
             redirect('admincp/review_cate');
         } else {
-            $data['title'] = "Create Category";
+            $data['title'] = "Tạo mới Category";
             $this->load->model('category_review_model');
             $data['category'] = $this->category_review_model->getAll();
             $this->load->view('admin/dashboard', $data);
@@ -69,7 +69,7 @@ class review_cate extends CI_Controller {
         }
         $data['edit'] = 0; 
         $data['id'] = $id;
-        $data['title'] = "Edit Category";
+        $data['title'] = "Chỉnh sửa Category";
         $data['detailscate'] = $this->category_review_model->getDetail($id);
         $data['category'] = $this->category_review_model->getAll();
         $this->load->view('admin/dashboard', $data);

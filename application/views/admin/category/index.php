@@ -5,12 +5,6 @@
             <header>
                 <div class="icons"><i class="icon-edit"></i></div>
                 <h5><?php echo $title; ?></h5>
-                <a class="cate-create" href="<?php echo $this->config->base_url().'admincp/category/create';?>">Create</a>
-                <!-- <div class="toolbar">
-                    <a href="#actionTable" data-toggle="collapse" class="accordion-toggle minimize-box">
-                        <i class="icon-chevron-up"></i>
-                    </a>
-                </div> -->
             </header>
             <div id="category-list" class="body collapse in">
             	<?php if(!$model): ?>
@@ -20,10 +14,10 @@
 	                    <thead>
 	                        <tr>
 	                            <th>ID</th>
-	                            <th>Name</th>
-	                            <th>Image</th>
-	                            <th>Category Root</th>
-	                            <th>Action</th>
+	                            <th>Tên</th>
+	                            <th>Hình ảnh</th>
+	                            <th>Category Cha</th>
+	                            <th>Tùy chọn</th>
 	                        </tr>
 	                    </thead>
 	                    <tbody>

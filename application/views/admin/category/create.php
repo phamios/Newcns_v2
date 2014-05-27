@@ -7,7 +7,6 @@
                 <!-- .toolbar -->
                 <div class="toolbar">
                     <ul class="nav">
-                        <li><a href="#">Link</a></li>
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <i class="icon-th-large"></i>
@@ -30,22 +29,22 @@
             <div id="div-1" class="accordion-body collapse in body">
                 <form class="form-horizontal" id="category-create" action="<?php echo site_url('admincp/category/create');?>" method="post">
                     <div class="control-group">
-                        <label for="text1" class="control-label">Name<span class="require">*</span></label>
+                        <label for="text1" class="control-label">Tên Category<span class="require">*</span></label>
 
                         <div class="controls with-tooltip">
                             <input type="text" id="name" class="span6 input-tooltip" data-original-title="Please use your name" data-placement="bottom" name="name"/>
                         </div>
                     </div>
                     <div class="control-group">
-                        <label class="control-label">Image</label>
+                        <label class="control-label">Hình ảnh</label>
                         <div class="controls"><input type="file" name="image" /></div>
                     </div>
                     <div class="control-group">
-                        <label class="control-label">Category Root</label>
+                        <label class="control-label">Category cha</label>
 
                         <div class="controls">
                             <select id="cate-root" name="cate-root">
-                                <option value="0">No Category Root</option>
+                                <option value="0">Không có Category cha</option>
                                 <?php foreach($category as $row): ?>
                                 <option value="<?php echo $row->id; ?>"><?php echo $row->catename ?></option>
                             	<?php endforeach; ?>
@@ -55,7 +54,7 @@
 
                     <div class="form-actions">
                         <input type="reset" value="Reset" id="back" class="navigation_button btn">
-                        <input type="button" onclick="create()" value="Create" id="next" class="navigation_button btn btn-primary">
+                        <input type="button" onclick="create()" value="Tạo mới" id="next" class="navigation_button btn btn-primary">
                     </div>
                 </form>
             </div>

@@ -43,7 +43,6 @@ tinymce.init({
                 <!-- .toolbar -->
                 <div class="toolbar">
                     <ul class="nav">
-                        <li><a href="#">Link</a></li>
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <i class="icon-th-large"></i>
@@ -67,7 +66,7 @@ tinymce.init({
                     <?php echo form_open_multipart('admincp/post/create',array('class'=>'form-horizontal','id'=>'post-create')); ?>
                     
                     <div class="control-group">
-                        <label class="control-label">Type</label>
+                        <label class="control-label">Loại tin</label>
 
                         <div class="controls">
                             <select id="type" name="type">
@@ -77,7 +76,7 @@ tinymce.init({
                     </div>
                 
                     <div class="control-group">
-                        <label for="text1" class="control-label">Title<span class="require">*</span></label>
+                        <label for="text1" class="control-label">Tiêu đề<span class="require">*</span></label>
 
                         <div class="controls with-tooltip">
                             <input type="text" id="title" class="span6 input-tooltip" data-original-title="Please use post title" data-placement="bottom" name="title"/>
@@ -85,7 +84,7 @@ tinymce.init({
                     </div>
 
                     <div class="control-group">
-                        <label class="control-label">Image</label>
+                        <label class="control-label">Hình ảnh</label>
                         <div class="controls"><input type="file" name="post_image" /></div>
                     </div>
 
@@ -94,7 +93,7 @@ tinymce.init({
 
                         <div class="controls">
                             <select id="post-category" name="category">
-                                <option value="">No select</option>
+                                <option value="">KHông chọn</option>
                                 <?php foreach($category as $row): ?>
                                 <option value="<?php echo $row->id; ?>"><?php echo $row->catename ?></option>
                                 <?php endforeach; ?>
@@ -104,7 +103,7 @@ tinymce.init({
                     
  
                     <div class="control-group">
-                        <label for="text1" class="control-label">Description</label>
+                        <label for="text1" class="control-label">Miêu tả</label>
 
                         <div class="controls with-tooltip">
                             <textarea id="description" name="post_description" name="description" class="span6"></textarea>
