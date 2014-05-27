@@ -49,7 +49,7 @@ class review_cate extends CI_Controller {
         if ($this->input->is_ajax_request()) {
             $id = $_POST['id'];
             $this->load->model('category_review_model');
-            $delete = $this->category_review_model->delete($id);
+            $this->category_review_model->delete($id);
         }
     }
 
