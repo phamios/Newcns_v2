@@ -33,6 +33,10 @@
                 <li id="menu-item-552394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-552394">
                     <a href="#">Deals</a>
                 </li>
+                
+                <li id="menu-item-552394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-552394">
+                    <a href="#">Quà tặng</a>
+                </li>
             </ul>
             <!--DTC HTML CACHE HIT STOP-->
         </nav>

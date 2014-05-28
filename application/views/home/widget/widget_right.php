@@ -64,7 +64,7 @@
     <!-- Last Rendered 2014-05-10 03:00:56 -->
     <div class="widget standard latest-posts">
 
-        <h3>Latest Features</h3>
+        <h3>Đặc trưng</h3>
         <div id="features_last_get">     
            
        </div>
