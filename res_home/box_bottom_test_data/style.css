@@ -1,0 +1,119 @@
+@charset "utf-8";
+/* CSS Document */
+
+/************************************************************************************
+RESET
+*************************************************************************************/
+*{margin:0; padding:0; list-style:none; outline:none; font-family: Arial, Helvetica, sans-serif; font-size:12px;}
+img, fieldset { border: 0;}
+body { background:white; color: #666;}
+a { color: #004376; text-decoration: none;}
+p { line-height:17px;}
+ul, ol { list-style:none outside none;}
+li { display:inline;}
+h1,h2,h3,h4,h5,h6 { font-size:100%; font-weight:normal;}
+table { border-collapse: collapse; border-spacing: 0;}
+textarea { border: 1px solid #bbb; color: #777; font-family: Arial,Helvetica,sans-serif; font-size:12px;}
+select { border: 1px solid #ccc; width: 130px;}
+
+.pkg:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+@font-face {
+  font-family: 'UTM_Avo_B';
+  src: url('fonts/UTM_AvoBold.eot');
+  src: local('☺'),
+  url('fonts/UTM_AvoBold.ttf') format('truetype'),
+  url('fonts/UTM_AvoBold.woff') format('woff'),
+  url('fonts/UTM_AvoBold.svg#UTM_AvoBold') format('svg');
+}
+@font-face {
+  font-family: 'UVNTinTucHep_B';
+  src: url('fonts/UVNTinTucHep_B.eot');
+  src: local('☺'),
+  url('fonts/UVNTinTucHep_B.ttf') format('truetype'),
+  url('fonts/UVNTinTucHep_B.woff') format('woff'),
+  url('fonts/UVNTinTucHep_B.svg#UVNTinTucHep_B') format('svg');
+}
+
+
+/************************************************************************************
+MAIN
+*************************************************************************************/
+
+.jcarousel-skin-tango { background:#f6f6f6; padding: 15px; position:relative;}
+.jcarousel-skin-tango .jcarousel-container-horizontal { width: 100%;}
+.jcarousel-skin-tango .jcarousel-clip { overflow: hidden;}
+.jcarousel-skin-tango .jcarousel-item { float:left; width: 169px; height:259px; background:white; margin-right:12px; padding:9px;}
+.title-common { border-bottom:1px dotted #c2c2c2; padding: 15px 15px 3px;}
+.title {
+    background: url("black-arrow_03.png") no-repeat scroll right 5px rgba(0, 0, 0, 0);
+    color: #0B6098;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    padding-right: 13px;
+    text-transform: uppercase;
+}
+.jcarousel-skin-tango li { float:left; width: 169px; height:259px; background:white; margin-right:12px; padding:9px;}
+.thumb168x115 { width:168px; height:115px; display:block; overflow:hidden; margin-bottom: 8px;}
+.caption { color:#333; font-weight:bold; line-height:16px; display:block; margin-bottom: 10px; width: 168px; max-height: 31px; overflow: hidden; font-size:14px;}
+.caption:hover { text-decoration:underline;}
+.jcarousel-skin-tango p { color:#888; height: 50px; overflow: hidden; width: 160px;}
+.logo { bottom: 7px; position: absolute; width: 169px;}
+.logo a { display: block; margin: auto; width: 130px;}
+.jcarousel-skin-tango .jcarousel-prev-horizontal { 
+	background:url("ar.png") no-repeat scroll -34px 0 rgba(0, 0, 0, 0); 
+	width:16px; height:15px; 
+	display:block; 
+	text-indent:-999em; 
+	position:absolute; 
+	right: 19px; 
+	top: -36px;
+	cursor:pointer;
+}
+.jcarousel-skin-tango .jcarousel-next-horizontal { 
+	background:url("ar.png") no-repeat scroll -17px 0 rgba(0, 0, 0, 0);
+	width:16px; height:15px; 
+	display:block; 
+	text-indent:-999em; 
+	position:absolute; 
+	right: 0; 
+	top: -36px;
+	cursor:pointer;
+}
+.jcarousel-skin-tango .jcarousel-prev-horizontal:active, .jcarousel-skin-tango .jcarousel-next-horizontal:active { margin-top:1px;}
+
+/* DOI SONG PHAP LUAT */
+.dspl .title { font-family:UTM_Avo_B; color:#0b6098; font-size:22px; background:url("blue-arrow_03.png") no-repeat scroll right 9px rgba(0, 0, 0, 0); padding-right: 27px; font-weight: normal;}
+.dspl .jcarousel-skin-tango .jcarousel-item { margin-right: 14px;}
+
+/* NGUOI DUA TIN */
+.ndt .title { font-family:UVNTinTucHep_B; color:#0b6098; font-size:22px; padding: 0 15px 0 12px;  padding: 0 15px 0 9px; background-position: right 11px; font-weight: normal;}
+.ndt .jcarousel-skin-tango .jcarousel-item { margin-right: 14px;}
+
+/* EDAILY */
+.edaily .title { font-size:20px; color:black; background:url("red-arrow_07.png") no-repeat scroll right 8px rgba(0, 0, 0, 0);}
+.edaily .title span { font-size:20px; color:#d91f1f;}
+.edaily .title-common { padding:15px 15px 3px 0;}
+.edaily .jcarousel-skin-tango { padding:15px 0;}
+
+/* THETHAO247 */
+.tt247 .title { font-size:18px;}
+.tt247 .jcarousel-skin-tango .jcarousel-item { margin-right: 10px;}
+
+/* SEATIMES */
+.st .title { background: url("gray-cross.png") no-repeat scroll right center rgba(0, 0, 0, 0); color: #124177; font-size: 18px; padding: 0 30px 0 0; text-transform: none;}
+.st .title-common { border-bottom: 1px solid #ddd;}
+.st .jcarousel-skin-tango { padding: 15px 2px 15px 10px;}
+.st .jcarousel-skin-tango .jcarousel-container-horizontal { margin-left: -8px;}
+.st .jcarousel-skin-tango .jcarousel-item { margin: 0 0 0 7px;}
+.st .jcarousel-skin-tango .jcarousel-next-horizontal { right: 8px;}
+.st .jcarousel-skin-tango .jcarousel-prev-horizontal { right:27px;}
+

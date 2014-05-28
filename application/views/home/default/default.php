@@ -27,7 +27,7 @@ if ($this->router->class == 'rev_cate'){
             </h3>
 
             <p>
-                <?php echo word_limiter($content->post_description, 40); ?>
+                <?php echo strip_tags(word_limiter($content->post_description, 40)); ?>
             </p>
 
             <div class="byline">

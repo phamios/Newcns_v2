@@ -17,6 +17,22 @@ class ajax extends CI_Controller {
         $this->load->helper(array('form', 'url'));
         @session_start();
     }
+	
+	public function get_footer(){
+		$this->load->model('config_model');
+		$footers = $this->config_model->get_site_config();
+		foreach($footers as $footer){
+			echo $footer->footer;
+		}
+	}
+	
+	public function get_logoheader(){
+		$this->load->model('config_model');
+		$footers = $this->config_model->get_site_config();
+		foreach($footers as $footer){
+			echo '<img src="'.base_url('src/admin/site/'.$footer->logo).'"  />';
+		}
+	}
 
     public function trend_ajax() {
         $this->load->model('review_model');

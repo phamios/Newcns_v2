@@ -76,9 +76,9 @@ class post extends CI_Controller {
                 $userid = $this->session->userdata('adminid');
                 $post_type = $this->input->post('type', true);
                 $featureid = $this->input->post('feature', true);
-                $post_description = $this->input->post('post_description', true);
+                $post_description = $this->input->post('post_description');
                 $post_images = $this->do_upload_image('./src/post/', 'post_image');
-                
+            
                 $object = array(
                     'post_title' => $title,
                     'cateid' => $category,
@@ -131,8 +131,12 @@ class post extends CI_Controller {
                 $userid = $this->session->userdata('adminid');
                 $post_type = $this->input->post('type', true);
                 $featureid = $this->input->post('feature', true);
-                $post_description = $this->input->post('post_description', true);
+                $post_description = $this->input->post('post_description');
                 $post_images = $this->do_upload_image('./src/post/', 'post_image');
+                
+                
+                 $newdes = strip_tags($post_description);
+                
                 
                 if (strlen($post_images) <= 0 ) {
                     $object = array(
@@ -143,7 +147,7 @@ class post extends CI_Controller {
                         'post_type' => 1,
                         'typeid' => 1,
                         'featureid' => $featureid,
-                        'post_description' => $post_description, 
+                        'post_description' => $newdes,
                         'post_createdate' => date("Y-m-d H:i:s")
                     );
                 } else {
@@ -156,7 +160,7 @@ class post extends CI_Controller {
                         'post_type' => 1,
                         'typeid' => 1,
                         'featureid' => $featureid,
-                        'post_description' => strip_tags($post_description, '<p>'), 
+                        'post_description' => $newdes,
                         'post_createdate' => date("Y-m-d H:i:s"),
                         'post_images' =>$post_images,
                     );

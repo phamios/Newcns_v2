@@ -1,6 +1,9 @@
 <div class="bb-wrap">
 <?php $config_custom = $this->config->item('custom'); ?> 
-    <a href="<?php echo site_url(); ?>"><div class="dt"><img src="<?php echo base_url('src/admin/site/'.$config_custom['meta']['logo']); ?>" alt="<?php echo site_url(); ?>"/></div></a>
+    <a href="<?php echo site_url(); ?>">
+		<div class="dt" id="logosite">
+		
+	</div></a>
     <div class="logo">
         <img src="<?php echo base_url('res_home/178X16.PNG'); ?>" alt="<?php echo site_url(); ?>"/>
 

@@ -90,7 +90,7 @@ class Config extends CI_Controller {
                 $site_title = $this->input->post('title', true);
                 $site_meta = $this->input->post('meta', true);
                 $site_description = $this->input->post('description', true);
-                $site_footer = $this->input->post('footer', true);
+                $site_footer = $this->input->post('footer');
                 $site_footer2 = $this->input->post('footer2', true);
                 $site_fb_link = $this->input->post('fb', true);
                 $site_tw_link = $this->input->post('tw', true);
@@ -112,20 +112,32 @@ class Config extends CI_Controller {
                     'mail_support' => trim($site_support),
                     'contact_phone' => trim($site_phone),
                 );
+				
+				$data = array(
+                    'title' => trim($site_title),
+                    'meta' => trim($site_meta),
+                    'description' => trim($site_description),
+                    'footer2' => trim($site_footer2),
+                    'facebook_link' => trim($site_fb_link),
+                    'twitter_link' => trim($site_tw_link),
+                    'googleplus_link' => trim($site_gg_link),
+                    'mail_support' => trim($site_support),
+                    'contact_phone' => trim($site_phone),
+                );
 
 
 
                 
 
-                if ($site_logo <> null) {
+                if (strlen($site_logo) > 0) {
                     $object['logo'] = $site_logo;
                 }
-                if ($site_fv_icon <> null) {
+                if (strlen($site_fv_icon)> 0 ) {
                     $object['favorite_icon'] = $site_fv_icon;
                 }
                 
                 // Xu ly add vao file config 
-                $this->write_php_ini($object, 'config.ini');
+                $this->write_php_ini($data, 'config.ini');
                 
                 
                 $this->config_model->update_site_config($object);

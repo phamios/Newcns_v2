@@ -12,7 +12,7 @@ tinymce.init({
         toolbar2: "cut copy paste | searchreplace | bullist numlist | outdent indent blockquote | undo redo | link unlink anchor image media code | inserttime preview | forecolor backcolor",
         toolbar3: "table | hr removeformat | subscript superscript | charmap emoticons | print fullscreen | ltr rtl | spellchecker | visualchars visualblocks nonbreaking template pagebreak restoredraft",
 
-        menubar: false,
+        menubar: true,
         toolbar_items_size: 'small',
 
         style_formats: [
@@ -25,10 +25,7 @@ tinymce.init({
                 {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
         ],
 
-        templates: [
-                {title: 'Test template 1', content: 'Test 1'},
-                {title: 'Test template 2', content: 'Test 2'}
-        ]
+        
 });</script>
 
 
@@ -106,8 +103,8 @@ tinymce.init({
                         <label for="text1" class="control-label">Miêu tả</label>
 
                         <div class="controls with-tooltip">
-                            <textarea id="description" name="post_description" name="description" class="span6"></textarea>
-                            <!-- <input type="text" id="description" class="span6 input-tooltip" data-original-title="Please use post title" data-placement="bottom" name="description"/> -->
+							<?php $config_custom = $this->config->item('custom');?>
+                            <textarea id="description" name="post_description" name="description" class="span6"> ( <?php echo $config_custom['meta']['title']?> ) -  </textarea>
                         </div>
                     </div>
 
@@ -168,29 +165,4 @@ function create (argument) {
 	}
 }
 </script>
-<script>
-new TINY.editor.edit('editor',{
-    id: 'description',
-    width: '584',
-    height: 175,
-    cssclass: 'tinyeditor',
-    controlclass: 'tinyeditor-control',
-    rowclass: 'tinyeditor-header',
-    dividerclass: 'tinyeditor-divider',
-    controls: ['bold', 'italic', 'underline', 'strikethrough', '|', 'subscript', 'superscript', '|',
-        'orderedlist', 'unorderedlist', '|', 'outdent', 'indent', '|', 'leftalign',
-        'centeralign', 'rightalign', 'blockjustify', '|', 'unformat', '|', 'undo', 'redo', 'n',
-        'font', 'size', 'style', '|', 'image', 'hr', 'link', 'unlink', '|', 'print'],
-    footer: true,
-    fonts: ['Verdana','Arial','Georgia','Trebuchet MS'],
-    xhtml: true,
-    cssfile: 'custom.css',
-    bodyid: 'editor',
-    footerclass: 'tinyeditor-footer',
-    toggle: {text: 'source', activetext: 'wysiwyg', cssclass: 'toggle'},
-    resize: {cssclass: 'resize'}
-});
-</script>
-<script type="text/javascript">
-
-</script>
+ 

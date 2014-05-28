@@ -1,11 +1,7 @@
-
-
-
+ 
 <script type="text/javascript" src="<?php echo base_url('res_home/index_files'); ?>/dt-optimized-head-js-b01f1491305a136a71d8987915470f03.js"></script>
 
-<!--Begin Define GPT Ad Slots-->
-
-
+<!--Begin Define GPT Ad Slots--> 
 <!-- DT Variables (digitaltrends-2013/functions.php) -->
 <script type="text/javascript">var ajaxurl="http://www.digitaltrends.com/wp-content/themes/digitaltrends-2013/ajax-actions.php";var ord=Math.random()*10000000000000000;</script>
 <!-- End DT Variables -->
@@ -23,6 +19,8 @@
         get_news_trend();
         review_category_autoload();
         news_category_autoload();
+		get_footer();
+		get_logosite();
 
         $(document).on('mouseover', '.sub-menu #a-hover', function(e) {
             var cateid = parseInt($(e.target).attr('cateid'));
@@ -171,6 +169,35 @@
         });
     }
     
+    function get_footer(){ 
+        $.ajax({
+            url: '<?php echo site_url('ajax/get_footer'); ?>',
+            type:'POST',
+            success: function(response){ 
+                $("#footer_ajax").html(response);
+            },
+            error: function (x, status, error) {
+                alert("Error code: " + x + "\nAn error occurred: " + status + "\nError: " + error);
+            }
+        });
+    }
+	
+    function get_logosite(){ 
+        $.ajax({
+            url: '<?php echo site_url('ajax/get_logoheader'); ?>',
+            type:'POST',
+            success: function(response){ 
+                $("#logosite").html(response);
+            },
+            error: function (x, status, error) {
+                alert("Error code: " + x + "\nAn error occurred: " + status + "\nError: " + error);
+            }
+        });
+    }
+	
+	
+	
+	
     
     
     
