@@ -59,6 +59,16 @@
 </li>
 
 <li class="accordion-group">
+    <a data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-gift">
+        <i class="icon-tasks icon-large"></i> Quà tặng <span class="label label-inverse pull-right"></span>
+    </a>
+    <ul class="collapse" id="component-nav-gift">
+        <li><a href="<?php echo base_url('admincp/gift') ?>"><i class="icon-angle-right"></i> Danh sách quà tặng  </a></li>
+        <li><a href="<?php echo base_url('admincp/gift/create') ?>"><i class="icon-angle-right"></i> Thêm mới quà tặng</a></li>
+    </ul>
+</li>
+
+<li class="accordion-group">
     <a data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-config">
         <i class="icon-tasks icon-large"></i> Cấu hình <span class="label label-inverse pull-right"></span>
     </a>

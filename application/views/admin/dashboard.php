@@ -137,6 +137,18 @@
                         <?php endif; ?>
                     <?php endif; ?>
 
+                    <?php if ($this->router->class == 'gift'): ?>
+                        <?php if ($this->router->fetch_method() == 'index'): ?>
+                            <?php $this->load->view('admin/gift/index'); ?>
+                        <?php endif; ?>
+                        <?php if ($this->router->fetch_method() == 'create'): ?>
+                            <?php $this->load->view('admin/gift/create'); ?>
+                        <?php endif; ?>
+                        <?php if ($this->router->fetch_method() == 'edit'): ?>
+                            <?php $this->load->view('admin/gift/edit'); ?>
+                        <?php endif; ?>
+                    <?php endif; ?>
+
                     <?php if ($this->router->class == 'profile'): ?>
                         <?php if ($this->router->fetch_method() == 'index'): ?>
                             <?php $this->load->view('admin/profile/index'); ?>
