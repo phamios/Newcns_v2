@@ -38,7 +38,7 @@
                                                 <?php echo $row->gift_content ?>
                                             </td>
                                             <td>
-                                                <?php echo $row->gift_video ?>
+                                              <img src="<?php echo base_url('src/gift/thumb_'.$row->gift_image);?>" />
                                             </td>
                                             <td>
                                                 <a class="btn edit" href="<?php echo site_url('admincp/gift/edit/' . $row->id); ?>"><i class="icon-edit"></i></a>

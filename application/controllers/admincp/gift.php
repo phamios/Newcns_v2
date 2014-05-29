@@ -42,7 +42,7 @@ class Gift extends CI_Controller {
                 $gift_title   = $this->input->post('title', true);
                 $gift_link    = $this->input->post('link', true);
                 $gift_content = $this->input->post('content'); 
-                $gift_image = $this->do_upload_image('./src/gift/', 'post_image');
+                $gift_image = $this->do_upload_image('./src/gift/', 'gift_image');
                 $timestart = $this->input->post('gift_start',true);
                 $timeend = $this->input->post('gift_end',true);
                 $phonesupport = $this->input->post('phonesupport',true);
