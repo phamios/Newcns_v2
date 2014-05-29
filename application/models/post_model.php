@@ -200,7 +200,7 @@ class post_model extends CI_Model {
 
     function get_all_features() {
         $this->db->order_by('id', 'DESC');
-        $this->db->where('typeid', 2);
+        $this->db->where('post_type', 2);
         $query = $this->db->get('tbl_post');
         return $query->result();
     }
