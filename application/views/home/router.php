@@ -26,9 +26,12 @@
 <?php endif; ?>
 
 <?php if ($this->router->class == 'features'): ?>  
-        <?php $this->load->view('home/review/features'); ?> 
+        <?php $this->load->view('home/features/index'); ?> 
 <?php endif; ?>
 
+<?php if ($this->router->class == 'features_cate'): ?>  
+        <?php $this->load->view('home/features_cate/index'); ?> 
+<?php endif; ?>
 
 <?php if ($this->router->class == 'news_cate'): ?> 
         <?php $this->load->view('home/default/default'); ?> 
