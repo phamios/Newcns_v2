@@ -5,6 +5,5 @@
         <div style="border: 0pt none;" id="google_ads_iframe_/5611/dt.dgt.www/home-page_0__container__">
             <a href="<?php echo site_url();?>"><img src="http://vmob.vn/themes/home/vmob_v1/images/hero-bg.png" width="800px" alt="<?php echo site_url();?>"/></a>
         </div>
-         
     </div>
 </div>
