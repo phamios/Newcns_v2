@@ -4,7 +4,7 @@
             <!--DTC HTML CACHE HIT START-->
             <ul id="menu-primary-navigation-2013" class="menu">
                 <li id="menu-item-411326" class="sub menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-411326">
-                    <a href="#">Sản phẩm</a>
+                    <a href="#">Đánh giá</a>
                      
                     <div class="mega-wrap">
                         <div id="rev_cate">
@@ -27,7 +27,7 @@
                 </li>
 
                 <li id="menu-item-520473" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-520473 menu-item-object-id-19">
-                    <a href="#">Đặc trưng</a>
+                    <a href="#">Shop</a>
                 </li>
 
                 <li id="menu-item-552394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-552394">
