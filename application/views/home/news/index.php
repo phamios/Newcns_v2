@@ -14,7 +14,7 @@
                         <span typeof="v:Breadcrumb">
                             <?php foreach ($category as $cate): ?>
                                 <?php if ($cate->id == $content->cateid): ?> 
-                                        <a href="<?php echo site_url('home/news_cate/' . mb_strtolower(url_title(removesign($cate->catename . "-" . $cate->id))) . ".html"); ?>" rel="v:url" property="v:title"><?php echo $cate->catename ?></a>
+                                    <a href="<?php echo site_url('home/news_cate/' . mb_strtolower(url_title(removesign($cate->catename . "-" . $cate->id))) . ".html"); ?>" rel="v:url" property="v:title"><?php echo $cate->catename ?></a>
                                 <?php endif; ?>
                             <?php endforeach; ?>
                         </span> 
@@ -212,12 +212,15 @@
                             </div> 
                         </section> 
                     </section> 
+                    
+                    <div class="fb-comments" data-href="<?php echo site_url('home/news/' . mb_strtolower(url_title(removesign($content->post_title . "-" . $content->id))) . ".html"); ?>" data-numposts="10" data-colorscheme="light"></div>
                 </div> 
             </div> 
         </div> 
     <?php endforeach; ?>
 <?php endif; ?>
 
+ 
 
 <?php
 

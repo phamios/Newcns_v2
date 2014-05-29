@@ -356,7 +356,7 @@
 
                     <section id="comments" data-post-id="577537" data-comments-open="1" data-comments-order="desc" data-user-reviews="1">
 
-
+                            <div class="fb-comments" data-href="<?php echo site_url('home/review/' . mb_strtolower(url_title(removesign($rev->review_title . "-" . $rev->id))) . ".html"); ?>" data-numposts="10" data-colorscheme="light"></div>
                     </section>
 
 

@@ -62,6 +62,7 @@
                        <p><?php echo $rev->review_specific; ?></p>  
                 </div> 
             </div> 
+            <div class="fb-comments" data-href="<?php echo site_url('home/features/' . mb_strtolower(url_title(removesign($rev->review_title . "-" . $rev->id))) . ".html"); ?>" data-numposts="10" data-colorscheme="light"></div>
         </div> 
     </div>
     <?php endforeach; ?>

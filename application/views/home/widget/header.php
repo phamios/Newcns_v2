@@ -42,6 +42,28 @@
         <?php $this->load->view('home/widget/js_header'); ?>
 
     </head>
+    
+    
+     <script>
+      window.fbAsyncInit = function() {
+        FB.init({ 
+          xfbml      : true,
+          version    : 'v2.0'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+    
+    
+    
+    
 
     <!--[if lt IE 7]> <body class="ie6 ie home page-id-444226 blog"> <![endif]-->
     <!--[if IE 7]>    <body class="ie7 ie home page-id-444226 blog"> <![endif]-->
