@@ -32,11 +32,11 @@
 
 <li class="accordion-group">
     <a data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-features">
-        <i class="icon-tasks icon-large"></i> Features <span class="label label-inverse pull-right"></span>
+        <i class="icon-tasks icon-large"></i> Shop <span class="label label-inverse pull-right"></span>
     </a>
     <ul class="collapse" id="component-nav-features">
-        <li><a href="<?php echo base_url('admincp/features') ?>"><i class="icon-angle-right"></i> Danh sách Features </a></li>
-        <li><a href="<?php echo base_url('admincp/features/create') ?>"><i class="icon-angle-right"></i> Thêm mới Features</a></li> 
+        <li><a href="<?php echo base_url('admincp/features') ?>"><i class="icon-angle-right"></i> Danh sách Shop </a></li>
+        <li><a href="<?php echo base_url('admincp/features/create') ?>"><i class="icon-angle-right"></i> Thêm mới Shop</a></li> 
     </ul>
 </li>
 <li class="accordion-group">

@@ -82,17 +82,24 @@ class Gift extends CI_Controller {
         } else {
             $this->load->model('gift_model');
             if (isset($_REQUEST['update_gift'])) {
-                $gift_title   = $this->input->post('title', true);
+               $gift_title   = $this->input->post('title', true);
                 $gift_link    = $this->input->post('link', true);
-                $gift_content = $this->input->post('content', true);
-                $gift_video   = $this->input->post('video', true);
-
-
+                $gift_content = $this->input->post('content'); 
+                $gift_image = $this->do_upload_image('./src/gift/', 'gift_image');
+                $timestart = $this->input->post('gift_start',true);
+                $timeend = $this->input->post('gift_end',true);
+                $phonesupport = $this->input->post('phonesupport',true);
+                $sponsor = $this->input->post('sponsor',true);
+                
                 $object = array(
                     'gift_title'   => $gift_title,
                     'gift_link'    => $gift_link,
-                    'gift_video'   => $gift_video,
                     'gift_content' => $gift_content,
+                    'gift_image'=>$gift_image,
+                    'timestart' =>$timestart,
+                    'timeend'=>$timeend,
+                    'phonesupport'=>$phonesupport,
+                    'sponsor' =>$sponsor,
                 );
                 $this->gift_model->update_gift($id,$object);
                 redirect(site_url('admincp/gift/'));

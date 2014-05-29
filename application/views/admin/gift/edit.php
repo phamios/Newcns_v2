@@ -72,29 +72,70 @@ tinymce.init({
                         </div>
                     </div>
 
-                    <div class="control-group">
-                        <label for="text1" class="control-label">Link</label>
+                   <div class="control-group">
+                    <label for="text1" class="control-label">Đường dẫn đến sản phẩm</label>
 
-                        <div class="controls with-tooltip">
-                            <input type="text" id="link" class="span6 input-tooltip" name="link" value="<?php echo $g->gift_link ?>"/>
-                        </div>
+                    <div class="controls with-tooltip">
+                        <input type="text" id="link" class="span6 input-tooltip" name="link" value="<?php echo $g->gift_link ?>"/>
                     </div>
+                </div>
+                
+                
 
-                    <div class="control-group">
-                        <label for="text1" class="control-label">Video</label>
-
-                        <div class="controls with-tooltip">
-                            <input type="text" id="video" class="span6 input-tooltip" name="video" value="<?php echo $g->gift_video ?>"/>
-                        </div>
+                <div class="control-group">
+                    <label class="control-label">
+                        <img src="<?php echo base_url('src/gift/thumb_'.$g->gift_image);?>" width="15%" />
+                    </label>
+                    <div class="controls">
+                        
+                        <input type="file" name="gift_image" />
                     </div>
+                </div>
+                
+                <div class="control-group">
+                    <label for="text1" class="control-label">Thời gian bắt đầu</label>
 
-                    <div class="control-group">
-                        <label for="text1" class="control-label">Nội dung</label>
-
-                        <div class="controls with-tooltip">
-                            <textarea id="description" name="content" class="span6"><?php echo $g->gift_content ?></textarea>
-                        </div>
+                    <div class="controls with-tooltip">
+                        
+                        <input type="text" id="gift_start" class="span6 input-tooltip" name="gift_start" value="<?php echo $g->timestart ?>"/>
                     </div>
+                </div>
+                
+                <div class="control-group">
+                    <label for="text1" class="control-label">Thời gian kết thúc</label>
+
+                    <div class="controls with-tooltip">
+                        <input type="text" id="gift_end" class="span6 input-tooltip" name="gift_end" value="<?php echo $g->timeend ?>"/>
+                    </div>
+                </div>
+ 
+
+                <div class="control-group">
+                    <label for="text1" class="control-label">Nội dung</label>
+
+                    <div class="controls with-tooltip">
+                        <textarea id="description" name="content" class="span6" >value="<?php echo $g->gift_content ?>"</textarea>
+                    </div>
+                </div>
+                
+                
+                <div class="control-group">
+                    <label for="text1" class="control-label">Phone liên hệ: </label>
+
+                    <div class="controls with-tooltip">
+                        <input type="text" id="phonesupport" class="span6 input-tooltip" name="phonesupport" value="<?php echo $g->phonesupport ?>"/>
+                    </div>
+                </div>
+                
+                
+                <div class="control-group">
+                    <label for="text1" class="control-label">Nhà tài trợ</label>
+
+                    <div class="controls with-tooltip">
+                        <input type="text" id="sponsor" class="span6 input-tooltip" name="sponsor" value="<?php echo $g->sponsor ?>"/>
+                    </div>
+                </div>
+                
 
                     <div class="form-actions">
                         <input type="reset" value="Reset" id="back" class="navigation_button btn">
