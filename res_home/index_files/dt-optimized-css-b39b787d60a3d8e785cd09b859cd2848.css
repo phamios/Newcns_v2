@@ -442,11 +442,11 @@ form.off{filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=30);opacity:0.3}
 p{width:435px;margin-top:-2px;font-size:12px;line-height:1.33333;color:gray}#footer-links{font-size:14px;line-height:2;background-color:#282828;color:#555}#footer-links
 .links{margin:-7px 0 32px 0;overflow:hidden;*zoom:1}#footer-links .links
 a{color:#0095da}#footer-links .links
-ul{float:left;width:194px}#footer-links .links ul li.title
+ul{float:left;width:180px}#footer-links .links ul li.title
 a{text-decoration:none;color:inherit;cursor:default}#footer-links .links ul li
 hr{margin:10px
        0;border:none;border-bottom:1px solid #3e3e3e}#footer-links .links
-ul.social{width:147px;margin-left:47px}#footer-links .links ul.social
+ul.social{width:100px;margin-left:0px}#footer-links .links ul.social
 li{height:20px;padding-left:30px;margin-bottom:8px;line-height:1.42857}#footer-links .links ul.social
 li.rss{background-position:0 -774px}#footer-links .links ul.social
 li.twitter{background-position:0 -1127px}#footer-links .links ul.social

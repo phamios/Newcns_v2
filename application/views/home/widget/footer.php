@@ -6,8 +6,8 @@
 
     <nav id="footer-links">
         <div class="bb-wrap"> 
-            <div style="width:45%; float:left;">
-                <div style="width:400px;">
+            <div style="width:35%; float:left; right: 0; text-align: left; z-index: 999999; padding-right:10px; ">
+                <div style="width:400px;  ">
                     <div class="copyright" id="footer_ajax"> 
                         <?php $config_custom = $this->config->item('custom'); ?>
                         <?php //echo $config_custom['meta']['footer']; ?>
@@ -23,7 +23,7 @@
                 </div>
             </div>
             </div>
-            <div style=" float:right;">
+            <div style=" float:right;  ">
                 <?php $this->load->view('home/widget/link_footer'); ?>  
             </div>
             
