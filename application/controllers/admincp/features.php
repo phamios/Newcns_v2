@@ -67,7 +67,7 @@ class features extends CI_Controller {
                 $title = $this->input->post('title', true);
                 $userid = $this->session->userdata('adminid');
                 $post_type = 2;
-                $post_description = $this->input->post('post_description', true);
+                $post_description = $this->input->post('post_description');
                 $post_images = $this->do_upload_image('./src/features/', 'feature_image');
 
 
@@ -109,7 +109,7 @@ class features extends CI_Controller {
                 $title = $this->input->post('title', true);
                 $userid = $this->session->userdata('adminid');
                 $post_type = 2;
-                $post_description = $this->input->post('post_description', true);
+                $post_description = $this->input->post('post_description');
                 $post_images = $this->do_upload_image('./src/features/', 'feature_image');
 
 

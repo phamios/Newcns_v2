@@ -27,7 +27,7 @@
                 </li>
 
                 <li id="menu-item-520473" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-520473 menu-item-object-id-19">
-                    <a href="#">Shop</a>
+                <a href="<?php echo site_url('home/features')?>">Shop</a>
                 </li>
 
                 <li id="menu-item-552394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-552394">
