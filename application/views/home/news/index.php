@@ -177,7 +177,7 @@
 
 
 
-                        <section class="author-block" data-user-id="76988" itemscope="" itemtype="#"> 
+<!--                        <section class="author-block" data-user-id="76988" itemscope="" itemtype="#"> 
                             <img src="<?php echo base_url('res_home/details_news_files/url-3f2f06289e34c0c057c29bf8ca91f9d7-94x94-c.jpg'); ?>" alt="Matt Smith" data-avatar-provider="uploaded">
                             <div class="wrap">
 
@@ -210,7 +210,7 @@
                                     <span class="icon"></span>Follow
                                 </a> 
                             </div> 
-                        </section> 
+                        </section> -->
                     </section> 
                     
                     <div class="fb-comments" data-href="<?php echo site_url('home/news/' . mb_strtolower(url_title(removesign($content->post_title . "-" . $content->id))) . ".html"); ?>" data-numposts="10" data-colorscheme="light"></div>
