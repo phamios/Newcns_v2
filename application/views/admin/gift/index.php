@@ -16,6 +16,8 @@
                                     <th>ID</th>
                                     <th>Tiêu đề</th>
                                     <th width="30%">Link</th>
+                                    <th>Bắt đầu</th>
+                                    <th>Kết thúc </th>
                                     <th>Nội dung</th>
                                     <th>Video</th>
                                     <th width="10%">Tùy chọn</th>
@@ -34,6 +36,8 @@
                                             <td>
                                                 <?php echo $row->gift_link ?>
                                             </td>
+                                            <td><?php echo $row->timestart ?></td>
+                                            <td><?php echo $row->timeend ?></td>
                                             <td>
                                                 <?php echo $row->gift_content ?>
                                             </td>
