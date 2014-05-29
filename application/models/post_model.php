@@ -204,5 +204,9 @@ class post_model extends CI_Model {
         $query = $this->db->get('tbl_post');
         return $query->result();
     }
+    
+    public function total_post() {
+        return $this->db->count_all('tbl_post');
+    }
 
 }

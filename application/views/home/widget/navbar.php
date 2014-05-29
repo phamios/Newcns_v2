@@ -7,10 +7,8 @@
                     <a href="#">Đánh giá</a>
                      
                     <div class="mega-wrap">
-                        <div id="rev_cate">
-                            
-                        </div>
-                        
+                        <div id="rev_cate"> 
+                        </div> 
                     </div>
                    
                 </li>
@@ -31,11 +29,11 @@
                 </li>
 
                 <li id="menu-item-552394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-552394">
-                    <a href="#">Deals</a>
+                    <a href="<?php echo site_url();?>">Deals</a>
                 </li>
                 
                 <li id="menu-item-552394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-552394">
-                    <a href="#">Quà tặng</a>
+                    <a href="<?php echo site_url('home/gift');?>">Quà tặng</a>
                 </li>
             </ul>
             <!--DTC HTML CACHE HIT STOP-->

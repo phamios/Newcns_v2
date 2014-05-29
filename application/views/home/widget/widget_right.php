@@ -14,10 +14,10 @@
             </div>
         </div>
 
-        <div class="tab tab-2 most-commented  active">
+        <div class="tab tab-2 most-commented on active">
             <h3><a href="javascript:void(0)">Chủ đề được quan tâm nhất<span class="icon"></span></a></h3>
 
-            <div style="display: none;" class="expand">
+            <div  class="expand">
                 <div class="wrap" id="news_trend_load">
                      
                 </div>

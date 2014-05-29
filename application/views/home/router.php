@@ -33,6 +33,15 @@
         <?php $this->load->view('home/features_cate/index'); ?> 
 <?php endif; ?>
 
+<?php if ($this->router->class == 'gift'): ?>  
+        <?php $this->load->view('home/gift/index'); ?> 
+<?php endif; ?>
+
+<?php if ($this->router->class == 'gift_now'): ?>  
+        <?php $this->load->view('home/gift/details'); ?> 
+<?php endif; ?>
+
+
 <?php if ($this->router->class == 'news_cate'): ?> 
         <?php $this->load->view('home/default/default'); ?> 
 <?php endif; ?>

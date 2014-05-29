@@ -73,6 +73,8 @@ class ajax extends CI_Controller {
     public function last_new() {
         $this->load->model('post_model');
         $result = $this->post_model->get_news_ajax();
+        $total = $this->post_model->total_post();
+        
         foreach ($result as $content) {
             echo '<div class="item">';
             echo '     <a href="' . site_url('home/news/' . mb_strtolower(url_title($this->removesign($content->post_title . '-' . $content->id))) . '.html') . '" class="thumb alt">';
@@ -80,7 +82,8 @@ class ajax extends CI_Controller {
             echo '    </a>';
             echo '    <h4><a href="' . site_url('home/news/' . mb_strtolower(url_title($this->removesign($content->post_title . '-' . $content->id))) . '.html') . '">' . $content->post_title . '</a></h4>';
             echo '    <div class="rating"> ';
-            echo '        <div class="dt-rating num-6" style="color:grey;">Điểm đánh giá<span><span>: ' . $content->post_view . '</span></span></div> ';
+            $rate = ($content->post_view*$total)/10;
+            echo '        <div class="dt-rating num-'.$rate.'" style="color:grey;">Điểm đánh giá<span><span>: ' . $content->post_view . '</span></span></div> ';
             echo '    </div> ';
             echo ' </div>';
         }
@@ -92,7 +95,7 @@ class ajax extends CI_Controller {
         foreach ($result as $content) {
             echo '<div class="item">';
             echo '     <a href="' . site_url('home/news/' . mb_strtolower(url_title($this->removesign($content->post_title . '-' . $content->id))) . '.html') . '" class="thumb alt">';
-            echo '        <img src="' . base_url('src/post/thumb_' . $content->post_images) . '" class="attachment-width=76&amp;height=76&amp;crop=1" alt="Canon SX600 front open">';
+            echo '        <img src="' . base_url('src/features/thumb_' . $content->post_images) . '" class="attachment-width=76&amp;height=76&amp;crop=1" alt="Canon SX600 front open">';
             echo '    </a>';
             echo '    <h4><a href="' . site_url('home/news/' . mb_strtolower(url_title($this->removesign($content->post_title . '-' . $content->id))) . '.html') . '">' . $content->post_title . '</a></h4>';
             echo '    <div class="rating"> ';
