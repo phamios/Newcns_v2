@@ -1,5 +1,5 @@
-<?php if ($features <> null): ?>
-    <?php foreach ($features as $content): ?>
+<?php if ($details_news <> null): ?>
+    <?php foreach ($details_news as $content): ?>
         <div class="bb-wrap"> 
             <header class="title-block">
                 <div class="crumbs">
