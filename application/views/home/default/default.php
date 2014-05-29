@@ -6,7 +6,7 @@ if ($this->router->class == 'rev_cate'){
 }
 ?>
 <section id="river" class="standard">
-    <h1>Bài mới nhất</h1> 
+    <?php $this->load->view('home/widget/breakcrum');?>
     <!--DTC HTML CACHE HIT START-->			
     <?php if($listcontent <> null):?>
     <?php foreach($listcontent as $content):?>

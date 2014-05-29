@@ -57,7 +57,7 @@
            
        </div>
  
-        <a href="#" class="button flat icon more"><span>Xem thêm</span></a>
+        <a href="<?php echo site_url('home/news_category')?>" class="button flat icon more"><span>Xem thêm</span></a>
 
     </div>
 
@@ -69,7 +69,7 @@
            
        </div>
 
-        <a href="#" class="button flat icon more"><span>Xem thêm</span></a>
+        <a href="<?php echo site_url('home/features')?>" class="button flat icon more"><span>Xem thêm</span></a>
     </div>
 
 </aside>
