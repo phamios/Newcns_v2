@@ -16,7 +16,19 @@
         <link type="text/css" rel="stylesheet" href="<?php echo base_url('res/assets/'); ?>/css/calendar.css">
 
         <link rel="stylesheet" href="<?php echo base_url('res/assets/'); ?>/css/theme.css">
- 
+
+        <?php if ($this->router->class == 'gift'): ?>
+            <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+            <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+            <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+            <script>
+                $(function() {
+                    $( "#gift_start" ).datepicker();
+                    $( "#gift_end" ).datepicker();
+                });
+            </script>
+
+        <?php endif; ?>
     </head>
     <body>
         <!-- BEGIN WRAP -->
@@ -49,7 +61,7 @@
             <div id="content">
                 <!-- .outer -->
                 <div class="container-fluid outer"> 
-                       
+
                     <?php if ($this->router->class == 'category'): ?>
                         <?php if ($this->router->fetch_method() == 'index'): ?>
                             <?php $this->load->view('admin/category/index'); ?>
@@ -66,7 +78,7 @@
                         <?php if ($this->router->fetch_method() == 'index'): ?>
                             <?php $this->load->view('admin/post/index'); ?>
                         <?php endif; ?>
-                     <?php if ($this->router->fetch_method() == 'hot'): ?>
+                        <?php if ($this->router->fetch_method() == 'hot'): ?>
                             <?php $this->load->view('admin/post/hot'); ?>
                         <?php endif; ?>
                         <?php if ($this->router->fetch_method() == 'create'): ?>
@@ -125,7 +137,7 @@
                             <?php $this->load->view('admin/video/edit'); ?>
                         <?php endif; ?>
                     <?php endif; ?>
-                     <?php if ($this->router->class == 'advertis'): ?>
+                    <?php if ($this->router->class == 'advertis'): ?>
                         <?php if ($this->router->fetch_method() == 'index'): ?>
                             <?php $this->load->view('admin/advertis/index'); ?>
                         <?php endif; ?>
@@ -174,7 +186,7 @@
                             <?php $this->load->view('admin/config/site'); ?>
                         <?php endif; ?>
                     <?php endif; ?>  
-                    
+
 
                 </div>
                 <!-- /.outer -->
@@ -235,7 +247,7 @@
         <script src="<?php echo base_url('res/assets/'); ?>/js/lib/jquery.mousewheel.js"></script>
         <script src="<?php echo base_url('res/assets/'); ?>/js/lib/jquery.sparkline.min.js"></script>
 
-     
+
 
         <script src="<?php echo base_url('res/assets/'); ?>/fullcalendar/fullcalendar/fullcalendar.min.js"></script>
 

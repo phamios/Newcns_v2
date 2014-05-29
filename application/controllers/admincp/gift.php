@@ -41,15 +41,22 @@ class Gift extends CI_Controller {
 
                 $gift_title   = $this->input->post('title', true);
                 $gift_link    = $this->input->post('link', true);
-                $gift_content = $this->input->post('content', true);
-                $gift_video   = $this->input->post('video', true);
-
-
+                $gift_content = $this->input->post('content'); 
+                $gift_image = $this->do_upload_image('./src/gift/', 'post_image');
+                $timestart = $this->input->post('gift_start',true);
+                $timeend = $this->input->post('gift_end',true);
+                $phonesupport = $this->input->post('phonesupport',true);
+                $sponsor = $this->input->post('sponsor',true);
+                
                 $object = array(
                     'gift_title'   => $gift_title,
                     'gift_link'    => $gift_link,
-                    'gift_video'   => $gift_video,
                     'gift_content' => $gift_content,
+                    'gift_image'=>$gift_image,
+                    'timestart' =>$timestart,
+                    'timeend'=>$timeend,
+                    'phonesupport'=>$phonesupport,
+                    'sponsor' =>$sponsor,
                 );
                 $this->gift_model->add_gift($object);
                 redirect(site_url('admincp/gift/'));
@@ -95,4 +102,56 @@ class Gift extends CI_Controller {
         }
     }
 
+    
+    
+      /**
+     * Upload Image 
+     * @param type $mypath
+     * @param type $filename
+     * @return null
+     */
+    function do_upload_image($mypath, $filename) {
+
+        $this->load->library('upload');
+        $config['upload_path'] = $mypath;
+        $config['allowed_types'] = 'gif|jpg|png|bmp';
+        $config['max_size'] = '80000';
+        $this->load->library('upload', $config);
+        $this->upload->initialize($config);
+        if (isset($filename)) {
+            if (!$this->upload->do_upload($filename)) {
+                $error = array('error' => $this->upload->display_errors());
+
+                return NULL;
+            } else {
+                $data = array('upload_data' => $this->upload->data());
+                $imagename = $this->upload->file_name;
+
+                $this->resize_image($mypath, 'thumb_' . $imagename, $imagename);
+                return $imagename;
+            }
+        } else {
+            echo $this->upload->display_errors();
+        }
+    }
+
+    /**
+     * Resize Image for Upload Images 
+     * @param type $dir
+     * @param type $new_name
+     * @param type $image
+     */
+    function resize_image($dir, $new_name, $image) {
+        $img_cfg_thumb['image_library'] = 'gd2';
+        $img_cfg_thumb['source_image'] = "./" . $dir . "/" . $image;
+        $img_cfg_thumb['maintain_ratio'] = TRUE;
+        $img_cfg_thumb['new_image'] = $new_name;
+        $img_cfg_thumb['width'] = 300;
+        $img_cfg_thumb['height'] = 200;
+        $this->load->library('image_lib');
+        $this->image_lib->initialize($img_cfg_thumb);
+        $this->image_lib->resize();
+    }
+    
+    
 }
