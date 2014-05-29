@@ -32,7 +32,6 @@ class features extends CI_Controller {
         
         //// site config 
         $data['features'] = $this->post_model->get_all_features();
-        print_r($data['features']);die;
         $data['category'] = $this->category_review_model->getAll();
         $data['details_news'] = $this->review_model->get_product_review_by_id($this->product_id);
         $data['galleries'] = $this->gallery_model->get_review_images($this->product_id); 
