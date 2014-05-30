@@ -13,7 +13,7 @@
         jQuery('body').addClass('stick-nav stuck-nav');
         category_review();
         category_news(); 
-        get_last_new();
+        get_last_rev();
         get_last_features();
         get_trend();
         get_news_trend();
@@ -75,13 +75,13 @@
         });
     };
     
-    function get_last_new(){
+    function get_last_rev(){
         
         $.ajax({
-            url: '<?php echo site_url('ajax/last_new'); ?>',
+            url: '<?php echo site_url('ajax/last_review'); ?>',
             type:'POST',
             success: function(response){ 
-                $("#new_last_get").html(response);
+                $("#review_last_get").html(response);
             },
             error: function (x, status, error) {
                 alert("Error code: " + x + "\nAn error occurred: " + status + "\nError: " + error);

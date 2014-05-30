@@ -87,4 +87,22 @@ class review_model extends CI_Model {
         }
     }
 
+    function get_rev_ajax() {
+        $this->db->order_by("id",'DESC');
+        $this->db->limit(10);
+        $query = $this->db->get('tbl_review');
+        return $query->result();
+    }
+
+    public function total_review() {
+        return $this->db->count_all('tbl_review');
+    }
+
+    public function get_first_rev_image_by_id($id) {
+        $this->db->where('review_id', $id);
+        $this->db->limit(1);
+        $query = $this->db->get('tbl_review_images');
+        return $query->result();
+    }
+
 }
