@@ -74,7 +74,7 @@ class ajax extends CI_Controller {
         $this->load->model('post_model');
         $result = $this->post_model->get_news_ajax();
         $total = $this->post_model->total_post();
-        
+
         foreach ($result as $content) {
             echo '<div class="item">';
             echo '     <a href="' . site_url('home/news/' . mb_strtolower(url_title($this->removesign($content->post_title . '-' . $content->id))) . '.html') . '" class="thumb alt">';
@@ -100,6 +100,26 @@ class ajax extends CI_Controller {
             echo '    <h4><a href="' . site_url('home/news/' . mb_strtolower(url_title($this->removesign($content->post_title . '-' . $content->id))) . '.html') . '">' . $content->post_title . '</a></h4>';
             echo '    <div class="rating"> ';
             echo '        <div class="dt-rating" style="color:grey;"> ' . $content->post_createdate . '</div> ';
+            echo '    </div> ';
+            echo ' </div>';
+        }
+    }
+
+    public function last_review() {
+        $this->load->model('review_model');
+        $result = $this->review_model->get_rev_ajax();
+        $total = $this->review_model->total_review();
+
+        foreach ($result as $content) {
+            $img = $this->review_model->get_first_rev_image_by_id($content->id);
+            echo '<div class="item">';
+            echo '     <a href="' . site_url('home/reiview/' . mb_strtolower(url_title($this->removesign($content->review_title . '-' . $content->id))) . '.html') . '" class="thumb alt">';
+            echo '        <img src="' . base_url('src/images/' . $img[0]->image_link) . '" class="attachment-width=76&amp;height=76&amp;crop=1" alt="Canon SX600 front open">';
+            echo '    </a>';
+            echo '    <h4><a href="' . site_url('home/review/' . mb_strtolower(url_title($this->removesign($content->review_title . '-' . $content->id))) . '.html') . '">' . $content->review_title . '</a></h4>';
+            echo '    <div class="rating"> ';
+            $rate = $content->review_score;
+            echo '        <div class="dt-rating num-'.$rate.'" style="color:grey;">Điểm đánh giá<span><span>: ' . $content->review_view . '</span></span></div> ';
             echo '    </div> ';
             echo ' </div>';
         }

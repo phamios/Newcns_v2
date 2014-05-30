@@ -5,7 +5,7 @@
     <div class="widget trending-tabbed ">
 
         <div class="tab tab-1 trending on active">
-            <h3><a href="javascript:void(0)">Xu thế<span class="icon"></span></a></h3>
+            <h3><a href="javascript:void(0)">Xu hướng<span class="icon"></span></a></h3>
 
             <div class="expand">
                 <div class="wrap" id="trend_load">
@@ -15,7 +15,7 @@
         </div>
 
         <div class="tab tab-2 most-commented on active">
-            <h3><a href="javascript:void(0)">Chủ đề được quan tâm nhất<span class="icon"></span></a></h3>
+            <h3><a href="javascript:void(0)">Bàn luận nhiều nhất<span class="icon"></span></a></h3>
 
             <div  class="expand">
                 <div class="wrap" id="news_trend_load">
@@ -25,7 +25,7 @@
         </div>
 
         <div class="tab tab-3 most-shared  active">
-            <h3><a href="javascript:void(0)">Nhiều chia sẻ nhất<span class="icon"></span></a></h3>
+            <h3><a href="javascript:void(0)">Chia sẻ nhiều nhất<span class="icon"></span></a></h3>
 
             <div style="display: none;" class="expand">
                 <div class="wrap">
@@ -51,20 +51,20 @@
     <!-- Last Rendered 2014-05-11 09:32:49 -->
     <div class="widget standard latest-reviews">
 
-        <h3>Bài viết mới nhất</h3>
+        <h3>Đánh giá mới nhất</h3>
 
-       <div id="new_last_get">     
+       <div id="review_last_get">     
            
        </div>
  
-        <a href="<?php echo site_url('home/news_category')?>" class="button flat icon more"><span>Xem thêm</span></a>
+        <a href="<?php echo site_url('home/review_category')?>" class="button flat icon more"><span>Xem thêm</span></a>
 
     </div>
 
     <!-- Last Rendered 2014-05-10 03:00:56 -->
     <div class="widget standard latest-posts">
 
-        <h3>Đặc trưng</h3>
+        <h3>Shop được yêu thích</h3>
         <div id="features_last_get">     
            
        </div>
